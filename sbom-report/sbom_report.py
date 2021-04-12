@@ -17,7 +17,7 @@ logging.basicConfig(level=logging.INFO,
 args = ws_conn = extra_conf = None
 
 ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz")                   # TODO COMPILE LIST
-
+SOURCE_SUFFICES = ("JavaScript")
 
 def init():
     global ws_conn, extra_conf
@@ -157,7 +157,7 @@ def create_files(scope_token: str, licenses_dict):      # TODO SIMPLIFY THIS
 
 
 def set_file_type(file_type: str, filename: str):                            # TODO ADDITIONAL TESTINGS
-    if file_type == "Source Files":
+    if file_type == "Source Library" or file_type in SOURCE_SUFFICES:
         ret = file.FileType.SOURCE
         logging.debug(f"Type of file: {filename} is source file")
     elif filename.endswith(ARCHIVE_SUFFICES):
