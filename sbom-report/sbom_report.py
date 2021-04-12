@@ -9,7 +9,7 @@ from spdx.utils import NoAssert, SPDXNone
 from ws_sdk import ws_utilities
 from ws_sdk.web import WS
 
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.INFO,
                     stream=sys.stdout,
                     format='%(levelname)s %(asctime)s %(thread)d: %(message)s',
                     datefmt='%y-%m-%d %H:%M:%S')
@@ -103,7 +103,7 @@ def get_license_obj(lic_id: str, licenses_dict: dict) -> License:
     return lic_obj
 
 
-def create_files(scope_token: str, licenses_dict):
+def create_files(scope_token: str, licenses_dict):      # TODO SIMPLIFY THIS
     global ws_conn
     files = []
     all_licenses_from_files = set()
@@ -117,10 +117,11 @@ def create_files(scope_token: str, licenses_dict):
         spdx_file = file.File(name=lib['filename'],
                               spdx_id=f"SPDXRef-FILE-{i+1}",
                               chk_sum=Algorithm(identifier="SHA1", value=lib['sha1']))
-        spdx_file.comment = lib['description']
+        spdx_file.comment = lib.get('description')
         spdx_file.type = set_file_type(lib['type'], lib['filename'])
 
         file_license_copyright = set()
+        licenses_in_file = set()
         for lic in lib['licenses']:
             # Handling license
             try:
@@ -132,25 +133,24 @@ def create_files(scope_token: str, licenses_dict):
                 spdx_license = NoAssert()
 
             all_licenses_from_files.add(spdx_license)
-            spdx_file.licenses_in_file.append(spdx_license)
 
             # Handling Copyright license
             try:
-                license_copyright = f"{lic['spdxName']} - {dd_dict[(lib['filename'], lic['name'])]['copyright']}"
+                # license_copyright = f"{lic.get('name')} - {dd_dict[(lib['filename'], lic['name'])]['copyright']}"
+                license_copyright = str(lib['copyrightReferences'])
                 all_copyright_from_files.add(license_copyright)
                 file_license_copyright.add(license_copyright)
                 logging.debug(f"Found copyright: {license_copyright}")
             except KeyError:
-                license_copyright = None
                 logging.error(f"Copyright of : ({lib['filename']}, {lic['name']}) was not found")
 
         # In case no licenses found on this lib
-        if not spdx_file.licenses_in_file:
-            spdx_file.licenses_in_file.append(NoAssert())
+        if not licenses_in_file:
+            licenses_in_file.add(NoAssert())
 
         spdx_file.copyright = ', '.join(file_license_copyright) if file_license_copyright else SPDXNone()
         spdx_file.conc_lics = SPDXNone()
-
+        spdx_file.licenses_in_file = list(licenses_in_file)
         files.append(spdx_file)
 
     return files, all_licenses_from_files, all_copyright_from_files
