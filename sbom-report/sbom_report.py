@@ -120,40 +120,71 @@ def create_files(scope_token: str, licenses_dict):      # TODO SIMPLIFY THIS
         spdx_file.comment = lib.get('description')
         spdx_file.type = set_file_type(lib['type'], lib['filename'])
 
-        file_license_copyright = set()
-        licenses_in_file = set()
-        for lic in lib['licenses']:
-            # Handling license
-            try:
-                license_full_name = licenses_dict[lic['spdxName']]
-                logging.debug(f"Found license: {license_full_name}")
-                spdx_license = License(full_name=license_full_name, identifier=lic['spdxName'])
-            except KeyError:
-                logging.error(f"License with identifier: {lic['name']} was not found")
-                spdx_license = NoAssert()
+        file_licenses = handle_file_licenses(lib['licenses'], licenses_dict)
+        spdx_file.licenses_in_file = list(file_licenses)
+        all_licenses_from_files.update(file_licenses)
 
-            all_licenses_from_files.add(spdx_license)
-
-            # Handling Copyright license
-            try:
-                # license_copyright = f"{lic.get('name')} - {dd_dict[(lib['filename'], lic['name'])]['copyright']}"
-                license_copyright = str(lib['copyrightReferences'])
-                all_copyright_from_files.add(license_copyright)
-                file_license_copyright.add(license_copyright)
-                logging.debug(f"Found copyright: {license_copyright}")
-            except KeyError:
-                logging.error(f"Copyright of : ({lib['filename']}, {lic['name']}) was not found")
-
-        # In case no licenses found on this lib
-        if not licenses_in_file:
-            licenses_in_file.add(NoAssert())
-
-        spdx_file.copyright = ', '.join(file_license_copyright) if file_license_copyright else SPDXNone()
         spdx_file.conc_lics = SPDXNone()
-        spdx_file.licenses_in_file = list(licenses_in_file)
+
+        file_copyrights = handle_file_copyright(lib['licenses'], lib, dd_dict)
+        if file_copyrights:
+            spdx_file.copyright = ', '.join(file_copyrights)
+            all_copyright_from_files.update(file_copyrights)
+        else:
+            spdx_file.copyright = NoAssert()
+
         files.append(spdx_file)
 
+
     return files, all_licenses_from_files, all_copyright_from_files
+
+
+def handle_file_licenses(licenses: list, licenses_dict: dict) -> set:
+    found_lics = set()
+    for lic in licenses:
+        fix_license(lic)                                                   # Manually fixing this license
+        try:
+            license_full_name = licenses_dict[lic['spdxName']]
+            logging.debug(f"Found license: {license_full_name}")
+            spdx_license = License(full_name=license_full_name, identifier=lic['spdxName'])
+        except KeyError:
+            logging.warning(f"License with identifier: {lic['name']} was not found")
+            spdx_license = License(full_name=lic['name'], identifier=lic['name'])
+
+        found_lics.add(spdx_license)
+
+    if not licenses:
+        found_lics.add(NoAssert())
+
+    return found_lics
+
+
+def handle_file_copyright(licenses: list, lib: dict, dd_dict: dict) -> set:
+    found_copyrights = set()
+
+    for lic in licenses:                                                    # Searching for copyright on licenses
+        dd_val = dd_dict.get((lib['filename'], lic['name']))
+        if dd_val:
+            dd_cr = dd_val.get('copyright')
+            license_copyright = f"{lic.get('name')} - {dd_cr}"
+            logging.debug(f"Found copyright on license: {license_copyright}")
+            found_copyrights.add(license_copyright)
+
+    if not found_copyrights and lib.get('copyrightReferences'):             # Searching for copyright on library
+        for d in lib.get('copyrightReferences'):
+            logging.debug(f"Found copyright on lib: {d['copyright']}")
+            found_copyrights.add("REF - " + d['copyright'])
+
+    if not found_copyrights:
+        logging.warning(f"Copyright on : ({lib['filename']}  was not found")
+
+    return found_copyrights
+
+
+def fix_license(lic: dict):
+    if lic.get('name') == "Public Domain" and not lic.get('spdxName'):
+        logging.info(f"Fixing license: {lic['name']}")
+        lic['spdxName'] = "CC-PDDC"
 
 
 def set_file_type(file_type: str, filename: str):                            # TODO ADDITIONAL TESTINGS
