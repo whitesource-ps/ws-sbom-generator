@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/whitesource-ps/wss-template.svg)](https://github.com/whitesource-ps/wss-template/releases/latest)  
 # WhiteSource SBOM report
 CLI Tool to generate SBOM report on chosen scope.
-* The tool can be executed on WS Organization, Product or Project.
+* The tool can be executed on WS Product or Project.
 * The tool accepts additional values which are unknown to WS via `sbom_extra.json`.
 * If not stated, the tool will access SAAS.
 * If not stated, the tool will produce report in JSON format.
@@ -32,7 +32,7 @@ optional arguments:
   -u WS_USER_KEY, --userKey WS_USER_KEY
                         WS User Key
   -o WS_TOKEN, --token WS_TOKEN
-                        WS Organization Key
+                        WS Product or Project Key
   -s SCOPE_TOKEN, --scope SCOPE_TOKEN
                         Scope token of SBOM report to generate
   -a WS_URL, --wsUrl WS_URL
@@ -46,5 +46,5 @@ optional arguments:
 ## Execution
 Execution instructions:  
 ```
-python sbom_report.py -u <USER_KEY> -o <ORG_TOKEN> -s <SCOPE_TOKEN>
+python sbom_report.py -u <USER_KEY> -o <TOKEN> -s <SCOPE_TOKEN>
 ```
