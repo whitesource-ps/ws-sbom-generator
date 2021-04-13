@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO,
 
 args = ws_conn = extra_conf = None
 
-ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz")                   # TODO COMPILE LIST
+ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz", ".gem")                   # TODO COMPILE LIST
 SOURCE_SUFFICES = ("JavaScript")
 
 def init():
