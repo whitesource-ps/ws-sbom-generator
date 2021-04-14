@@ -22,8 +22,9 @@ Python 3.6+
 
 ## Usage
 ```
-sbom_report.py [-h] -u WS_USER_KEY -o WS_TOKEN [-s SCOPE_TOKEN]
+sbom_report.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN]
                       [-a WS_URL] [-t {tv,json,xml,rdf,yaml}] [-e EXTRA]
+                      [-o OUT_DIR]
 
 Utility to create SBOM from WhiteSource data
 
@@ -31,8 +32,8 @@ optional arguments:
   -h, --help            show this help message and exit
   -u WS_USER_KEY, --userKey WS_USER_KEY
                         WS User Key
-  -o WS_TOKEN, --token WS_TOKEN
-                        WS Product or Project Key
+  -k WS_TOKEN, --token WS_TOKEN
+                        WS Organization Key
   -s SCOPE_TOKEN, --scope SCOPE_TOKEN
                         Scope token of SBOM report to generate
   -a WS_URL, --wsUrl WS_URL
@@ -41,10 +42,12 @@ optional arguments:
                         Output type
   -e EXTRA, --extra EXTRA
                         Extra configuration of SBOM
+  -o OUT_DIR, --out OUT_DIR
+                        Output directory
 ```
 
 ## Execution
 Execution instructions:  
 ```
-python sbom_report.py -u <USER_KEY> -o <TOKEN> -s <SCOPE_TOKEN>
+python sbom_report.py -u <USER_KEY> -k <TOKEN> -s <SCOPE_TOKEN>
 ```

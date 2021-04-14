@@ -1,6 +1,6 @@
 import json
 import logging
-
+import os
 import sys
 from spdx import file, package, version, creationinfo
 from spdx.checksum import Algorithm
@@ -16,8 +16,9 @@ logging.basicConfig(level=logging.INFO,
 
 args = ws_conn = extra_conf = None
 
-ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz", ".gem")                   # TODO COMPILE LIST
+ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz", ".gem")
 SOURCE_SUFFICES = ("JavaScript")
+
 
 def init():
     global ws_conn, extra_conf
@@ -44,13 +45,13 @@ def create_sbom_doc():
         licenses = json.loads(fp.read())
     logging.debug(f"License List Version: {licenses['licenseListVersion']}")
     licenses_dict = ws_utilities.convert_dict_list_to_dict(lst=licenses['licenses'], key_desc='licenseId')
-    doc.package = create_package(scope['name'], licenses_dict)
+    doc.package = create_package(scope['name'], licenses_dict, 1)
     doc.package.files, licenses_from_files, copyrights_from_files = create_files(args.scope_token, licenses_dict)
 
     # After file section creation
     doc.package.verif_code = doc.package.calc_verif_code()
     doc.package.licenses_from_files = licenses_from_files
-    doc.package.cr_text =  ', '.join(copyrights_from_files)
+    doc.package.cr_text = ', '.join(copyrights_from_files)
     write_file(doc, args.type)
 
     logging.info("Finished report")
@@ -79,10 +80,10 @@ def create_document(token: str) -> Document:
     return document
 
 
-def create_package(package_name: str, licenses_dict: dict) -> package.Package:
+def create_package(package_name: str, licenses_dict: dict, id) -> package.Package:
     logging.debug(f"Creating SBOM Package section")
     pkg = package.Package(name=package_name,
-                          spdx_id="SPDXRef-PACKAGE-1",
+                          spdx_id=f"SPDXRef-PACKAGE-{id}",
                           download_location=extra_conf.get('package_location', NoAssert()))
     pkg.check_sum = Algorithm(identifier="SHA1", value=extra_conf.get('package_sha1', NoAssert()))
     pkg.license_declared = get_license_obj(extra_conf.get('package_license_identifier'), licenses_dict)
@@ -103,7 +104,7 @@ def get_license_obj(lic_id: str, licenses_dict: dict) -> License:
     return lic_obj
 
 
-def create_files(scope_token: str, licenses_dict):      # TODO SIMPLIFY THIS
+def create_files(scope_token: str, licenses_dict):
     global ws_conn
     files = []
     all_licenses_from_files = set()
@@ -134,7 +135,6 @@ def create_files(scope_token: str, licenses_dict):      # TODO SIMPLIFY THIS
             spdx_file.copyright = NoAssert()
 
         files.append(spdx_file)
-
 
     return files, all_licenses_from_files, all_copyright_from_files
 
@@ -206,16 +206,17 @@ def set_file_type(file_type: str, filename: str):                            # T
 
 def write_file(doc: Document, type: str):
                 # Type: (suffix, module_name)
-    file_types = {"json" : ("json", "spdx.writers.json"),
+    file_types = {"json": ("json", "spdx.writers.json"),
                   "tv" : ("tv", "spdx.writers.tagvalue"),
-                  "rdf" : ("xml", "spdx.writers.rdf"),
+                  "rdf": ("xml", "spdx.writers.rdf"),
                   "xml": ("xml", "spdx.writers.xml"),
                   "yaml": ("yml", "spdx.writers.yaml")}
     report_file = f"{doc.name}-{doc.version}.{file_types[type][0]}"
+    full_path = os.path.join(args.out_dir, report_file)
     import importlib
     module = importlib.import_module(file_types[type][1])           # Dynamically loading appropriate writer module
-    logging.debug(f"Writing file: {report_file} in format: {type}")
-    with open(report_file, "w") as fp:
+    logging.debug(f"Writing file: {full_path} in format: {type}")
+    with open(full_path, "w") as fp:
         module.write_document(doc, fp)
 
 
@@ -223,11 +224,12 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
     parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', required=True)
-    parser.add_argument('-o', '--token', help="WS Organization Key", dest='ws_token', required=True)
+    parser.add_argument('-k', '--token', help="WS Organization Key", dest='ws_token', required=True)
     parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=True)
     parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default="saas")
     parser.add_argument('-t', '--type', help="Output type", dest='type', choices=["tv", "json", "xml", "rdf", "yaml"], default='json')
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default='sbom_extra.json')
+    parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
 
     return parser.parse_args()
 
