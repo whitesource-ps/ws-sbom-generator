@@ -29,7 +29,9 @@ jobs:
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Full test
-        run: python sbom-report/sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }}
+        run: |
+          cd sbom-report
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }}
       - name: Zip release
         uses: papeloto/action-zip@v1
         with:
