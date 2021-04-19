@@ -44,7 +44,7 @@ jobs:
         uses: papeloto/action-zip@v1
         with:
           files: requirements.txt LICENSE README.md CLA.md sbom-report/
-          dest: ws-projects-cleanup.zip
+          dest: ws-sbom-report.zip
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1

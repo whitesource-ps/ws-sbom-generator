@@ -47,6 +47,7 @@ def create_sbom_doc():
     logging.debug(f"License List Version: {licenses['licenseListVersion']}")
     licenses_dict = ws_utilities.convert_dict_list_to_dict(lst=licenses['licenses'], key_desc='licenseId')
     doc.package = create_package(scope['name'], licenses_dict, 1)
+
     doc.package.files, licenses_from_files, copyrights_from_files, extracted_licenses_from_files = create_files(args.scope_token, licenses_dict)
 
     # After file section creation
@@ -262,11 +263,13 @@ def write_file(doc: Document, type: str):
                   "rdf": ("xml", "spdx.writers.rdf", "wb", None),
                   "xml": ("xml", "spdx.writers.xml", "wb", None),
                   "yaml": ("yml", "spdx.writers.yaml", "wb", None)}
+
     report_file = f"{doc.name}-{doc.version}.{file_types[type][0]}"
     full_path = os.path.join(args.out_dir, report_file)
     import importlib
     module = importlib.import_module(file_types[type][1])           # Dynamically loading appropriate writer module
     logging.debug(f"Writing file: {full_path} in format: {type}")
+
     with open(full_path, file_types[type][2], encoding=file_types[type][3]) as fp:
         module.write_document(doc, fp)
 
