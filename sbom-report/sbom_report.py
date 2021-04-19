@@ -4,7 +4,7 @@ import os
 import sys
 from spdx import file, package, version, creationinfo
 from spdx.checksum import Algorithm
-from spdx.document import Document, License
+from spdx.document import Document, License, ExtractedLicense
 from spdx.utils import NoAssert, SPDXNone
 from ws_sdk import ws_utilities
 from ws_sdk.web import WS
@@ -17,6 +17,7 @@ logging.basicConfig(level=logging.INFO,
 args = ws_conn = extra_conf = None
 
 ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz", ".gem")
+BIN_SUFFICES = (".dll", ".so", ".exe")
 SOURCE_SUFFICES = ("JavaScript")
 
 
@@ -39,18 +40,20 @@ def create_sbom_doc():
     logging.info(f"Starting to work on SBOM Document of {scope['type']} {scope['name']} (token: {args.scope_token})")
     doc = create_document(args.scope_token)
 
-    # Manually loading licenses file as built-in filter depracated licenses
-    from spdx.config import _licenses, _exceptions
+    # Manually loading licenses file as built-in filter deprecated licenses
+    from spdx.config import _licenses
     with open(_licenses, "r") as fp:
         licenses = json.loads(fp.read())
     logging.debug(f"License List Version: {licenses['licenseListVersion']}")
     licenses_dict = ws_utilities.convert_dict_list_to_dict(lst=licenses['licenses'], key_desc='licenseId')
     doc.package = create_package(scope['name'], licenses_dict, 1)
-    doc.package.files, licenses_from_files, copyrights_from_files = create_files(args.scope_token, licenses_dict)
+
+    doc.package.files, licenses_from_files, copyrights_from_files, extracted_licenses_from_files = create_files(args.scope_token, licenses_dict)
 
     # After file section creation
     doc.package.verif_code = doc.package.calc_verif_code()
     doc.package.licenses_from_files = licenses_from_files
+    doc.extracted_licenses = list(extracted_licenses_from_files)
     doc.package.cr_text = ', '.join(copyrights_from_files)
     write_file(doc, args.type)
 
@@ -80,10 +83,12 @@ def create_document(token: str) -> Document:
     return document
 
 
-def create_package(package_name: str, licenses_dict: dict, id) -> package.Package:
+def create_package(package_name: str,
+                   licenses_dict: dict,
+                   p_id: int) -> package.Package:
     logging.debug(f"Creating SBOM Package section")
     pkg = package.Package(name=package_name,
-                          spdx_id=f"SPDXRef-PACKAGE-{id}",
+                          spdx_id=f"SPDXRef-PACKAGE-{p_id}",
                           download_location=extra_conf.get('package_location', NoAssert()))
     pkg.check_sum = Algorithm(identifier="SHA1", value=extra_conf.get('package_sha1', NoAssert()))
     pkg.license_declared = get_license_obj(extra_conf.get('package_license_identifier'), licenses_dict)
@@ -104,11 +109,33 @@ def get_license_obj(lic_id: str, licenses_dict: dict) -> License:
     return lic_obj
 
 
-def create_files(scope_token: str, licenses_dict):
+def create_files(scope_token: str,
+                 licenses_dict: dict) -> tuple:
+    # filter set to contain only a single of SPDXNone and NOASSERT
+    def filter_none_types(in_set):
+        out_set = set()
+        no_assert_in_set = False
+        spdx_none_int_set = False
+        for ent in in_set:
+            ent_is_no_assert = isinstance(ent, NoAssert)
+            ent_is_spdx_none = isinstance(ent, SPDXNone)
+
+            if not no_assert_in_set and ent_is_no_assert:
+                no_assert_in_set = True
+                out_set.add(ent)
+            elif not spdx_none_int_set and ent_is_spdx_none:
+                spdx_none_int_set = True
+                out_set.add(ent)
+            elif not ent_is_spdx_none and not ent_is_no_assert:
+                out_set.add(ent)
+
+        return out_set
+
     global ws_conn
     files = []
     all_licenses_from_files = set()
     all_copyright_from_files = set()
+    all_extracted_licenses_from_files = list()
     dd_list = ws_conn.get_due_diligence(token=scope_token)
     dd_dict = ws_utilities.convert_dict_list_to_dict(lst=dd_list, key_desc=('library', 'name'))
     libs = ws_conn.get_licenses(token=scope_token)
@@ -121,9 +148,11 @@ def create_files(scope_token: str, licenses_dict):
         spdx_file.comment = lib.get('description')
         spdx_file.type = set_file_type(lib['type'], lib['filename'])
 
-        file_licenses = handle_file_licenses(lib['licenses'], licenses_dict)
+        file_licenses, extracted_licenses = handle_file_licenses(lib['licenses'], licenses_dict)
         spdx_file.licenses_in_file = list(file_licenses)
+
         all_licenses_from_files.update(file_licenses)
+        all_extracted_licenses_from_files.extend(extracted_licenses)
 
         spdx_file.conc_lics = SPDXNone()
 
@@ -136,30 +165,46 @@ def create_files(scope_token: str, licenses_dict):
 
         files.append(spdx_file)
 
-    return files, all_licenses_from_files, all_copyright_from_files
+    all_licenses_from_files = filter_none_types(all_licenses_from_files)
+
+    return files, all_licenses_from_files, all_copyright_from_files, all_extracted_licenses_from_files
 
 
-def handle_file_licenses(licenses: list, licenses_dict: dict) -> set:
+def handle_file_licenses(licenses: list,
+                         licenses_dict: dict) -> tuple:
+    def create_ext_license(name):
+        ext_license = ExtractedLicense(identifier=name)
+        ext_license.full_name = name
+        ext_license.text = name
+
+        return ext_license
+
     found_lics = set()
+    extracted_licenses = list()
     for lic in licenses:
         fix_license(lic)                                                   # Manually fixing this license
         try:
-            license_full_name = licenses_dict[lic['spdxName']]
-            logging.debug(f"Found license: {license_full_name}")
-            spdx_license = License(full_name=license_full_name, identifier=lic['spdxName'])
+            spdx_license_dict = licenses_dict[lic['spdxName']]
+            logging.debug(f"Found license: {spdx_license_dict['licenseId']}")
+            spdx_license = License(full_name=spdx_license_dict['licenseId'], identifier=lic['spdxName'])
+            found_lics.add(spdx_license)
+            if spdx_license_dict['isDeprecatedLicenseId']:
+                logging.debug(f"License {lic['spdxName']} is deprecated")
+                extracted_licenses.append(create_ext_license(lic['spdxName']))
         except KeyError:
             logging.warning(f"License with identifier: {lic['name']} was not found")
-            spdx_license = License(full_name=lic['name'], identifier=lic['name'])
+            create_ext_license(lic['name'])
+            extracted_licenses.append(create_ext_license(lic['name']))
 
-        found_lics.add(spdx_license)
-
-    if not licenses:
+    if not found_lics:
         found_lics.add(NoAssert())
 
-    return found_lics
+    return found_lics, extracted_licenses
 
 
-def handle_file_copyright(licenses: list, lib: dict, dd_dict: dict) -> set:
+def handle_file_copyright(licenses: list,
+                          lib: dict,
+                          dd_dict: dict) -> set:
     found_copyrights = set()
 
     for lic in licenses:                                                    # Searching for copyright on licenses
@@ -182,19 +227,26 @@ def handle_file_copyright(licenses: list, lib: dict, dd_dict: dict) -> set:
 
 
 def fix_license(lic: dict):
-    if lic.get('name') == "Public Domain" and not lic.get('spdxName'):
-        logging.info(f"Fixing license: {lic['name']}")
-        lic['spdxName'] = "CC-PDDC"
+    if not lic.get('spdxName'):
+        if lic.get('name') == "Public Domain":
+            lic['spdxName'] = "CC-PDDC"
+        elif lic.get('name') == "AGPL":
+            lic['spdxName'] = "AGPL-1.0"
+
+        if lic.get('spdxName'):
+            logging.info(f"Fixed spdxName of {lic['name']} to {lic['spdxName']}")
+        else:
+            logging.warning(f"Unable to fix spdxName of {lic['name']}")
 
 
-def set_file_type(file_type: str, filename: str):                            # TODO ADDITIONAL TESTINGS
+def set_file_type(file_type: str, filename: str):
     if file_type == "Source Library" or file_type in SOURCE_SUFFICES:
         ret = file.FileType.SOURCE
         logging.debug(f"Type of file: {filename} is source file")
     elif filename.endswith(ARCHIVE_SUFFICES):
         logging.debug(f"Type of file: {filename} is archive")
         ret = file.FileType.ARCHIVE
-    elif False:                                                               # TODO SEE IF WE CAN DISCOVER BINARIES
+    elif filename.endswith(BIN_SUFFICES):
         logging.debug(f"Type of file: {filename} is binary")
         ret = file.FileType.BINARY
     else:
@@ -205,18 +257,20 @@ def set_file_type(file_type: str, filename: str):                            # T
 
 
 def write_file(doc: Document, type: str):
-                # Type: (suffix, module_name)
-    file_types = {"json": ("json", "spdx.writers.json"),
-                  "tv" : ("tv", "spdx.writers.tagvalue"),
-                  "rdf": ("xml", "spdx.writers.rdf"),
-                  "xml": ("xml", "spdx.writers.xml"),
-                  "yaml": ("yml", "spdx.writers.yaml")}
+                  # Type: (suffix, module_name, f_open_flags, encoding)
+    file_types = {"json": ("json", "spdx.writers.json", "w", None),
+                  "tv": ("tv", "spdx.writers.tagvalue", "w", "utf-8"),
+                  "rdf": ("xml", "spdx.writers.rdf", "wb", None),
+                  "xml": ("xml", "spdx.writers.xml", "wb", None),
+                  "yaml": ("yml", "spdx.writers.yaml", "wb", None)}
+
     report_file = f"{doc.name}-{doc.version}.{file_types[type][0]}"
     full_path = os.path.join(args.out_dir, report_file)
     import importlib
     module = importlib.import_module(file_types[type][1])           # Dynamically loading appropriate writer module
     logging.debug(f"Writing file: {full_path} in format: {type}")
-    with open(full_path, "w") as fp:
+
+    with open(full_path, file_types[type][2], encoding=file_types[type][3]) as fp:
         module.write_document(doc, fp)
 
 

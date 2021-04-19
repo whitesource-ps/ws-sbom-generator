@@ -28,6 +28,18 @@ jobs:
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --ignore=E501,F841
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Full test JSON
+        run: |
+          cd sbom-report
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }}
+      - name: Full test RDF
+        run: |
+          cd sbom-report
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }} -t rdf
+      - name: Full test TV (tag-value)
+        run: |
+          cd sbom-report
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }} -t tv
       - name: Zip release
         uses: papeloto/action-zip@v1
         with:
