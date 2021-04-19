@@ -2,8 +2,8 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
 [![GitHub release](https://img.shields.io/github/release/whitesource-ps/wss-template.svg)](https://github.com/whitesource-ps/wss-template/releases/latest)  
-# WhiteSource SBOM report
-CLI Tool to generate SBOM report on chosen scope.
+# WS SBOM Report Generator in SPDX format 
+CLI Tool to generate SBOM report on chosen scope in [SPDX format](https://spdx.org).
 * The tool can be executed on WS Product or Project.
 * The tool accepts additional values which are unknown to WS via `sbom_extra.json`.
 * If not stated, the tool will access SAAS.
