@@ -1,7 +1,7 @@
 ![Logo](https://whitesource-resources.s3.amazonaws.com/ws-sig-images/Whitesource_Logo_178x44.png)  
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
-[![GitHub release](https://img.shields.io/github/release/whitesource-ps/wss-template.svg)](https://github.com/whitesource-ps/wss-template/releases/latest)  
+[![GitHub release](https://img.shields.io/github/v/release/whitesource-ps/ws-sbom-report)](https://github.com/whitesource-ps/ws-sbom-report/releases/latest)
 # WhiteSource SBOM report
 CLI Tool to generate SBOM report on chosen scope.
 * The tool can be executed on WS Product or Project.
