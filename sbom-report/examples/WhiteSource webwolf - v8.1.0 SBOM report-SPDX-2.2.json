@@ -8,7 +8,7 @@
                 "Tool: White Source SBOM Report Generator",
                 "Person: person name (person@email.address)"
             ],
-            "created": "2021-04-14T08:55:41Z",
+            "created": "2021-04-19T08:57:39Z",
             "licenseListVersion": "3.6"
         },
         "dataLicense": "CC0-1.0",
@@ -25,22 +25,22 @@
                     },
                     "licenseConcluded": "NOASSERTION",
                     "licenseInfoFromFiles": [
-                        "MPL-1.1",
-                        "BSD-2-Clause",
-                        "MIT",
-                        "CDDL-1.0",
-                        "GPL-2.0-with-classpath-exception",
-                        "GPL-2.0",
-                        "CC0-1.0",
-                        "BSD-3-Clause",
                         "LGPL-2.1",
-                        "Apache-2.0",
                         "EPL-1.0",
+                        "BSD-3-Clause",
+                        "GPL-2.0-with-classpath-exception",
                         "CDDL-1.1",
-                        "EPL-2.0"
+                        "MPL-1.1",
+                        "GPL-2.0",
+                        "MIT",
+                        "EPL-2.0",
+                        "Apache-2.0",
+                        "BSD-2-Clause",
+                        "CC0-1.0",
+                        "CDDL-1.0"
                     ],
-                    "licenseDeclared": "GPL-2.0-with-classpath-exception",
-                    "copyrightText": "Apache 2.0 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2012-2018 Copyright 2012-2018 Oracle and/or its affiliates, Apache 2.0 - 2001-2016 Copyright 2001-2016 (C) MetaStuff, Ltd. and DOM4J contributors, REF - QOS.ch, Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - 2020 VMware Inc, REF - Copyright 2004-2017 Oracle </font>]]>, BSD 2 - Copyright Group, 1996-2019 Copyright 1996-2019 The PostgreSQL Global Development Group, 2003-2015 Copyright 2003-2015 PostgreSQL Global Development, 1997 Copyright 1997 PostgreSQL Global Development Group, REF - Unspecified Copyright, Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc, LGPL 2.1 - Unspecified Copyright, Apache 2.0 - 2020 Pivotal Software Inc, REF - Copyright 2019 Oracle and/or its affiliates, BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates, MIT - &url QOS.ch, MIT - None, REF - Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen, Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation, REF - Copyright 2019 Eclipse Foundation, Apache 2.0 - 2018 snakeyaml, Apache 2.0 - 2020 Red Hat Inc, Apache 2.0 - None, Apache 2.0 - 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)  -->, 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org), Eclipse 1.0 - &url Eclipse Foundation Inc, Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors, Apache 2.0 - 1999-2019 Copyright 1999-2019 The Apache Software Foundation, Apache 2.0 - 2014 Copyright 2014 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, REF - Copyright 2012-2018 Oracle and/or its affiliates, GPL 2.0 - None, Apache 2.0 - 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org), 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org)   -->, Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0, REF - Copyright 2012-2018 Oracle and, REF - Copyright 2007 Eclipse Foundation, Inc. and its licensors, REF - Copyright 1997-2018 Oracle and, LGPL 2.1 - 1991-1999 Copyright 1991-1999 Free Software Foundation, Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307, MIT - 2009-2015 Copyright 2009-2015 The Project Lombok Authors, BSD 3 - 2014 Terence Parr, REF - Copyright 1999 Shigeru Chiba, Apache 2.0 - 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, Apache 2.0 - 2011-2016 Copyright 2011-2016 The THYMELEAF team (http://www.thymeleaf.org), 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), GPL 2.0 Classpath - 2011 Copyright 2011 Oracle and/or its affiliates, 1989-1991 Copyright 1989-1991 Free Software Foundation, Inc, Apache 2.0 - 2001-2015 Copyright 2001-2015 The Apache Software Foundation, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2018 Copyright 2005-2018 Oracle and/or its affiliates, Apache 2.0 - Unspecified Copyright, REF - Copyright 2018-2019 Oracle and/or its affiliates, REF - Copyright 2013 Oracle and/or its affiliates, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates, Apache 2.0 - 2002-2017 Copyright 2002-2017 The Apache Software Foundation, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2013-2018 Copyright 2013-2018 Oracle and/or its affiliates, REF - Copyright 1997-2017 Oracle and/or its affiliates, Apache 2.0 - Copyright ${project.inceptionYear} - ${current.year} ${copyright.holder}, 2014-2019 Copyright 2014-2019 Rafael Winterhalter, Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), 2011-2014 Copyright 2011-2014 The THYMELEAF team (http://www.thymeleaf.org), REF - Copyright 2017-2018 Oracle and/or its affiliates, Apache 2.0 - &url Tatu Saloranta, CC0 - 2014 Gil Tene, REF - Copyright 1989-1991 Free Software Foundation, Inc, BSD 3 - 1995-2000 Copyright 1995-2000 by the Hypersonic SQL Group, 2001-2020 Copyright 2001-2020 The HSQL Development Group, Apache 2.0 - &url FasterXML, 2011 FasterXML LLC",
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "Apache 2.0 - None, REF - Copyright 1999 Shigeru Chiba, Apache 2.0 - 1999-2019 Copyright 1999-2019 The Apache Software Foundation, Apache 2.0 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2012-2018 Copyright 2012-2018 Oracle and/or its affiliates, Apache 2.0 - 2001-2015 Copyright 2001-2015 The Apache Software Foundation, REF - Copyright 2012-2018 Oracle and/or its affiliates, Apache 2.0 - 2020 Pivotal Software Inc, BSD 3 - 2014 Terence Parr, REF - Copyright 2017-2018 Oracle and/or its affiliates, REF - Copyright 2007 Eclipse Foundation, Inc. and its licensors, REF - Copyright 2004-2017 Oracle </font>]]>, REF - Copyright 2012-2018 Oracle and, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2013-2018 Copyright 2013-2018 Oracle and/or its affiliates, MIT - 2009-2015 Copyright 2009-2015 The Project Lombok Authors, Apache 2.0 - 2020 VMware Inc, Eclipse 1.0 - &url Eclipse Foundation Inc, MIT - None, REF - Copyright 1997-2018 Oracle and, Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0, Apache 2.0 - 2014 Copyright 2014 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, Apache 2.0 - 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org), 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org)   -->, REF - Copyright 1997-2017 Oracle and/or its affiliates, REF - Copyright 2019 Oracle and/or its affiliates, Apache 2.0 - Unspecified Copyright, REF - Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen, Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), 2011-2014 Copyright 2011-2014 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - &url Tatu Saloranta, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2018 Copyright 2005-2018 Oracle and/or its affiliates, Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - 2011-2016 Copyright 2011-2016 The THYMELEAF team (http://www.thymeleaf.org), 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - 2018 snakeyaml, GPL 2.0 - None, BSD 3 - 1995-2000 Copyright 1995-2000 by the Hypersonic SQL Group, 2001-2020 Copyright 2001-2020 The HSQL Development Group, CC0 - 2014 Gil Tene, BSD 2 - Copyright Group, 1996-2019 Copyright 1996-2019 The PostgreSQL Global Development Group, 2003-2015 Copyright 2003-2015 PostgreSQL Global Development, 1997 Copyright 1997 PostgreSQL Global Development Group, REF - QOS.ch, BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates, REF - Copyright 2018-2019 Oracle and/or its affiliates, Apache 2.0 - 2020 Red Hat Inc, Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation, Apache 2.0 - &url FasterXML, 2011 FasterXML LLC, Apache 2.0 - 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)  -->, 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org), Apache 2.0 - 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, MIT - &url QOS.ch, Apache 2.0 - Copyright ${project.inceptionYear} - ${current.year} ${copyright.holder}, 2014-2019 Copyright 2014-2019 Rafael Winterhalter, Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors, Apache 2.0 - 2002-2017 Copyright 2002-2017 The Apache Software Foundation, REF - Copyright 2013 Oracle and/or its affiliates, GPL 2.0 Classpath - 2011 Copyright 2011 Oracle and/or its affiliates, 1989-1991 Copyright 1989-1991 Free Software Foundation, Inc, REF - Copyright 1989-1991 Free Software Foundation, Inc, REF - Unspecified Copyright, REF - Copyright 2019 Eclipse Foundation, Apache 2.0 - 2001-2016 Copyright 2001-2016 (C) MetaStuff, Ltd. and DOM4J contributors, Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc, LGPL 2.1 - 1991-1999 Copyright 1991-1999 Free Software Foundation, Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307, LGPL 2.1 - Unspecified Copyright",
                     "checksums": [
                         {
                             "algorithm": "checksumAlgorithm_sha1",
@@ -193,8 +193,8 @@
                                 ],
                                 "licenseConcluded": "NONE",
                                 "licenseInfoFromFiles": [
-                                    "EPL-1.0",
-                                    "LGPL-2.1"
+                                    "LGPL-2.1",
+                                    "EPL-1.0"
                                 ],
                                 "copyrightText": "REF - QOS.ch",
                                 "sha1": "864344400c3d4d92dfeb0a305dc87d953677c03c",
@@ -216,8 +216,8 @@
                                 ],
                                 "licenseConcluded": "NONE",
                                 "licenseInfoFromFiles": [
-                                    "EPL-1.0",
-                                    "LGPL-2.1"
+                                    "LGPL-2.1",
+                                    "EPL-1.0"
                                 ],
                                 "copyrightText": "REF - QOS.ch",
                                 "sha1": "7c4f3c474fb2c041d8028740440937705ebb473a",
@@ -416,10 +416,10 @@
                                 ],
                                 "licenseConcluded": "NONE",
                                 "licenseInfoFromFiles": [
-                                    "CDDL-1.1",
-                                    "GPL-2.0-with-classpath-exception"
+                                    "GPL-2.0-with-classpath-exception",
+                                    "CDDL-1.1"
                                 ],
-                                "copyrightText": "REF - Copyright 2017-2018 Oracle and/or its affiliates, REF - Copyright 2004-2017 Oracle </font>]]>",
+                                "copyrightText": "REF - Copyright 2004-2017 Oracle </font>]]>, REF - Copyright 2017-2018 Oracle and/or its affiliates",
                                 "sha1": "8531ad5ac454cc2deb9d4d32c40c4d7451939b5d",
                                 "comment": "JAXB (JSR 222) API",
                                 "fileTypes": [
@@ -440,8 +440,8 @@
                                 "licenseConcluded": "NONE",
                                 "licenseInfoFromFiles": [
                                     "Apache-2.0",
-                                    "MPL-1.1",
-                                    "LGPL-2.1"
+                                    "LGPL-2.1",
+                                    "MPL-1.1"
                                 ],
                                 "copyrightText": "REF - Copyright 1999 Shigeru Chiba, REF - Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen",
                                 "sha1": "d7466fc2e3af7c023e95c510f06448ad29b225b3",
@@ -927,8 +927,8 @@
                                 ],
                                 "licenseConcluded": "NONE",
                                 "licenseInfoFromFiles": [
-                                    "EPL-2.0",
-                                    "GPL-2.0-with-classpath-exception"
+                                    "GPL-2.0-with-classpath-exception",
+                                    "EPL-2.0"
                                 ],
                                 "copyrightText": "REF - Copyright 2012-2018 Oracle and",
                                 "sha1": "c4179d48720a1e87202115fbed6089bdc4195405",
@@ -953,7 +953,7 @@
                                     "BSD-3-Clause",
                                     "EPL-2.0"
                                 ],
-                                "copyrightText": "REF - Copyright 2018-2019 Oracle and/or its affiliates, REF - Copyright 2007 Eclipse Foundation, Inc. and its licensors, REF - Copyright 2019 Oracle and/or its affiliates, REF - Copyright 2019 Eclipse Foundation",
+                                "copyrightText": "REF - Copyright 2019 Oracle and/or its affiliates, REF - Copyright 2019 Eclipse Foundation, REF - Copyright 2007 Eclipse Foundation, Inc. and its licensors, REF - Copyright 2018-2019 Oracle and/or its affiliates",
                                 "sha1": "8f6ea5daedc614f07a3654a455660145286f024e",
                                 "comment": "Eclipse Enterprise for Java (EE4J) is an open source initiative to create standard APIs,\n        implementations of those APIs, and technology compatibility kits for Java runtimes\n        that enable development, deployment, and management of server-side and cloud-native applications.",
                                 "fileTypes": [
@@ -973,10 +973,10 @@
                                 ],
                                 "licenseConcluded": "NONE",
                                 "licenseInfoFromFiles": [
-                                    "EPL-2.0",
-                                    "GPL-2.0-with-classpath-exception"
+                                    "GPL-2.0-with-classpath-exception",
+                                    "EPL-2.0"
                                 ],
-                                "copyrightText": "REF - Copyright 2012-2018 Oracle and/or its affiliates, REF - Copyright 2019 Eclipse Foundation",
+                                "copyrightText": "REF - Copyright 2019 Eclipse Foundation, REF - Copyright 2012-2018 Oracle and/or its affiliates",
                                 "sha1": "59eb84ee0d616332ff44aba065f3888cf002cd2d",
                                 "comment": "Jakarta Annotations API",
                                 "fileTypes": [
@@ -1018,8 +1018,8 @@
                                 ],
                                 "licenseConcluded": "NONE",
                                 "licenseInfoFromFiles": [
-                                    "EPL-2.0",
-                                    "GPL-2.0-with-classpath-exception"
+                                    "GPL-2.0-with-classpath-exception",
+                                    "EPL-2.0"
                                 ],
                                 "copyrightText": "REF - Copyright 1997-2018 Oracle and",
                                 "sha1": "7c810f7bca93d109bac3323286b8e5ec6c394e12",
@@ -1041,8 +1041,8 @@
                                 ],
                                 "licenseConcluded": "NONE",
                                 "licenseInfoFromFiles": [
-                                    "EPL-2.0",
-                                    "GPL-2.0-with-classpath-exception"
+                                    "GPL-2.0-with-classpath-exception",
+                                    "EPL-2.0"
                                 ],
                                 "copyrightText": "REF - Copyright 1997-2018 Oracle and, REF - Copyright 2013 Oracle and/or its affiliates",
                                 "sha1": "dab46ee1ee23f7197c13d7c40fce14817c9017df",
@@ -2220,6 +2220,78 @@
                         }
                     ]
                 }
+            }
+        ],
+        "extractedLicenseInfos": [
+            {
+                "licenseId": "LGPL-2.1",
+                "extractedText": "LGPL-2.1",
+                "name": "LGPL-2.1"
+            },
+            {
+                "licenseId": "LGPL-2.1",
+                "extractedText": "LGPL-2.1",
+                "name": "LGPL-2.1"
+            },
+            {
+                "licenseId": "GPL-2.0-with-classpath-exception",
+                "extractedText": "GPL-2.0-with-classpath-exception",
+                "name": "GPL-2.0-with-classpath-exception"
+            },
+            {
+                "licenseId": "GPL-2.0-with-classpath-exception",
+                "extractedText": "GPL-2.0-with-classpath-exception",
+                "name": "GPL-2.0-with-classpath-exception"
+            },
+            {
+                "licenseId": "GPL-2.0-with-classpath-exception",
+                "extractedText": "GPL-2.0-with-classpath-exception",
+                "name": "GPL-2.0-with-classpath-exception"
+            },
+            {
+                "licenseId": "LGPL-2.1",
+                "extractedText": "LGPL-2.1",
+                "name": "LGPL-2.1"
+            },
+            {
+                "licenseId": "LGPL-2.1",
+                "extractedText": "LGPL-2.1",
+                "name": "LGPL-2.1"
+            },
+            {
+                "licenseId": "GPL-2.0",
+                "extractedText": "GPL-2.0",
+                "name": "GPL-2.0"
+            },
+            {
+                "licenseId": "GPL-2.0-with-classpath-exception",
+                "extractedText": "GPL-2.0-with-classpath-exception",
+                "name": "GPL-2.0-with-classpath-exception"
+            },
+            {
+                "licenseId": "GPL-2.0-with-classpath-exception",
+                "extractedText": "GPL-2.0-with-classpath-exception",
+                "name": "GPL-2.0-with-classpath-exception"
+            },
+            {
+                "licenseId": "GPL-2.0-with-classpath-exception",
+                "extractedText": "GPL-2.0-with-classpath-exception",
+                "name": "GPL-2.0-with-classpath-exception"
+            },
+            {
+                "licenseId": "GPL-2.0-with-classpath-exception",
+                "extractedText": "GPL-2.0-with-classpath-exception",
+                "name": "GPL-2.0-with-classpath-exception"
+            },
+            {
+                "licenseId": "LGPL-2.1",
+                "extractedText": "LGPL-2.1",
+                "name": "LGPL-2.1"
+            },
+            {
+                "licenseId": "GPL-2.0",
+                "extractedText": "GPL-2.0",
+                "name": "GPL-2.0"
             }
         ]
     }
