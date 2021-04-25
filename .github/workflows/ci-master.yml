@@ -1,0 +1,59 @@
+name: WS SBOM report generator - Master
+on:
+  push:
+    branches:
+      - 'master'
+    tags:
+      - '*'
+  schedule:
+    - cron: '0 4 * * 6'
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: UnicornGlobal/trufflehog-actions-scan@master
+        with:
+          branch: ${{ github.head_ref }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+          pip install -r requirements.txt
+      - name: Lint with flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --ignore=E501,F841
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Full test JSON
+        run: |
+          cd sbom-report
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }}
+      - name: Full test RDF
+        run: |
+          cd sbom-report
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }} -t rdf
+      - name: Full test TV (tag-value)
+        run: |
+          cd sbom-report
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }} -t tv
+      - name: Zip release
+        uses: papeloto/action-zip@v1
+        with:
+          files: requirements.txt LICENSE README.md CLA.md sbom-report/
+          dest: ws-sbom-report.zip
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
+          artifacts: "*.zip"
