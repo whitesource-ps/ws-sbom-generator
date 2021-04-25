@@ -72,7 +72,7 @@ def create_document(token: str) -> Document:
 
     logging.debug(f"Creating SBOM Creation Info section")
     document.creation_info.set_created_now()
-    org = creationinfo.Organization(ws_conn.get_organization_name(), extra_conf.get('org_email'))
+    org = creationinfo.Organization(ws_conn.get_name(), extra_conf.get('org_email'))
     tool = creationinfo.Tool("White Source SBOM Report Generator")
     person = creationinfo.Person(extra_conf.get('person'), extra_conf.get('person_email'))
     document.creation_info.add_creator(org)

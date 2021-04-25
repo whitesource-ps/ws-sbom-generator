@@ -1,7 +1,12 @@
-name: WS Python SDK Build and Publish
+name: WS SBOM report generator - Master
 on:
   push:
-
+    branches:
+      - 'master'
+    tags:
+      - '*'
+  schedule:
+    - cron: '0 4 * * 6'
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
