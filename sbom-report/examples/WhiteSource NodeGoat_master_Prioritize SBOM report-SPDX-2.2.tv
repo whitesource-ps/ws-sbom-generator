@@ -1,0 +1,4475 @@
+# Document Information
+
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+DocumentName: WhiteSource NodeGoat_master_Prioritize SBOM report
+SPDXID: SPDXRef-DOCUMENT
+DocumentNamespace: http://CreatorWebsite/pathToSpdx/DocumentName-UUID
+
+
+# Creation Info
+
+Creator: Organization: Sam Bush (org@email.address)
+Creator: Tool: White Source SBOM Report Generator
+Creator: Person: person name (person@email.address)
+Created: 2021-04-19T10:25:57Z
+
+
+# Package
+
+PackageName: NodeGoat_master_Prioritize
+SPDXID: SPDXRef-PACKAGE-1
+PackageDownloadLocation: http://package/location
+PackageChecksum: SHA1: 
+PackageVerificationCode: bd9a4971e23cf5d9ec1b93dac5b6e93f376989fe
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseInfoFromFiles: NOASSERTION
+PackageLicenseInfoFromFiles: AGPL-1.0
+PackageLicenseInfoFromFiles: AGPL-3.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageLicenseInfoFromFiles: CC-PDDC
+PackageLicenseInfoFromFiles: CC0-1.0
+PackageLicenseInfoFromFiles: ISC
+PackageLicenseInfoFromFiles: MIT
+PackageLicenseInfoFromFiles: X11
+PackageCopyrightText: <text>BSD 3 - 2014 Copyright 2014 Nathan LaFreniere and other contributors, MIT - 2012 Copyright 2012 TJ Holowaychuk, 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson, Unspecified License - None, MIT - 2011 Copyright 2011 TJ Holowaychuk <tj@vision-media.ca>, 2010 Copyright 2010 Sencha Inc, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2014 Copyright 2014 Nathan Rajlich "nathan@tootallnate.net" (mailto:nathan@tootallnate.net), 2014 Copyright 2014 Nathan Rajlich <nathan@tootallnate.net>, MIT - 2013 Copyright 2013 Jonathan Ong <me@jongleberry.com>, 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert, MIT - 2010-2014 Copyright 2010-2014 Caolan McMahon, MIT - 2013 Copyright 2013 Jordan Harband, MIT X11 - Unspecified Copyright, MIT - 2014-2018 Copyright 2014-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2014-2018 Copyright 2014-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert), Apache 2.0 - None, MIT - 2014-2015 Copyright 2014-2015 2016, 2017 Simon Lydell, MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert), 2015-2018 Copyright 2015-2018 Jon Schlinkert, MIT - 2013 Copyright 2013 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>, 2013 Copyright 2013 Jared Hanson <"http://jaredhanson.net/" (http://jaredhanson.net/)>, 2013 Copyright 2013 Jared Hanson, MIT - 2011-2013 Copyright 2011-2013 John-David Dalton <http://allyoucanleet.com/>, 2014-2016 Copyright 2014-2016 Benjamin Tan <https://d10.github.io/>, MIT - 2013-2018 Copyright 2013-2018 Petka Antonov, 2013-2017 Copyright 2013-2017 Petka Antonov, MIT - 2013 Copyright 2013 Jonathan Ong <me@jongleberry.com>, 2014 Copyright 2014 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2014-2017 Copyright 2014-2017 Angelos Pikoulas (agelos.pikoulas@gmail.com), MIT - Copyright Sam Verschueren <sam.verschueren@gmail.com> (github.com/SamVerschueren), MIT - 2010 Copyright 2010 Benjamin Thomas, Robert Kieffer, REF - Copyright 2007 The OWASP Foundation, MIT - 2013 Copyright 2013 Thiago de Arruda, MIT - 2016-2018 Copyright 2016-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert), MIT - 2014 Copyright 2014 Alex Gorbatchev, MIT - 2012-2015 Copyright 2012-2015 Thorsten Lorenz, MIT - 2010 Copyright 2010 Charlie Robbins, MIT - 2015 Copyright 2015 Andreas Lubbe, 2015 Copyright 2015 Tiancheng "Timothy" Gu, 2012-2013 Copyright 2012-2013 TJ Holowaychuk, MIT - 2010 Copyright 2010 Caolan McMahon, 2010-2014 Copyright 2010-2014 Caolan McMahon, MIT - Copyright Marak Squires, Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com), MIT - 2015-2016 Copyright 2015-2016 Douglas Christopher Wilson <doug@somethingdoug.com>, 2013-2014 Copyright 2013-2014 TJ Holowaychuk <tj@vision-media.ca>, MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, MIT - 2016 Copyright 2016 Douglas Christopher Wilson, MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2015-2017 Copyright 2015-2017 Douglas Christopher Wilson <doug@somethingdoug.com>, BSD 2 - Copyright 2012-2013 (c) Mihai Bazon <mihai.bazon@gmail.com>, MIT - 2014 Copyright 2014 Jordan Harband, MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert), MIT - 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson, MIT - 2013 Copyright 2013 Forbes Lindesay, MIT - 2014 Copyright 2014 Component contributors <dev@component.io>, MIT - 2011-2014 Copyright 2011-2014 Christopher Jeffrey, 2011-2014 Copyright 2011-2014 Christopher Jeffrey (https://github.com/chjj/), MIT - 2009-2012 Copyright 2009-2012 Jeremy Ashkenas, DocumentCloud, MIT - 2014-2015 Copyright 2014-2015 Jon Schlinkert, 2015 Copyright 2015 Jon Schlinkert, MIT - 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2012-2014 Copyright 2012-2014 Isaac Z, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson, 2012-2014 Copyright 2012-2014 Federico Romero, MIT - 2012-2016 Copyright 2012-2016 Evan Hahn, Adam Baldwin, ISC - Copyright Isaac Z, MIT - 2013 Copyright 2013 Simon Lydell, MIT - 2009-2018 Copyright 2009-2018 Jeremy Ashkenas, DocumentCloud and Investigative, MIT - 2017 Copyright 2017 Khaled Al-Ansari, MIT - 2015 Copyright 2015 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert, 2015 Copyright 2015 [Jon Schlinkert](https://github.com/jonschlinkert), MIT - 2011 Copyright 2011 Charlie Robbins and the Contributors, MIT - 2010 Copyright 2010 Sencha Inc, 2011 Copyright 2011 LearnBoost, 2011 Copyright 2011 TJ Holowaychuk, 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson, MIT - &url James Halliday, REF - Copyright 2011-2016 The Dojo Foundation, MIT - 2010 Copyright 2010 Sencha Inc, 2011 Copyright 2011 LearnBoost, 2014-2017 Copyright 2014-2017 Douglas Christopher Wilson, 2011 Copyright 2011 TJ Holowaychuk, MIT - 2012-2013 Copyright 2012-2013 2014 James Halliday <mail@substack.net>, 2009 Thomas Robinson <280north.com>, REF - Copyright 1999-2000 s FirstThe OpenNMS Project was started in July of, MIT - 2016 Copyright 2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert), MIT - 2016 Copyright 2016 Jordan Harband, MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert), 2016-2017 Copyright 2016-2017 Jon Schlinkert, MIT - 2019 Copyright 2019 Inspect JS, ISC - 2015 Copyright 2015 Elan Shanker, MIT - 2011 Copyright 2011 by fent, 2011 Copyright 2011 by Roly Fentanes, MIT - 2015 Copyright 2015 Douglas Christopher Wilson, MIT - Copyright James Halliday, MIT - 2013-2014 Copyright 2013-2014 Roman Shtylman <shtylman+expressjs@gmail.com>, 2009-2014 Copyright 2009-2014 TJ Holowaychuk <tj@vision-media.ca>, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2011 Copyright 2011 by Charlie McConnell, CC0 - None, MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2016 Copyright 2016 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2011 Copyright 2011 hij1nx "http://www.twitter.com/hij1nx" (http://www.twitter.com/hij1nx), BSD 2 - 2012 Copyright 2012 Nevins Bartolomeo <nevins.bartolomeo@gmail.com>, 2012 Copyright 2012 Shane Girish <shaneGirish@gmail.com>, ISC - 2015 Copyright 2015 Contributors, MIT - 2011-2015 Copyright 2011-2015 Paul Vorbach <paul@vorba.ch>, 2011-2016 Copyright 2011-2016 "Paul Vorbach" (https://paul.vorba.ch/) and, MIT - 2013 Copyright 2013 Julian Gruber &lt;julian@juliangruber.com&gt;, 2013 Copyright 2013 Julian Gruber <julian@juliangruber.com>, MIT - 2014 Copyright 2014 Douglas Christopher Wilson, MIT - 2014-2015 Copyright 2014-2015 2017, Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2009 Copyright 2009 cloudhead, ISC - None, Apache 2.0 - Unspecified Copyright, ISC - 2014 Copyright 2014 Elan Shanker, MIT - 2012-2014 Copyright 2012-2014 Roman Shtylman <shtylman@gmail.com>, 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2017 Jonathan Ong & Douglas Christopher Wilson , MIT - Copyright 2010 James Halliday (mail@substack.net), MIT - 2009-2016 Copyright 2009-2016 Jeremy Ashkenas,, Copyright jQuery Foundation and other contributors <https://jquery.org/>, 2012-2016 Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>, MIT - 2016 Copyright 2016 [Jon Schlinkert](http://github.com/jonschlinkert), 2014-2015 Copyright 2014-2015 Jon Schlinkert, 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 "Jon Schlinkert" (http://github.com/jonschlinkert), MIT - 2011 Copyright 2011 Rafael de Oleza <rafeca@gmail.com>, MIT - 2011 Copyright 2011 Nodejitsu Inc, MIT - 2011-2017 Copyright 2011-2017 whitequark <whitequark@whitequark.org>, REF - Copyright 2014 The OpenNMS Group, Inc, MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert), MIT - 2014-2015 Copyright 2014-2015 Evan Hahn, Adam Baldwin, MIT - 2020 Copyright 2020 Inspect JS, MIT - 2012-2014 Copyright 2012-2014 TJ Holowaychuk <tj@vision-media.ca>, 2015-2016 Copyright 2015-2016 Douglas Christopher Wilson <doug@somethingdoug.com, MIT - 2013-2017 Copyright 2013-2017 Jared Hanson <"http://jaredhanson.net/" (http://jaredhanson.net/)>, 2013-2017 Copyright 2013-2017 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>, 2013-2017 Copyright 2013-2017 Jared Hanson, MIT - 2010 Copyright 2010 Caolan McMahon, MIT - 2014 Copyright 2014 Jon Schlinkert, MIT - 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT X11 - 2010 Copyright 2010 James Halliday (mail@substack.net), ISC - Unspecified Copyright, Public Domain - Unspecified Copyright, MIT - 2014 Copyright 2014 Guillermo Rauch <rauchg@gmail.com>, MIT - 2015-2016 Copyright 2015-2016 Evan Hahn, Adam Baldwin, MIT - 2015 Copyright 2015 Evan Hahn, MIT - 2010 Copyright 2010 Charlie Robbins & the Contributors, 2009 Copyright 2009 Charlie Robbins, MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com), MIT - 2016 Copyright 2016 Evan Hahn, MIT - 2015 Copyright 2015 Calvin Metcalf, MIT - 2011 Copyright 2011 Dominic Tarr, MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert, MIT - 2014-2016 Copyright 2014-2016 Evan Hahn, Adam Baldwin, MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - Unspecified Copyright, MIT - 2015 Copyright 2015 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert, MIT - 2010 Copyright 2010 Nodejitsu Inc, MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2013 Copyright 2013 Manuel Stofer, MIT - Copyright 2016, MIT - 2014 Copyright 2014 Jonathan Ong me@jongleberry.com, 2016 Copyright 2016 Douglas Christopher Wilson doug@somethingdoug.com, MIT - 2016 Copyright 2016 Zeit, Inc, MIT - 2018 Copyright 2018 Nikita Skovoroda <chalkerx@gmail.com>, MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2018 Copyright 2015-2018 Jon Schlinkert, MIT - 2015 Copyright 2015 Jordan Harband, MIT - 2011-2016 Copyright 2011-2016 TJ Holowaychuk <tj@vision-media.ca>, MIT - 2014 Copyright 2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt;, 2014 Copyright 2014 TJ Holowaychuk <tj@vision-media.ca>, BSD 3 - 2009-2011 Copyright 2009-2011 Mozilla Foundation and contributors, MIT - 2012 Copyright 2012 LearnBoost <tj@learnboost.com>, Apache 2.0 - 2009-2010 Copyright 2009-2010 Alexis Sellier, Charlie Robbins, Nodejitsu Inc, Public Domain - None, Suspected MIT - None, MIT - 2016-2017 Copyright 2016-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), REF - Copyright 2009-2011 Mozilla Foundation and contributors, MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert, MIT - 2016 Copyright 2016 Calvin Metcalf, MIT - None, MIT - 2010 Copyright 2010 Sencha Inc, 2011 Copyright 2011 LearnBoost, 2011-2014 Copyright 2011-2014 TJ Holowaychuk, 2015 Copyright 2015 Douglas Christopher Wilson, MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2015-2016 Copyright 2015-2016 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2014 Copyright 2014 Simon Lydell, MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson <doug@somethingdoug.com>, 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2015 Copyright 2014-2015 2017, Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), Suspected Unspecified License - Unspecified Copyright, MIT - 2014 Copyright 2014 Jonathan Ong me@jongleberry.com, MIT - 2011 Copyright 2011 Felix Geisendörfer (felix@debuggable.com), MIT - 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com>, 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, MIT - 2014-2017 Copyright 2014-2017 Douglas Christopher Wilson, MIT - 2013-2014 Copyright 2013-2014 Jonathan Ong <me@jongleberry.com>, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2013 Copyright 2013 James Halliday, MIT - 2012-2019 Copyright 2012-2019 Paul Miller (https://paulmillr.com) & Elan Shanker, MIT - 2014-2017 Copyright 2014-2017 Douglas Christopher Wilson <doug@somethingdoug.com>, Unspecified License - Unspecified Copyright, MIT - 2016 Copyright 2016 Jon Schlinkert, MIT - 2014-2016 Copyright 2014-2016 Jon Schlinkert, MIT - 2016-2017 Copyright 2016-2017 Douglas Christopher Wilson <doug@somethingdoug.com>, 2012 Copyright 2012 TJ Holowaychuk <tj@vision-media.ca>, REF - Copyright 1999-2015 The OpenNMS Group, Inc, MIT - 2017 Copyright 2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2014 Copyright 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors, REF - Copyright 2014 Karl Düüna, MIT - Copyright Fork, Ltd, Apache 2.0 - 2015 Copyright 2015 AJ ONeal, 2012-2018 Copyright 2012-2018 AJ ONeal, MIT - 2019 Copyright 2019 Jordan Harband, MIT - 2013 Copyright 2013 Julian Gruber <julian@juliangruber.com>, MIT - Copyright Elan Shanker and Node.js contributors, MIT - 2012 Jeremy Ashkenas, DocumentCloud, MIT - 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2019 Copyright 2019 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2016 Copyright 2016 Douglas Christopher Wilson <doug@somethingdoug.com>, MIT - 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson, MIT - 2011 Copyright 2011 Charlie Robbins & the Contributors, MIT - 2010-2013 Copyright 2010-2013 Paul Armstrong, MIT X11 - Copyright 2010 James Halliday (mail@substack.net), MIT - 2015 Copyright 2015 Jon Schlinkert, MIT - Copyright 2010, MIT - 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert, 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert), MIT - 2015-2017 Copyright 2015-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2018 Copyright 2018 Jordan Harband, MIT - Copyright Node.js contributors, MIT - 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert, MIT - Copyright Feross Aboukhadijeh, Apache 2.0 - 2016 Copyright 2016 NAN contributors, MIT - 2014-2016 Copyright 2014-2016 TJ Holowaychuk &lt;tj@vision-media.ca&gt;, 2014-2016 Copyright 2014-2016 TJ Holowaychuk <tj@vision, 2014 Copyright 2014 TJ Holowaychuk <tj@vision-media.ca>, MIT - 2014 Copyright 2014 Blake Embrey (hello@blakeembrey.com), MIT - 2011 Copyright 2011 Alexander Shtuchkin, MIT - 2016 Copyright 2016 Paul Miller "(paulmillr.com)" (http://paulmillr.com), MIT - 2010 Copyright 2010 Charlie Robbins & the Contributors, ISC - 2015 Copyright 2015 Wes Todd, MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), MIT - 2013 Copyright 2013 Raynos, MIT - 2011 Copyright 2011 Charlie Robbins, Paolo Fragomeni, & the Contributors, ISC - 2017 Tomas Sardyha, Node.js - Copyright Node.js contributors, MIT - 2014-2015 Copyright 2014-2015 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2015 Copyright 2014-2015 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert, MIT - 2012-2014 Copyright 2012-2014 TJ Holowaychuk <tj@vision-media.ca>, 2015 Copyright 2015 Jed Watson <jed.watson@me.com>, MIT - 2015 Copyright 2015 Rod Vagg, 2015 Copyright 2015 Rod Vagg [@rvagg](https://twitter.com/rvagg) and licenced under the MIT licence, 2015 Copyright 2015 Rod Vagg "@rvagg" (https://twitter.com/rvagg) and licenced under the MIT licence, MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2015 Copyright 2015 Jon Schlinkert</text>
+
+
+# File
+
+FileName: accepts-1.3.5.tgz
+SPDXID: SPDXRef-FILE-277
+FileType: ARCHIVE
+FileChecksum: SHA1: eb777df6011723a3b14e8a72c0805c8e86746bd2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com>, 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com></text>
+FileComment: <text>Higher-level content negotiation</text>
+
+
+# File
+
+FileName: amdefine-1.0.1.tgz
+SPDXID: SPDXRef-FILE-161
+FileType: ARCHIVE
+FileChecksum: SHA1: 4a5282ac164729e93619bcfd3ad151f817ce91f5
+LicenseConcluded: NONE
+LicenseInfoInFile: BSD-3-Clause
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>REF - Copyright 2011-2016 The Dojo Foundation</text>
+FileComment: <text>Provide AMD's define() API for declaring modules in the AMD format</text>
+
+
+# File
+
+FileName: ansi-regex-2.1.1.tgz
+SPDXID: SPDXRef-FILE-174
+FileType: ARCHIVE
+FileChecksum: SHA1: c3b33ab5ee360d86e0e628f0468ae7ef27d654df
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Regular expression for matching ANSI escape codes</text>
+
+
+# File
+
+FileName: anymatch-2.0.0.tgz
+SPDXID: SPDXRef-FILE-261
+FileType: ARCHIVE
+FileChecksum: SHA1: bcb24b4f37934d9aa7ac17b4adaf89e7c76ef2eb
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - 2014 Copyright 2014 Elan Shanker</text>
+FileComment: <text>Matches strings against configurable strings, globs, regular expressions, and/or functions</text>
+
+
+# File
+
+FileName: arr-diff-4.0.0.tgz
+SPDXID: SPDXRef-FILE-217
+FileType: ARCHIVE
+FileChecksum: SHA1: d6461074febfec71e7e15235761a329a5dc7c520
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns an array with only the unique values from the first array, by excluding all values from additional arrays using strict equality for comparisons.</text>
+
+
+# File
+
+FileName: arr-flatten-1.1.0.tgz
+SPDXID: SPDXRef-FILE-194
+FileType: ARCHIVE
+FileChecksum: SHA1: 36048bbff4e7b47e136644316c99669ea5ae91f1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Recursively flatten an array or arrays.</text>
+
+
+# File
+
+FileName: arr-union-3.1.0.tgz
+SPDXID: SPDXRef-FILE-140
+FileType: ARCHIVE
+FileChecksum: SHA1: e39b09aea9def866a8f206e288af63919bae39c4
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Combines a list of arrays, returning a single array with unique values, using strict equality for comparisons.</text>
+
+
+# File
+
+FileName: array-filter-1.0.0.tgz
+SPDXID: SPDXRef-FILE-183
+FileType: ARCHIVE
+FileChecksum: SHA1: baf79e62e6ef4c2a4c0b831232daffec251f9d83
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Julian Gruber &lt;julian@juliangruber.com&gt;, 2013 Copyright 2013 Julian Gruber <julian@juliangruber.com></text>
+FileComment: <text>Array#filter for older browsers.</text>
+
+
+# File
+
+FileName: array-flatten-1.1.1.tgz
+SPDXID: SPDXRef-FILE-88
+FileType: ARCHIVE
+FileChecksum: SHA1: 9a5f699051b1e7073328f2a008968b64ea2955d2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Blake Embrey (hello@blakeembrey.com)</text>
+FileComment: <text>Flatten an array of nested arrays into a single flat array</text>
+
+
+# File
+
+FileName: array-unique-0.3.2.tgz
+SPDXID: SPDXRef-FILE-216
+FileType: ARCHIVE
+FileChecksum: SHA1: a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Remove duplicate values from an array. Fastest ES5 implementation.</text>
+
+
+# File
+
+FileName: assign-symbols-1.0.0.tgz
+SPDXID: SPDXRef-FILE-254
+FileType: ARCHIVE
+FileChecksum: SHA1: 59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Assign the enumerable es6 Symbol properties from an object (or objects) to the first object passed on the arguments. Can be used as a supplement to other extend, assign or merge methods as a polyfill for the Symbols part of the es6 Object.assign method.</text>
+
+
+# File
+
+FileName: async-0.2.10.tgz
+SPDXID: SPDXRef-FILE-14
+FileType: ARCHIVE
+FileChecksum: SHA1: b6bbe0b0674b9d719708ca38de8c237cb526c3d1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Caolan McMahon</text>
+FileComment: <text>Higher-order functions and common patterns for asynchronous code</text>
+
+
+# File
+
+FileName: async-0.2.9.tgz
+SPDXID: SPDXRef-FILE-65
+FileType: ARCHIVE
+FileChecksum: SHA1: df63060fbf3d33286a76aaf6d55a2986d9ff8619
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Caolan McMahon</text>
+FileComment: <text>Higher-order functions and common patterns for asynchronous code</text>
+
+
+# File
+
+FileName: async-0.9.2.tgz
+SPDXID: SPDXRef-FILE-92
+FileType: ARCHIVE
+FileChecksum: SHA1: aea74d5e61c1f899613bf64bda66d4c78f2fd17d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010-2014 Copyright 2010-2014 Caolan McMahon</text>
+FileComment: <text>Higher-order functions and common patterns for asynchronous code</text>
+
+
+# File
+
+FileName: async-1.5.2.tgz
+SPDXID: SPDXRef-FILE-98
+FileType: ARCHIVE
+FileChecksum: SHA1: ec6a61ae56480c0c3cb241c95618e20892f9672a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Caolan McMahon, 2010-2014 Copyright 2010-2014 Caolan McMahon</text>
+FileComment: <text>Higher-order functions and common patterns for asynchronous code</text>
+
+
+# File
+
+FileName: async-each-1.0.3.tgz
+SPDXID: SPDXRef-FILE-327
+FileType: ARCHIVE
+FileChecksum: SHA1: b727dbf87d7651602f06f4d4ac387f47d91b0cbf
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Paul Miller "(paulmillr.com)" (http://paulmillr.com)</text>
+FileComment: <text>No-bullshit, ultra-simple, 35-lines-of-code async parallel forEach / map function for JavaScript.</text>
+
+
+# File
+
+FileName: atob-2.1.2.tgz
+SPDXID: SPDXRef-FILE-306
+FileType: ARCHIVE
+FileChecksum: SHA1: 6d9517eb9e030d2436666651e86bd9f6f13533c9
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2015 Copyright 2015 AJ ONeal, 2012-2018 Copyright 2012-2018 AJ ONeal</text>
+FileComment: <text>atob for Node.JS and Linux / Mac / Windows CLI (it's a one-liner)</text>
+
+
+# File
+
+FileName: attributes_test.zip
+SPDXID: SPDXRef-FILE-6
+FileType: ARCHIVE
+FileChecksum: SHA1: 661a8cf1cc06593fc85d6248ad2a242a8f4602f8
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Unspecified Copyright</text>
+
+
+# File
+
+FileName: available-typed-arrays-1.0.2.tgz
+SPDXID: SPDXRef-FILE-362
+FileType: ARCHIVE
+FileChecksum: SHA1: 6b098ca9d8039079ee3f77f7b783c4480ba513f5
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2020 Copyright 2020 Inspect JS</text>
+FileComment: <text>Returns an array of Typed Array names that are available in the current environment</text>
+
+
+# File
+
+FileName: balanced-match-1.0.0.tgz
+SPDXID: SPDXRef-FILE-195
+FileType: ARCHIVE
+FileChecksum: SHA1: 89b4d199ab2bee49de164ea02b89ce462d71b767
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Julian Gruber <julian@juliangruber.com></text>
+FileComment: <text>Match balanced character pairs, like "{" and "}"</text>
+
+
+# File
+
+FileName: base-0.11.2.tgz
+SPDXID: SPDXRef-FILE-235
+FileType: ARCHIVE
+FileChecksum: SHA1: 7bde5ced145b6d551a90db87f83c558b4eb48a8f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2017 Copyright 2015-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>base is the foundation for creating modular, unit testable and highly pluggable node.js applications, starting with a handful of common methods, like `set`, `get`, `del` and `use`.</text>
+
+
+# File
+
+FileName: bcrypt-nodejs-0.0.3.tgz
+SPDXID: SPDXRef-FILE-109
+FileType: ARCHIVE
+FileChecksum: SHA1: c60917f26dc235661566c681061c303c2b28842b
+LicenseConcluded: NONE
+LicenseInfoInFile: BSD-2-Clause
+FileCopyrightText: <text>BSD 2 - 2012 Copyright 2012 Nevins Bartolomeo <nevins.bartolomeo@gmail.com>, 2012 Copyright 2012 Shane Girish <shaneGirish@gmail.com></text>
+FileComment: <text>A native JS bcrypt library for NodeJS.</text>
+
+
+# File
+
+FileName: binary-extensions-1.13.1.tgz
+SPDXID: SPDXRef-FILE-324
+FileType: ARCHIVE
+FileChecksum: SHA1: 598afe54755b2868a5330d2aff9d4ebb53209b65
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>List of binary file extensions</text>
+
+
+# File
+
+FileName: bluebird-3.5.3.tgz
+SPDXID: SPDXRef-FILE-318
+FileType: ARCHIVE
+FileChecksum: SHA1: 7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013-2018 Copyright 2013-2018 Petka Antonov, 2013-2017 Copyright 2013-2017 Petka Antonov</text>
+FileComment: <text>Full featured Promises/A+ implementation with exceptionally good performance</text>
+
+
+# File
+
+FileName: body-parser-1.18.3.tgz
+SPDXID: SPDXRef-FILE-294
+FileType: ARCHIVE
+FileChecksum: SHA1: 5b292198ffdd553b3a0f20ded0592b956955c8b4
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Node.js body parsing middleware</text>
+
+
+# File
+
+FileName: brace-expansion-1.1.11.tgz
+SPDXID: SPDXRef-FILE-271
+FileType: ARCHIVE
+FileChecksum: SHA1: 3c7fcbf529d87226f3d2f52b966ff5271eb441dd
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Julian Gruber &lt;julian@juliangruber.com&gt;, 2013 Copyright 2013 Julian Gruber <julian@juliangruber.com></text>
+FileComment: <text>Brace expansion as known from sh/bash</text>
+
+
+# File
+
+FileName: braces-2.3.2.tgz
+SPDXID: SPDXRef-FILE-286
+FileType: ARCHIVE
+FileChecksum: SHA1: 5979fd3f14cd531565e5fa2df1abfff1dfaee729
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2018 Copyright 2014-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.</text>
+
+
+# File
+
+FileName: broadway-0.3.6.tgz
+SPDXID: SPDXRef-FILE-54
+FileType: ARCHIVE
+FileChecksum: SHA1: 7dbef068b954b7907925fd544963b578a902ba7a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Nodejitsu Inc</text>
+FileComment: <text>Lightweight application extensibility and composition with a twist of feature reflection.</text>
+
+
+# File
+
+FileName: bson-1.0.9.tgz
+SPDXID: SPDXRef-FILE-298
+FileType: ARCHIVE
+FileChecksum: SHA1: 12319f8323b1254739b7c6bef8d3e89ae05a2f57
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+FileComment: <text>A bson parser for node.js and the browser</text>
+
+
+# File
+
+FileName: buffer-shims-1.0.0.tgz
+SPDXID: SPDXRef-FILE-121
+FileType: ARCHIVE
+FileChecksum: SHA1: 9978ce317388c649ad8793028c3477ef044a8b51
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Calvin Metcalf</text>
+FileComment: <text>some shims for node buffers</text>
+
+
+# File
+
+FileName: bytes-3.0.0.tgz
+SPDXID: SPDXRef-FILE-232
+FileType: ARCHIVE
+FileChecksum: SHA1: d32815404d689699f85a4ea4fa8755dd13a96048
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012-2014 Copyright 2012-2014 TJ Holowaychuk <tj@vision-media.ca>, 2015 Copyright 2015 Jed Watson <jed.watson@me.com></text>
+FileComment: <text>Utility to parse a string bytes to bytes and vice-versa</text>
+
+
+# File
+
+FileName: cache-base-1.0.1.tgz
+SPDXID: SPDXRef-FILE-228
+FileType: ARCHIVE
+FileChecksum: SHA1: 0a7f46416831c8b662ee36fe4e7c59d76f666ab2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Basic object cache with `get`, `set`, `del`, and `has` methods for node.js/javascript projects.</text>
+
+
+# File
+
+FileName: caller-0.0.1.tgz
+SPDXID: SPDXRef-FILE-62
+FileType: ARCHIVE
+FileChecksum: SHA1: f37a1d6ea10e829d94721ae29a90bb4fb52ab767
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>@substack's caller.js as a module</text>
+
+
+# File
+
+FileName: camelcase-1.2.1.tgz
+SPDXID: SPDXRef-FILE-79
+FileType: ARCHIVE
+FileChecksum: SHA1: 9bb5304d2e0b56698b2c758b08a3eaa9daa58a39
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar</text>
+
+
+# File
+
+FileName: camelcase-2.1.1.tgz
+SPDXID: SPDXRef-FILE-115
+FileType: ARCHIVE
+FileChecksum: SHA1: 7c1d16d679a1bbe59ca02cacecfb011e201f5a1f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Convert a dash/dot/underscore/space separated string to camelCase: foo-bar → fooBar</text>
+
+
+# File
+
+FileName: camelize-1.0.0.tgz
+SPDXID: SPDXRef-FILE-106
+FileType: ARCHIVE
+FileChecksum: SHA1: 164a5483e630fa4321e5af07020e531831b2609b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>recursively transform key strings to camel-case</text>
+
+
+# File
+
+FileName: cb-never-called-1.0.1.tgz
+SPDXID: SPDXRef-FILE-90
+FileType: ARCHIVE
+FileChecksum: SHA1: 905212798798b872f044c27b121a89f9dc6acc36
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Unspecified Copyright</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: chokidar-2.1.8.tgz
+SPDXID: SPDXRef-FILE-329
+FileType: ARCHIVE
+FileChecksum: SHA1: 804b3a7b6a99358c3c5c61e71d8728f041cff917
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012-2019 Copyright 2012-2019 Paul Miller (https://paulmillr.com) & Elan Shanker</text>
+FileComment: <text>A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.</text>
+
+
+# File
+
+FileName: class-utils-0.3.6.tgz
+SPDXID: SPDXRef-FILE-262
+FileType: ARCHIVE
+FileChecksum: SHA1: f93369ae8b9a7ce02fd41faad0ca83033190c463
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2018 Copyright 2015-2018 Jon Schlinkert</text>
+FileComment: <text>Utils for working with JavaScript classes and prototype methods.</text>
+
+
+# File
+
+FileName: cliff-0.1.10.tgz
+SPDXID: SPDXRef-FILE-58
+FileType: ARCHIVE
+FileChecksum: SHA1: 53be33ea9f59bec85609ee300ac4207603e52013
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Charlie Robbins & the Contributors</text>
+FileComment: <text>Your CLI formatting friend.</text>
+
+
+# File
+
+FileName: cliff-0.1.9.tgz
+SPDXID: SPDXRef-FILE-64
+FileType: ARCHIVE
+FileChecksum: SHA1: a211e09c6a3de3ba1af27d049d301250d18812bc
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Nodejitsu Inc</text>
+FileComment: <text>Your CLI formatting friend.</text>
+
+
+# File
+
+FileName: cliui-3.2.0.tgz
+SPDXID: SPDXRef-FILE-117
+FileType: ARCHIVE
+FileChecksum: SHA1: 120601537a916d29940f934da3b48d585a39213d
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - 2015 Copyright 2015 Contributors</text>
+FileComment: <text>easily create complex multi-column command-line-interfaces</text>
+
+
+# File
+
+FileName: clone-2.1.2.tgz
+SPDXID: SPDXRef-FILE-280
+FileType: ARCHIVE
+FileChecksum: SHA1: 1b7f4b9f591f1e8f83670401600345a02887435f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011-2015 Copyright 2011-2015 Paul Vorbach <paul@vorba.ch>, 2011-2016 Copyright 2011-2016 "Paul Vorbach" (https://paul.vorba.ch/) and</text>
+FileComment: <text>deep cloning of objects and arrays</text>
+
+
+# File
+
+FileName: code-point-at-1.1.0.tgz
+SPDXID: SPDXRef-FILE-162
+FileType: ARCHIVE
+FileChecksum: SHA1: 0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>ES2015 `String#codePointAt()` ponyfill</text>
+
+
+# File
+
+FileName: collection-visit-1.0.0.tgz
+SPDXID: SPDXRef-FILE-229
+FileType: ARCHIVE
+FileChecksum: SHA1: 4bc0373c164bc3291b4d368c829cf1a80a59dca0
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Visit a method over the items in an object, or map visit over the objects in an array.</text>
+
+
+# File
+
+FileName: colors-0.6.2.tgz
+SPDXID: SPDXRef-FILE-9
+FileType: ARCHIVE
+FileChecksum: SHA1: 2423fe6678ac0c5dae8852e5d0e5be08c997abcc
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright 2010</text>
+FileComment: <text>get colors in your node.js console like what</text>
+
+
+# File
+
+FileName: colors-1.0.3.tgz
+SPDXID: SPDXRef-FILE-28
+FileType: ARCHIVE
+FileChecksum: SHA1: 0433f44d809680fdeb60ed260f1b0c262e82a40b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Marak Squires, Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>get colors in your node.js console</text>
+
+
+# File
+
+FileName: colors-1.4.0.tgz
+SPDXID: SPDXRef-FILE-330
+FileType: ARCHIVE
+FileChecksum: SHA1: c50491479d4c1bdaed2c9ced32cf7c7dc2360f78
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Marak Squires, Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>get colors in your node.js console</text>
+
+
+# File
+
+FileName: component-emitter-1.2.1.tgz
+SPDXID: SPDXRef-FILE-119
+FileType: ARCHIVE
+FileChecksum: SHA1: 137918d6d78283f7df7a6b7c5a63e140e69425e6
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Component contributors <dev@component.io></text>
+FileComment: <text>Event emitter</text>
+
+
+# File
+
+FileName: concat-map-0.0.1.tgz
+SPDXID: SPDXRef-FILE-18
+FileType: ARCHIVE
+FileChecksum: SHA1: d8a96bd77fd68df7793a73036a3ba0d5405d477b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright James Halliday</text>
+FileComment: <text>concatenative mapdashery</text>
+
+
+# File
+
+FileName: connect-3.4.1.tgz
+SPDXID: SPDXRef-FILE-114
+FileType: ARCHIVE
+FileChecksum: SHA1: a21361d3f4099ef761cda6dc4a973bb1ebb0a34d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Sencha Inc, 2011 Copyright 2011 LearnBoost, 2011-2014 Copyright 2011-2014 TJ Holowaychuk, 2015 Copyright 2015 Douglas Christopher Wilson</text>
+FileComment: <text>High performance middleware framework</text>
+
+
+# File
+
+FileName: consolidate-0.14.5.tgz
+SPDXID: SPDXRef-FILE-163
+FileType: ARCHIVE
+FileChecksum: SHA1: 5a25047bc76f73072667c8cb52c989888f494c63
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011-2016 Copyright 2011-2016 TJ Holowaychuk <tj@vision-media.ca></text>
+FileComment: <text>Template engine consolidation library</text>
+
+
+# File
+
+FileName: content-disposition-0.5.2.tgz
+SPDXID: SPDXRef-FILE-170
+FileType: ARCHIVE
+FileChecksum: SHA1: 0cf68bb9ddf5f2be7961c3a85178cb85dba78cb4
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Douglas Christopher Wilson</text>
+FileComment: <text>Create and parse Content-Disposition header</text>
+
+
+# File
+
+FileName: content-security-policy-builder-1.0.0.tgz
+SPDXID: SPDXRef-FILE-131
+FileType: ARCHIVE
+FileChecksum: SHA1: 11fd40c5cc298a6c725a35f9acf71e82ab5d3243
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Evan Hahn</text>
+FileComment: <text>Build Content Security Policy directives.</text>
+
+
+# File
+
+FileName: content-type-1.0.4.tgz
+SPDXID: SPDXRef-FILE-234
+FileType: ARCHIVE
+FileChecksum: SHA1: e138cc75e040c727b1966fe5e5f8c9aee256fe3b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Douglas Christopher Wilson</text>
+FileComment: <text>Create and parse HTTP Content-Type header</text>
+
+
+# File
+
+FileName: cookie-0.3.1.tgz
+SPDXID: SPDXRef-FILE-126
+FileType: ARCHIVE
+FileChecksum: SHA1: e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012-2014 Copyright 2012-2014 Roman Shtylman <shtylman@gmail.com>, 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>HTTP server cookie parsing and serialization</text>
+
+
+# File
+
+FileName: cookie-signature-1.0.6.tgz
+SPDXID: SPDXRef-FILE-26
+FileType: ARCHIVE
+FileChecksum: SHA1: e303a882b342cc3ee8ca513a79999734dab3ae2c
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012 Copyright 2012 LearnBoost <tj@learnboost.com></text>
+FileComment: <text>Sign and unsign cookies</text>
+
+
+# File
+
+FileName: copy-descriptor-0.1.1.tgz
+SPDXID: SPDXRef-FILE-151
+FileType: ARCHIVE
+FileChecksum: SHA1: 676f6eb3c39997c2ee1ac3a924fd6124748f578d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert</text>
+FileComment: <text>Copy a descriptor from object A to object B</text>
+
+
+# File
+
+FileName: core-util-is-1.0.2.tgz
+SPDXID: SPDXRef-FILE-78
+FileType: ARCHIVE
+FileChecksum: SHA1: b5fd54220aa2bc5ab57aab7140c940754503c1a7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Node.js contributors</text>
+FileComment: <text>The `util.is*` functions introduced in Node v0.12.</text>
+
+
+# File
+
+FileName: crc-3.4.4.tgz
+SPDXID: SPDXRef-FILE-172
+FileType: ARCHIVE
+FileChecksum: SHA1: 9da1e980e3bd44fc5c93bf5ab3da3378d85e466b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Alex Gorbatchev</text>
+FileComment: <text>Module for calculating Cyclic Redundancy Check (CRC) for Node.js and the Browser.</text>
+
+
+# File
+
+FileName: csrf-3.0.6.tgz
+SPDXID: SPDXRef-FILE-181
+FileType: ARCHIVE
+FileChecksum: SHA1: b61120ddceeafc91e76ed5313bb5c0b2667b710a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com>, 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com></text>
+FileComment: <text>primary logic behind csrf tokens</text>
+
+
+# File
+
+FileName: csurf-1.9.0.tgz
+SPDXID: SPDXRef-FILE-164
+FileType: ARCHIVE
+FileChecksum: SHA1: 49d2c6925ffcec7b7de559597c153fa533364133
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson <doug@somethingdoug.com>, 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com></text>
+FileComment: <text>CSRF token middleware</text>
+
+
+# File
+
+FileName: cycle-1.0.3.tgz
+SPDXID: SPDXRef-FILE-23
+FileType: ARCHIVE
+FileChecksum: SHA1: 21e80b2be8580f98b468f379430662b046c34ad2
+LicenseConcluded: NONE
+LicenseInfoInFile: CC-PDDC
+FileCopyrightText: <text>Public Domain - None</text>
+FileComment: <text>decycle your json</text>
+
+
+# File
+
+FileName: dashify-0.2.2.tgz
+SPDXID: SPDXRef-FILE-173
+FileType: ARCHIVE
+FileChecksum: SHA1: 6a07415a01c91faf4a32e38d9dfba71f61cb20fe
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2015-2016 Copyright 2015-2016 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Convert a camelcase or space-separated string to a dash-separated string.</text>
+
+
+# File
+
+FileName: debug-2.2.0.tgz
+SPDXID: SPDXRef-FILE-71
+FileType: ARCHIVE
+FileChecksum: SHA1: f87057e995b1a1f6ae6a4960664137bc56f039da
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt;, 2014 Copyright 2014 TJ Holowaychuk <tj@vision-media.ca></text>
+FileComment: <text>small debugging utility</text>
+
+
+# File
+
+FileName: debug-2.6.9.tgz
+SPDXID: SPDXRef-FILE-251
+FileType: ARCHIVE
+FileChecksum: SHA1: 5d128515df134ff327e90a4c93f4e077a536341f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2016 Copyright 2014-2016 TJ Holowaychuk &lt;tj@vision-media.ca&gt;, 2014-2016 Copyright 2014-2016 TJ Holowaychuk <tj@vision, 2014 Copyright 2014 TJ Holowaychuk <tj@vision-media.ca></text>
+FileComment: <text>small debugging utility</text>
+
+
+# File
+
+FileName: decamelize-1.2.0.tgz
+SPDXID: SPDXRef-FILE-113
+FileType: ARCHIVE
+FileChecksum: SHA1: f6534d15148269b20352e7bee26f501f9a191290
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Convert a camelized string into a lowercased one with a custom separator: unicornRainbow → unicorn_rainbow</text>
+
+
+# File
+
+FileName: decode-uri-component-0.2.0.tgz
+SPDXID: SPDXRef-FILE-231
+FileType: ARCHIVE
+FileChecksum: SHA1: eb3913333458775cb84cd1a1fae062106bb87545
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sam Verschueren <sam.verschueren@gmail.com> (github.com/SamVerschueren)</text>
+FileComment: <text>A better decodeURIComponent</text>
+
+
+# File
+
+FileName: deep-equal-0.1.2.tgz
+SPDXID: SPDXRef-FILE-53
+FileType: ARCHIVE
+FileChecksum: SHA1: b246c2b80a570a47c11be1d9bd1070ec878b87ce
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>node's assert.deepEqual algorithm</text>
+
+
+# File
+
+FileName: deep-equal-0.2.2.tgz
+SPDXID: SPDXRef-FILE-49
+FileType: ARCHIVE
+FileChecksum: SHA1: 84b745896f34c684e98f2ce0e42abaf43bba017d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>node's assert.deepEqual algorithm</text>
+
+
+# File
+
+FileName: deep-equal-2.0.2.tgz
+SPDXID: SPDXRef-FILE-361
+FileType: ARCHIVE
+FileChecksum: SHA1: e68291e245493ae908ca7190c1deea57a01ed82b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012-2013 Copyright 2012-2013 2014 James Halliday <mail@substack.net>, 2009 Thomas Robinson <280north.com></text>
+FileComment: <text>node's assert.deepEqual algorithm</text>
+
+
+# File
+
+FileName: define-properties-1.1.3.tgz
+SPDXID: SPDXRef-FILE-305
+FileType: ARCHIVE
+FileChecksum: SHA1: cf88da6cbee26fe6db7094f61d870cbd84cee9f1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Define multiple non-enumerable properties at once. Uses `Object.defineProperty` when available; falls back to standard assignment in older engines.</text>
+
+
+# File
+
+FileName: define-property-0.2.5.tgz
+SPDXID: SPDXRef-FILE-146
+FileType: ARCHIVE
+FileChecksum: SHA1: c35b1ef918ec3c990f9a5bc57be04aacec5c8116
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Define a non-enumerable property on an object.</text>
+
+
+# File
+
+FileName: define-property-1.0.0.tgz
+SPDXID: SPDXRef-FILE-210
+FileType: ARCHIVE
+FileChecksum: SHA1: 769ebaaf3f4a63aad3af9e8d304c9bbe79bfb0e6
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Define a non-enumerable property on an object.</text>
+
+
+# File
+
+FileName: define-property-2.0.2.tgz
+SPDXID: SPDXRef-FILE-274
+FileType: ARCHIVE
+FileChecksum: SHA1: d459689e8d654ba77e02a817f8710d702cb16e9d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2018 Copyright 2015-2018 Jon Schlinkert</text>
+FileComment: <text>Define a non-enumerable property on an object. Uses Reflect.defineProperty when available, otherwise Object.defineProperty.</text>
+
+
+# File
+
+FileName: defined-0.0.0.tgz
+SPDXID: SPDXRef-FILE-48
+FileType: ARCHIVE
+FileChecksum: SHA1: f35eea7d705e933baf13b2f03b3f83d921403b3e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>return the first argument that is `!== undefined`</text>
+
+
+# File
+
+FileName: depd-1.1.0.tgz
+SPDXID: SPDXRef-FILE-75
+FileType: ARCHIVE
+FileChecksum: SHA1: e1bd82c6aab6ced965b97b88b17ed3e528ca18c3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson</text>
+FileComment: <text>Deprecate all the things</text>
+
+
+# File
+
+FileName: depd-1.1.2.tgz
+SPDXID: SPDXRef-FILE-263
+FileType: ARCHIVE
+FileChecksum: SHA1: 9bcd52e14c097763e749b274c4346ed2e560b5a9
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Douglas Christopher Wilson</text>
+FileComment: <text>Deprecate all the things</text>
+
+
+# File
+
+FileName: destroy-1.0.4.tgz
+SPDXID: SPDXRef-FILE-95
+FileType: ARCHIVE
+FileChecksum: SHA1: 978857442c44749e4206613e37946205826abd80
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong me@jongleberry.com</text>
+FileComment: <text>destroy a stream if possible</text>
+
+
+# File
+
+FileName: director-1.2.7.tgz
+SPDXID: SPDXRef-FILE-51
+FileType: ARCHIVE
+FileChecksum: SHA1: bfd3741075fd7fb1a5b2e13658c5f4bec77736f3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Charlie Robbins, Paolo Fragomeni, & the Contributors</text>
+FileComment: <text>A client Side/Server Side Router</text>
+
+
+# File
+
+FileName: dns-prefetch-control-0.1.0.tgz
+SPDXID: SPDXRef-FILE-134
+FileType: ARCHIVE
+FileChecksum: SHA1: 60ddb457774e178f1f9415f0cabb0e85b0b300b2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Evan Hahn</text>
+FileComment: <text>Middleware to set X-DNS-Prefetch-Control header.</text>
+
+
+# File
+
+FileName: dont-sniff-mimetype-1.0.0.tgz
+SPDXID: SPDXRef-FILE-127
+FileType: ARCHIVE
+FileChecksum: SHA1: 5932890dc9f4e2f19e5eb02a20026e5e5efc8f58
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>Middleware to prevent mimetype from being sniffed</text>
+
+
+# File
+
+FileName: ee-first-1.1.1.tgz
+SPDXID: SPDXRef-FILE-74
+FileType: ARCHIVE
+FileChecksum: SHA1: 590c61156b0ae2f4f0255732a158b266bc56b21d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong me@jongleberry.com</text>
+FileComment: <text>return the first event in a set of ee/event pairs</text>
+
+
+# File
+
+FileName: encodeurl-1.0.2.tgz
+SPDXID: SPDXRef-FILE-266
+FileType: ARCHIVE
+FileChecksum: SHA1: ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Douglas Christopher Wilson</text>
+FileComment: <text>Encode a URL to a percent-encoded form, excluding already-encoded sequences</text>
+
+
+# File
+
+FileName: es-abstract-1.17.5.tgz
+SPDXID: SPDXRef-FILE-355
+FileType: ARCHIVE
+FileChecksum: SHA1: d8c9d1d66c8981fb9200e2251d799eee92774ae9
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>ECMAScript spec abstract operations.</text>
+
+
+# File
+
+FileName: es-get-iterator-1.1.0.tgz
+SPDXID: SPDXRef-FILE-352
+FileType: ARCHIVE
+FileChecksum: SHA1: bb98ad9d6d63b31aacdc8f89d5d0ee57bcb5b4c8
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2019 Copyright 2019 Jordan Harband</text>
+FileComment: <text>Get an iterator for any JS language value. Works robustly across all environments, all versions.</text>
+
+
+# File
+
+FileName: es-to-primitive-1.2.1.tgz
+SPDXID: SPDXRef-FILE-331
+FileType: ARCHIVE
+FileChecksum: SHA1: e55cd4c9cdc188bcefb03b366c736323fc5c898a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>ECMAScript “ToPrimitive” algorithm. Provides ES5 and ES2015 versions.</text>
+
+
+# File
+
+FileName: es6-promise-3.2.1.tgz
+SPDXID: SPDXRef-FILE-125
+FileType: ARCHIVE
+FileChecksum: SHA1: ec56233868032909207170c39448e24449dd1fc4
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors</text>
+FileComment: <text>A lightweight library that provides tools for organizing asynchronous code</text>
+
+
+# File
+
+FileName: escape-html-1.0.3.tgz
+SPDXID: SPDXRef-FILE-94
+FileType: ARCHIVE
+FileChecksum: SHA1: 0258eae4d3d0c0974de1c169188ef0051d1d1988
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Andreas Lubbe, 2015 Copyright 2015 Tiancheng "Timothy" Gu, 2012-2013 Copyright 2012-2013 TJ Holowaychuk</text>
+FileComment: <text>Escape string for use in HTML</text>
+
+
+# File
+
+FileName: etag-1.8.1.tgz
+SPDXID: SPDXRef-FILE-236
+FileType: ARCHIVE
+FileChecksum: SHA1: 41ae2eeb65efa62268aebfea83ac7d79299b0887
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson</text>
+FileComment: <text>Create simple HTTP ETags</text>
+
+
+# File
+
+FileName: event-stream-0.5.3.tgz
+SPDXID: SPDXRef-FILE-61
+FileType: ARCHIVE
+FileChecksum: SHA1: b77b9309f7107addfeab63f0c0eafd8db0bd8c1c
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Dominic Tarr</text>
+FileComment: <text>construct pipes of streams of events</text>
+
+
+# File
+
+FileName: eventemitter2-0.4.14.tgz
+SPDXID: SPDXRef-FILE-10
+FileType: ARCHIVE
+FileChecksum: SHA1: 8f61b75cde012b2e9eb284d4545583b5643b61ab
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 hij1nx "http://www.twitter.com/hij1nx" (http://www.twitter.com/hij1nx)</text>
+FileComment: <text>A Node.js event emitter implementation with namespaces, wildcards, TTL and browser support.</text>
+
+
+# File
+
+FileName: expand-brackets-2.1.4.tgz
+SPDXID: SPDXRef-FILE-214
+FileType: ARCHIVE
+FileChecksum: SHA1: b77735e315ce30f6b6eff0f83b04151a22449622
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Expand POSIX bracket expressions (character classes) in glob patterns.</text>
+
+
+# File
+
+FileName: express-4.16.4.tgz
+SPDXID: SPDXRef-FILE-314
+FileType: ARCHIVE
+FileChecksum: SHA1: fddef61926109e24c515ea97fd2f1bdbf62df12e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013-2014 Copyright 2013-2014 Roman Shtylman <shtylman+expressjs@gmail.com>, 2009-2014 Copyright 2009-2014 TJ Holowaychuk <tj@vision-media.ca>, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Fast, unopinionated, minimalist web framework</text>
+
+
+# File
+
+FileName: express-session-1.15.6.tgz
+SPDXID: SPDXRef-FILE-242
+FileType: ARCHIVE
+FileChecksum: SHA1: 47b4160c88f42ab70fe8a508e31cbff76757ab0a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 TJ Holowaychuk <tj@vision-media.ca>, 2010 Copyright 2010 Sencha Inc, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Simple session middleware for Express</text>
+
+
+# File
+
+FileName: extend-shallow-2.0.1.tgz
+SPDXID: SPDXRef-FILE-110
+FileType: ARCHIVE
+FileChecksum: SHA1: 51af7d614ad9a9f610ea1bafbb989d6b1c56890f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 Jon Schlinkert, 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Extend an object with the properties of additional objects. node.js/javascript util.</text>
+
+
+# File
+
+FileName: extend-shallow-3.0.2.tgz
+SPDXID: SPDXRef-FILE-255
+FileType: ARCHIVE
+FileChecksum: SHA1: 26a71aaf073b39fb2127172746131c2704028db8
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2015 Copyright 2014-2015 2017, Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Extend an object with the properties of additional objects. node.js/javascript util.</text>
+
+
+# File
+
+FileName: extglob-2.0.4.tgz
+SPDXID: SPDXRef-FILE-264
+FileType: ARCHIVE
+FileChecksum: SHA1: ad00fe4dc612a9232e8718711dc5cb5ab0285543
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Extended glob support for JavaScript. Adds (almost) the expressive power of regular expressions to glob patterns.</text>
+
+
+# File
+
+FileName: eyes-0.1.8.tgz
+SPDXID: SPDXRef-FILE-24
+FileType: ARCHIVE
+FileChecksum: SHA1: 62cf120234c683785d902348a800ef3e0cc20bc0
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2009 Copyright 2009 cloudhead</text>
+FileComment: <text>a customizable value inspector</text>
+
+
+# File
+
+FileName: fastest.zip
+SPDXID: SPDXRef-FILE-3
+FileType: ARCHIVE
+FileChecksum: SHA1: a08bf53f686748a3d2a7eb458f767224f32d2445
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Suspected Unspecified License - Unspecified Copyright</text>
+
+
+# File
+
+FileName: fill-range-4.0.0.tgz
+SPDXID: SPDXRef-FILE-218
+FileType: ARCHIVE
+FileChecksum: SHA1: d544811d428f98eb06a63dc402d2403c328c38f7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Fill in a range of numbers or letters, optionally passing an increment or `step` to use, or create a regex-compatible range with `options.toRegex`</text>
+
+
+# File
+
+FileName: finalhandler-0.4.1.tgz
+SPDXID: SPDXRef-FILE-99
+FileType: ARCHIVE
+FileChecksum: SHA1: 85a17c6c59a94717d262d61230d4b0ebe3d4a14d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Node.js final http responder</text>
+
+
+# File
+
+FileName: finalhandler-1.1.1.tgz
+SPDXID: SPDXRef-FILE-278
+FileType: ARCHIVE
+FileChecksum: SHA1: eebf4ed840079c83f4249038c9d703008301b105
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Node.js final http responder</text>
+
+
+# File
+
+FileName: fixtures.tgz
+SPDXID: SPDXRef-FILE-37
+FileType: ARCHIVE
+FileChecksum: SHA1: da2704914886317b2cb3d72f320ce260d9cab255
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Unspecified License - Unspecified Copyright</text>
+
+
+# File
+
+FileName: flatiron-0.4.3.tgz
+SPDXID: SPDXRef-FILE-50
+FileType: ARCHIVE
+FileChecksum: SHA1: 248cf79a3da7d7dc379e2a11c92a2719cbb540f6
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Nodejitsu Inc</text>
+FileComment: <text>An elegant blend of convention and configuration for building apps in Node.js and the browser</text>
+
+
+# File
+
+FileName: for-in-1.0.2.tgz
+SPDXID: SPDXRef-FILE-177
+FileType: ARCHIVE
+FileChecksum: SHA1: 81068d295a8142ec0ac726c6e2200c30fb6d5e80
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Iterate over the own and inherited enumerable properties of an object, and return an object with properties that evaluate to true from the callback. Exit early by returning `false`. JavaScript/Node.js</text>
+
+
+# File
+
+FileName: foreach-2.0.5.tgz
+SPDXID: SPDXRef-FILE-67
+FileType: ARCHIVE
+FileChecksum: SHA1: 0bee005018aeb260d0a3af3ae658dd0136ec1b99
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Manuel Stofer</text>
+FileComment: <text>foreach component + npm package</text>
+
+
+# File
+
+FileName: forever-2.0.0.tgz
+SPDXID: SPDXRef-FILE-350
+FileType: ARCHIVE
+FileChecksum: SHA1: beaf02125b6c650b61b6b58b15341e722a4b4043
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Charlie Robbins & the Contributors, 2009 Copyright 2009 Charlie Robbins</text>
+FileComment: <text>A simple CLI tool for ensuring that a given node script runs continuously (i.e. forever)</text>
+
+
+# File
+
+FileName: forever-monitor-2.0.0.tgz
+SPDXID: SPDXRef-FILE-351
+FileType: ARCHIVE
+FileChecksum: SHA1: 5bfb8e1de253ce3bf23ffd48d91419496928baae
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Charlie Robbins & the Contributors</text>
+FileComment: <text>Core forever process monitor</text>
+
+
+# File
+
+FileName: forked-underscore-1.5.1.tgz
+SPDXID: SPDXRef-FILE-41
+FileType: ARCHIVE
+FileChecksum: SHA1: ad498d078bf3c1884730807002a67db5d395cd5b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+
+
+# File
+
+FileName: forwarded-0.1.2.tgz
+SPDXID: SPDXRef-FILE-237
+FileType: ARCHIVE
+FileChecksum: SHA1: 98c23dab1175657b8c0573e8ceccd91b0ff18c84
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Douglas Christopher Wilson</text>
+FileComment: <text>Parse HTTP X-Forwarded-For header</text>
+
+
+# File
+
+FileName: fragment-cache-0.2.1.tgz
+SPDXID: SPDXRef-FILE-215
+FileType: ARCHIVE
+FileChecksum: SHA1: 4290fad27f13e89be7f33799c6bc5a0abfff0d19
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert), 2016-2017 Copyright 2016-2017 Jon Schlinkert</text>
+FileComment: <text>A cache for managing namespaced sub-caches</text>
+
+
+# File
+
+FileName: frameguard-2.0.0.tgz
+SPDXID: SPDXRef-FILE-199
+FileType: ARCHIVE
+FileChecksum: SHA1: 30c2c149e5e3505f9e156f9bc491a438420e487e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2016 Copyright 2014-2016 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>Middleware to set X-Frame-Options headers</text>
+
+
+# File
+
+FileName: fresh-0.5.2.tgz
+SPDXID: SPDXRef-FILE-238
+FileType: ARCHIVE
+FileChecksum: SHA1: 3d8cadd90d976569fa835ab1f8e4b23a105605a7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016-2017 Copyright 2016-2017 Douglas Christopher Wilson <doug@somethingdoug.com>, 2012 Copyright 2012 TJ Holowaychuk <tj@vision-media.ca></text>
+FileComment: <text>HTTP response freshness testing</text>
+
+
+# File
+
+FileName: fs.realpath-1.0.0.tgz
+SPDXID: SPDXRef-FILE-136
+FileType: ARCHIVE
+FileChecksum: SHA1: 1504ad2523158caa40db4a2787cb01411994ea4f
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>Use node's fs.realpath, but fall back to the JS implementation if the native one fails</text>
+
+
+# File
+
+FileName: function-bind-1.1.1.tgz
+SPDXID: SPDXRef-FILE-220
+FileType: ARCHIVE
+FileChecksum: SHA1: a56899d3ea3c9bab874bb9773b7c5ede92f4895d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Raynos</text>
+FileComment: <text>Implementation of Function.prototype.bind</text>
+
+
+# File
+
+FileName: get-value-2.0.6.tgz
+SPDXID: SPDXRef-FILE-150
+FileType: ARCHIVE
+FileChecksum: SHA1: dc15ca1c672387ca76bd37ac0a395ba2042a2c28
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2016 Copyright 2014-2016 Jon Schlinkert</text>
+FileComment: <text>Use property paths (`a.b.c`) to get a nested value from an object.</text>
+
+
+# File
+
+FileName: github-com-BryanDonovan-dummy-npm-bar.git.tar.gz
+SPDXID: SPDXRef-FILE-38
+FileType: ARCHIVE
+FileChecksum: SHA1: c1f3196bc517ee3a21638b283e9bcf571ea3c851
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - None</text>
+
+
+# File
+
+FileName: github-com-BryanDonovan-dummy-npm-buzz.git.tar.gz
+SPDXID: SPDXRef-FILE-39
+FileType: ARCHIVE
+FileChecksum: SHA1: c6c763eaac4dbb746e1a0fb3c4476712b7611532
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - None</text>
+
+
+# File
+
+FileName: github-com-BryanDonovan-dummy-npm-foo.git.tar.gz
+SPDXID: SPDXRef-FILE-44
+FileType: ARCHIVE
+FileChecksum: SHA1: 6248e79efa6d591a01950c4a41f5441bbab55109
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - None</text>
+
+
+# File
+
+FileName: github-com-BryanDonovan-npm-git-test.git.tar.gz
+SPDXID: SPDXRef-FILE-42
+FileType: ARCHIVE
+FileChecksum: SHA1: a5f0ee36520eb1f05e2b326c2556806c7fcd22ae
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - None</text>
+
+
+# File
+
+FileName: gitignore-and-npmignore.tgz
+SPDXID: SPDXRef-FILE-36
+FileType: ARCHIVE
+FileChecksum: SHA1: 37b1cefdc7e7f8aa038ddcb7166963988b887f3b
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Unspecified License - None</text>
+
+
+# File
+
+FileName: gitignore.tgz
+SPDXID: SPDXRef-FILE-43
+FileType: ARCHIVE
+FileChecksum: SHA1: c00227761dfe630401063bad1a6f18aa31a83cc5
+LicenseConcluded: NONE
+LicenseInfoInFile: CC0-1.0
+FileCopyrightText: <text>CC0 - None</text>
+
+
+# File
+
+FileName: glob-7.1.3.tgz
+SPDXID: SPDXRef-FILE-308
+FileType: ARCHIVE
+FileChecksum: SHA1: 3960832d3f1574108342dafd3a67b332c0969df1
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>a little globber</text>
+
+
+# File
+
+FileName: glob-parent-3.1.0.tgz
+SPDXID: SPDXRef-FILE-169
+FileType: ARCHIVE
+FileChecksum: SHA1: 9e6af6299d8d3bd2bd40430832bd113df906c5ae
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - 2015 Copyright 2015 Elan Shanker</text>
+FileComment: <text>Strips glob magic from a string to provide the parent directory path</text>
+
+
+# File
+
+FileName: graceful-fs-4.1.15.tgz
+SPDXID: SPDXRef-FILE-317
+FileType: ARCHIVE
+FileChecksum: SHA1: ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>A drop-in replacement for fs, making various improvements.</text>
+
+
+# File
+
+FileName: has-1.0.3.tgz
+SPDXID: SPDXRef-FILE-297
+FileType: ARCHIVE
+FileChecksum: SHA1: 722d7cbfc1f6aa8241f16dd814e011e1f41e8796
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Thiago de Arruda</text>
+FileComment: <text>Object.prototype.hasOwnProperty.call shortcut</text>
+
+
+# File
+
+FileName: has-symbols-1.0.1.tgz
+SPDXID: SPDXRef-FILE-334
+FileType: ARCHIVE
+FileChecksum: SHA1: 9f5214758a44196c406d9bd76cebf81ec2dd31e8
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Jordan Harband</text>
+FileComment: <text>Determine if the JS environment has Symbol support. Supports spec, or shams.</text>
+
+
+# File
+
+FileName: has-value-0.3.1.tgz
+SPDXID: SPDXRef-FILE-143
+FileType: ARCHIVE
+FileChecksum: SHA1: 7b1f58bada62ca827ec0a2078025654845995e1f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert</text>
+FileComment: <text>Returns true if a value exists, false if empty. Works with deeply nested values using object paths.</text>
+
+
+# File
+
+FileName: has-value-1.0.0.tgz
+SPDXID: SPDXRef-FILE-223
+FileType: ARCHIVE
+FileChecksum: SHA1: 18b281da585b1c5c51def24c930ed29a0be6b177
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if a value exists, false if empty. Works with deeply nested values using object paths.</text>
+
+
+# File
+
+FileName: has-values-0.1.4.tgz
+SPDXID: SPDXRef-FILE-149
+FileType: ARCHIVE
+FileChecksum: SHA1: 6d61de95d91dfca9b9a02089ad384bff8f62b771
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert</text>
+FileComment: <text>Returns true if any values exist, false if empty. Works for booleans, functions, numbers, strings, nulls, objects and arrays. </text>
+
+
+# File
+
+FileName: has-values-1.0.0.tgz
+SPDXID: SPDXRef-FILE-224
+FileType: ARCHIVE
+FileChecksum: SHA1: 95b0b63fec2146619a6fe57fe75628d5a39efe4f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if any values exist, false if empty. Works for booleans, functions, numbers, strings, nulls, objects and arrays. </text>
+
+
+# File
+
+FileName: helmet-2.3.0.tgz
+SPDXID: SPDXRef-FILE-202
+FileType: ARCHIVE
+FileChecksum: SHA1: d655c85b55b0a3bf722a4c2c66e48b78b4161b91
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012-2016 Copyright 2012-2016 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>help secure Express/Connect apps with various HTTP headers</text>
+
+
+# File
+
+FileName: helmet-csp-1.2.2.tgz
+SPDXID: SPDXRef-FILE-204
+FileType: ARCHIVE
+FileChecksum: SHA1: 085c0307d57fc96cd97337f170ab8bfea99e5df7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2016 Copyright 2014-2016 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>Content Security Policy middleware.</text>
+
+
+# File
+
+FileName: hide-powered-by-1.0.0.tgz
+SPDXID: SPDXRef-FILE-133
+FileType: ARCHIVE
+FileChecksum: SHA1: 4a85ad65881f62857fc70af7174a1184dccce32b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>Middleware to remove the X-Powered-By header.</text>
+
+
+# File
+
+FileName: hpkp-1.2.0.tgz
+SPDXID: SPDXRef-FILE-201
+FileType: ARCHIVE
+FileChecksum: SHA1: 83f2cb38b26cff21daf26e2ff4b57126921dec65
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2016 Copyright 2015-2016 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>HTTP Public Key Pinning (HPKP) middleware</text>
+
+
+# File
+
+FileName: hsts-1.0.0.tgz
+SPDXID: SPDXRef-FILE-129
+FileType: ARCHIVE
+FileChecksum: SHA1: 98e1039ef7aba554057b6b0e32584c0b1143a414
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>HTTP Strict Transport Security middleware.</text>
+
+
+# File
+
+FileName: http-errors-1.5.1.tgz
+SPDXID: SPDXRef-FILE-166
+FileType: ARCHIVE
+FileChecksum: SHA1: 788c0d2c1de2c81b9e6e8c01843b6b97eb920750
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong me@jongleberry.com, 2016 Copyright 2016 Douglas Christopher Wilson doug@somethingdoug.com</text>
+FileComment: <text>Create HTTP error objects</text>
+
+
+# File
+
+FileName: http-errors-1.6.3.tgz
+SPDXID: SPDXRef-FILE-282
+FileType: ARCHIVE
+FileChecksum: SHA1: 8b55680bb4be283a0b5bf4ea2e38580be1d9320d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong me@jongleberry.com, 2016 Copyright 2016 Douglas Christopher Wilson doug@somethingdoug.com</text>
+FileComment: <text>Create HTTP error objects</text>
+
+
+# File
+
+FileName: https://source.codeaurora.org/quic/chrome4sdp/nodejs/node/-v0.12.18
+SPDXID: SPDXRef-FILE-365
+FileType: SOURCE
+FileChecksum: SHA1: b0ab8502033215485de4e51792de403fd9ee82d2
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Unspecified License - Unspecified Copyright</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: i-0.3.6.tgz
+SPDXID: SPDXRef-FILE-244
+FileType: ARCHIVE
+FileChecksum: SHA1: d96c92732076f072711b6b10fd7d4f65ad8ee23d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>custom inflections for nodejs</text>
+
+
+# File
+
+FileName: iconv-lite-0.4.23.tgz
+SPDXID: SPDXRef-FILE-291
+FileType: ARCHIVE
+FileChecksum: SHA1: 297871f63be507adcfbfca715d0cd0eed84e9a63
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Alexander Shtuchkin</text>
+FileComment: <text>Convert character encodings in pure javascript.</text>
+
+
+# File
+
+FileName: ienoopen-1.0.0.tgz
+SPDXID: SPDXRef-FILE-128
+FileType: ARCHIVE
+FileChecksum: SHA1: 346a428f474aac8f50cf3784ea2d0f16f62bda6b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>Middleware for IE security. Set X-Download-Options to noopen.</text>
+
+
+# File
+
+FileName: inflight-1.0.6.tgz
+SPDXID: SPDXRef-FILE-159
+FileType: ARCHIVE
+FileChecksum: SHA1: 49bd6331d7d02d0c09bc910a1075ba8165b56df9
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>Add callbacks to requests in flight to avoid async duplication</text>
+
+
+# File
+
+FileName: inherits-2.0.3.tgz
+SPDXID: SPDXRef-FILE-155
+FileType: ARCHIVE
+FileChecksum: SHA1: 633c2c83e3da42a502f52466022480f4208261de
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>Browser-friendly inheritance fully compatible with standard node.js inherits()</text>
+
+
+# File
+
+FileName: ini-1.3.5.tgz
+SPDXID: SPDXRef-FILE-248
+FileType: ARCHIVE
+FileChecksum: SHA1: eee25f56db1c9ec6085e0c22778083f596abf927
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>An ini encoder/decoder for node</text>
+
+
+# File
+
+FileName: invert-kv-1.0.0.tgz
+SPDXID: SPDXRef-FILE-46
+FileType: ARCHIVE
+FileChecksum: SHA1: 104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Invert the key/value of an object. Example: {foo: 'bar'} → {bar: 'foo'}</text>
+
+
+# File
+
+FileName: ipaddr.js-1.8.0.tgz
+SPDXID: SPDXRef-FILE-303
+FileType: ARCHIVE
+FileChecksum: SHA1: eaa33d6ddd7ace8f7f6fe0c9ca0440e706738b1e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011-2017 Copyright 2011-2017 whitequark <whitequark@whitequark.org></text>
+FileComment: <text>A library for manipulating IPv4 and IPv6 addresses in JavaScript.</text>
+
+
+# File
+
+FileName: is-accessor-descriptor-0.1.6.tgz
+SPDXID: SPDXRef-FILE-147
+FileType: ARCHIVE
+FileChecksum: SHA1: a9e12cb3ae8d876727eeef3843f8a0897b5c98d6
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Returns true if a value has the characteristics of a valid JavaScript accessor descriptor.</text>
+
+
+# File
+
+FileName: is-accessor-descriptor-1.0.0.tgz
+SPDXID: SPDXRef-FILE-259
+FileType: ARCHIVE
+FileChecksum: SHA1: 169c2f6d3df1f992618072365c9b0ea1f6878656
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2017 Copyright 2015-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if a value has the characteristics of a valid JavaScript accessor descriptor.</text>
+
+
+# File
+
+FileName: is-arguments-1.0.4.tgz
+SPDXID: SPDXRef-FILE-319
+FileType: ARCHIVE
+FileChecksum: SHA1: 3faf966c7cba0ff437fb31f6250082fcf0448cf3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jordan Harband</text>
+FileComment: <text>Is this an arguments object? It's a harder question than you think.</text>
+
+
+# File
+
+FileName: is-bigint-1.0.0.tgz
+SPDXID: SPDXRef-FILE-333
+FileType: ARCHIVE
+FileChecksum: SHA1: 73da8c33208d00f130e9b5e15d23eac9215601c4
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2018 Copyright 2018 Jordan Harband</text>
+FileComment: <text>Is this value an ES BigInt?</text>
+
+
+# File
+
+FileName: is-binary-path-1.0.1.tgz
+SPDXID: SPDXRef-FILE-76
+FileType: ARCHIVE
+FileChecksum: SHA1: 75f16642b480f187a711c814161fd3a4a7655898
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Check if a filepath is a binary file</text>
+
+
+# File
+
+FileName: is-boolean-object-1.0.1.tgz
+SPDXID: SPDXRef-FILE-348
+FileType: ARCHIVE
+FileChecksum: SHA1: 10edc0900dd127697a92f6f9807c7617d68ac48e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Is this value a JS Boolean? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-buffer-1.1.6.tgz
+SPDXID: SPDXRef-FILE-247
+FileType: ARCHIVE
+FileChecksum: SHA1: efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Feross Aboukhadijeh</text>
+FileComment: <text>Determine if an object is a Buffer</text>
+
+
+# File
+
+FileName: is-callable-1.1.5.tgz
+SPDXID: SPDXRef-FILE-347
+FileType: ARCHIVE
+FileChecksum: SHA1: f7e46b596890456db74e7f6e976cb3273d06faab
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Is this JS value callable? Works with Functions and GeneratorFunctions, despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-data-descriptor-0.1.4.tgz
+SPDXID: SPDXRef-FILE-144
+FileType: ARCHIVE
+FileChecksum: SHA1: 0b5ee648388e2c860282e793f1856fec3f301b56
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert, 2015 Copyright 2015 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if a value has the characteristics of a valid JavaScript data descriptor.</text>
+
+
+# File
+
+FileName: is-data-descriptor-1.0.0.tgz
+SPDXID: SPDXRef-FILE-258
+FileType: ARCHIVE
+FileChecksum: SHA1: d84876321d0e7add03990406abbbbd36ba9268c7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Returns true if a value has the characteristics of a valid JavaScript data descriptor.</text>
+
+
+# File
+
+FileName: is-date-object-1.0.2.tgz
+SPDXID: SPDXRef-FILE-344
+FileType: ARCHIVE
+FileChecksum: SHA1: bda736f2cd8fd06d32844e7743bfa7494c3bfd7e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Is this value a JS Date object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-descriptor-0.1.6.tgz
+SPDXID: SPDXRef-FILE-227
+FileType: ARCHIVE
+FileChecksum: SHA1: 366d8240dde487ca51823b1ab9f07a10a78251ca
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Returns true if a value has the characteristics of a valid JavaScript descriptor. Works for data descriptors and accessor descriptors.</text>
+
+
+# File
+
+FileName: is-descriptor-1.0.2.tgz
+SPDXID: SPDXRef-FILE-260
+FileType: ARCHIVE
+FileChecksum: SHA1: 3b159746a66604b04f8c81524ba365c5f14d86ec
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if a value has the characteristics of a valid JavaScript descriptor. Works for data descriptors and accessor descriptors.</text>
+
+
+# File
+
+FileName: is-extendable-0.1.1.tgz
+SPDXID: SPDXRef-FILE-87
+FileType: ARCHIVE
+FileChecksum: SHA1: 62b110e289a471418e3ec36a617d472e301dfc89
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Returns true if a value is any of the object types: array, regexp, plain object, function or date. This is useful for determining if a value can be extended, e.g. "can the value have keys?"</text>
+
+
+# File
+
+FileName: is-extendable-1.0.1.tgz
+SPDXID: SPDXRef-FILE-253
+FileType: ARCHIVE
+FileChecksum: SHA1: a7470f9e426733d81bd81e1155264e3a3507cab4
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if a value is a plain object, array or function.</text>
+
+
+# File
+
+FileName: is-extglob-2.1.1.tgz
+SPDXID: SPDXRef-FILE-168
+FileType: ARCHIVE
+FileChecksum: SHA1: a88c02535791f02ed37c76a1b9ea9773c833f8c2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if a string has an extglob.</text>
+
+
+# File
+
+FileName: is-fullwidth-code-point-1.0.0.tgz
+SPDXID: SPDXRef-FILE-73
+FileType: ARCHIVE
+FileChecksum: SHA1: ef9e31386f031a7f0d643af82fde50c457ef00cb
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Check if the character represented by a given Unicode code point is fullwidth</text>
+
+
+# File
+
+FileName: is-glob-3.1.0.tgz
+SPDXID: SPDXRef-FILE-158
+FileType: ARCHIVE
+FileChecksum: SHA1: 7ba5ae24217804ac70707b96922567486cc3e84a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert</text>
+FileComment: <text>Returns `true` if the given string looks like a glob pattern or an extglob pattern. This makes it easy to create code that only uses external modules like node-glob when necessary, resulting in much faster code execution and initialization time, and a bet</text>
+
+
+# File
+
+FileName: is-glob-4.0.1.tgz
+SPDXID: SPDXRef-FILE-325
+FileType: ARCHIVE
+FileChecksum: SHA1: 7567dbe9f2f5e2467bc77ab83c4a29482407a5dc
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2019 Copyright 2019 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns `true` if the given string looks like a glob pattern or an extglob pattern. This makes it easy to create code that only uses external modules like node-glob when necessary, resulting in much faster code execution and initialization time, and a bet</text>
+
+
+# File
+
+FileName: is-map-2.0.1.tgz
+SPDXID: SPDXRef-FILE-340
+FileType: ARCHIVE
+FileChecksum: SHA1: 520dafc4307bb8ebc33b813de5ce7c9400d644a1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2019 Copyright 2019 Inspect JS</text>
+FileComment: <text>Is this value a JS Map? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-number-3.0.0.tgz
+SPDXID: SPDXRef-FILE-189
+FileType: ARCHIVE
+FileChecksum: SHA1: 24fd6201a4782cf50561c810276afc7d12d71195
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if the value is a number. comprehensive tests.</text>
+
+
+# File
+
+FileName: is-number-object-1.0.4.tgz
+SPDXID: SPDXRef-FILE-345
+FileType: ARCHIVE
+FileChecksum: SHA1: 36ac95e741cf18b283fc1ddf5e83da798e3ec197
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Is this value a JS Number object? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-plain-object-2.0.4.tgz
+SPDXID: SPDXRef-FILE-197
+FileType: ARCHIVE
+FileChecksum: SHA1: 2c163b3fafb1b606d9d17928f05c2a1c38e07677
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if an object was created by the `Object` constructor.</text>
+
+
+# File
+
+FileName: is-regex-1.0.5.tgz
+SPDXID: SPDXRef-FILE-337
+FileType: ARCHIVE
+FileChecksum: SHA1: 39d589a358bf18967f726967120b8fc1aed74eae
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jordan Harband</text>
+FileComment: <text>Is this value a JS regex? Works cross-realm/iframe, and despite ES6 @@toStringTag</text>
+
+
+# File
+
+FileName: is-set-2.0.1.tgz
+SPDXID: SPDXRef-FILE-341
+FileType: ARCHIVE
+FileChecksum: SHA1: d1604afdab1724986d30091575f54945da7e5f43
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2019 Copyright 2019 Inspect JS</text>
+FileComment: <text>Is this value a JS Set? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-string-1.0.5.tgz
+SPDXID: SPDXRef-FILE-346
+FileType: ARCHIVE
+FileChecksum: SHA1: 40493ed198ef3ff477b8c7f92f644ec82a5cd3a6
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Is this value a JS String object or primitive? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-symbol-1.0.3.tgz
+SPDXID: SPDXRef-FILE-335
+FileType: ARCHIVE
+FileChecksum: SHA1: 38e1014b9e6329be0de9d24a414fd7441ec61937
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Determine if a value is an ES6 Symbol or not.</text>
+
+
+# File
+
+FileName: is-typed-array-1.1.3.tgz
+SPDXID: SPDXRef-FILE-363
+FileType: ARCHIVE
+FileChecksum: SHA1: a4ff5a5e672e1a55f99c7f54e59597af5c1df04d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Is this value a JS Typed Array? This module works cross-realm/iframe, does not depend on `instanceof` or mutable properties, and despite ES6 Symbol.toStringTag.</text>
+
+
+# File
+
+FileName: is-weakmap-2.0.1.tgz
+SPDXID: SPDXRef-FILE-342
+FileType: ARCHIVE
+FileChecksum: SHA1: 5008b59bdc43b698201d18f62b37b2ca243e8cf2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2019 Copyright 2019 Inspect JS</text>
+FileComment: <text>Is this value a JS WeakMap? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-weakset-2.0.1.tgz
+SPDXID: SPDXRef-FILE-343
+FileType: ARCHIVE
+FileChecksum: SHA1: e9a0af88dbd751589f5e50d80f4c98b780884f83
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2019 Copyright 2019 Inspect JS</text>
+FileComment: <text>Is this value a JS WeakSet? This module works cross-realm/iframe, and despite ES6 @@toStringTag.</text>
+
+
+# File
+
+FileName: is-windows-1.0.2.tgz
+SPDXID: SPDXRef-FILE-272
+FileType: ARCHIVE
+FileChecksum: SHA1: d1850eb9791ecd18e6182ce12a30f396634bb19d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert), 2015-2018 Copyright 2015-2018 Jon Schlinkert</text>
+FileComment: <text>Returns true if the platform is windows. UMD module, works with node.js, commonjs, browser, AMD, electron, etc.</text>
+
+
+# File
+
+FileName: isarray-1.0.0.tgz
+SPDXID: SPDXRef-FILE-93
+FileType: ARCHIVE
+FileChecksum: SHA1: bb935d48582cba168c06834957a54a3e07124f11
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Julian Gruber &lt;julian@juliangruber.com&gt;, 2013 Copyright 2013 Julian Gruber <julian@juliangruber.com></text>
+FileComment: <text>Array#isArray for older browsers</text>
+
+
+# File
+
+FileName: isarray-2.0.5.tgz
+SPDXID: SPDXRef-FILE-328
+FileType: ARCHIVE
+FileChecksum: SHA1: 8af1e4c1221244cc62459faf38940d4e644a5723
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Julian Gruber <julian@juliangruber.com></text>
+FileComment: <text>Array#isArray for older browsers</text>
+
+
+# File
+
+FileName: isobject-2.1.0.tgz
+SPDXID: SPDXRef-FILE-118
+FileType: ARCHIVE
+FileChecksum: SHA1: f065561096a3f1da2ef46272f815c840d87e0c89
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if the value is an object and not an array or null.</text>
+
+
+# File
+
+FileName: isobject-3.0.1.tgz
+SPDXID: SPDXRef-FILE-198
+FileType: ARCHIVE
+FileChecksum: SHA1: 4e431e92b11a9731636aa1f9c8d1ccbcfdab78df
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns true if the value is an object and not an array or null.</text>
+
+
+# File
+
+FileName: isstream-0.1.2.tgz
+SPDXID: SPDXRef-FILE-25
+FileType: ARCHIVE
+FileChecksum: SHA1: 47e63f7af55afa6f92e1500e690eb8b8529c099a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Rod Vagg, 2015 Copyright 2015 Rod Vagg [@rvagg](https://twitter.com/rvagg) and licenced under the MIT licence, 2015 Copyright 2015 Rod Vagg "@rvagg" (https://twitter.com/rvagg) and licenced under the MIT licence</text>
+FileComment: <text>Determine if an object is a Stream</text>
+
+
+# File
+
+FileName: jsonify-0.0.0.tgz
+SPDXID: SPDXRef-FILE-17
+FileType: ARCHIVE
+FileChecksum: SHA1: 2c74b6ee41d93ca51b7b5aaee8f503631d252a73
+LicenseConcluded: NONE
+LicenseInfoInFile: CC-PDDC
+FileCopyrightText: <text>Public Domain - Unspecified Copyright</text>
+FileComment: <text>JSON without touching any globals</text>
+
+
+# File
+
+FileName: kind-of-3.2.2.tgz
+SPDXID: SPDXRef-FILE-187
+FileType: ARCHIVE
+FileChecksum: SHA1: 31ea21a734bab9bbb0f32466d893aea51e4a3c64
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Get the native type of a value.</text>
+
+
+# File
+
+FileName: kind-of-4.0.0.tgz
+SPDXID: SPDXRef-FILE-188
+FileType: ARCHIVE
+FileChecksum: SHA1: 20813df3d712928b207378691a45066fae72dd57
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Get the native type of a value.</text>
+
+
+# File
+
+FileName: kind-of-5.1.0.tgz
+SPDXID: SPDXRef-FILE-245
+FileType: ARCHIVE
+FileChecksum: SHA1: 729c91e2d857b7a419a1f9aa65685c4c33f5845d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Get the native type of a value.</text>
+
+
+# File
+
+FileName: kind-of-6.0.2.tgz
+SPDXID: SPDXRef-FILE-252
+FileType: ARCHIVE
+FileChecksum: SHA1: 01146b36a6218e64e58f3a8d66de5d7fc6f6d051
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Get the native type of a value.</text>
+
+
+# File
+
+FileName: lazy-1.0.11.tgz
+SPDXID: SPDXRef-FILE-55
+FileType: ARCHIVE
+FileChecksum: SHA1: daa068206282542c088288e975c297c1ae77b690
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>Lazy lists for node</text>
+
+
+# File
+
+FileName: lcid-1.0.0.tgz
+SPDXID: SPDXRef-FILE-47
+FileType: ARCHIVE
+FileChecksum: SHA1: 308accafa0bc483a3867b4b6f2b9506251d1b835
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Mapping between standard locale identifiers and Windows locale identifiers (LCID)</text>
+
+
+# File
+
+FileName: linux_arc.zip
+SPDXID: SPDXRef-FILE-5
+FileType: ARCHIVE
+FileChecksum: SHA1: 4b9cee891e490cc978880f2bb9e4327848bc4e53
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Suspected Unspecified License - Unspecified Copyright</text>
+
+
+# File
+
+FileName: lodash.reduce-4.5.0.tgz
+SPDXID: SPDXRef-FILE-203
+FileType: ARCHIVE
+FileChecksum: SHA1: af7d2ec621062441e77d5bf408a1e071ef86691c
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2009-2016 Copyright 2009-2016 Jeremy Ashkenas,, Copyright jQuery Foundation and other contributors <https://jquery.org/>, 2012-2016 Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/></text>
+FileComment: <text>The lodash method `_.reduce` exported as a module.</text>
+
+
+# File
+
+FileName: map-cache-0.2.2.tgz
+SPDXID: SPDXRef-FILE-139
+FileType: ARCHIVE
+FileChecksum: SHA1: c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Basic cache object for storing key-value pairs.</text>
+
+
+# File
+
+FileName: map-visit-1.0.0.tgz
+SPDXID: SPDXRef-FILE-221
+FileType: ARCHIVE
+FileChecksum: SHA1: ecdca8f13144e660f1b5bd41f12f3479d98dfb8f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Map `visit` over an array of objects.</text>
+
+
+# File
+
+FileName: marked-0.3.9.tgz
+SPDXID: SPDXRef-FILE-257
+FileType: ARCHIVE
+FileChecksum: SHA1: 54ce6a57e720c3ac6098374ec625fcbcc97ff290
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011-2014 Copyright 2011-2014 Christopher Jeffrey, 2011-2014 Copyright 2011-2014 Christopher Jeffrey (https://github.com/chjj/)</text>
+FileComment: <text>A markdown parser built for speed</text>
+
+
+# File
+
+FileName: media-typer-0.3.0.tgz
+SPDXID: SPDXRef-FILE-15
+FileType: ARCHIVE
+FileChecksum: SHA1: 8710d7af0aa626f8fffa1ce00168545263255748
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Douglas Christopher Wilson</text>
+FileComment: <text>Simple RFC 6838 media type parser and formatter</text>
+
+
+# File
+
+FileName: merge-descriptors-1.0.1.tgz
+SPDXID: SPDXRef-FILE-97
+FileType: ARCHIVE
+FileChecksum: SHA1: b00aaa556dd8b44568150ec9d1b953f3f90cbb61
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Jonathan Ong <me@jongleberry.com>, 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Merge objects using descriptors</text>
+
+
+# File
+
+FileName: methods-1.1.2.tgz
+SPDXID: SPDXRef-FILE-96
+FileType: ARCHIVE
+FileChecksum: SHA1: 5529a4d67654134edcc5266656835b0f851afcee
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2016 Copyright 2015-2016 Douglas Christopher Wilson <doug@somethingdoug.com>, 2013-2014 Copyright 2013-2014 TJ Holowaychuk <tj@vision-media.ca></text>
+FileComment: <text>HTTP methods that node supports</text>
+
+
+# File
+
+FileName: micromatch-3.1.10.tgz
+SPDXID: SPDXRef-FILE-288
+FileType: ARCHIVE
+FileChecksum: SHA1: 70859bc95c9840952f359a068a3fc49f9ecfac23
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2018 Copyright 2014-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Glob matching for javascript/node.js. A drop-in replacement and faster alternative to minimatch and multimatch.</text>
+
+
+# File
+
+FileName: mime-1.4.1.tgz
+SPDXID: SPDXRef-FILE-241
+FileType: ARCHIVE
+FileChecksum: SHA1: 121f9ebc49e3766f311a76e1fa1c8003c4b03aa6
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Benjamin Thomas, Robert Kieffer</text>
+FileComment: <text>A comprehensive library for mime-type mapping</text>
+
+
+# File
+
+FileName: mime-db-1.37.0.tgz
+SPDXID: SPDXRef-FILE-316
+FileType: ARCHIVE
+FileChecksum: SHA1: 0b6a0ce6fdbe9576e25f1f2d2fde8830dc0ad0d8
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong me@jongleberry.com</text>
+FileComment: <text>Media Type Database</text>
+
+
+# File
+
+FileName: mime-types-2.1.21.tgz
+SPDXID: SPDXRef-FILE-315
+FileType: ARCHIVE
+FileChecksum: SHA1: 28995aa1ecb770742fe6ae7e58f9181c744b3f96
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com>, 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com></text>
+FileComment: <text>The ultimate javascript content-type utility.</text>
+
+
+# File
+
+FileName: minimatch-3.0.4.tgz
+SPDXID: SPDXRef-FILE-184
+FileType: ARCHIVE
+FileChecksum: SHA1: 5166e286457f03306064be5497e8dbb0c3d32083
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>a glob matcher in javascript</text>
+
+
+# File
+
+FileName: minimist-0.0.10.tgz
+SPDXID: SPDXRef-FILE-11
+FileType: ARCHIVE
+FileChecksum: SHA1: de3f98543dbf96082be48ad1a0c7cda836301dcf
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - &url James Halliday</text>
+FileComment: <text>parse argument options</text>
+
+
+# File
+
+FileName: minimist-0.0.8.tgz
+SPDXID: SPDXRef-FILE-7
+FileType: ARCHIVE
+FileChecksum: SHA1: 857fcabfc3397d2625b8228262e86aa7a011b05d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Unspecified Copyright</text>
+FileComment: <text>parse argument options</text>
+
+
+# File
+
+FileName: minimist-1.2.5.tgz
+SPDXID: SPDXRef-FILE-354
+FileType: ARCHIVE
+FileChecksum: SHA1: 67d66014b66a6a8aaa0c083c5fd58df4e4e97602
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright James Halliday</text>
+FileComment: <text>parse argument options</text>
+
+
+# File
+
+FileName: mixin-deep-1.3.1.tgz
+SPDXID: SPDXRef-FILE-267
+FileType: ARCHIVE
+FileChecksum: SHA1: a49e7268dce1a0d9698e45326c5626df3543d0fe
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 2017, Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Deeply mix the properties of objects into the first object. Like merge-deep, but doesn't clone.</text>
+
+
+# File
+
+FileName: mkdirp-0.5.1.tgz
+SPDXID: SPDXRef-FILE-86
+FileType: ARCHIVE
+FileChecksum: SHA1: 30057438eac6cf7f8c4767f38648d6697d75c903
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright 2010 James Halliday (mail@substack.net)</text>
+FileComment: <text>Recursively mkdir, like `mkdir -p`</text>
+
+
+# File
+
+FileName: mongodb-2.2.36.tgz
+SPDXID: SPDXRef-FILE-301
+FileType: ARCHIVE
+FileChecksum: SHA1: 1c573680b2849fb0f47acbba3dc5fa228de975f5
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2016 Copyright 2016 NAN contributors</text>
+FileComment: <text>The official MongoDB driver for Node.js</text>
+
+
+# File
+
+FileName: mongodb-core-2.1.20.tgz
+SPDXID: SPDXRef-FILE-302
+FileType: ARCHIVE
+FileChecksum: SHA1: fece8dd76b59ee7d7f2d313b65322c160492d8f1
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2016 Copyright 2016 NAN contributors</text>
+FileComment: <text>Core MongoDB driver functionality, no bells and whistles and meant for integration not end applications</text>
+
+
+# File
+
+FileName: ms-0.7.1.tgz
+SPDXID: SPDXRef-FILE-83
+FileType: ARCHIVE
+FileChecksum: SHA1: 9cd13c03adbff25b65effde7ce864ee952017098
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Guillermo Rauch <rauchg@gmail.com></text>
+FileComment: <text>Tiny ms conversion utility</text>
+
+
+# File
+
+FileName: ms-2.0.0.tgz
+SPDXID: SPDXRef-FILE-186
+FileType: ARCHIVE
+FileChecksum: SHA1: 5608aeadfc00be6c2901df5f9861788de0d597c8
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Zeit, Inc</text>
+FileComment: <text>Tiny milisecond conversion utility</text>
+
+
+# File
+
+FileName: ms-2.1.1.tgz
+SPDXID: SPDXRef-FILE-250
+FileType: ARCHIVE
+FileChecksum: SHA1: 30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Zeit, Inc</text>
+FileComment: <text>Tiny millisecond conversion utility</text>
+
+
+# File
+
+FileName: mute-stream-0.0.8.tgz
+SPDXID: SPDXRef-FILE-320
+FileType: ARCHIVE
+FileChecksum: SHA1: 1630c42b2251ff81e2a283de96a5497ea92e5e0d
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>Bytes go in, but they don't come out (when muted).</text>
+
+
+# File
+
+FileName: nanomatch-1.2.13.tgz
+SPDXID: SPDXRef-FILE-299
+FileType: ARCHIVE
+FileChecksum: SHA1: b87a8aa4fc0de8fe6be88895b38983ff265bd119
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016-2018 Copyright 2016-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Fast, minimal glob matcher for node.js. Similar to micromatch, minimatch and multimatch, but complete Bash 4.3 wildcard support only (no support for exglobs, posix brackets or braces)</text>
+
+
+# File
+
+FileName: nconf-0.10.0.tgz
+SPDXID: SPDXRef-FILE-265
+FileType: ARCHIVE
+FileChecksum: SHA1: da1285ee95d0a922ca6cee75adcf861f48205ad2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Charlie Robbins and the Contributors</text>
+FileComment: <text>Hierarchical node.js configuration with files, environment variables, command-line arguments, and atomic object merging.</text>
+
+
+# File
+
+FileName: nconf-0.6.9.tgz
+SPDXID: SPDXRef-FILE-60
+FileType: ARCHIVE
+FileChecksum: SHA1: 9570ef15ed6f9ae6b2b3c8d5e71b66d3193cd661
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Nodejitsu Inc</text>
+FileComment: <text>Hierarchical node.js configuration with files, environment variables, command-line arguments, and atomic object merging.</text>
+
+
+# File
+
+FileName: ncp-0.4.2.tgz
+SPDXID: SPDXRef-FILE-22
+FileType: ARCHIVE
+FileChecksum: SHA1: abcc6cbd3ec2ed2a729ff6e7c1fa8f01784a8574
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 by Charlie McConnell</text>
+FileComment: <text>Asynchronous recursive file copy utility.</text>
+
+
+# File
+
+FileName: ncp-1.0.1.tgz
+SPDXID: SPDXRef-FILE-8
+FileType: ARCHIVE
+FileChecksum: SHA1: d15367e5cb87432ba117d2bf80fdf45aecfb4246
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 by Charlie McConnell</text>
+FileComment: <text>Asynchronous recursive file copy utility.</text>
+
+
+# File
+
+FileName: needle-2.2.4.tgz
+SPDXID: SPDXRef-FILE-311
+FileType: ARCHIVE
+FileChecksum: SHA1: 51931bff82533b1928b7d1d69e01f1b00ffd2a4e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Fork, Ltd</text>
+FileComment: <text>The leanest and most handsome HTTP client in the Nodelands.</text>
+
+
+# File
+
+FileName: negotiator-0.6.1.tgz
+SPDXID: SPDXRef-FILE-124
+FileType: ARCHIVE
+FileChecksum: SHA1: 2b327184e8992101177b28563fb5e7102acd0ca9
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012-2014 Copyright 2012-2014 Isaac Z, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson, 2012-2014 Copyright 2012-2014 Federico Romero</text>
+FileComment: <text>HTTP content negotiation</text>
+
+
+# File
+
+FileName: nocache-1.0.1.tgz
+SPDXID: SPDXRef-FILE-200
+FileType: ARCHIVE
+FileChecksum: SHA1: 695c9f736926a7554f7365fa25e087941065bd36
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2016 Copyright 2014-2016 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>Middleware to destroy caching</text>
+
+
+# File
+
+FileName: node-esapi-0.0.1.tgz
+SPDXID: SPDXRef-FILE-295
+FileType: ARCHIVE
+FileChecksum: SHA1: 6f4c456a14ebbd135a0f0d1766c30b2abf07198c
+LicenseConcluded: NONE
+LicenseInfoInFile: BSD-3-Clause
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>REF - Copyright 2007 The OWASP Foundation, REF - Copyright 2014 Karl Düüna</text>
+FileComment: <text>OSWASP ESAPI4JS encoders port to node module</text>
+
+
+# File
+
+FileName: normal.zip
+SPDXID: SPDXRef-FILE-2
+FileType: ARCHIVE
+FileChecksum: SHA1: cc500a64475494583ba88c4d0446a8f585b2d797
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Suspected Unspecified License - Unspecified Copyright</text>
+
+
+# File
+
+FileName: normalize-path-2.1.1.tgz
+SPDXID: SPDXRef-FILE-179
+FileType: ARCHIVE
+FileChecksum: SHA1: 1ab28b556e198363a8c1a6f7e6fa20137fe6aed9
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Normalize file path slashes to be unix-like forward slashes. Also condenses repeat slashes to a single slash and removes and trailing slashes unless disabled.</text>
+
+
+# File
+
+FileName: normalize-path-3.0.0.tgz
+SPDXID: SPDXRef-FILE-309
+FileType: ARCHIVE
+FileChecksum: SHA1: 0dcd69ff23a1c9b11fd0978316644a0388216a65
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2018 Copyright 2014-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Normalize slashes in a file path to be posix/unix-like forward slashes. Also condenses repeat slashes to a single slash and removes and trailing slashes, unless disabled.</text>
+
+
+# File
+
+FileName: npmignore.tgz
+SPDXID: SPDXRef-FILE-40
+FileType: ARCHIVE
+FileChecksum: SHA1: 33e01ca7b99263b80637bc79fb4ee6a91a93e25d
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Suspected MIT - None</text>
+
+
+# File
+
+FileName: nssocket-0.6.0.tgz
+SPDXID: SPDXRef-FILE-102
+FileType: ARCHIVE
+FileChecksum: SHA1: 59f96f6ff321566f33c70f7dbeeecdfdc07154fa
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Charlie Robbins, Paolo Fragomeni, & the Contributors</text>
+FileComment: <text>An elegant way to define lightweight protocols on-top of TCP/TLS sockets in node.js</text>
+
+
+# File
+
+FileName: number-is-nan-1.0.1.tgz
+SPDXID: SPDXRef-FILE-152
+FileType: ARCHIVE
+FileChecksum: SHA1: 097b602b53422a522c1afb8790318336941a011d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>ES2015 Number.isNaN() ponyfill</text>
+
+
+# File
+
+FileName: object-assign-4.1.1.tgz
+SPDXID: SPDXRef-FILE-175
+FileType: ARCHIVE
+FileChecksum: SHA1: 2109adc7965887cfc05cbbd442cac8bfbb360863
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>ES2015 `Object.assign()` ponyfill</text>
+
+
+# File
+
+FileName: object-copy-0.1.0.tgz
+SPDXID: SPDXRef-FILE-145
+FileType: ARCHIVE
+FileChecksum: SHA1: 7e7d858b781bd7c991a41ba975ed3812754e998c
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Jon Schlinkert</text>
+FileComment: <text>Copy static properties, prototype properties, and descriptors from one object to another.</text>
+
+
+# File
+
+FileName: object-inspect-1.7.0.tgz
+SPDXID: SPDXRef-FILE-332
+FileType: ARCHIVE
+FileChecksum: SHA1: f4f6bd181ad77f006b5ece60bd0b6f398ff74a67
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 James Halliday</text>
+FileComment: <text>string representations of objects in node and the browser</text>
+
+
+# File
+
+FileName: object-is-1.0.2.tgz
+SPDXID: SPDXRef-FILE-338
+FileType: ARCHIVE
+FileChecksum: SHA1: 6b80eb84fe451498f65007982f035a5b445edec4
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jordan Harband</text>
+FileComment: <text>ES2015-compliant shim for Object.is - differentiates between -0 and +0</text>
+
+
+# File
+
+FileName: object-keys-1.1.1.tgz
+SPDXID: SPDXRef-FILE-326
+FileType: ARCHIVE
+FileChecksum: SHA1: 1c47f272df277f3b1daf061677d9c82e2322c60e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Jordan Harband</text>
+FileComment: <text>An Object.keys replacement, in case Object.keys is not available. From https://github.com/es-shims/es5-shim</text>
+
+
+# File
+
+FileName: object-visit-1.0.1.tgz
+SPDXID: SPDXRef-FILE-225
+FileType: ARCHIVE
+FileChecksum: SHA1: f79c4493af0c5377b59fe39d395e41042dd045bb
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Call a specified method on each value in the given object.</text>
+
+
+# File
+
+FileName: object.assign-4.1.0.tgz
+SPDXID: SPDXRef-FILE-256
+FileType: ARCHIVE
+FileChecksum: SHA1: 968bf1100d7956bb3ca086f006f846b3bc4008da
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jordan Harband</text>
+FileComment: <text>ES6 spec-compliant Object.assign shim. From https://github.com/es-shims/es6-shim</text>
+
+
+# File
+
+FileName: object.pick-1.3.0.tgz
+SPDXID: SPDXRef-FILE-208
+FileType: ARCHIVE
+FileChecksum: SHA1: 87a10ac4c1694bd2e1cbf53591a66141fb5dd747
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert), 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Returns a filtered copy of an object with only the specified keys, similar to `_.pick` from lodash / underscore.</text>
+
+
+# File
+
+FileName: on-finished-2.3.0.tgz
+SPDXID: SPDXRef-FILE-77
+FileType: ARCHIVE
+FileChecksum: SHA1: 20f1336481b083cd75337992a16971aa2d906947
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Jonathan Ong <me@jongleberry.com>, 2014 Copyright 2014 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Execute a callback when a request closes, finishes, or errors</text>
+
+
+# File
+
+FileName: on-headers-1.0.1.tgz
+SPDXID: SPDXRef-FILE-101
+FileType: ARCHIVE
+FileChecksum: SHA1: 928f5d0f470d49342651ea6794b0857c100693f7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Douglas Christopher Wilson</text>
+FileComment: <text>Execute a listener when a response is about to write headers</text>
+
+
+# File
+
+FileName: once-1.4.0.tgz
+SPDXID: SPDXRef-FILE-153
+FileType: ARCHIVE
+FileChecksum: SHA1: 583b1aa775961d4b113ac17d9c50baef9dd76bd1
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>Run a function exactly one time</text>
+
+
+# File
+
+FileName: opennms-opennms-source-26.0.0-1
+SPDXID: SPDXRef-FILE-364
+FileType: SOURCE
+FileChecksum: SHA1: f743aace93bf4008764acc234bb39f12afd15188
+LicenseConcluded: NONE
+LicenseInfoInFile: AGPL-1.0
+LicenseInfoInFile: AGPL-3.0
+FileCopyrightText: <text>REF - Copyright 1999-2015 The OpenNMS Group, Inc, REF - Copyright 2014 The OpenNMS Group, Inc, REF - Copyright 1999-2000 s FirstThe OpenNMS Project was started in July of</text>
+FileComment: <text>A Java based fault and performance management system</text>
+
+
+# File
+
+FileName: optimist-0.2.8.tgz
+SPDXID: SPDXRef-FILE-52
+FileType: ARCHIVE
+FileChecksum: SHA1: e981ab7e268b457948593b55674c099a815cac31
+LicenseConcluded: NONE
+LicenseInfoInFile: X11
+FileCopyrightText: <text>MIT X11 - 2010 Copyright 2010 James Halliday (mail@substack.net)</text>
+FileComment: <text>Light-weight option parsing with an argv hash. No optstrings attached.</text>
+
+
+# File
+
+FileName: optimist-0.6.0.tgz
+SPDXID: SPDXRef-FILE-59
+FileType: ARCHIVE
+FileChecksum: SHA1: 69424826f3405f79f142e6fc3d9ae58d4dbb9200
+LicenseConcluded: NONE
+LicenseInfoInFile: X11
+FileCopyrightText: <text>MIT X11 - 2010 Copyright 2010 James Halliday (mail@substack.net)</text>
+FileComment: <text>Light-weight option parsing with an argv hash. No optstrings attached.</text>
+
+
+# File
+
+FileName: optimist-0.6.1.tgz
+SPDXID: SPDXRef-FILE-12
+FileType: ARCHIVE
+FileChecksum: SHA1: da3ea74686fa21a19a111c326e90eb15a0196686
+LicenseConcluded: NONE
+LicenseInfoInFile: X11
+FileCopyrightText: <text>MIT X11 - Copyright 2010 James Halliday (mail@substack.net)</text>
+FileComment: <text>Light-weight option parsing with an argv hash. No optstrings attached.</text>
+
+
+# File
+
+FileName: os-locale-1.4.0.tgz
+SPDXID: SPDXRef-FILE-80
+FileType: ARCHIVE
+FileChecksum: SHA1: 20f9f17ae29ed345e8bde583b13d2009803c14d9
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Get the system locale</text>
+
+
+# File
+
+FileName: parseurl-1.3.2.tgz
+SPDXID: SPDXRef-FILE-233
+FileType: ARCHIVE
+FileChecksum: SHA1: fc289d4ed8993119460c156253262cdc8de65bf3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Jonathan Ong & Douglas Christopher Wilson </text>
+FileComment: <text>parse a url with memoization</text>
+
+
+# File
+
+FileName: pascalcase-0.1.1.tgz
+SPDXID: SPDXRef-FILE-182
+FileType: ARCHIVE
+FileChecksum: SHA1: b363e55e8006ca6fe21784d2db22bd15d7917f14
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Convert a string to pascal-case.</text>
+
+
+# File
+
+FileName: path-dirname-1.0.2.tgz
+SPDXID: SPDXRef-FILE-157
+FileType: ARCHIVE
+FileChecksum: SHA1: cc33d24d525e099a5388c0336c6e32b9160609e0
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Elan Shanker and Node.js contributors</text>
+FileComment: <text>Node.js path.dirname() ponyfill</text>
+
+
+# File
+
+FileName: path-is-absolute-1.0.1.tgz
+SPDXID: SPDXRef-FILE-154
+FileType: ARCHIVE
+FileChecksum: SHA1: 174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Node.js 0.12 path.isAbsolute() ponyfill</text>
+
+
+# File
+
+FileName: path-is-absolute-2.0.0.tgz
+SPDXID: SPDXRef-FILE-323
+FileType: ARCHIVE
+FileChecksum: SHA1: cba416f4f3be5d068afe2083d9b3b3707414533d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Node.js 0.12 path.isAbsolute() ponyfill</text>
+
+
+# File
+
+FileName: path-to-regexp-0.1.7.tgz
+SPDXID: SPDXRef-FILE-89
+FileType: ARCHIVE
+FileChecksum: SHA1: df604178005f522f15eb4490e7247a1bfaa67f8c
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Blake Embrey (hello@blakeembrey.com)</text>
+FileComment: <text>Express style path to RegExp utility</text>
+
+
+# File
+
+FileName: pkginfo-0.3.1.tgz
+SPDXID: SPDXRef-FILE-85
+FileType: ARCHIVE
+FileChecksum: SHA1: 5b29f6a81f70717142e09e765bbeab97b4f81e21
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Charlie Robbins</text>
+FileComment: <text>An easy way to expose properties on a module from a package.json</text>
+
+
+# File
+
+FileName: platform-1.3.1.tgz
+SPDXID: SPDXRef-FILE-132
+FileType: ARCHIVE
+FileChecksum: SHA1: 492210892335bd3131c0a08dda2d93ec3543e423
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011-2013 Copyright 2011-2013 John-David Dalton <http://allyoucanleet.com/>, 2014-2016 Copyright 2014-2016 Benjamin Tan <https://d10.github.io/></text>
+FileComment: <text>A platform detection library that works on nearly all JavaScript platforms.</text>
+
+
+# File
+
+FileName: posix-character-classes-0.1.1.tgz
+SPDXID: SPDXRef-FILE-213
+FileType: ARCHIVE
+FileChecksum: SHA1: 01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016-2017 Copyright 2016-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>POSIX character classes for creating regular expressions.</text>
+
+
+# File
+
+FileName: prettyjson-1.2.1.tgz
+SPDXID: SPDXRef-FILE-171
+FileType: ARCHIVE
+FileChecksum: SHA1: fcffab41d19cab4dfae5e575e64246619b12d289
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Rafael de Oleza <rafeca@gmail.com></text>
+FileComment: <text>Package for formatting JSON data in a coloured YAML-style, perfect for CLI output</text>
+
+
+# File
+
+FileName: process-nextick-args-1.0.7.tgz
+SPDXID: SPDXRef-FILE-122
+FileType: ARCHIVE
+FileChecksum: SHA1: 150e20b756590ad3f91093f25a4f2ad8bff30ba3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Calvin Metcalf</text>
+FileComment: <text>process.nextTick but always with args</text>
+
+
+# File
+
+FileName: process-nextick-args-2.0.0.tgz
+SPDXID: SPDXRef-FILE-270
+FileType: ARCHIVE
+FileChecksum: SHA1: a37d732f4271b4ab1ad070d35508e8290788ffaa
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Calvin Metcalf</text>
+FileComment: <text>process.nextTick but always with args</text>
+
+
+# File
+
+FileName: prompt-0.2.14.tgz
+SPDXID: SPDXRef-FILE-21
+FileType: ARCHIVE
+FileChecksum: SHA1: 57754f64f543fd7b0845707c818ece618f05ffdc
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Nodejitsu Inc</text>
+FileComment: <text>A beautiful command-line prompt for node.js</text>
+
+
+# File
+
+FileName: proxy-addr-2.0.4.tgz
+SPDXID: SPDXRef-FILE-304
+FileType: ARCHIVE
+FileChecksum: SHA1: ecfc733bf22ff8c6f407fa275327b9ab67e48b93
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson</text>
+FileComment: <text>Determine address of proxied request</text>
+
+
+# File
+
+FileName: ps-tree-0.0.3.tgz
+SPDXID: SPDXRef-FILE-56
+FileType: ARCHIVE
+FileChecksum: SHA1: dbf8d752a7fe22fa7d58635689499610e9276ddc
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>get all children of a pid</text>
+
+
+# File
+
+FileName: qs-6.5.2.tgz
+SPDXID: SPDXRef-FILE-290
+FileType: ARCHIVE
+FileChecksum: SHA1: cb3ae806e8740444584ef154ce8ee98d403f3e36
+LicenseConcluded: NONE
+LicenseInfoInFile: BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2014 Copyright 2014 Nathan LaFreniere and other contributors</text>
+FileComment: <text>A querystring parser that supports nesting and arrays, with a depth limit</text>
+
+
+# File
+
+FileName: random-bytes-1.0.0.tgz
+SPDXID: SPDXRef-FILE-107
+FileType: ARCHIVE
+FileChecksum: SHA1: 4f68a1dc0ae58bd3fb95848c30324db75d64360b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>URL and cookie safe UIDs</text>
+
+
+# File
+
+FileName: range-parser-1.2.0.tgz
+SPDXID: SPDXRef-FILE-137
+FileType: ARCHIVE
+FileChecksum: SHA1: f49be6b487894ddc40dcc94a322f611092e00d5e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012-2014 Copyright 2012-2014 TJ Holowaychuk <tj@vision-media.ca>, 2015-2016 Copyright 2015-2016 Douglas Christopher Wilson <doug@somethingdoug.com</text>
+FileComment: <text>Range header field string parser</text>
+
+
+# File
+
+FileName: raw-body-2.3.3.tgz
+SPDXID: SPDXRef-FILE-292
+FileType: ARCHIVE
+FileChecksum: SHA1: 1b324ece6b5706e153855bc1148c65bb7f6ea0c3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013-2014 Copyright 2013-2014 Jonathan Ong <me@jongleberry.com>, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Get and validate the raw body of a readable stream.</text>
+
+
+# File
+
+FileName: read-1.0.7.tgz
+SPDXID: SPDXRef-FILE-103
+FileType: ARCHIVE
+FileChecksum: SHA1: b3da19bd052431a97671d44a42634adf710b40c4
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>read(1) for node programs</text>
+
+
+# File
+
+FileName: readable-stream-2.2.7.tgz
+SPDXID: SPDXRef-FILE-180
+FileType: ARCHIVE
+FileChecksum: SHA1: 07057acbe2467b22042d36f98c5ad507054e95b1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Node.js contributors</text>
+FileComment: <text>Streams3, a user-land copy of the stream library from Node.js</text>
+
+
+# File
+
+FileName: readable-stream-2.3.6.tgz
+SPDXID: SPDXRef-FILE-287
+FileType: ARCHIVE
+FileChecksum: SHA1: b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Node.js contributors</text>
+FileComment: <text>Streams3, a user-land copy of the stream library from Node.js</text>
+
+
+# File
+
+FileName: readdirp-2.2.1.tgz
+SPDXID: SPDXRef-FILE-310
+FileType: ARCHIVE
+FileChecksum: SHA1: 0e87622a3325aa33e892285caf8b4e846529a525
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012-2015 Copyright 2012-2015 Thorsten Lorenz</text>
+FileComment: <text>Recursive version of fs.readdir with streaming api.</text>
+
+
+# File
+
+FileName: referrer-policy-1.0.0.tgz
+SPDXID: SPDXRef-FILE-190
+FileType: ARCHIVE
+FileChecksum: SHA1: f60eedc92f942b01a6118121ec932d66e8fd7e14
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Evan Hahn</text>
+FileComment: <text>Middleware to set the Referrer-Policy HTTP header</text>
+
+
+# File
+
+FileName: regex-not-1.0.2.tgz
+SPDXID: SPDXRef-FILE-275
+FileType: ARCHIVE
+FileChecksum: SHA1: 1f4ece27e00b0b65e0247a6810e6a85d83a5752c
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016-2018 Copyright 2016-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Create a javascript regular expression for matching everything except for the given string.</text>
+
+
+# File
+
+FileName: regexp.prototype.flags-1.3.0.tgz
+SPDXID: SPDXRef-FILE-339
+FileType: ARCHIVE
+FileChecksum: SHA1: 7aba89b3c13a64509dabcf3ca8d9fbb9bdf5cb75
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jordan Harband</text>
+FileComment: <text>ES6 spec-compliant RegExp.prototype.flags shim.</text>
+
+
+# File
+
+FileName: remove-trailing-separator-1.1.0.tgz
+SPDXID: SPDXRef-FILE-207
+FileType: ARCHIVE
+FileChecksum: SHA1: c24bce2a283adad5bc3f58e0d48249b92379d8ef
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - 2017 Tomas Sardyha</text>
+FileComment: <text>Removes separators from the end of the string.</text>
+
+
+# File
+
+FileName: repeat-element-1.1.3.tgz
+SPDXID: SPDXRef-FILE-307
+FileType: ARCHIVE
+FileChecksum: SHA1: 782e0d825c0c5a3bb39731f84efee6b742e6b1ce
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert, 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Create an array by repeating the given value n times.</text>
+
+
+# File
+
+FileName: repeat-string-1.6.1.tgz
+SPDXID: SPDXRef-FILE-156
+FileType: ARCHIVE
+FileChecksum: SHA1: 8dcae470e1c88abc2d600fff4a776286da75e637
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 [Jon Schlinkert](http://github.com/jonschlinkert), 2014-2015 Copyright 2014-2015 Jon Schlinkert, 2014-2016 Copyright 2014-2016 Jon Schlinkert, 2016 Copyright 2016 "Jon Schlinkert" (http://github.com/jonschlinkert)</text>
+FileComment: <text>Repeat the given string n times. Fastest implementation for repeating a string.</text>
+
+
+# File
+
+FileName: require_optional-1.0.1.tgz
+SPDXID: SPDXRef-FILE-192
+FileType: ARCHIVE
+FileChecksum: SHA1: 4cf35a4247f64ca3df8c2ef208cc494b1ca8fc2e
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Unspecified Copyright</text>
+FileComment: <text>Allows you declare optionalPeerDependencies that can be satisfied by the top level module but ignored if they are not.</text>
+
+
+# File
+
+FileName: resolve-from-2.0.0.tgz
+SPDXID: SPDXRef-FILE-100
+FileType: ARCHIVE
+FileChecksum: SHA1: 9480ab20e94ffa1d9e80a804c7ea147611966b57
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Resolve the path of a module like require.resolve() but from a given path</text>
+
+
+# File
+
+FileName: resolve-url-0.2.1.tgz
+SPDXID: SPDXRef-FILE-68
+FileType: ARCHIVE
+FileChecksum: SHA1: 2c637fe77c893afd2a663fe21aa9080068e2052a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Simon Lydell</text>
+FileComment: <text>Like Node.js’ `path.resolve`/`url.resolve` for the browser.</text>
+
+
+# File
+
+FileName: resumer-0.0.0.tgz
+SPDXID: SPDXRef-FILE-63
+FileType: ARCHIVE
+FileChecksum: SHA1: f1e8f461e4064ba39e82af3cdc2a8c893d076759
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - &url James Halliday</text>
+FileComment: <text>a through stream that starts paused and resumes on the next tick</text>
+
+
+# File
+
+FileName: ret-0.1.15.tgz
+SPDXID: SPDXRef-FILE-206
+FileType: ARCHIVE
+FileChecksum: SHA1: b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 by fent, 2011 Copyright 2011 by Roly Fentanes</text>
+FileComment: <text>Tokenizes a string that represents a regular expression.</text>
+
+
+# File
+
+FileName: revalidator-0.1.8.tgz
+SPDXID: SPDXRef-FILE-19
+FileType: ARCHIVE
+FileChecksum: SHA1: fece61bfa0c1b52a206bd6b18198184bdd523a3b
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2009-2010 Copyright 2009-2010 Alexis Sellier, Charlie Robbins, Nodejitsu Inc</text>
+FileComment: <text>A cross-browser / node.js validator used by resourceful</text>
+
+
+# File
+
+FileName: rimraf-2.6.3.tgz
+SPDXID: SPDXRef-FILE-321
+FileType: ARCHIVE
+FileChecksum: SHA1: b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>A deep deletion module for node (like `rm -rf`)</text>
+
+
+# File
+
+FileName: rndm-1.2.0.tgz
+SPDXID: SPDXRef-FILE-108
+FileType: ARCHIVE
+FileChecksum: SHA1: f33fe9cfb52bbfd520aa18323bc65db110a1b76c
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong me@jongleberry.com</text>
+FileComment: <text>random string generator</text>
+
+
+# File
+
+FileName: safe-buffer-5.1.1.tgz
+SPDXID: SPDXRef-FILE-191
+FileType: ARCHIVE
+FileChecksum: SHA1: 893312af69b2123def71f57889001671eeb2c853
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Feross Aboukhadijeh</text>
+FileComment: <text>Safer Node.js Buffer API</text>
+
+
+# File
+
+FileName: safe-buffer-5.1.2.tgz
+SPDXID: SPDXRef-FILE-289
+FileType: ARCHIVE
+FileChecksum: SHA1: 991ec69d296e0313747d59bdfd2b745c35f8828d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Feross Aboukhadijeh</text>
+FileComment: <text>Safer Node.js Buffer API</text>
+
+
+# File
+
+FileName: safe-regex-1.1.0.tgz
+SPDXID: SPDXRef-FILE-160
+FileType: ARCHIVE
+FileChecksum: SHA1: 40a3669f3b077d1e943d44629e157dd48023bf2e
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Unspecified Copyright</text>
+FileComment: <text>detect possibly catastrophic, exponential-time regular expressions</text>
+
+
+# File
+
+FileName: safer-buffer-2.1.2.tgz
+SPDXID: SPDXRef-FILE-285
+FileType: ARCHIVE
+FileChecksum: SHA1: 44fa161b0187b9549dd84bb91802f9bd8385cd6a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2018 Copyright 2018 Nikita Skovoroda <chalkerx@gmail.com></text>
+FileComment: <text>Modern Buffer API polyfill without footguns</text>
+
+
+# File
+
+FileName: sax-1.2.4.tgz
+SPDXID: SPDXRef-FILE-193
+FileType: ARCHIVE
+FileChecksum: SHA1: 2816234e2378bddc4e5354fab5caa895df7100d9
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>An evented streaming XML parser in JavaScript</text>
+
+
+# File
+
+FileName: scoped-underscore-1.3.1.tgz
+SPDXID: SPDXRef-FILE-45
+FileType: ARCHIVE
+FileChecksum: SHA1: 28eb847a949e71eb9041fd6567a36c9acfcf2bed
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012 Jeremy Ashkenas, DocumentCloud</text>
+
+
+# File
+
+FileName: secure-keys-1.0.0.tgz
+SPDXID: SPDXRef-FILE-116
+FileType: ARCHIVE
+FileChecksum: SHA1: f0c82d98a3b139a8776a8808050b824431087fca
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>Encrypt/Decrypt the values of a given object</text>
+
+
+# File
+
+FileName: semver-5.6.0.tgz
+SPDXID: SPDXRef-FILE-313
+FileType: ARCHIVE
+FileChecksum: SHA1: 7e74256fbaa49c75aa7c7a205cc22799cac80004
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>The semantic version parser used by npm.</text>
+
+
+# File
+
+FileName: send-0.16.2.tgz
+SPDXID: SPDXRef-FILE-268
+FileType: ARCHIVE
+FileChecksum: SHA1: 6ecca1e0f8c156d141597559848df64730a6bbc1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2012 Copyright 2012 TJ Holowaychuk, 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson</text>
+FileComment: <text>Better streaming static file server with Range and conditional-GET support</text>
+
+
+# File
+
+FileName: serve-favicon-2.5.0.tgz
+SPDXID: SPDXRef-FILE-283
+FileType: ARCHIVE
+FileChecksum: SHA1: 935d240cdfe0f5805307fdfe967d88942a2cbcf0
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Sencha Inc, 2011 Copyright 2011 LearnBoost, 2014-2017 Copyright 2014-2017 Douglas Christopher Wilson, 2011 Copyright 2011 TJ Holowaychuk</text>
+FileComment: <text>favicon serving middleware with caching</text>
+
+
+# File
+
+FileName: serve-static-1.13.2.tgz
+SPDXID: SPDXRef-FILE-269
+FileType: ARCHIVE
+FileChecksum: SHA1: 095e8472fd5b46237db50ce486a43f4b86c6cec1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Sencha Inc, 2011 Copyright 2011 LearnBoost, 2011 Copyright 2011 TJ Holowaychuk, 2014-2016 Copyright 2014-2016 Douglas Christopher Wilson</text>
+FileComment: <text>Serve static files</text>
+
+
+# File
+
+FileName: set-value-0.4.3.tgz
+SPDXID: SPDXRef-FILE-176
+FileType: ARCHIVE
+FileChecksum: SHA1: 7db08f9d3d22dc7f78e53af3c3bf4666ecdfccf1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Create nested values and any intermediaries using dot notation (`'a.b.c'`) paths.</text>
+
+
+# File
+
+FileName: set-value-2.0.0.tgz
+SPDXID: SPDXRef-FILE-226
+FileType: ARCHIVE
+FileChecksum: SHA1: 71ae4a88f0feefbbf52d1ea604f3fb315ebb6274
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2017 Copyright 2014-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Create nested values and any intermediaries using dot notation (`'a.b.c'`) paths.</text>
+
+
+# File
+
+FileName: setprototypeof-1.0.2.tgz
+SPDXID: SPDXRef-FILE-165
+FileType: ARCHIVE
+FileChecksum: SHA1: 81a552141ec104b88e89ce383103ad5c66564d08
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - 2015 Copyright 2015 Wes Todd</text>
+FileComment: <text>A small polyfill for Object.setprototypeof</text>
+
+
+# File
+
+FileName: setprototypeof-1.1.0.tgz
+SPDXID: SPDXRef-FILE-243
+FileType: ARCHIVE
+FileChecksum: SHA1: d0bd85536887b6fe7c0d818cb962d9d91c54e656
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - 2015 Copyright 2015 Wes Todd</text>
+FileComment: <text>A small polyfill for Object.setprototypeof</text>
+
+
+# File
+
+FileName: shush-1.0.0.tgz
+SPDXID: SPDXRef-FILE-104
+FileType: ARCHIVE
+FileChecksum: SHA1: c27415a9e458f2fed39b27cf8eb37c003782b431
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>Sugar for silencing JSON comments.</text>
+
+
+# File
+
+FileName: side-channel-1.0.2.tgz
+SPDXID: SPDXRef-FILE-349
+FileType: ARCHIVE
+FileChecksum: SHA1: df5d1abadb4e4bf4af1cd8852bf132d2f7876947
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2019 Copyright 2019 Jordan Harband</text>
+FileComment: <text>Store information about any JS value in a side channel. Uses WeakMap if available.</text>
+
+
+# File
+
+FileName: snapdragon-0.8.2.tgz
+SPDXID: SPDXRef-FILE-279
+FileType: ARCHIVE
+FileChecksum: SHA1: 64922e7c565b0e14204ba1aa7d6964278d25182d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2016 Copyright 2016 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Fast, pluggable and easy-to-use parser-renderer factory.</text>
+
+
+# File
+
+FileName: snapdragon-node-2.1.1.tgz
+SPDXID: SPDXRef-FILE-212
+FileType: ARCHIVE
+FileChecksum: SHA1: 6c175f86ff14bdb0724563e8f3c1b021a286853b
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Snapdragon utility for creating a new AST node in custom code, such as plugins.</text>
+
+
+# File
+
+FileName: snapdragon-util-3.0.1.tgz
+SPDXID: SPDXRef-FILE-219
+FileType: ARCHIVE
+FileChecksum: SHA1: f956479486f2acd79700693f6f7b805e45ab56e2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Utilities for the snapdragon parser/compiler.</text>
+
+
+# File
+
+FileName: source-map-0.1.34.tgz
+SPDXID: SPDXRef-FILE-34
+FileType: ARCHIVE
+FileChecksum: SHA1: a7cfe89aec7b1682c3b198d0acfb47d7d090566b
+LicenseConcluded: NONE
+LicenseInfoInFile: BSD-2-Clause
+LicenseInfoInFile: BSD-3-Clause
+FileCopyrightText: <text>REF - Copyright 2009-2011 Mozilla Foundation and contributors</text>
+FileComment: <text>Generates and consumes source maps</text>
+
+
+# File
+
+FileName: source-map-0.5.7.tgz
+SPDXID: SPDXRef-FILE-209
+FileType: ARCHIVE
+FileChecksum: SHA1: 8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc
+LicenseConcluded: NONE
+LicenseInfoInFile: BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2009-2011 Copyright 2009-2011 Mozilla Foundation and contributors</text>
+FileComment: <text>Generates and consumes source maps</text>
+
+
+# File
+
+FileName: source-map-resolve-0.5.2.tgz
+SPDXID: SPDXRef-FILE-293
+FileType: ARCHIVE
+FileChecksum: SHA1: 72e2cc34095543e43b2c62b2c4c10d4a9054f259
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 2016, 2017 Simon Lydell</text>
+FileComment: <text>Resolve the source map and/or sources for a generated file.</text>
+
+
+# File
+
+FileName: source-map-url-0.4.0.tgz
+SPDXID: SPDXRef-FILE-120
+FileType: ARCHIVE
+FileChecksum: SHA1: 3e935d7ddd73631b97659956d55128e87b5084a3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Simon Lydell</text>
+FileComment: <text>Tools for working with sourceMappingURL comments.</text>
+
+
+# File
+
+FileName: split-string-3.1.0.tgz
+SPDXID: SPDXRef-FILE-249
+FileType: ARCHIVE
+FileChecksum: SHA1: 7cb09dda3a86585705c64b39a6466038682e8fe2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2017 Copyright 2015-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Split a string on a character except when the character is escaped.</text>
+
+
+# File
+
+FileName: stack-trace-0.0.10.tgz
+SPDXID: SPDXRef-FILE-185
+FileType: ARCHIVE
+FileChecksum: SHA1: 547c70b347e8d32b4e108ea1a2a159e5fdde19c0
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Felix Geisendörfer (felix@debuggable.com)</text>
+FileComment: <text>Get v8 stack traces as an array of CallSite objects.</text>
+
+
+# File
+
+FileName: static-extend-0.1.2.tgz
+SPDXID: SPDXRef-FILE-148
+FileType: ARCHIVE
+FileChecksum: SHA1: 60809c39cbff55337226fd5e0b520f341f1fb5c6
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016 Copyright 2016 Jon Schlinkert, 2016 Copyright 2016 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Adds a static `extend` method to a class, to simplify inheritance. Extends the static properties, prototype properties, and descriptors from a `Parent` constructor onto `Child` constructors.</text>
+
+
+# File
+
+FileName: statuses-1.4.0.tgz
+SPDXID: SPDXRef-FILE-246
+FileType: ARCHIVE
+FileChecksum: SHA1: bb73d446da2796106efcc1b601a253d6c46bd087
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2016 Copyright 2016 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>HTTP status utility</text>
+
+
+# File
+
+FileName: statuses-1.5.0.tgz
+SPDXID: SPDXRef-FILE-281
+FileType: ARCHIVE
+FileChecksum: SHA1: 161c7dac177659fd9811f43771fa99381478628c
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2016 Copyright 2016 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>HTTP status utility</text>
+
+
+# File
+
+FileName: store.zip
+SPDXID: SPDXRef-FILE-4
+FileType: ARCHIVE
+FileChecksum: SHA1: ff09580c29518f4c2991edafd81e3df920d2085b
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Suspected Unspecified License - Unspecified Copyright</text>
+
+
+# File
+
+FileName: string-width-1.0.2.tgz
+SPDXID: SPDXRef-FILE-141
+FileType: ARCHIVE
+FileChecksum: SHA1: 118bdf5b8cdc51a2a7e70d211e07e2b0b9b107d3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Get the visual width of a string - the number of columns required to display it</text>
+
+
+# File
+
+FileName: string.prototype.trimend-1.0.0.tgz
+SPDXID: SPDXRef-FILE-356
+FileType: ARCHIVE
+FileChecksum: SHA1: ee497fd29768646d84be2c9b819e292439614373
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 Khaled Al-Ansari</text>
+FileComment: <text>ES2019 spec-compliant String.prototype.trimEnd shim.</text>
+
+
+# File
+
+FileName: string.prototype.trimleft-2.1.2.tgz
+SPDXID: SPDXRef-FILE-357
+FileType: ARCHIVE
+FileChecksum: SHA1: 4408aa2e5d6ddd0c9a80739b087fbc067c03b3cc
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>ES2019 spec-compliant String.prototype.trimLeft shim.</text>
+
+
+# File
+
+FileName: string.prototype.trimright-2.1.2.tgz
+SPDXID: SPDXRef-FILE-358
+FileType: ARCHIVE
+FileChecksum: SHA1: c76f1cef30f21bbad8afeb8db1511496cfb0f2a3
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>ES2019 spec-compliant String.prototype.trimLeft shim.</text>
+
+
+# File
+
+FileName: string.prototype.trimstart-1.0.0.tgz
+SPDXID: SPDXRef-FILE-359
+FileType: ARCHIVE
+FileChecksum: SHA1: afe596a7ce9de905496919406c9734845f01a2f2
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 Khaled Al-Ansari</text>
+FileComment: <text>ES2019 spec-compliant String.prototype.trimStart shim.</text>
+
+
+# File
+
+FileName: string_decoder-1.0.3.tgz
+SPDXID: SPDXRef-FILE-196
+FileType: ARCHIVE
+FileChecksum: SHA1: 0fc67d7c141825de94282dd536bec6b9bce860ab
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Node.js contributors</text>
+FileComment: <text>The string_decoder module from Node core</text>
+
+
+# File
+
+FileName: string_decoder-1.1.1.tgz
+SPDXID: SPDXRef-FILE-284
+FileType: ARCHIVE
+FileChecksum: SHA1: 9cf1611ba62685d7030ae9e4ba34149c3af03fc8
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Node.js - Copyright Node.js contributors</text>
+FileComment: <text>The string_decoder module from Node core</text>
+
+
+# File
+
+FileName: strip-ansi-3.0.1.tgz
+SPDXID: SPDXRef-FILE-111
+FileType: ARCHIVE
+FileChecksum: SHA1: 6a385fb8853d952d5ff05d0e8aaf94278dc63dcf
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Strip ANSI escape codes</text>
+
+
+# File
+
+FileName: strip-json-comments-0.1.3.tgz
+SPDXID: SPDXRef-FILE-29
+FileType: ARCHIVE
+FileChecksum: SHA1: 164c64e370a8a3cc00c9e01b539e569823f0ee54
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Strip comments from JSON. Lets you use comments in your JSON files!</text>
+
+
+# File
+
+FileName: swig-1.4.2.tgz
+SPDXID: SPDXRef-FILE-66
+FileType: ARCHIVE
+FileChecksum: SHA1: 4085ca0453369104b5d483e2841b39b7ae1aaba5
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010-2013 Copyright 2010-2013 Paul Armstrong</text>
+FileComment: <text>A simple, powerful, and extendable templating engine for node.js and browsers, similar to Django, Jinja2, and Twig.</text>
+
+
+# File
+
+FileName: tape-2.3.3.tgz
+SPDXID: SPDXRef-FILE-57
+FileType: ARCHIVE
+FileChecksum: SHA1: 2e7ce0a31df09f8d6851664a71842e0ca5057af7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>tap-producing test harness for node and browsers</text>
+
+
+# File
+
+FileName: term-size-0.1.0.exe
+SPDXID: SPDXRef-FILE-312
+FileType: BINARY
+FileChecksum: SHA1: 97a33c1a4174ddacce113a15ee65c03568f2a1db
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Unspecified License - None</text>
+FileComment: <text>Get the terminal window size</text>
+
+
+# File
+
+FileName: through-2.3.8.tgz
+SPDXID: SPDXRef-FILE-70
+FileType: ARCHIVE
+FileChecksum: SHA1: 0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Dominic Tarr</text>
+FileComment: <text>simplified stream construction</text>
+
+
+# File
+
+FileName: to-object-path-0.3.0.tgz
+SPDXID: SPDXRef-FILE-142
+FileType: ARCHIVE
+FileChecksum: SHA1: 297588b7b0e7e0ac08e04e672f85c1f4999e17af
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2016 Copyright 2015-2016 Jon Schlinkert, 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Create an object path from a list or array of strings.</text>
+
+
+# File
+
+FileName: to-regex-3.0.2.tgz
+SPDXID: SPDXRef-FILE-276
+FileType: ARCHIVE
+FileChecksum: SHA1: 13cfdd9b336552f30b51f33a8ae1b42a7a7599ce
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2016-2018 Copyright 2016-2018 Jon Schlinkert, 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2018 Copyright 2018 [Jon Schlinkert](https://github.com/jonschlinkert)</text>
+FileComment: <text>Generate a regex from a string or array of strings.</text>
+
+
+# File
+
+FileName: to-regex-range-2.1.1.tgz
+SPDXID: SPDXRef-FILE-211
+FileType: ARCHIVE
+FileChecksum: SHA1: 7c80c17b9dfebe599e27367e0d4dd5590141db38
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 [Jon Schlinkert](https://github.com/jonschlinkert), 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Pass two numbers, get a regex-compatible source string for matching ranges. Validated against more than 2.78 million test assertions.</text>
+
+
+# File
+
+FileName: tsscmp-1.0.5.tgz
+SPDXID: SPDXRef-FILE-135
+FileType: ARCHIVE
+FileChecksum: SHA1: 7dc4a33af71581ab4337da91d85ca5427ebd9a97
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright 2016</text>
+FileComment: <text>Timing safe string compare using double HMAC</text>
+
+
+# File
+
+FileName: type-is-1.6.16.tgz
+SPDXID: SPDXRef-FILE-273
+FileType: ARCHIVE
+FileChecksum: SHA1: f89ce341541c672b25ee7ae3c73dee3b2be50194
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2014-2015 Copyright 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Infer the content-type of a request.</text>
+
+
+# File
+
+FileName: uglify-js-2.4.24.tgz
+SPDXID: SPDXRef-FILE-91
+FileType: ARCHIVE
+FileChecksum: SHA1: fad5755c1e1577658bb06ff9ab6e548c95bebd6e
+LicenseConcluded: NONE
+LicenseInfoInFile: BSD-2-Clause
+FileCopyrightText: <text>BSD 2 - Copyright 2012-2013 (c) Mihai Bazon <mihai.bazon@gmail.com></text>
+FileComment: <text>JavaScript parser, mangler/compressor and beautifier toolkit</text>
+
+
+# File
+
+FileName: uglify-to-browserify-1.0.2.tgz
+SPDXID: SPDXRef-FILE-32
+FileType: ARCHIVE
+FileChecksum: SHA1: 6e0924d6bda6b5afe349e39a6d632850a0f882b7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Forbes Lindesay</text>
+FileComment: <text>A transform to make UglifyJS work in browserify.</text>
+
+
+# File
+
+FileName: uid-safe-2.1.4.tgz
+SPDXID: SPDXRef-FILE-178
+FileType: ARCHIVE
+FileChecksum: SHA1: 3ad6f38368c6d4c8c75ec17623fb79aa1d071d81
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2015-2017 Copyright 2015-2017 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>URL and cookie safe UIDs</text>
+
+
+# File
+
+FileName: uid-safe-2.1.5.tgz
+SPDXID: SPDXRef-FILE-205
+FileType: ARCHIVE
+FileChecksum: SHA1: 2b3d5c7240e8fc2e58f8aa269e5ee49c0857bd3a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jonathan Ong <me@jongleberry.com>, 2015-2017 Copyright 2015-2017 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>URL and cookie safe UIDs</text>
+
+
+# File
+
+FileName: ultra.zip
+SPDXID: SPDXRef-FILE-1
+FileType: ARCHIVE
+FileChecksum: SHA1: 60d0a56dca2c30d48b55e8e9808e59d1d45e4cb3
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Suspected Unspecified License - Unspecified Copyright</text>
+
+
+# File
+
+FileName: underscore-1.3.3.tgz
+SPDXID: SPDXRef-FILE-35
+FileType: ARCHIVE
+FileChecksum: SHA1: 47ac53683daf832bfa952e1774417da47817ae42
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2009-2012 Copyright 2009-2012 Jeremy Ashkenas, DocumentCloud</text>
+FileComment: <text>JavaScript's functional programming helper library.</text>
+
+
+# File
+
+FileName: underscore-1.9.1.tgz
+SPDXID: SPDXRef-FILE-296
+FileType: ARCHIVE
+FileChecksum: SHA1: 06dce34a0e68a7babc29b365b8e74b8925203961
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2009-2018 Copyright 2009-2018 Jeremy Ashkenas, DocumentCloud and Investigative</text>
+FileComment: <text>JavaScript's functional programming helper library.</text>
+
+
+# File
+
+FileName: union-value-1.0.0.tgz
+SPDXID: SPDXRef-FILE-222
+FileType: ARCHIVE
+FileChecksum: SHA1: 5c71c34cb5bad5dcebe3ea0cd08207ba5aa1aea4
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015-2017 Copyright 2015-2017 Jon Schlinkert</text>
+FileComment: <text>Set an array of unique values as the property of an object. Supports setting deeply nested properties using using object-paths/dot notation.</text>
+
+
+# File
+
+FileName: unpipe-1.0.0.tgz
+SPDXID: SPDXRef-FILE-72
+FileType: ARCHIVE
+FileChecksum: SHA1: b2bf4ee8514aae6165b4817829d21b2ef49904ec
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Douglas Christopher Wilson <doug@somethingdoug.com></text>
+FileComment: <text>Unpipe a stream from all destinations</text>
+
+
+# File
+
+FileName: unset-value-1.0.0.tgz
+SPDXID: SPDXRef-FILE-230
+FileType: ARCHIVE
+FileChecksum: SHA1: 8376873f7d2335179ffb1e6fc3a8ed0dfc8ab559
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015-2017 Copyright 2015-2017 Jon Schlinkert, 2017 Copyright 2017 "Jon Schlinkert" (https://github.com/jonschlinkert)</text>
+FileComment: <text>Delete nested properties from an object using dot notation.</text>
+
+
+# File
+
+FileName: upath-1.1.2.tgz
+SPDXID: SPDXRef-FILE-322
+FileType: ARCHIVE
+FileChecksum: SHA1: 3db658600edaeeccbe6db5e684d67ee8c2acd068
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Angelos Pikoulas (agelos.pikoulas@gmail.com)</text>
+FileComment: <text>A proxy to `path`, replacing `\` with `/` for all results & new methods to normalize & join keeping leading `./` and add, change, default, trim file extensions.</text>
+
+
+# File
+
+FileName: urix-0.1.0.tgz
+SPDXID: SPDXRef-FILE-69
+FileType: ARCHIVE
+FileChecksum: SHA1: da937f7a62e21fec1fd18d49b35c2935067a6c72
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Simon Lydell</text>
+FileComment: <text>Makes Windows-style paths more unix and URI friendly.</text>
+
+
+# File
+
+FileName: use-3.1.1.tgz
+SPDXID: SPDXRef-FILE-300
+FileType: ARCHIVE
+FileChecksum: SHA1: d50c8cac79a19fbc20f2911f56eb973f4e10070f
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2018 Copyright 2018 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Easily add plugin support to your node.js application.</text>
+
+
+# File
+
+FileName: util-deprecate-1.0.2.tgz
+SPDXID: SPDXRef-FILE-82
+FileType: ARCHIVE
+FileChecksum: SHA1: 450d4dc9fa70de732762fbd2d4a28981419a0ccf
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Nathan Rajlich "nathan@tootallnate.net" (mailto:nathan@tootallnate.net), 2014 Copyright 2014 Nathan Rajlich <nathan@tootallnate.net></text>
+FileComment: <text>The Node.js `util.deprecate()` function with browser support</text>
+
+
+# File
+
+FileName: utile-0.2.1.tgz
+SPDXID: SPDXRef-FILE-20
+FileType: ARCHIVE
+FileChecksum: SHA1: 930c88e99098d6220834c356cbd9a770522d90d7
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Nodejitsu Inc</text>
+FileComment: <text>A drop-in replacement for `util` with some additional advantageous functions</text>
+
+
+# File
+
+FileName: utile-0.3.0.tgz
+SPDXID: SPDXRef-FILE-138
+FileType: ARCHIVE
+FileChecksum: SHA1: 1352c340eb820e4d8ddba039a4fbfaa32ed4ef3a
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2011 Copyright 2011 Charlie Robbins & the Contributors</text>
+FileComment: <text>A drop-in replacement for `util` with some additional advantageous functions</text>
+
+
+# File
+
+FileName: utils-merge-1.0.0.tgz
+SPDXID: SPDXRef-FILE-16
+FileType: ARCHIVE
+FileChecksum: SHA1: 0294fb922bb9375153541c4f7096231f287c8af8
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013 Copyright 2013 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>, 2013 Copyright 2013 Jared Hanson <"http://jaredhanson.net/" (http://jaredhanson.net/)>, 2013 Copyright 2013 Jared Hanson</text>
+FileComment: <text>merge() utility function</text>
+
+
+# File
+
+FileName: utils-merge-1.0.1.tgz
+SPDXID: SPDXRef-FILE-240
+FileType: ARCHIVE
+FileChecksum: SHA1: 9f95710f50a267947b2ccc124741c1028427e713
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2013-2017 Copyright 2013-2017 Jared Hanson <"http://jaredhanson.net/" (http://jaredhanson.net/)>, 2013-2017 Copyright 2013-2017 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>, 2013-2017 Copyright 2013-2017 Jared Hanson</text>
+FileComment: <text>merge() utility function</text>
+
+
+# File
+
+FileName: vary-1.1.2.tgz
+SPDXID: SPDXRef-FILE-239
+FileType: ARCHIVE
+FileChecksum: SHA1: 2299f02c6ded30d4a5961b0b9f74524a18f634fc
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2017 Copyright 2014-2017 Douglas Christopher Wilson</text>
+FileComment: <text>Manipulate the HTTP Vary header</text>
+
+
+# File
+
+FileName: which-boxed-primitive-1.0.1.tgz
+SPDXID: SPDXRef-FILE-336
+FileType: ARCHIVE
+FileChecksum: SHA1: cbe8f838ebe91ba2471bb69e9edbda67ab5a5ec1
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2019 Copyright 2019 Jordan Harband</text>
+FileComment: <text>Which kind of boxed JS primitive is this?</text>
+
+
+# File
+
+FileName: which-collection-1.0.1.tgz
+SPDXID: SPDXRef-FILE-353
+FileType: ARCHIVE
+FileChecksum: SHA1: 70eab71ebbbd2aefaf32f917082fc62cdcb70906
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2019 Copyright 2019 Inspect JS</text>
+FileComment: <text>Which kind of Collection (Map, Set, WeakMap, WeakSet) is this JavaScript value? Works cross-realm, without `instanceof`, and despite Symbol.toStringTag.</text>
+
+
+# File
+
+FileName: which-typed-array-1.1.1.tgz
+SPDXID: SPDXRef-FILE-360
+FileType: ARCHIVE
+FileChecksum: SHA1: bff075fd975faedad9ed9355ee0d15452d068794
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2015 Copyright 2015 Jordan Harband</text>
+FileComment: <text>Which kind of Typed Array is this JavaScript value? Works cross-realm, without `instanceof`, and despite Symbol.toStringTag.</text>
+
+
+# File
+
+FileName: window-size-0.1.0.tgz
+SPDXID: SPDXRef-FILE-33
+FileType: ARCHIVE
+FileChecksum: SHA1: 5438cd2ea93b202efa3a19fe8887aee7c94f9c9d
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014 Copyright 2014 Jon Schlinkert</text>
+FileComment: <text>Reliable way to to get the height and width of the terminal/console in a node.js environment.</text>
+
+
+# File
+
+FileName: window-size-0.1.4.tgz
+SPDXID: SPDXRef-FILE-81
+FileType: ARCHIVE
+FileChecksum: SHA1: f8e1aa1ee5a53ec5bf151ffa09742a6ad7697876
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 [Jon Schlinkert](https://github.com/jonschlinkert), 2014-2015 Copyright 2014-2015 "Jon Schlinkert" (https://github.com/jonschlinkert), 2015 Copyright 2015 Jon Schlinkert</text>
+FileComment: <text>Reliable way to to get the height and width of the terminal/console in a node.js environment.</text>
+
+
+# File
+
+FileName: winston-0.8.0.tgz
+SPDXID: SPDXRef-FILE-30
+FileType: ARCHIVE
+FileChecksum: SHA1: 61d0830fa699706212206b0a2b5ca69a93043668
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Charlie Robbins</text>
+FileComment: <text>A multi-transport async logging library for Node.js</text>
+
+
+# File
+
+FileName: winston-0.8.3.tgz
+SPDXID: SPDXRef-FILE-27
+FileType: ARCHIVE
+FileChecksum: SHA1: 64b6abf4cd01adcaefd5009393b1d8e8bec19db0
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2010 Copyright 2010 Charlie Robbins</text>
+FileComment: <text>A multi-transport async logging library for Node.js</text>
+
+
+# File
+
+FileName: wordwrap-0.0.2.tgz
+SPDXID: SPDXRef-FILE-13
+FileType: ARCHIVE
+FileChecksum: SHA1: b79669bb42ecb409f83d583cad52ca17eaa1643f
+LicenseConcluded: NONE
+LicenseInfoInFile: X11
+FileCopyrightText: <text>MIT X11 - Unspecified Copyright</text>
+FileComment: <text>Wrap those words. Show them at what columns to start and stop.</text>
+
+
+# File
+
+FileName: wordwrap-0.0.3.tgz
+SPDXID: SPDXRef-FILE-84
+FileType: ARCHIVE
+FileChecksum: SHA1: a3d5da6cd5c0bc0008d37234bbaf1bed63059107
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>Wrap those words. Show them at what columns to start and stop.</text>
+
+
+# File
+
+FileName: wrap-ansi-2.1.0.tgz
+SPDXID: SPDXRef-FILE-167
+FileType: ARCHIVE
+FileChecksum: SHA1: d8fc3d284dd05794fe84973caecdd1cf824fdd85
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)</text>
+FileComment: <text>Wordwrap a string with ANSI escape codes</text>
+
+
+# File
+
+FileName: wrappy-1.0.2.tgz
+SPDXID: SPDXRef-FILE-123
+FileType: ARCHIVE
+FileChecksum: SHA1: b5243d8f3ec1aa35f1364605bc0d1036e30ab69f
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - Copyright Isaac Z</text>
+FileComment: <text>Callback wrapping utility</text>
+
+
+# File
+
+FileName: x-xss-protection-1.0.0.tgz
+SPDXID: SPDXRef-FILE-130
+FileType: ARCHIVE
+FileChecksum: SHA1: 898afb93869b24661cf9c52f9ee8db8ed0764dd9
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - 2014-2015 Copyright 2014-2015 Evan Hahn, Adam Baldwin</text>
+FileComment: <text>Middleware to set the X-XSS-Protection header</text>
+
+
+# File
+
+FileName: y18n-3.2.1.tgz
+SPDXID: SPDXRef-FILE-112
+FileType: ARCHIVE
+FileChecksum: SHA1: 6d15fba884c08679c0d77e88e7759e811e07fa41
+LicenseConcluded: NONE
+LicenseInfoInFile: ISC
+FileCopyrightText: <text>ISC - 2015 Copyright 2015 Contributors</text>
+FileComment: <text>the bare-bones internationalization library used by yargs</text>
+
+
+# File
+
+FileName: yargs-3.32.0.tgz
+SPDXID: SPDXRef-FILE-105
+FileType: ARCHIVE
+FileChecksum: SHA1: 03088e9ebf9e756b69751611d2a5ef591482c995
+LicenseConcluded: NONE
+LicenseInfoInFile: MIT
+FileCopyrightText: <text>MIT - Copyright 2010 James Halliday (mail@substack.net)</text>
+FileComment: <text>Light-weight option parsing with an argv hash. No optstrings attached.</text>
+
+
+# File
+
+FileName: yargs-3.5.4.tgz
+SPDXID: SPDXRef-FILE-31
+FileType: ARCHIVE
+FileChecksum: SHA1: d8aff8f665e94c34bd259bdebd1bfaf0ddd35361
+LicenseConcluded: NONE
+LicenseInfoInFile: X11
+FileCopyrightText: <text>MIT X11 - 2010 Copyright 2010 James Halliday (mail@substack.net)</text>
+FileComment: <text>Light-weight option parsing with an argv hash. No optstrings attached.</text>
+
+
+# Extracted Licenses
+
+LicenseID: AGPL-1.0
+LicenseName: AGPL-1.0
+ExtractedText: <text>AGPL-1.0</text>
+
+
+LicenseID: AGPL-3.0
+LicenseName: AGPL-3.0
+ExtractedText: <text>AGPL-3.0</text>
+
+
+LicenseID: Node.js
+LicenseName: Node.js
+ExtractedText: <text>Node.js</text>
+
+
+LicenseID: Suspected MIT
+LicenseName: Suspected MIT
+ExtractedText: <text>Suspected MIT</text>
+
+
+LicenseID: Suspected Unspecified License
+LicenseName: Suspected Unspecified License
+ExtractedText: <text>Suspected Unspecified License</text>
+
+
+LicenseID: Suspected Unspecified License
+LicenseName: Suspected Unspecified License
+ExtractedText: <text>Suspected Unspecified License</text>
+
+
+LicenseID: Suspected Unspecified License
+LicenseName: Suspected Unspecified License
+ExtractedText: <text>Suspected Unspecified License</text>
+
+
+LicenseID: Suspected Unspecified License
+LicenseName: Suspected Unspecified License
+ExtractedText: <text>Suspected Unspecified License</text>
+
+
+LicenseID: Suspected Unspecified License
+LicenseName: Suspected Unspecified License
+ExtractedText: <text>Suspected Unspecified License</text>
+
+
+LicenseID: Unspecified License
+LicenseName: Unspecified License
+ExtractedText: <text>Unspecified License</text>
+
+
+LicenseID: Unspecified License
+LicenseName: Unspecified License
+ExtractedText: <text>Unspecified License</text>
+
+
+LicenseID: Unspecified License
+LicenseName: Unspecified License
+ExtractedText: <text>Unspecified License</text>
+
+
+LicenseID: Unspecified License
+LicenseName: Unspecified License
+ExtractedText: <text>Unspecified License</text>
+
+

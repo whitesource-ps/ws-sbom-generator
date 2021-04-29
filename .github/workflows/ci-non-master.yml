@@ -33,12 +33,12 @@ jobs:
       - name: Full test JSON
         run: |
           cd sbom-report
-          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }}
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_JAVA_MAVEN }}
       - name: Full test RDF
         run: |
           cd sbom-report
-          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }} -t rdf
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_NPM }} -t rdf
       - name: Full test TV (tag-value)
         run: |
           cd sbom-report
-          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_TOKEN }} -t tv
+          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_PYTHON }} -t tv
