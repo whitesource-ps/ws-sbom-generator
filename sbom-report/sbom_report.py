@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO,
 
 args = ws_conn = extra_conf = None
 
-ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz", ".gem")
+ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz", ".gem", ".whl")
 BIN_SUFFICES = (".dll", ".so", ".exe")
 SOURCE_SUFFICES = ("JavaScript")
 
@@ -140,30 +140,35 @@ def create_files(scope_token: str,
     dd_dict = ws_utilities.convert_dict_list_to_dict(lst=dd_list, key_desc=('library', 'name'))
     libs = ws_conn.get_licenses(token=scope_token)
 
+    lib_filenames = set()
     for i, lib in enumerate(libs):
-        logging.debug(f"Handling library: {lib['name']}")
-        spdx_file = file.File(name=lib['filename'],
-                              spdx_id=f"SPDXRef-FILE-{i+1}",
-                              chk_sum=Algorithm(identifier="SHA1", value=lib['sha1']))
-        spdx_file.comment = lib.get('description')
-        spdx_file.type = set_file_type(lib['type'], lib['filename'])
+        if lib['filename'] not in lib_filenames:
+            lib_filenames.add(lib['filename'])                      # Tracking lib names as SPDX does not allow duplications
+            logging.debug(f"Handling library (filename: {lib['filename']}")
+            spdx_file = file.File(name=lib['filename'],
+                                  spdx_id=f"SPDXRef-FILE-{i+1}",
+                                  chk_sum=Algorithm(identifier="SHA1", value=lib['sha1']))
+            spdx_file.comment = lib.get('description')
+            spdx_file.type = set_file_type(lib['type'], lib['filename'])
 
-        file_licenses, extracted_licenses = handle_file_licenses(lib['licenses'], licenses_dict)
-        spdx_file.licenses_in_file = list(file_licenses)
+            file_licenses, extracted_licenses = handle_file_licenses(lib['licenses'], licenses_dict)
+            spdx_file.licenses_in_file = list(file_licenses)
 
-        all_licenses_from_files.update(file_licenses)
-        all_extracted_licenses_from_files.extend(extracted_licenses)
+            all_licenses_from_files.update(file_licenses)
+            all_extracted_licenses_from_files.extend(extracted_licenses)
 
-        spdx_file.conc_lics = SPDXNone()
+            spdx_file.conc_lics = SPDXNone()
 
-        file_copyrights = handle_file_copyright(lib['licenses'], lib, dd_dict)
-        if file_copyrights:
-            spdx_file.copyright = ', '.join(file_copyrights)
-            all_copyright_from_files.update(file_copyrights)
+            file_copyrights = handle_file_copyright(lib['licenses'], lib, dd_dict)
+            if file_copyrights:
+                spdx_file.copyright = ', '.join(file_copyrights)
+                all_copyright_from_files.update(file_copyrights)
+            else:
+                spdx_file.copyright = NoAssert()
+
+            files.append(spdx_file)
         else:
-            spdx_file.copyright = NoAssert()
-
-        files.append(spdx_file)
+            logging.warning(f"Found duplicate library: {lib['name']}, filename: {lib['filename']} ID: {lib['keyUuid']}. Skipping")
 
     all_licenses_from_files = filter_none_types(all_licenses_from_files)
 
