@@ -8,9 +8,10 @@ from spdx.document import Document, License, ExtractedLicense
 from spdx.utils import NoAssert, SPDXNone
 from ws_sdk import ws_utilities
 from ws_sdk.web import WS
+import re
 
-logging.basicConfig(level=logging.INFO,
-                    stream=sys.stdout,
+logging.basicConfig(level=logging.DEBUG,
+                    handlers=[logging.StreamHandler(stream=sys.stdout)],
                     format='%(levelname)s %(asctime)s %(thread)d: %(message)s',
                     datefmt='%y-%m-%d %H:%M:%S')
 
@@ -131,6 +132,26 @@ def create_files(scope_token: str,
 
         return out_set
 
+    def create_spdx_filename(lib_name: str, l_loc: dict) -> str:
+        path = ""
+        locations = l_loc.get('locations')
+        if len(locations):
+            if len(locations) > 1:
+                logging.warning(f"Found {len(l_loc['locations'])} locations for lib {lib_name}. Using the first one")
+            location = locations[0]
+            try:
+                split_path = re.split('\\\\|\\|/|//', location['path'])
+                path = f"../{split_path[-4]}/{split_path[-3]}/{split_path[-2]}/"
+            except KeyError:
+                logging.error(f"No path value in lib: {lib_name} ")
+        else:
+            logging.error(f"No locations found for lib {lib_name} ")
+
+        rel_path = path + lib_name
+        logging.debug(f"Received filename: {lib_name}. SPDX relative path: {rel_path}")
+
+        return rel_path
+
     global ws_conn
     files = []
     all_licenses_from_files = set()
@@ -139,17 +160,20 @@ def create_files(scope_token: str,
     dd_list = ws_conn.get_due_diligence(token=scope_token)
     dd_dict = ws_utilities.convert_dict_list_to_dict(lst=dd_list, key_desc=('library', 'name'))
     libs = ws_conn.get_licenses(token=scope_token)
-
+    libs_loc_list = ws_conn.get_library_location(token=scope_token)
+    libs_loc = ws_utilities.convert_dict_list_to_dict(libs_loc_list, 'keyUuid')
     lib_filenames = set()
     for i, lib in enumerate(libs):
-        if lib['filename'] not in lib_filenames:
-            lib_filenames.add(lib['filename'])                      # Tracking lib names as SPDX does not allow duplications
-            logging.debug(f"Handling library (filename: {lib['filename']}")
-            spdx_file = file.File(name=lib['filename'],
+        lib_loc = libs_loc[lib['keyUuid']]
+        spdx_filename = create_spdx_filename(lib['filename'], lib_loc)
+        if spdx_filename not in lib_filenames:
+            lib_filenames.add(spdx_filename)                      # Tracking lib names as SPDX does not allow duplications
+            logging.debug(f"Handling library (filename: {spdx_filename}")
+            spdx_file = file.File(name=spdx_filename,
                                   spdx_id=f"SPDXRef-FILE-{i+1}",
                                   chk_sum=Algorithm(identifier="SHA1", value=lib['sha1']))
             spdx_file.comment = lib.get('description')
-            spdx_file.type = set_file_type(lib['type'], lib['filename'])
+            spdx_file.type = set_file_type(lib['type'], spdx_filename)
 
             file_licenses, extracted_licenses = handle_file_licenses(lib['licenses'], licenses_dict)
             spdx_file.licenses_in_file = list(file_licenses)
@@ -168,7 +192,7 @@ def create_files(scope_token: str,
 
             files.append(spdx_file)
         else:
-            logging.warning(f"Found duplicate library: {lib['name']}, filename: {lib['filename']} ID: {lib['keyUuid']}. Skipping")
+            logging.warning(f"Found duplicate library: {lib['name']}, filename: {spdx_filename} ID: {lib['keyUuid']}. Skipping")
 
     all_licenses_from_files = filter_none_types(all_licenses_from_files)
 
