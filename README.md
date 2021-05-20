@@ -5,7 +5,8 @@
 
 # WS SBOM Report Generator in SPDX format 
 CLI Tool to generate SBOM report on chosen scope in [SPDX format](https://spdx.org).
-* The tool can be executed on WS Product or Project.
+* The tool utlizes [spdx-tools](https://github.com/spdx/tools).
+* The tool can be executed on WS Product or Project scope.
 * The tool accepts additional values which are unknown to WS via `sbom_extra.json`.
 * If not stated, the tool will access SAAS.
 * If not stated, the tool will produce report in JSON format.
