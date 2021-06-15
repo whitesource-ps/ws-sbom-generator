@@ -210,7 +210,6 @@ def handle_file_licenses(licenses: list,
 
         return ext_license
 
-    global ws_conn
     found_lics = set()
     extracted_licenses = list()
     for lic in licenses:                                                # TODO: REMOVE AS UNNECESSARY STARTING FROM SDK 0.2
