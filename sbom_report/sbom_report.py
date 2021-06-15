@@ -56,9 +56,11 @@ def create_sbom_doc():
     doc.package.licenses_from_files = licenses_from_files
     doc.extracted_licenses = list(extracted_licenses_from_files)
     doc.package.cr_text = ', '.join(copyrights_from_files)
-    write_file(doc, args.type)
+    file_path = write_file(doc, args.type)
 
     logging.info("Finished report")
+
+    return file_path
 
 
 def create_document(token: str) -> Document:
@@ -212,8 +214,8 @@ def handle_file_licenses(licenses: list,
 
     found_lics = set()
     extracted_licenses = list()
-    for lic in licenses:                                                # TODO: REMOVE AS UNNECESSARY STARTING FROM SDK 0.2
-        fix_license(lic)
+    for lic in licenses:
+        fix_license(lic)                                        # TODO: MOVE TO SDK
         try:
             spdx_license_dict = licenses_dict[lic['spdxName']]
             logging.debug(f"Found license: {spdx_license_dict['licenseId']}")
@@ -289,7 +291,7 @@ def set_file_type(file_type: str, filename: str):
     return ret
 
 
-def write_file(doc: Document, type: str):
+def write_file(doc: Document, type: str) -> ():
                   # Type: (suffix, module_name, f_open_flags, encoding)
     file_types = {"json": ("json", "spdx.writers.json", "w", None),
                   "tv": ("tv", "spdx.writers.tagvalue", "w", "utf-8"),
@@ -306,6 +308,8 @@ def write_file(doc: Document, type: str):
     with open(full_path, file_types[type][2], encoding=file_types[type][3]) as fp:
         module.write_document(doc, fp)
 
+    return full_path
+
 
 def parse_args():
     import argparse
@@ -321,6 +325,13 @@ def parse_args():
     return parser.parse_args()
 
 
-if __name__ == '__main__':
+def main():
+    global args
     args = parse_args()
-    create_sbom_doc()
+    file_path = create_sbom_doc()
+
+    return file_path
+
+
+if __name__ == '__main__':
+    main()
