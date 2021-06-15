@@ -10,7 +10,7 @@ from ws_sdk import ws_utilities
 from ws_sdk.web import WS
 import re
 
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.INFO,
                     handlers=[logging.StreamHandler(stream=sys.stdout)],
                     format='%(levelname)s %(asctime)s %(thread)d: %(message)s',
                     datefmt='%y-%m-%d %H:%M:%S')
@@ -42,7 +42,7 @@ def create_sbom_doc():
     doc = create_document(args.scope_token)
 
     # Manually loading licenses file as built-in filter deprecated licenses
-    from spdx.config import _licenses
+    from spdx.config import _licenses                                # TODO: REMOVE AS UNNECESSARY STARTING FROM SDK 0.2
     with open(_licenses, "r") as fp:
         licenses = json.loads(fp.read())
     logging.debug(f"License List Version: {licenses['licenseListVersion']}")
@@ -95,6 +95,8 @@ def create_package(package_name: str,
     pkg.license_declared = get_license_obj(extra_conf.get('package_license_identifier'), licenses_dict)
     pkg.conc_lics = get_license_obj(extra_conf.get('package_conc_licenses'), licenses_dict)
     pkg.cr_text = extra_conf.get('package_copyright_text', NoAssert())
+    pkg.supplier = creationinfo.Person(extra_conf.get('package_supplier', SPDXNone()), extra_conf.get('package_supplier_email', SPDXNone()))
+
     logging.debug(f"Finished SBOM package section")
 
     return pkg
@@ -208,10 +210,11 @@ def handle_file_licenses(licenses: list,
 
         return ext_license
 
+    global ws_conn
     found_lics = set()
     extracted_licenses = list()
-    for lic in licenses:
-        fix_license(lic)                                                   # Manually fixing this license
+    for lic in licenses:                                                # TODO: REMOVE AS UNNECESSARY STARTING FROM SDK 0.2
+        fix_license(lic)
         try:
             spdx_license_dict = licenses_dict[lic['spdxName']]
             logging.debug(f"Found license: {spdx_license_dict['licenseId']}")
@@ -255,12 +258,14 @@ def handle_file_copyright(licenses: list,
     return found_copyrights
 
 
-def fix_license(lic: dict):
+def fix_license(lic: dict):     # TODO: ALREADY IN SDK TO BE REMOVED
     if not lic.get('spdxName'):
         if lic.get('name') == "Public Domain":
             lic['spdxName'] = "CC-PDDC"
         elif lic.get('name') == "AGPL":
             lic['spdxName'] = "AGPL-1.0"
+        elif lic.get('name') == "BSD Zero":
+            lic['spdxName'] = "0BSD"
 
         if lic.get('spdxName'):
             logging.info(f"Fixed spdxName of {lic['name']} to {lic['spdxName']}")
