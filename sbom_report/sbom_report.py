@@ -26,12 +26,26 @@ def init():
     global ws_conn, extra_conf
     ws_conn = WS(url=args.ws_url, user_key=args.ws_user_key, token=args.ws_token)
     try:
-        fp = open(args.extra).read()
-        extra_conf = json.loads(fp)
+        fp = open(args.extra, 'r')
+        extra_conf = json.loads(fp.read())
     except FileNotFoundError:
         logging.warning(f"Extra configuration file: {args.extra} was not found")
     except json.JSONDecodeError:
         logging.error(f"Unable to parse file: {args.extra}")
+    finally:
+        fp.close()
+
+
+def filter_dups_and_sort(items: list) -> list:
+    ret_list = {}
+    for item in items:
+        if isinstance(item, (NoAssert, SPDXNone)):
+            ret_list[type(item).__name__] = item
+        else:
+            ret_list[item.full_name] = item
+    ret_list = {k: v for k, v in sorted(ret_list.items())}
+
+    return list(ret_list.values())
 
 
 def create_sbom_doc():
@@ -54,8 +68,8 @@ def create_sbom_doc():
     # After file section creation
     doc.package.verif_code = doc.package.calc_verif_code()
     doc.package.licenses_from_files = licenses_from_files
-    doc.extracted_licenses = list(extracted_licenses_from_files)
-    doc.package.cr_text = ', '.join(copyrights_from_files)
+    doc.extracted_licenses = filter_dups_and_sort(extracted_licenses_from_files)
+    doc.package.cr_text = ', '.join(sorted(list(copyrights_from_files)))
     file_path = write_file(doc, args.type)
 
     logging.info("Finished report")
@@ -117,7 +131,7 @@ def get_license_obj(lic_id: str, licenses_dict: dict) -> License:
 def create_files(scope_token: str,
                  licenses_dict: dict) -> tuple:
     # filter set to contain only a single of SPDXNone and NOASSERT
-    def filter_none_types(in_set):
+    def __filter_none_types__(in_set):
         out_set = set()
         no_assert_in_set = False
         spdx_none_int_set = False
@@ -136,7 +150,7 @@ def create_files(scope_token: str,
 
         return out_set
 
-    def create_spdx_filename(lib_name: str, l_loc: dict) -> str:
+    def __create_spdx_filename__(lib_name: str, l_loc: dict) -> str:
         path = ""
         locations = l_loc.get('locations')
         if len(locations):
@@ -169,9 +183,9 @@ def create_files(scope_token: str,
     lib_filenames = set()
     for i, lib in enumerate(libs):
         lib_loc = libs_loc[lib['keyUuid']]
-        spdx_filename = create_spdx_filename(lib['filename'], lib_loc)
+        spdx_filename = __create_spdx_filename__(lib['filename'], lib_loc)
         if spdx_filename not in lib_filenames:
-            lib_filenames.add(spdx_filename)                      # Tracking lib names as SPDX does not allow duplications
+            lib_filenames.add(spdx_filename)                    # Tracking lib names as SPDX does not allow duplications
             logging.debug(f"Handling library (filename: {spdx_filename}")
             spdx_file = file.File(name=spdx_filename,
                                   spdx_id=f"SPDXRef-FILE-{i+1}",
@@ -180,7 +194,7 @@ def create_files(scope_token: str,
             spdx_file.type = set_file_type(lib['type'], spdx_filename)
 
             file_licenses, extracted_licenses = handle_file_licenses(lib['licenses'], licenses_dict)
-            spdx_file.licenses_in_file = list(file_licenses)
+            spdx_file.licenses_in_file = filter_dups_and_sort(file_licenses)
 
             all_licenses_from_files.update(file_licenses)
             all_extracted_licenses_from_files.extend(extracted_licenses)
@@ -189,7 +203,7 @@ def create_files(scope_token: str,
 
             file_copyrights = handle_file_copyright(lib['licenses'], lib, dd_dict)
             if file_copyrights:
-                spdx_file.copyright = ', '.join(file_copyrights)
+                spdx_file.copyright = ', '.join(sorted(list(file_copyrights)))
                 all_copyright_from_files.update(file_copyrights)
             else:
                 spdx_file.copyright = NoAssert()
@@ -198,14 +212,14 @@ def create_files(scope_token: str,
         else:
             logging.warning(f"Found duplicate library: {lib['name']}, filename: {spdx_filename} ID: {lib['keyUuid']}. Skipping")
 
-    all_licenses_from_files = filter_none_types(all_licenses_from_files)
+    all_licenses_from_files = __filter_none_types__(all_licenses_from_files)
 
     return files, all_licenses_from_files, all_copyright_from_files, all_extracted_licenses_from_files
 
 
 def handle_file_licenses(licenses: list,
                          licenses_dict: dict) -> tuple:
-    def create_ext_license(name):
+    def __create_ext_license__(name):
         ext_license = ExtractedLicense(identifier=name)
         ext_license.full_name = name
         ext_license.text = name
@@ -223,11 +237,11 @@ def handle_file_licenses(licenses: list,
             found_lics.add(spdx_license)
             if spdx_license_dict['isDeprecatedLicenseId']:
                 logging.debug(f"License {lic['spdxName']} is deprecated")
-                extracted_licenses.append(create_ext_license(lic['spdxName']))
+                extracted_licenses.append(__create_ext_license__(lic['spdxName']))
         except KeyError:
             logging.warning(f"License with identifier: {lic['name']} was not found")
-            create_ext_license(lic['name'])
-            extracted_licenses.append(create_ext_license(lic['name']))
+            __create_ext_license__(lic['name'])
+            extracted_licenses.append(__create_ext_license__(lic['name']))
 
     if not found_lics:
         found_lics.add(NoAssert())
@@ -251,7 +265,7 @@ def handle_file_copyright(licenses: list,
     if not found_copyrights and lib.get('copyrightReferences'):             # Searching for copyright on library
         for d in lib.get('copyrightReferences'):
             logging.debug(f"Found copyright on lib: {d['copyright']}")
-            found_copyrights.add("REF - " + d['copyright'])
+            found_copyrights.add(d['copyright'])
 
     if not found_copyrights:
         logging.warning(f"Copyright on : ({lib['filename']}  was not found")
