@@ -1,0 +1,169 @@
+# Document Information
+
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+DocumentName: WhiteSource xxe - v8.1.0 SBOM report
+SPDXID: SPDXRef-DOCUMENT
+DocumentNamespace: http://CreatorWebsite/pathToSpdx/DocumentName-UUID
+
+
+# Creation Info
+
+Creator: Organization: Oz Testing Environment (org@email.address)
+Creator: Tool: White Source SBOM Report Generator
+Creator: Person: person name (person@email.address)
+Created: 2021-06-22T08:04:16Z
+
+
+# Package
+
+PackageName: xxe - v8.1.0
+SPDXID: SPDXRef-PACKAGE-1
+PackageDownloadLocation: http://package/location
+PackageSupplier: Person: supplier name (supplier@email.address)
+PackageChecksum: SHA1: 
+PackageVerificationCode: fbf3a0486e923c93f2bdc70eab130affcb0eb689
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageLicenseInfoFromFiles: CDDL-1.1
+PackageLicenseInfoFromFiles: GPL-2.0-with-classpath-exception
+PackageCopyrightText: <text>Apache 2.0 - 2001-2011 Copyright 2001-2011 The Apache Software Foundation, Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation, Apache 2.0 - 2012-2013 Copyright 2012-2013 Oracle and/or its affiliates, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2018 Copyright 2005-2018 Oracle and/or its affiliates, REF - Copyright 1997-2015 Oracle and/or its affiliates, REF - Copyright 1997-2017 Oracle and/or its affiliates, REF - Copyright 2004-2017 Oracle </font>]]>, REF - Copyright 2013-2017 Oracle and/or its affiliates, REF - Copyright 2017-2018 Oracle and/or its affiliates</text>
+
+
+# File
+
+FileName: ../activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar
+SPDXID: SPDXRef-FILE-7
+FileType: SOURCE
+FileChecksum: SHA1: 85262acf3ca9816f9537ca47d5adeabaead7cb16
+LicenseConcluded: NONE
+LicenseInfoInFile: CDDL-1.1
+LicenseInfoInFile: GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>REF - Copyright 1997-2017 Oracle and/or its affiliates</text>
+FileComment: <text>JavaBeans Activation Framework API jar</text>
+
+
+# File
+
+FileName: ../bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar
+SPDXID: SPDXRef-FILE-8
+FileType: SOURCE
+FileChecksum: SHA1: 8531ad5ac454cc2deb9d4d32c40c4d7451939b5d
+LicenseConcluded: NONE
+LicenseInfoInFile: CDDL-1.1
+LicenseInfoInFile: GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>REF - Copyright 2004-2017 Oracle </font>]]>, REF - Copyright 2017-2018 Oracle and/or its affiliates</text>
+FileComment: <text>JAXB (JSR 222) API</text>
+
+
+# File
+
+FileName: ../commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+SPDXID: SPDXRef-FILE-10
+FileType: SOURCE
+FileChecksum: SHA1: 0ce1edb914c94ebc388f086c6827e8bdeec71ac2
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2001-2011 Copyright 2001-2011 The Apache Software Foundation</text>
+FileComment: <text>Commons Lang, a package of Java utility classes for the
+        classes that are in java.lang's hierarchy, or are considered to be so
+        standard as to justify existence in java.lang.</text>
+
+
+# File
+
+FileName: ../commons/commons-exec/1.3/commons-exec-1.3.jar
+SPDXID: SPDXRef-FILE-2
+FileType: SOURCE
+FileChecksum: SHA1: 8dfb9facd0830a27b1b5f29f84593f0aeee7773b
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation</text>
+FileComment: <text>Apache Commons Exec is a library to reliably execute external processes from within the JVM.</text>
+
+
+# File
+
+FileName: ../fastinfoset/FastInfoset/1.2.13/FastInfoset-1.2.13.jar
+SPDXID: SPDXRef-FILE-1
+FileType: SOURCE
+FileChecksum: SHA1: 098f56b9354e27bd2941cc5d461344e240ae51ae
+LicenseConcluded: NONE
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2013 Copyright 2012-2013 Oracle and/or its affiliates</text>
+FileComment: <text>Open Source implementation of the Fast Infoset Standard for Binary XML (http://www.itu.int/ITU-T/asn1/).</text>
+
+
+# File
+
+FileName: ../istack/istack-commons-runtime/3.0.5/istack-commons-runtime-3.0.5.jar
+SPDXID: SPDXRef-FILE-4
+FileType: SOURCE
+FileChecksum: SHA1: 8052dc9920dfab5d50b8ca95c95a6ce4296a8f8b
+LicenseConcluded: NONE
+LicenseInfoInFile: CDDL-1.1
+LicenseInfoInFile: GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>REF - Copyright 1997-2017 Oracle and/or its affiliates</text>
+FileComment: <text>istack common utility code</text>
+
+
+# File
+
+FileName: ../jaxb/jaxb-core/2.3.0/jaxb-core-2.3.0.jar
+SPDXID: SPDXRef-FILE-5
+FileType: SOURCE
+FileChecksum: SHA1: b40bc6ae4bc14480204e143377ce6f75ebba5066
+LicenseConcluded: NONE
+LicenseInfoInFile: CDDL-1.1
+LicenseInfoInFile: GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>REF - Copyright 2013-2017 Oracle and/or its affiliates</text>
+FileComment: <text>JAXB Core module. Contains sources required by XJC, JXC and Runtime modules.</text>
+
+
+# File
+
+FileName: ../jaxb/jaxb-runtime/2.3.0/jaxb-runtime-2.3.0.jar
+SPDXID: SPDXRef-FILE-6
+FileType: SOURCE
+FileChecksum: SHA1: c50f1a599ff0fcf3944e7467cf3cfae1374f4fd6
+LicenseConcluded: NONE
+LicenseInfoInFile: CDDL-1.1
+LicenseInfoInFile: GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>REF - Copyright 2013-2017 Oracle and/or its affiliates</text>
+FileComment: <text>JAXB (JSR 222) Reference Implementation</text>
+
+
+# File
+
+FileName: ../jaxb/txw2/2.3.2/txw2-2.3.2.jar
+SPDXID: SPDXRef-FILE-9
+FileType: SOURCE
+FileChecksum: SHA1: ce5be7da2e442c25ec14c766cb60cb802741727b
+LicenseConcluded: NONE
+LicenseInfoInFile: BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2018 Copyright 2005-2018 Oracle and/or its affiliates</text>
+FileComment: <text>TXW is a library that allows you to write XML documents.</text>
+
+
+# File
+
+FileName: ../staxex/stax-ex/1.7.8/stax-ex-1.7.8.jar
+SPDXID: SPDXRef-FILE-3
+FileType: SOURCE
+FileChecksum: SHA1: 377077e4441cc46be5efde9de63efdf790a59cd7
+LicenseConcluded: NONE
+LicenseInfoInFile: CDDL-1.1
+LicenseInfoInFile: GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>REF - Copyright 1997-2015 Oracle and/or its affiliates</text>
+FileComment: <text>Extensions to JSR-173 StAX API.</text>
+
+
+# Extracted Licenses
+
+LicenseID: GPL-2.0-with-classpath-exception
+LicenseName: GPL-2.0-with-classpath-exception
+ExtractedText: <text>GPL-2.0-with-classpath-exception</text>
+
+

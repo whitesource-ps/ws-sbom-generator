@@ -33,6 +33,12 @@ jobs:
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --ignore=E501,F841
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Perform integration test and compare to existing report
+        env:
+          WS_USER_KEY: ${{ secrets.WS_USER_KEY }}
+          WS_SCOPE_PROJ: ${{ secrets.WS_SCOPE_PROJ_WEBGOAT_INTEGRATION_TESTS }}
+          WS_SCOPE_ORG: ${{ secrets.WS_ORG_TOKEN }}
+        run: python -m unittest
       - name: Full test JSON
         run: |
           cd sbom_report
@@ -50,6 +56,7 @@ jobs:
         with:
           files: requirements.txt LICENSE README.md CLA.md sbom_report/
           dest: ws-sbom-report.zip
+          recursive: false
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1
@@ -57,3 +64,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           allowUpdates: true
           artifacts: "*.zip"
+      - name: confluence-markdown-sync
+        uses: cupcakearmy/confluence-markdown-sync@v1
+        with:
+          from: README.md
+          to: 1992262152
+          cloud: whitesource
+          user: ${{ secrets.CONFLUENCE_USER }}
+          token: ${{ secrets.CONFLUENCE_TOKEN }}
