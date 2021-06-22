@@ -14,7 +14,7 @@ class SbomReportTest(TestCase):
     sbom_report.parse_args.return_value.scope_token = os.environ.get('WS_SCOPE_PROJ')
     sbom_report.parse_args.return_value.ws_url = 'saas'
     sbom_report.parse_args.return_value.type = 'tv'
-    sbom_report.parse_args.return_value.extra = '../sbom_extra.json'
+    sbom_report.parse_args.return_value.extra = os.path.join(os.getcwd(), '../sbom_extra.json')
     sbom_report.parse_args.return_value.out_dir = '.'
 
     def setUp(self) -> None:
