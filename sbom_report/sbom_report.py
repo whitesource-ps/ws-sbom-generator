@@ -211,7 +211,7 @@ def create_files(scope_token: str,
             files.append(spdx_file)
         else:
             logging.warning(f"Found duplicate library: {lib['name']}, filename: {spdx_filename} ID: {lib['keyUuid']}. Skipping")
-
+            
     all_licenses_from_files = __filter_none_types__(all_licenses_from_files)
 
     return files, all_licenses_from_files, all_copyright_from_files, all_extracted_licenses_from_files

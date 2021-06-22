@@ -1,0 +1,1962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:ns1="http://spdx.org/rdf/terms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <ns1:SpdxDocument rdf:about="http://www.spdx.org/tools#SPDXRef-DOCUMENT">
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-89">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nc6ab1f208221484aa80356df3b3d62d6">
+            <ns1:checksumValue>574349bf76bb4a85033e526efa0315ca9933fa83</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>spring-data-commons-2.2.3.RELEASE.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <rdfs:comment>Global parent pom.xml to be used by Spring Data modules</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-2">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>Guava is a suite of core and expanded libraries that include
+    utility classes, google's collections, io classes, and much
+    much more.
+
+    Guava has only one code dependency - javax.annotation,
+    per the JSR-305 spec.</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>guava-18.0.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ned097fadf2184460bc78c58eaa9971fc">
+            <ns1:checksumValue>cce0823396aa693798f8882e64213b1772032b09</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-46">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>HikariCP-3.4.1.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N4e9e788562354b91ae44db1f83790c4d">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>842894380a73b72c2ecd9e483403e4d5ef7d8b76</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>Apache 2.0 - Unspecified Copyright</ns1:copyrightText>
+        <rdfs:comment>Ultimate JDBC Connection Pool</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-52">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N978b5e22592c4388ab4be7c85c10b9df">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>ef88658d6eba31f3c3777bb6e7f9f3bd7235264b</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>spring-security-test</rdfs:comment>
+        <ns1:fileName>spring-security-test-5.2.1.RELEASE.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-87">
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Starter for building MVC web applications using Thymeleaf views</rdfs:comment>
+        <ns1:fileName>spring-boot-starter-thymeleaf-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N3657d60721ff4fb980e646c0c5e760b9">
+            <ns1:checksumValue>fb3920ecfaeaed5190e4cd89441fced220f53507</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-58">
+        <ns1:fileName>jackson-databind-2.10.1.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - &amp;url Tatu Saloranta</ns1:copyrightText>
+        <rdfs:comment>General data-binding functionality for Jackson: works on core streaming API</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N62d6e1441a74479aab3d7904339c2b4c">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>18eee15ffc662d27538d5b6ee84e4c92c0a9d03e</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-16">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>dom4j-2.1.1.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Na531bd7da6fd417091f4d9c0a24eba30">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>3dce5dbb3571aa820c677fadd8349bfa8f00c199</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>flexible XML framework for Java</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:copyrightText>Apache 2.0 - 2001-2016 Copyright 2001-2016 (C) MetaStuff, Ltd. and DOM4J contributors</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-47">
+        <ns1:copyrightText>MIT - &amp;url QOS.ch</ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/MIT"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>slf4j-api-1.7.29.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N36ff863b15f042d98b6dd04b475b5c9e">
+            <ns1:checksumValue>e56bf4473a4c6b71c7dd397a833dce86d1993d9d</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>The slf4j API</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-20">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N86d2739d737f42a791a47b2b22bd4b9d">
+            <ns1:checksumValue>88bb10bf73ce285208dd848e8eb17f897ebb02d4</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>thymeleaf-extras-springsecurity5-3.0.4.RELEASE.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>Modern server-side Java template engine for both web and standalone environments</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org)</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-26">
+        <rdfs:comment>Extensions to JSR-173 StAX API.</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:copyrightText>BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates</ns1:copyrightText>
+        <ns1:fileName>stax-ex-1.8.1.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N39fe95f885d64a6ba53aa307da55ea8e">
+            <ns1:checksumValue>78011e483a21102fb4858f3e8f269a677e50aa23</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-98">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nb007c0318caf45c9a4b93d842fc4a809">
+            <ns1:checksumValue>815893df5f31da2ece4040fe0a12fd44b577afaf</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>Apache 2.0 - 2002-2017 Copyright 2002-2017 The Apache Software Foundation</ns1:copyrightText>
+        <rdfs:comment>The Apache Commons IO library contains utility classes, stream implementations, file filters,
+file comparators, endian transformation classes, and much more.</rdfs:comment>
+        <ns1:fileName>commons-io-2.6.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N797d394c5f334703a9ac7f2ff59ae683">
+        <ns1:extractedText>GPL-2.0</ns1:extractedText>
+        <ns1:licenseId>GPL-2.0</ns1:licenseId>
+        <ns1:licenseName>GPL-2.0</ns1:licenseName>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-57">
+        <ns1:fileName>jackson-annotations-2.10.1.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - &amp;url Tatu Saloranta</ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N6afa62e279bc4883a22230af80182d43">
+            <ns1:checksumValue>54d72475c0d6819f2d0e9a09d25c3ed876a4972f</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Core annotations used for value types, used by Jackson data binding package.</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-42">
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N682a566e4fdc477fb5299e242531952d">
+            <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+            <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+            <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/EPL-2.0"/>
+        <rdfs:comment>Jakarta Annotations API</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>REF - Copyright 2012-2018 Oracle and/or its affiliates, REF - Copyright 2019 Eclipse Foundation</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ne559aa42a2c94c948e3405d0ab4477e4">
+            <ns1:checksumValue>59eb84ee0d616332ff44aba065f3888cf002cd2d</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>jakarta.annotation-api-1.3.5.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="Nf6e09941a4a94b40a5815dd522588883">
+        <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+        <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+        <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-43">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>BSD 2 - Copyright Group, 1996-2019 Copyright 1996-2019 The PostgreSQL Global Development Group, 2003-2015 Copyright 2003-2015 PostgreSQL Global Development, 1997 Copyright 1997 PostgreSQL Global Development Group</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Java JDBC 4.2 (JRE 8+) driver for PostgreSQL database</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nc7f0e7c612b941e6bdce268b758ac2d5">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>6f394c7df5600d11b221f356ff020440d2ece44f</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>postgresql-42.2.8.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-2-Clause"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-88">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Starter for aspect-oriented programming with Spring AOP and AspectJ</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>spring-boot-starter-aop-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nd05851344c83426cb6b2fd861852db37">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>f3c7529b69898084018e69e101ebc108237b1cce</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-74">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ne34d35ce955f44f4adceac57b4bd701a">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>2af860baa0b094e13786613e15e1804edb7a5977</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Spring Transaction</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>spring-tx-5.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-72">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>Spring Context</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N1d9f565997f045629840ac60d7923f6a">
+            <ns1:checksumValue>a77a18fa425eba9c55447fa0711e2dbfbf71907b</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>spring-context-5.2.2.RELEASE.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-19">
+        <ns1:fileName>thymeleaf-3.0.11.RELEASE.jar</ns1:fileName>
+        <rdfs:comment>Modern server-side Java template engine for both web and standalone environments</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N8e9e00a05b0147fd8d66a58dbf6f1b27">
+            <ns1:checksumValue>628ebb91f520053d4120b7b18bf78ff295d57461</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>Apache 2.0 - 2011-2016 Copyright 2011-2016 The THYMELEAF team (http://www.thymeleaf.org), 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org)</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-90">
+        <rdfs:comment>Starter for building web, including RESTful, applications using Spring
+		MVC. Uses Tomcat as the default embedded container</rdfs:comment>
+        <ns1:fileName>spring-boot-starter-web-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N19a5e6241129490c80dc9486ccfe2c90">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>3e15f18a4dafd499b900082f3cc25bb11ea91821</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N2192ca75d417444ab93bc4547fa15b92">
+        <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+        <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+        <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-78">
+        <rdfs:comment>Starter for using Java Bean Validation with Hibernate
+		Validator</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>spring-boot-starter-validation-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nbd7022f1d8644db39898ce435d11f014">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>ef3ac3571ae518f22117e8bce826970b358f3cdf</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-10">
+        <ns1:copyrightText>Apache 2.0 - 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates</ns1:copyrightText>
+        <rdfs:comment>The NIO implementation of the XNIO project</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N1aac4ba2507345578a6e27f91560a1a6">
+            <ns1:checksumValue>8dafaf230666e526c53e544ab6a9d6ecfcbab4ee</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>xnio-nio-3.3.8.Final.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-83">
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>spring-boot-starter-json-2.2.2.RELEASE.jar</ns1:fileName>
+        <rdfs:comment>Starter for reading and writing json</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N4a19e9516975443185c57ef82310a92d">
+            <ns1:checksumValue>7ef93e43938abf3064cce9b7317bdb8278060437</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-29">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N5e418ceaa9bf4a12a5192c4d30d3ef2a">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>ce5be7da2e442c25ec14c766cb60cb802741727b</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>txw2-2.3.2.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:copyrightText>BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2018 Copyright 2005-2018 Oracle and/or its affiliates</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>TXW is a library that allows you to write XML documents.</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-3">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nb3a1b15abe334bb79ef6b696e6153ac4">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>5fe28b9518e58819180a43a850fbc0dd24b7c050</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - 2001-2015 Copyright 2001-2015 The Apache Software Foundation</ns1:copyrightText>
+        <rdfs:comment>Apache Commons Lang, a package of Java utility classes for the
+  classes that are in java.lang's hierarchy, or are considered to be so
+  standard as to justify existence in java.lang.</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>commons-lang3-3.4.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-79">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nea7e665443a94b838351dac0bc4d982c">
+            <ns1:checksumValue>e7ad304a1471ba4bbea2c84c41e912cf7113da8e</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>spring-boot-starter-actuator-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <rdfs:comment>Starter for using Spring Boot's Actuator which provides production
+		ready features to help you monitor and manage your application</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:dataLicense rdf:resource="http://spdx.org/licenses/CC0-1.0"/>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-28">
+        <ns1:fileName>jaxb-runtime-2.3.2.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N0c7ece320eba47048d0968862ddf60d4">
+            <ns1:checksumValue>5528bc882ea499a09d720b42af11785c4fc6be2a</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>JAXB (JSR 222) Reference Implementation</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:copyrightText>BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2013-2018 Copyright 2013-2018 Oracle and/or its affiliates</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N42cde8f2c92b40b5ae37e85bd70d4829">
+        <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+        <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+        <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N4570274ba9a846eeae2c5083c5e0b8ad">
+        <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+        <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+        <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-35">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>hsqldb-2.5.0.jar</ns1:fileName>
+        <ns1:copyrightText>BSD 3 - 1995-2000 Copyright 1995-2000 by the Hypersonic SQL Group, 2001-2020 Copyright 2001-2020 The HSQL Development Group</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <rdfs:comment>HSQLDB - Lightweight 100% Java SQL Database Engine</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N5a323ebebde64bca99f85e622b7d17c6">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>59298fcd77faf01e02b405def2f80cccbf582508</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-37">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N8433cbcaf3b54d3ebdb515bb27a6f71d">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>dfb42ea8ce1a399bcf7218efe8115a0b7ab3788a</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>The Apache Log4j binding between Log4j 2 API and SLF4J.</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - 1999-2019 Copyright 1999-2019 The Apache Software Foundation</ns1:copyrightText>
+        <ns1:fileName>log4j-to-slf4j-2.12.1.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="Neffb4aa2b3e74cd6b2187abadef9398d">
+        <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+        <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+        <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-30">
+        <ns1:copyrightText>REF - Unspecified Copyright</ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/CC0-1.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>HdrHistogram supports the recording and analyzing sampled data value
+        counts across a configurable integer value range with configurable value
+        precision within the range. Value precision is expressed as the number of
+        significant digits in the value recording, and provides control over value
+        quantization behavior across the value range and the subsequent value
+        resolution at any given level.</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-2-Clause"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>HdrHistogram-2.1.11.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N42d239f73bec4b81af3e10fa148f41a7">
+            <ns1:checksumValue>1b035a1a4ce5d3441a4a1a331d04839ef487ec49</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-76">
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>spring-orm-5.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ne950b8a577194ebd8e93ae7bf7fe4057">
+            <ns1:checksumValue>1b17c9e69d92e54439a092d6943e956f80392f43</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <rdfs:comment>Spring Object/Relational Mapping</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-11">
+        <rdfs:comment>WebJar for jQuery</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>jquery-3.2.1.jar</ns1:fileName>
+        <ns1:copyrightText>MIT - None</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nb17e1f16facf4071b3af1a5f8e136a4d">
+            <ns1:checksumValue>3202162bb547fa5a9c97a22b5bbb3b5de7a9e40a</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/MIT"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-59">
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>jackson-datatype-jsr310-2.10.1.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>Add-on module to support JSR-310 (Java 8 Date &amp; Time API) data types.</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ncaedfa20c2de4bb99a26298deef465ea">
+            <ns1:checksumValue>52ee272b0181a1c0df5c931235c494b1e0e022d0</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-44">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/EPL-2.0"/>
+        <rdfs:comment>Eclipse Enterprise for Java (EE4J) is an open source initiative to create standard APIs,
+        implementations of those APIs, and technology compatibility kits for Java runtimes
+        that enable development, deployment, and management of server-side and cloud-native applications.</rdfs:comment>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nca8c2e00615b44c49e358607ba7f442a">
+            <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+            <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+            <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <ns1:fileName>jakarta.servlet-api-4.0.3.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N0df6a784b9f74221b9c2b7987da64a8a">
+            <ns1:checksumValue>7c810f7bca93d109bac3323286b8e5ec6c394e12</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>REF - Copyright 1997-2018 Oracle and</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:describesPackage>
+      <ns1:Package rdf:about="http://www.spdx.org/tools#SPDXRef-Package">
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-97"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-7"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-73"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-14"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-65"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-85"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-94"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-56"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-40"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-93"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-48"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-70"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/BSD-2-Clause"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-82"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-92"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-32"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/CDDL-1.1"/>
+        <ns1:copyrightText>REF - Copyright 2019 Oracle and/or its affiliates, Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), 2011-2014 Copyright 2011-2014 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - 1999-2019 Copyright 1999-2019 The Apache Software Foundation, REF - Copyright 1997-2018 Oracle and, Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors, LGPL 2.1 - 1991-1999 Copyright 1991-1999 Free Software Foundation, Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307, REF - Copyright 1997-2017 Oracle and/or its affiliates, Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium &lt;https://www.ow2.org/&gt;, 2002-2019 Copyright 2002-2019 Pivotal, Inc, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2013-2018 Copyright 2013-2018 Oracle and/or its affiliates, Apache 2.0 - 2020 VMware Inc, Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2018 Copyright 2005-2018 Oracle and/or its affiliates, REF - Unspecified Copyright, Apache 2.0 - Unspecified Copyright, REF - Copyright 2012-2018 Oracle and/or its affiliates, GPL 2.0 - None, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates, Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation, Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), REF - Copyright 2018-2019 Oracle and/or its affiliates, Apache 2.0 - 2020 Pivotal Software Inc, BSD 3 - 1995-2000 Copyright 1995-2000 by the Hypersonic SQL Group, 2001-2020 Copyright 2001-2020 The HSQL Development Group, Apache 2.0 - &amp;url Tatu Saloranta, Apache 2.0 - 2020 Red Hat Inc, REF - Copyright 2004-2017 Oracle &lt;/font&gt;]]&gt;, MIT - &amp;url QOS.ch, MIT - None, BSD 3 - 2014 Terence Parr, Apache 2.0 - None, Apache 2.0 - 2011-2016 Copyright 2011-2016 The THYMELEAF team (http://www.thymeleaf.org), 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), REF - Copyright 1999 Shigeru Chiba, CC0 - 2014 Gil Tene, REF - QOS.ch, Eclipse 1.0 - &amp;url Eclipse Foundation Inc, BSD 2 - Copyright Group, 1996-2019 Copyright 1996-2019 The PostgreSQL Global Development Group, 2003-2015 Copyright 2003-2015 PostgreSQL Global Development, 1997 Copyright 1997 PostgreSQL Global Development Group, REF - Copyright 2013 Oracle and/or its affiliates, Apache 2.0 - Copyright ${project.inceptionYear} - ${current.year} ${copyright.holder}, 2014-2019 Copyright 2014-2019 Rafael Winterhalter, LGPL 2.1 - Unspecified Copyright, Apache 2.0 - 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, Apache 2.0 - 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org), 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org)   --&gt;, Apache 2.0 - 2002-2017 Copyright 2002-2017 The Apache Software Foundation, Apache 2.0 - 2014 Copyright 2014 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, Apache 2.0 - &amp;url FasterXML, 2011 FasterXML LLC, REF - Copyright 2019 Eclipse Foundation, Apache 2.0 - 2001-2016 Copyright 2001-2016 (C) MetaStuff, Ltd. and DOM4J contributors, Apache 2.0 - 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)  --&gt;, 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org), Apache 2.0 - 2001-2015 Copyright 2001-2015 The Apache Software Foundation, REF - Copyright 2019 The Apache Software Foundation, Licensed under the &lt;a class="white" href="/licen, REF - Copyright 1989-1991 Free Software Foundation, Inc, Apache 2.0 - 2018 snakeyaml, REF - Copyright 2012-2018 Oracle and, BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates, REF - Copyright 2007 Eclipse Foundation, Inc. and its licensors, MIT - 2009-2015 Copyright 2009-2015 The Project Lombok Authors, Apache 2.0 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2012-2018 Copyright 2012-2018 Oracle and/or its affiliates, GPL 2.0 Classpath - 2011 Copyright 2011 Oracle and/or its affiliates, 1989-1991 Copyright 1989-1991 Free Software Foundation, Inc, REF - Copyright 2017-2018 Oracle and/or its affiliates</ns1:copyrightText>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-60"/>
+        <ns1:packageVerificationCode>
+          <ns1:PackageVerificationCode rdf:nodeID="N066bb06b7e504bf9abea56974c8ad39b">
+            <ns1:packageVerificationCodeValue>6008d831d30cc2c0cc85eaab658b8e55da6e1e57</ns1:packageVerificationCodeValue>
+          </ns1:PackageVerificationCode>
+        </ns1:packageVerificationCode>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-64"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-22"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-67"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-53"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-13"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-49"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-80"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-54"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-62"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-41"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-33"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-17"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-69"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-23"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-9"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-87"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-71"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/MPL-1.1"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-15"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-66"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-8"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-61"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-57"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nbcbadb8618f2467a964f015e3680a57e">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue></ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-72"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-25"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-89"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-47"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-98"/>
+        <ns1:name>webwolf - v8.1.0</ns1:name>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-84"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-58"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-75"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-31"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-86"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-74"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-50"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-81"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-52"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-46"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-6"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-39"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-24"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-68"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-16"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-43"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-42"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-90"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-30"/>
+        <ns1:licenseInfoFromFiles>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Ne08eb5b56d8948fd858a374d0fe2214d">
+            <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+            <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+            <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoFromFiles>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-18"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-28"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-59"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-79"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-5"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-34"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-26"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/MIT"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/CC0-1.0"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-45"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-2"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-76"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-20"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-10"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-35"/>
+        <ns1:licenseInfoFromFiles>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N94a8c65beab94c0a8f1c05b5f974ce65">
+            <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+            <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+            <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoFromFiles>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-37"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-88"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-3"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-11"/>
+        <ns1:licenseInfoFromFiles>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nd9c44e58ebf749b9aa4e95b202bd27ac">
+            <ns1:licenseId>GPL-2.0</ns1:licenseId>
+            <ns1:extractedText>GPL-2.0</ns1:extractedText>
+            <ns1:licenseName>GPL-2.0</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoFromFiles>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-21"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+        <ns1:downloadLocation>http://package/location</ns1:downloadLocation>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-83"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-78"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-19"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-29"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/EPL-1.0"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-95"/>
+        <ns1:licenseDeclared rdf:resource="http://spdx.org/licenses/MIT"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/EPL-2.0"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-51"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-36"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/CDDL-1.0"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-63"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-96"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-1"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-38"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-12"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-77"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-4"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-1"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-44"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-91"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-55"/>
+        <ns1:hasFile rdf:resource="http://www.spdx.org/files#SPDXRef-FILE-27"/>
+      </ns1:Package>
+    </ns1:describesPackage>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-45">
+        <ns1:copyrightText>REF - Copyright 2013 Oracle and/or its affiliates, REF - Copyright 1997-2018 Oracle and</ns1:copyrightText>
+        <ns1:fileName>jakarta.el-3.0.3.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/EPL-2.0"/>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N9f60f1d662184763a59246c2d77ef6af">
+            <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+            <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+            <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <rdfs:comment>Jakarta Expression Language provides a specification document, API, reference implementation and TCK 
+        that describes an expression language for Java applications.</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N027d6cbc08964dee8974c883eb624696">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>dab46ee1ee23f7197c13d7c40fce14817c9017df</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-77">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Spring JDBC</rdfs:comment>
+        <ns1:fileName>spring-jdbc-5.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N78f5014f47354bb889d148b915d072b0">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>6f0070f04c60f77d0048dc5521f8aafd5a86e87e</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-97">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>WebGoat 8.0</rdfs:comment>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N27e096ea2b004eef9f5e20eadc367c20">
+            <ns1:extractedText>GPL-2.0</ns1:extractedText>
+            <ns1:licenseId>GPL-2.0</ns1:licenseId>
+            <ns1:licenseName>GPL-2.0</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N3b3d24c6045441159373e34c3a5c71da">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>bd16fedb3340be337f606ec3cce055d30cff23f7</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>WebGoat-v8.1.0</ns1:fileName>
+        <ns1:copyrightText>GPL 2.0 - None</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-70">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Spring Expression Language (SpEL)</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N0a3eac6b84df490394ba34a9d514ced3">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>eb93bc4d4eb8e0bee60ea910e0fd615869336643</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>spring-expression-5.2.2.RELEASE.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-12">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nf2cb31c7382049a1b761086a84598a45">
+            <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+            <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+            <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N7bedf35cff854ccc940f06a3321054c1">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>85262acf3ca9816f9537ca47d5adeabaead7cb16</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>javax.activation-api-1.2.0.jar</ns1:fileName>
+        <ns1:copyrightText>REF - Copyright 1997-2017 Oracle and/or its affiliates</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/CDDL-1.1"/>
+        <rdfs:comment>JavaBeans Activation Framework API jar</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N2efc620baa9d43e6aa92a17e7f57aab2">
+        <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+        <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+        <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-63">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors</ns1:copyrightText>
+        <rdfs:comment>Undertow</rdfs:comment>
+        <ns1:fileName>undertow-core-2.0.28.Final.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N15a054c9e46244c8b65a2d55e185deb5">
+            <ns1:checksumValue>688f7a1096534a9fba1150a211b5cf939233f372</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-36">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - 1999-2019 Copyright 1999-2019 The Apache Software Foundation</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>log4j-api-2.12.1.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N0498fa5453ee4cfa994bf5f56ffb9c2e">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>a55e6d987f50a515c9260b0451b4fa217dc539cb</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>The Apache Log4j API</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:specVersion>SPDX-2.2</ns1:specVersion>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="Ne403f0a0574f47fa9604dc36e91e08d4">
+        <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+        <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+        <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-21">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Modern server-side Java template engine for both web and standalone environments</rdfs:comment>
+        <ns1:fileName>thymeleaf-spring5-3.0.11.RELEASE.jar</ns1:fileName>
+        <ns1:copyrightText>Apache 2.0 - 2011-2016 Copyright 2011-2016 The THYMELEAF team (http://www.thymeleaf.org), 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org)</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nf7a6e2d8d07b4ea3b27333bf0e742fc2">
+            <ns1:checksumValue>de7bf0adf13b5e9c4811f95edf18279da193c0c6</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-91">
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nef61a06eca30429fa281187ba83266ad">
+            <ns1:checksumValue>62cbc3b594bd82e035bdcd6f93250f4826d407b6</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Starter for using JDBC with the HikariCP connection pool</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>spring-boot-starter-jdbc-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-94">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nd6c7aaa94914473dad9ff4817672c9d3">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>9ddf7702fdc9c15e266bd2d20deeb20b6680d7d4</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>spring-data-jpa-2.2.3.RELEASE.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>Spring Data module for JPA repositories.</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="Na36aaf2b0ac9470198bdb11692c6edba">
+        <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+        <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+        <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-13">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Na06d1ac0964f44c49cb38fb18ec809bc">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>0d6b20c0e95c5b38f313cc2ab1a55560cedabe1f</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>jboss-annotations-api_1.2_spec-1.0.2.Final.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nc7ba33220fd1462bbcef53f52057b58e">
+            <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+            <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+            <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <rdfs:comment>JSR 250: Common Annotations for the Java(TM) Platform</rdfs:comment>
+        <ns1:copyrightText>GPL 2.0 Classpath - 2011 Copyright 2011 Oracle and/or its affiliates, 1989-1991 Copyright 1989-1991 Free Software Foundation, Inc</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-95">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>spring-boot-starter-data-jpa-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N835e1c71fa46414ab6fe17403a1d6633">
+            <ns1:checksumValue>70fca038c1bbb1e9d0d6bedd1035f091ad024a7e</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Starter for using Spring Data JPA with Hibernate</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-85">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>spring-boot-actuator-autoconfigure-2.2.2.RELEASE.jar</ns1:fileName>
+        <rdfs:comment>Spring Boot Actuator AutoConfigure</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nbd244b0f767940b999342d89439f2a51">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>eaabf82f2033353fc97804792195eb42d82b56e3</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-92">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>spring-boot-devtools-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N974ed31a31f64d96ac332b630642fb17">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>b72b182af53fdc10a0dda71cd20d37f357872de0</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Spring Boot Developer Tools</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N54ae3f449c1544efa46038b91ffc61cd">
+        <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+        <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+        <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-1">
+        <rdfs:comment>A framework for constructing recognizers, compilers,
+    and translators from grammatical descriptions containing
+    Java, C#, C++, or Python actions.</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>BSD 3 - 2014 Terence Parr</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N18cc275e1d1941fab4ae555fc54ace9d">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>83cd2cd674a217ade95a4bb83a8a14f351f48bd0</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>antlr-2.7.7.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-48">
+        <rdfs:comment>JUL to SLF4J bridge</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N76c65eca153a4795a890bcce0fde41d9">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>f58dd9d8c15a1141a48de53d2d6b723ae6cf18d6</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>MIT - &amp;url QOS.ch</ns1:copyrightText>
+        <ns1:fileName>jul-to-slf4j-1.7.29.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/MIT"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-65">
+        <rdfs:comment>The AspectJ weaver introduces advices to java classes</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>aspectjweaver-1.9.5.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/EPL-1.0"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ne861f144c70f4374aed268d13ad4ca9b">
+            <ns1:checksumValue>1740dc9140103b796d1722668805fd4cf852780c</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>Eclipse 1.0 - &amp;url Eclipse Foundation Inc</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-38">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N71d1cc9bfcab43faaacaf0e9bddbcc71">
+            <ns1:checksumValue>8b6e01ef661d8378ae6dd7b511a7f2a33fae1421</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>snakeyaml-1.25.jar</ns1:fileName>
+        <rdfs:comment>YAML 1.1 parser and emitter for Java</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - 2018 snakeyaml</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-4">
+        <ns1:copyrightText>Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>commons-exec-1.3.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N0037ef0b23d34d87baf80c3f0dbb9d83">
+            <ns1:checksumValue>8dfb9facd0830a27b1b5f29f84593f0aeee7773b</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Apache Commons Exec is a library to reliably execute external processes from within the JVM.</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-73">
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>spring-webmvc-5.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <rdfs:comment>Spring Web MVC</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N8529f6c864504fe6b29a207017958675">
+            <ns1:checksumValue>a0e9e88a296c09850f92318872f4dee9f62c8c13</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-51">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:copyrightText>Apache 2.0 - 2020 VMware Inc</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N76609bed19954c528a0b7c016cac54f6">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>f1265ecdd4636a2038768c2ab9da4b79961a3465</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>spring-security-core-5.2.1.RELEASE.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>spring-security-core</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-96">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N736a703eb0744ce6979a5e24cab40cc3">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>e2495ca2657e58715ce2fe76ed330e39daf74ea1</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Starter for using Undertow as the embedded servlet container. An
+		alternative to spring-boot-starter-tomcat</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>spring-boot-starter-undertow-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-40">
+        <ns1:fileName>jakarta.transaction-api-1.3.3.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/EPL-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N2eb6ac72e7dd42af980eaf3fa8e97ce3">
+            <ns1:checksumValue>c4179d48720a1e87202115fbed6089bdc4195405</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Jakarta Transactions</rdfs:comment>
+        <ns1:copyrightText>REF - Copyright 2012-2018 Oracle and</ns1:copyrightText>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Ncb068ac0ac364118ab0a5eae370dd397">
+            <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+            <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+            <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:creationInfo>
+      <ns1:CreationInfo rdf:nodeID="N165393cfd10b4a8a90d7447c6e5eeb0f">
+        <ns1:creator>Person: person name (person@email.address)</ns1:creator>
+        <ns1:created>2021-04-19T10:23:46Z</ns1:created>
+        <ns1:creator>Tool: White Source SBOM Report Generator</ns1:creator>
+        <ns1:creator>Organization: Oz Testing Environment (org@email.address)</ns1:creator>
+      </ns1:CreationInfo>
+    </ns1:creationInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-9">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>xnio-api-3.3.8.Final.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N84dc3af0a6bc4a2e9097d56aaf3c0fe1">
+            <ns1:checksumValue>7942ba8330c91a12006c912e040d25a77a58c525</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>Apache 2.0 - 2014 Copyright 2014 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates</ns1:copyrightText>
+        <rdfs:comment>The API JAR of the XNIO project</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-14">
+        <rdfs:comment>Powerful, fast and easy to use HTML and XML parser for Java</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>attoparser-2.0.5.RELEASE.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:copyrightText>Apache 2.0 - 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org), 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org)   --&gt;</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N71a73f5927564a26b0362812d6d64395">
+            <ns1:checksumValue>a93ad36df9560de3a5312c1d14f69d938099fa64</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-82">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N187844caa1ba428391fa19e0cbdf62a8">
+            <ns1:checksumValue>dd6b1771f1b3288b332cd41705aadcb2aebda221</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>spring-boot-starter-logging-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Starter for logging using Logback. Default logging starter</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-67">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors</ns1:copyrightText>
+        <rdfs:comment>Undertow</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N737b976838d0414c896dcc62c76bcb65">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>ec008be06442a3dc22ee279bcfffebe2cd2c824b</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>undertow-websockets-jsr-2.0.28.Final.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-7">
+        <ns1:copyrightText>REF - QOS.ch</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>logback-core module</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N137a51735c3a48218d5fd1320c2d8b7e">
+            <ns1:checksumValue>864344400c3d4d92dfeb0a305dc87d953677c03c</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N90459a6e6c67460381aec9a1a99ed05c">
+            <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+            <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+            <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/EPL-1.0"/>
+        <ns1:fileName>logback-core-1.2.3.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-93">
+        <rdfs:comment>Starter for using Spring Security</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N84b7214be3f34b89a03aeb60cd7788e8">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>4644039ba9ff9e74b41d92a715d7e7640ba0e7f5</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>spring-boot-starter-security-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-55">
+        <ns1:copyrightText>Apache 2.0 - 2020 Pivotal Software Inc</ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Application monitoring instrumentation facade</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N767a800c44724d0ab77ceac507c4c8f4">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>963bca3d978690d8202c2ad762165c8610ccc169</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>micrometer-core-1.3.1.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:name rdf:resource="WhiteSource webwolf - v8.1.0 SBOM report"/>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-27">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>istack-commons-runtime-3.0.8.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <rdfs:comment>istack common utility code</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N674e8c4e237b40769ccd07dd6124b93a">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>d6a97364045aa6b99bf2d3c566a3f98599c2d296</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-61">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>jackson-module-parameter-names-2.10.1.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N982e53eaed1b4e09a2541d8bdd70e255">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>6643b48d7dab2fb8c874526bea13ce4cd1a76cb9</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>Add-on module for Jackson (http://jackson.codehaus.org) to support
+introspection of method/constructor parameter names, without having to add explicit property name annotation.</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-17">
+        <rdfs:comment>JAXB (JSR 222) API</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>REF - Copyright 2004-2017 Oracle &lt;/font&gt;]]&gt;, REF - Copyright 2017-2018 Oracle and/or its affiliates</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nf0249544a98d44d1a0380af62f956fa3">
+            <ns1:checksumValue>8531ad5ac454cc2deb9d4d32c40c4d7451939b5d</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>jaxb-api-2.3.1.jar</ns1:fileName>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N89b116f8d680496eb89960b2e8245cfd">
+            <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+            <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+            <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/CDDL-1.1"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-53">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ne4fb604909b74de88e5d270a1353396f">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>9e43c2d8d2dffc60bfba8ac95a106d30e9593106</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:copyrightText>Apache 2.0 - 2020 VMware Inc</ns1:copyrightText>
+        <rdfs:comment>spring-security-web</rdfs:comment>
+        <ns1:fileName>spring-security-web-5.2.1.RELEASE.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-23">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>LGPL 2.1 - Unspecified Copyright</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>hibernate-commons-annotations-5.1.0.Final.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N3e0bba52f70747588d406e80ecd7bb44">
+            <ns1:checksumValue>700aeedc4a2089816621948f0379e17cbd17d5db</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nf1b6c4494277441f863cbd95f88d3eff">
+            <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+            <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+            <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <rdfs:comment>Common reflection code used in support of annotation processing</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-15">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nb3b5935e8a9746159658af718818c5b8">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>7b90360afb2b860e09e8347112800d12c12b2a13</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Advanced yet easy-to-use escape/unescape library for Java</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>unbescape-1.1.6.RELEASE.jar</ns1:fileName>
+        <ns1:copyrightText>Apache 2.0 - 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)  --&gt;, 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-86">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N729f8da484564a6a9bfb367856a6ea62">
+            <ns1:checksumValue>8046ac16d5356874a9d64bc40ecd3f58b346b63d</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>spring-boot-actuator-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <rdfs:comment>Spring Boot Actuator</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-56">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nec20b1cd87bd4143a0c781c5dcb70f7c">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>db9247b3eb6f07520ff6ff6d1070439edd6803c3</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>jackson-datatype-jdk8-2.10.1.jar</ns1:fileName>
+        <rdfs:comment>Add-on module for Jackson (http://jackson.codehaus.org) to support
+JDK 8 data types.</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-31">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <rdfs:comment>Parent POM for JBoss projects. Provides default project build configuration.</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ned86ecb5fc1241f2bc517e31070ec974">
+            <ns1:checksumValue>c89aa5564fea8b08b9b41f0bbcabb8fed0d89c0d</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>jandex-2.1.1.Final.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-64">
+        <rdfs:comment>Hibernate's core ORM functionality</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>LGPL 2.1 - 1991-1999 Copyright 1991-1999 Free Software Foundation, Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307</ns1:copyrightText>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ncb8feea3e10d438b890019a45e5909bc">
+            <ns1:checksumValue>6a7efbbe889e9644b163f5cc03936b7e2b360293</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>hibernate-core-5.4.9.Final.jar</ns1:fileName>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N58d7f00e885441e9bbb2d7f6d7cd5356">
+            <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+            <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+            <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-62">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N470a9b22bf2745a1b11df3295680ddcb">
+            <ns1:checksumValue>ceec924fc774201f010f14155e0e479248fd5e30</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>undertow-servlet-2.0.28.Final.jar</ns1:fileName>
+        <ns1:copyrightText>Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors</ns1:copyrightText>
+        <rdfs:comment>Undertow</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-6">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N836a8c51eb214e679779287cefac9fe5">
+            <ns1:checksumValue>769c0b82cb2421c8256300e907298a9410a2a3d3</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>LatencyUtils-2.0.3.jar</ns1:fileName>
+        <rdfs:comment>LatencyUtils is a package that provides latency recording and reporting utilities.</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/CC0-1.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>CC0 - 2014 Gil Tene</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N9889563e8ab84832898f942bf2940037">
+        <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+        <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+        <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-66">
+        <ns1:copyrightText>Apache 2.0 - Copyright ${project.inceptionYear} - ${current.year} ${copyright.holder}, 2014-2019 Copyright 2014-2019 Rafael Winterhalter</ns1:copyrightText>
+        <ns1:fileName>byte-buddy-1.10.4.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nd070895864e042eaad6e43bf3f29012a">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>e682f5d73de28ac3577aaa71021d355f2ad560f7</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Byte Buddy is a Java library for creating Java classes at run time.
+        This artifact is a build of Byte Buddy with all ASM dependencies repackaged into its own name space.</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-49">
+        <rdfs:comment>Hibernate's Bean Validation (JSR-380) reference implementation.</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - Unspecified Copyright</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>hibernate-validator-6.0.18.Final.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Na8e142b3e38e4b1e83ccf1c0b761b004">
+            <ns1:checksumValue>7fd00bcd87e14b6ba66279282ef15efa30dd2492</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-60">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N59dfcc6157954238adad66788d41e0f0">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>2c8b5e26ba40e5f91eb37a24075a2028b402c5f9</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>jackson-core-2.10.1.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:copyrightText>Apache 2.0 - &amp;url Tatu Saloranta</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Core Jackson processing abstractions (aka Streaming API), implementation for JSON</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-22">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/MIT"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N4c64a8459f4a4f2998815ae11763599b">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>7103ab519b1cdbb0642ad4eaf1db209d905d0f96</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Spice up your java: Automatic Resource Management, automatic generation of getters, setters, equals, hashCode and toString, and more!</rdfs:comment>
+        <ns1:copyrightText>MIT - 2009-2015 Copyright 2009-2015 The Project Lombok Authors</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>lombok-1.18.4.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-75">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>spring-web-5.2.2.RELEASE.jar</ns1:fileName>
+        <rdfs:comment>Spring Web</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N434a079f62a7455485d9866128153740">
+            <ns1:checksumValue>d9b0a8079b7d604f134e3054127a7aeba65949a5</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-24">
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N45da966bc2fa4448930d0b38f005be74">
+            <ns1:checksumValue>562a587face36ec7eff2db7f2fc95425c6602bc1</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>jakarta.activation-api-1.2.1.jar</ns1:fileName>
+        <ns1:copyrightText>BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 1997-2018 Copyright 1997-2018 Oracle and/or its affiliates</ns1:copyrightText>
+        <rdfs:comment>JavaBeans Activation Framework API jar</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-39">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <rdfs:comment>The JBoss Logging Framework</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - 2020 Red Hat Inc</ns1:copyrightText>
+        <ns1:fileName>jboss-logging-3.4.1.Final.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N20da4bac8bac4a8180c6ad05f1b825f8">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>40fd4d696c55793e996d1ff3c475833f836c2498</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-32">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N86abbfa7c3cc44db99a9e2f85c0ac330">
+            <ns1:checksumValue>5a864a58587cd76243b8ec55dd7115c9eac25c08</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>jakarta.validation-api-2.0.1.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Bean Validation API</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - Unspecified Copyright</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-80">
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <rdfs:comment>Spring Boot AutoConfigure</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nd5431d2f86f547089b14f3a494189a27">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>2e7876e237097d36bfffd5ce3416930f6d6b579c</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>spring-boot-autoconfigure-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-71">
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>spring-aop-5.2.2.RELEASE.jar</ns1:fileName>
+        <rdfs:comment>Spring AOP</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nc0242075efdd445c8a1b3fa678a5d645">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>899739cf7f338f6297aa9eb25ea8b16338fe4e6d</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-50">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ncbfaa20f754e403f8e6c2fe338d3e633">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>3fe0bed568c62df5e89f4f174c101eab25345b6c</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - &amp;url FasterXML, 2011 FasterXML LLC</ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileName>classmate-1.5.1.jar</ns1:fileName>
+        <rdfs:comment>Library for introspecting types with full generic information
+        including resolving of field and method types.</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-18">
+        <rdfs:comment>Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation
+    simple.  It is a class library for editing bytecodes in Java.</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:copyrightText>REF - Copyright 2019 The Apache Software Foundation, Licensed under the &lt;a class="white" href="/licen, REF - Copyright 1999 Shigeru Chiba</ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N05a5fc63b0734a9aad5bf23e750e40b2">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>d7466fc2e3af7c023e95c510f06448ad29b225b3</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileName>javassist-3.24.0-GA.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/MPL-1.1"/>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nc1309120622d409fb4e08024c2ebba92">
+            <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+            <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+            <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-41">
+        <rdfs:comment>Eclipse Enterprise for Java (EE4J) is an open source initiative to create standard APIs,
+        implementations of those APIs, and technology compatibility kits for Java runtimes
+        that enable development, deployment, and management of server-side and cloud-native applications.</rdfs:comment>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:copyrightText>REF - Copyright 2018-2019 Oracle and/or its affiliates, REF - Copyright 2007 Eclipse Foundation, Inc. and its licensors, REF - Copyright 2019 Oracle and/or its affiliates, REF - Copyright 2019 Eclipse Foundation</ns1:copyrightText>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileName>jakarta.persistence-api-2.2.3.jar</ns1:fileName>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/EPL-2.0"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N363586e3e63247c488eb3c5640bd91be">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>8f6ea5daedc614f07a3654a455660145286f024e</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N99ecbd8abecd42d1bcb3cd444eae7bef">
+        <ns1:extractedText>GPL-2.0</ns1:extractedText>
+        <ns1:licenseId>GPL-2.0</ns1:licenseId>
+        <ns1:licenseName>GPL-2.0</ns1:licenseName>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-54">
+        <ns1:copyrightText>Apache 2.0 - 2020 VMware Inc</ns1:copyrightText>
+        <rdfs:comment>spring-security-config</rdfs:comment>
+        <ns1:fileName>spring-security-config-5.2.1.RELEASE.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nc40ba4a8fb6a4c73b3f6dbbea7d8e666">
+            <ns1:checksumValue>8f49e12035d0357b5f35e254334ea06d4585cf01</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="Nf60fc904ec824c10a613b20416726d2c">
+        <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+        <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+        <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:hasExtractedLicensingInfo>
+      <ns1:ExtractedLicensingInfo rdf:nodeID="N8bc90e14ebaa467c8d003db622ea9563">
+        <ns1:licenseName>GPL-2.0-with-classpath-exception</ns1:licenseName>
+        <ns1:licenseId>GPL-2.0-with-classpath-exception</ns1:licenseId>
+        <ns1:extractedText>GPL-2.0-with-classpath-exception</ns1:extractedText>
+      </ns1:ExtractedLicensingInfo>
+    </ns1:hasExtractedLicensingInfo>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-5">
+        <ns1:fileName>bootstrap-3.3.7.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>WebJar for Bootstrap</rdfs:comment>
+        <ns1:copyrightText>Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0</ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N64e42ae99ba04194bcb6ca2bce229e89">
+            <ns1:checksumValue>d6aeba80236573ed585baa657dac2b951caa8e7e</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-69">
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N37e3c8f289a94747b2cb668d609ccdea">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>81e4d9cc2e8fac88ab4eb7325c4521bd07c6389c</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <rdfs:comment>Spring Beans</rdfs:comment>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>spring-beans-5.2.2.RELEASE.jar</ns1:fileName>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-81">
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <ns1:fileName>spring-boot-starter-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N98ef769b7e1044e0a0778517566e2c95">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>1f8bb1e33a900c95dc31011e0998b70929d05a68</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>Core starter, including auto-configuration support, logging and YAML</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-8">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nc42c6672300945daaedfa1683d01f552">
+            <ns1:extractedText>LGPL-2.1</ns1:extractedText>
+            <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+            <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <ns1:fileName>logback-classic-1.2.3.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nbe445fd4341845e3adbb1641b09860ca">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>7c4f3c474fb2c041d8028740440937705ebb473a</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/EPL-1.0"/>
+        <rdfs:comment>logback-classic module</rdfs:comment>
+        <ns1:copyrightText>REF - QOS.ch</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-25">
+        <rdfs:comment>Open Source implementation of the Fast Infoset Standard for Binary XML (http://www.itu.int/ITU-T/asn1/).</rdfs:comment>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nd8c26c69f68f45d0aba50623b043c5da">
+            <ns1:checksumValue>4eb6a0adad553bf759ffe86927df6f3b848c8bea</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:copyrightText>Apache 2.0 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2012-2018 Copyright 2012-2018 Oracle and/or its affiliates</ns1:copyrightText>
+        <ns1:fileName>FastInfoset-1.2.16.jar</ns1:fileName>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-33">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Na4ac4c4e93d64331a4c6fb54d1dd9312">
+            <ns1:checksumValue>36e7175ddce36c486fff4578b5af7bb32f54f5df</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), 2011-2014 Copyright 2011-2014 The THYMELEAF team (http://www.thymeleaf.org)</ns1:copyrightText>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>thymeleaf-extras-java8time-3.0.4.RELEASE.jar</ns1:fileName>
+        <rdfs:comment>Modern server-side Java template engine for both web and standalone environments</rdfs:comment>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-68">
+        <rdfs:comment>Spring Aspects</rdfs:comment>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:fileName>spring-aspects-5.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N82ea3a045e8f4abd80c38678bda31403">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>a7fc38ee5fcc7efff607cc93b5fa7259c0fbb4da</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:copyrightText><![CDATA[Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, France Telecom, 1999-2009 Copyright 1999-2009 OW2 Consortium <https://www.ow2.org/>, 2002-2019 Copyright 2002-2019 Pivotal, Inc]]></ns1:copyrightText>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-84">
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N16d7d2ec88984301b44202ba24cd985d">
+            <ns1:algorithm>SHA1</ns1:algorithm>
+            <ns1:checksumValue>cc636f24a5ebbfb21f1c8c30ed9c3b13512c16ec</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:copyrightText>Apache 2.0 - None</ns1:copyrightText>
+        <rdfs:comment>Spring Boot</rdfs:comment>
+        <ns1:fileName>spring-boot-2.2.2.RELEASE.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+      </ns1:File>
+    </ns1:referencesFile>
+    <ns1:referencesFile>
+      <ns1:File rdf:about="http://www.spdx.org/files#SPDXRef-FILE-34">
+        <ns1:fileType rdf:resource="http://spdx.org/rdf/terms#fileType_source"/>
+        <ns1:licenseInfoInFile>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N1c95b0b35ca9468695382fc9ba60603b">
+            <ns1:licenseName>GPL-2.0</ns1:licenseName>
+            <ns1:licenseId>GPL-2.0</ns1:licenseId>
+            <ns1:extractedText>GPL-2.0</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoInFile>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N6d875de0106742faa64dde0816e6f05b">
+            <ns1:checksumValue>1b2cbb00b4dd2f4655eadd8c8346231282578563</ns1:checksumValue>
+            <ns1:algorithm>SHA1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:licenseInfoInFile rdf:resource="http://spdx.org/licenses/CDDL-1.0"/>
+        <ns1:fileName>jboss-websocket-api_1.1_spec-1.1.4.Final.jar</ns1:fileName>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <rdfs:comment>JSR-356: Java(TM) API for WebSocket 1.1 classes</rdfs:comment>
+        <ns1:copyrightText>REF - Copyright 1989-1991 Free Software Foundation, Inc</ns1:copyrightText>
+      </ns1:File>
+    </ns1:referencesFile>
+  </ns1:SpdxDocument>
+</rdf:RDF>
