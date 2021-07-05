@@ -64,11 +64,19 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           allowUpdates: true
           artifacts: "*.zip"
-      - name: confluence-markdown-sync
+      - name: confluence-markdown-sync - PS documentation
         uses: cupcakearmy/confluence-markdown-sync@v1
         with:
           from: README.md
           to: 1992262152
+          cloud: whitesource
+          user: ${{ secrets.CONFLUENCE_USER }}
+          token: ${{ secrets.CONFLUENCE_TOKEN }}
+      - name: confluence-markdown-sync - Public Community
+        uses: cupcakearmy/confluence-markdown-sync@v1
+        with:
+          from: README.md
+          to: 2224554824
           cloud: whitesource
           user: ${{ secrets.CONFLUENCE_USER }}
           token: ${{ secrets.CONFLUENCE_TOKEN }}
