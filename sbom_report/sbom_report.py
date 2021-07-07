@@ -158,12 +158,17 @@ def create_files(scope_token: str,
                 logging.warning(f"Found {len(l_loc['locations'])} locations for lib {lib_name}. Using the first one")
             location = locations[0]
             try:
-                split_path = re.split('\\\\|\\|/|//', location['path'])
+                split_path = re.split('\\\\|\\|/|//|/', location['path'])
                 path = f"../{split_path[-4]}/{split_path[-3]}/{split_path[-2]}/"
+                logging.debug(f"Using {path} as file location")
             except KeyError:
                 logging.error(f"No path value in lib: {lib_name} ")
+            except IndexError:
+                path = location['path']
+                logging.warning(f"Unable to create path value from last 3 sections of: {path}")
+
         else:
-            logging.error(f"No locations found for lib {lib_name} ")
+            logging.warning(f"No locations found for lib {lib_name} ")
 
         rel_path = path + lib_name
         logging.debug(f"Received filename: {lib_name}. SPDX relative path: {rel_path}")
