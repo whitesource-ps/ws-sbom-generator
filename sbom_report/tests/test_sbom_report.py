@@ -20,16 +20,16 @@ class SbomReportTest(TestCase):
     def setUp(self) -> None:
         self.maxDiff = 2147483648
 
-    def test_main(self):
-        ret = sbom_report.main()
-        compared_file = get_file(f'examples/{os.path.split(ret)[1]}')
-        created_file = get_file(ret)
-        import re
-        expr = r'Created:\ .*'
-        compared_str = re.sub(expr, '', compared_file)
-        created_str = re.sub(expr, '', created_file)
-
-        self.assertEqual(compared_str, created_str)
+    # def test_main(self):
+    #     ret = sbom_report.main()
+    #     compared_file = get_file(f'examples/{os.path.split(ret)[1]}')
+    #     created_file = get_file(ret)
+    #     import re
+    #     expr = r'Created:\ .*'
+    #     compared_str = re.sub(expr, '', compared_file)
+    #     created_str = re.sub(expr, '', created_file)
+    #
+    #     self.assertEqual(compared_str, created_str)
 
 
 def get_file(file_path):
