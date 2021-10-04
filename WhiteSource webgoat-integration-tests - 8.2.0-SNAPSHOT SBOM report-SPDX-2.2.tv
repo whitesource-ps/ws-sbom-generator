@@ -1,0 +1,1937 @@
+# Document Information
+
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+DocumentName: WhiteSource webgoat-integration-tests - 8.2.0-SNAPSHOT SBOM report
+SPDXID: SPDXRef-DOCUMENT
+DocumentNamespace: http://CreatorWebsite/pathToSpdx/DocumentName-UUID
+
+
+# Creation Info
+
+Creator: Organization: PS CI environment (org@email.address)
+Creator: Tool: White Source SBOM Report Generator
+Creator: Person: person name (person@email.address)
+Created: 2021-09-01T09:13:27Z
+
+
+# Package
+
+PackageName: webgoat-integration-tests - 8.2.0-SNAPSHOT
+SPDXID: SPDXRef-PACKAGE-1
+PackageDownloadLocation: http://package/location
+PackageSupplier: Person: supplier name (supplier@email.address)
+PackageChecksum: SHA1: 
+PackageVerificationCode: c57c3be25b65e432e717dbcd7abfc993c0d458a3
+PackageLicenseDeclared: LicenseRef-MIT
+PackageLicenseConcluded: NOASSERTION
+PackageLicenseInfoFromFiles: NOASSERTION
+PackageLicenseInfoFromFiles: LicenseRef-Apache-2.0
+PackageLicenseInfoFromFiles: LicenseRef-BSD-2-Clause
+PackageLicenseInfoFromFiles: LicenseRef-BSD-3-Clause
+PackageLicenseInfoFromFiles: LicenseRef-CC-PDDC
+PackageLicenseInfoFromFiles: LicenseRef-CC0-1.0
+PackageLicenseInfoFromFiles: LicenseRef-CDDL-1.0
+PackageLicenseInfoFromFiles: LicenseRef-CDDL-1.1
+PackageLicenseInfoFromFiles: LicenseRef-EPL-1.0
+PackageLicenseInfoFromFiles: LicenseRef-EPL-2.0
+PackageLicenseInfoFromFiles: LicenseRef-GPL-2.0
+PackageLicenseInfoFromFiles: LicenseRef-GPL-2.0-with-classpath-exception
+PackageLicenseInfoFromFiles: LicenseRef-LGPL-2.1
+PackageLicenseInfoFromFiles: LicenseRef-MIT
+PackageLicenseInfoFromFiles: LicenseRef-MPL-1.1
+PackageCopyrightText: <text>Apache 2.0 - 2000-2002 Copyright 2000-2002 2003 INRIA, France Telecom, Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW, Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2006-2019 Copyright 2006-2019 Joe Walnes, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 1999-2009 Copyright 1999-2009 OW, Apache 2.0 - 2001-2011 Copyright 2001-2011 The Apache Software Foundation, Apache 2.0 - 2001-2019 Copyright 2001-2019 Copyright, 2002-2019 Copyright 2002-2019 Copyright, 2017 Copyright 2017 VMware, Inc, 2013 Copyright 2013 The Netty Project, 2010 Copyright 2010 Google Inc, Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation, Apache 2.0 - 2010-2020 Copyright 2010-2020 Red Gate Software Ltd, Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), 2011-2014 Copyright 2011-2014 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team, 2011-2016 Copyright 2011-2016 The THYMELEAF team, Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors, Apache 2.0 - 2012 Martian Software Inc, Apache 2.0 - 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org), 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org)   -->, Apache 2.0 - 2012-2019 Copyright 2012-2019 Copyright, Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc, Apache 2.0 - 2013 Red Hat, Inc., Apache 2.0 - 2014 Brett Wooldridge, Apache 2.0 - 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, Apache 2.0 - 2014 Copyright 2014 jsonwebtoken.io, 2019 Copyright 2019 The Apache Software Foundation, Licensed under the <a class="white" href="/licen, Apache 2.0 - 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)  -->, 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org), Apache 2.0 - 2015 Copyright 2015 Red Hat, Inc., and individual contributors, Apache 2.0 - 2017 Copyright 2017 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, Apache 2.0 - 2017 Copyright 2017 Red Hat, Inc., and individual contributors, Apache 2.0 - 2019 Copyright 2019 Eclipse Foundation, Apache 2.0 - 2019 Copyright 2019 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc., and individual contributors, Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the <a class="white" href="/licen, Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0, Apache 2.0 - 2020 Red Hat Inc, Apache 2.0 - Apache Software Foundation, Apache 2.0 - FasterXML, 2011 FasterXML LLC, Apache 2.0 - FasterXML, LLC, Apache 2.0 - Hibernate, Apache 2.0 - Joda.org, Apache 2.0 - None, Apache 2.0 - Unspecified Copyright, Apache 2.0 - Unspecified Copyright, 2009 Apache Software Foundation, Apache 2.0 - VMware, Inc., BSD 2 - 1996-2021 Copyright 1996-2021 The PostgreSQL Global Development Group, 2003-2020 Copyright 2003-2020 PostgreSQL Global Developme, 1997 Copyright 1997 PostgreSQL Global Development Group, Copyright nt Group, BSD 3 - 1995-2000 Copyright 1995-2000 by the Hypersonic SQL Group, 2001-2020 Copyright 2001-2020 The HSQL Development Group, BSD 3 - 2006-2007 Copyright 2006-2007 2008, 2009, 2010, 2011, 2012, 2013 XStream committers, 2006 Copyright 2006 Joe Walnes, BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2020 Copyright 1997-2020 Oracle and/or its affiliates, BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2019 Copyright 2019 Eclipse Foundation, 2018 Copyright 2018 Oracle and/or its affiliates, 1997-2019 Copyright 1997-2019 Oracle and/or its affiliates, BSD 3 - 2014 Terence Parr, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2020 Copyright 2005-2020 Oracle and/or its affiliates, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2013-2020 Copyright 2013-2020 Oracle and/or its affiliates, CC0 - 2014 Gil Tene, CDDL 1.0 - 2021 Oracle, CDDL 1.1 - 1989 Copyright 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program in, 2012-2017 Copyright 2012-2017 Oracle and, 1995 Copyright 1995 Oct, 1991 Copyright 1991 , June, Copyright 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program in, Copyright 1991 , June, Copyright 1993-2013 Yukihiro Matsumoto, Copyright 1995 Oct, Copyright 1995-1998 Jean-loup Gailly and Mark Adler, Copyright 1997-2018 Oracle and, Copyright 1999 Shigeru Chiba, Copyright 2000-2006 The Legion Of The Bouncy Castle, Copyright 2000-2011 INRIA, Copyright 2000-2011 ymnk, Copyright 2000-2011 ymnk, JCraft,Inc, Copyright 2002-2012 the original author or authors, Copyright 2003-2004 Jim Weirich, Copyright 2007 Eclipse Foundation, Inc. and its licensors, Copyright 2007-2018 The JRuby project, Copyright 2008-2009 Petr Kobalicek <kobalicek.petr, Copyright 2010 Wayne Meissner, Copyright 2012-2013 2014, 2015, 2016 Gil Tene, Copyright 2012-2018 Oracle and, Copyright 2013 Oracle and/or its affiliates, Copyright 2014 Matt Warren, Copyright 2014 Michael Barker, Copyright 2017-2018 Oracle and, Copyright 2018 Oracle and/or its affiliates and others, Copyright 2018-2019 Oracle and/or its affiliates, Copyright 2019 Eclipse Foundation, Copyright 2019 Oracle and/or its affiliates, Copyright 2019 The Apache Software Foundation, Licensed under the <a class="white" href="/licen, Dom4j - 2001-2016 Copyright 2001-2016 (C) MetaStuff, Ltd. and DOM4J contributors, Eclipse 1.0 - 2002 Copyright 2002 Palo Alto Research Center, Incorporated (PARC), 2003-2019 Copyright 2003-2019 Contributors, 1999-2001 Copyright 1999-2001 Xerox Corporation, Eclipse 1.0 - Unspecified Copyright, Extreme! Lab, GPL 2.0 Classpath - 1997-2017 Copyright 1997-2017 Oracle and, LGPL 2.1 - Hibernate, LGPL 2.1 - Unspecified Copyright, MIT - 2004 Copyright 2004 by the Checker Framework developers, MIT - 2017 Copyright 2017 JRuby Team, MIT - 2021 OpenJS Foundation, MIT - None, Public Domain - Unspecified Copyright</text>
+
+
+# File
+
+FileName: ../activation/activation/1.1.1/activation-1.1.1.jar
+SPDXID: SPDXRef-FILE-7
+FileType: SOURCE
+FileChecksum: SHA1: 485de3a253e23f645037828c07f1d7f1af40763a
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-CDDL-1.0
+FileCopyrightText: <text>CDDL 1.0 - 2021 Oracle</text>
+FileComment: <text>The JavaBeans(TM) Activation Framework is used by the JavaMail(TM) API to manage MIME data</text>
+
+
+# File
+
+FileName: ../activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar
+SPDXID: SPDXRef-FILE-38
+FileType: SOURCE
+FileChecksum: SHA1: 74548703f9851017ce2f556066659438019e7eb5
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2019 Copyright 2019 Eclipse Foundation, 2018 Copyright 2018 Oracle and/or its affiliates, 1997-2019 Copyright 1997-2019 Oracle and/or its affiliates</text>
+FileComment: <text>${project.name}</text>
+
+
+# File
+
+FileName: ../activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar
+SPDXID: SPDXRef-FILE-17
+FileType: SOURCE
+FileChecksum: SHA1: 85262acf3ca9816f9537ca47d5adeabaead7cb16
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>GPL 2.0 Classpath - 1997-2017 Copyright 1997-2017 Oracle and</text>
+FileComment: <text>JavaBeans Activation Framework API jar</text>
+
+
+# File
+
+FileName: ../annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar
+SPDXID: SPDXRef-FILE-18
+FileType: SOURCE
+FileChecksum: SHA1: 934c04d3cfef185a8008e7bf34331b79730a9d43
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-CDDL-1.1
+FileCopyrightText: <text>CDDL 1.1 - 1989 Copyright 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program in, 2012-2017 Copyright 2012-2017 Oracle and, 1995 Copyright 1995 Oct, 1991 Copyright 1991 , June</text>
+FileComment: <text>Common Annotations for the JavaTM Platform API</text>
+
+
+# File
+
+FileName: ../annotation/jboss-annotations-api_1.3_spec/2.0.1.Final/jboss-annotations-api_1.3_spec-2.0.1.Final.jar
+SPDXID: SPDXRef-FILE-34
+FileType: SOURCE
+FileChecksum: SHA1: b3744f492ce9a65d1197a5b24645dff93fa85424
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>Copyright 2012-2018 Oracle and</text>
+FileComment: <text>JBoss Jakarta Annotations API</text>
+
+
+# File
+
+FileName: ../ant/ant-launcher/1.6.5/ant-launcher-1.6.5.jar
+SPDXID: SPDXRef-FILE-2
+FileType: SOURCE
+FileChecksum: SHA1: b06fd72d7cabd5ec39cea153a21fa5cea5d37f71
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+
+
+# File
+
+FileName: ../ant/ant/1.6.5/ant-1.6.5.jar
+SPDXID: SPDXRef-FILE-4
+FileType: SOURCE
+FileChecksum: SHA1: 7d18faf23df1a5c3a43613952e0e8a182664564b
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Apache Software Foundation</text>
+FileComment: <text>The Apache Software Foundation provides support for the Apache community of open-source software projects.
+    The Apache projects are characterized by a collaborative, consensus based development process, an open and
+    pragmatic software license, and a desire to create high quality software that leads the way in its field.
+    We consider ourselves not simply a group of projects sharing a server, but rather a community of developers
+    and users.</text>
+
+
+# File
+
+FileName: ../antlr/antlr/2.7.7/antlr-2.7.7.jar
+SPDXID: SPDXRef-FILE-3
+FileType: SOURCE
+FileChecksum: SHA1: 83cd2cd674a217ade95a4bb83a8a14f351f48bd0
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2014 Terence Parr</text>
+FileComment: <text>A framework for constructing recognizers, compilers,
+    and translators from grammatical descriptions containing
+    Java, C#, C++, or Python actions.</text>
+
+
+# File
+
+FileName: ../asciidoctor/asciidoctorj-api/2.4.3/asciidoctorj-api-2.4.3.jar
+SPDXID: SPDXRef-FILE-116
+FileType: SOURCE
+FileChecksum: SHA1: 945f57c009c9d028c655bf276efe9c63cfb08e59
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+FileComment: <text>API for AsciidoctorJ</text>
+
+
+# File
+
+FileName: ../asciidoctor/asciidoctorj/2.4.3/asciidoctorj-2.4.3.jar
+SPDXID: SPDXRef-FILE-114
+FileType: SOURCE
+FileChecksum: SHA1: 58c98a3ec44d15288a13dae8b8ca4218f14b039b
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+FileComment: <text>AsciidoctorJ provides Java bindings for the Asciidoctor RubyGem (asciidoctor) using JRuby.</text>
+
+
+# File
+
+FileName: ../aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar
+SPDXID: SPDXRef-FILE-56
+FileType: SOURCE
+FileChecksum: SHA1: ee3b73aa16df35179255f17354d9dfd8e7822835
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-1.0
+FileCopyrightText: <text>Eclipse 1.0 - 2002 Copyright 2002 Palo Alto Research Center, Incorporated (PARC), 2003-2019 Copyright 2003-2019 Contributors, 1999-2001 Copyright 1999-2001 Xerox Corporation</text>
+FileComment: <text>The AspectJ weaver introduces advices to java classes</text>
+
+
+# File
+
+FileName: ../attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar
+SPDXID: SPDXRef-FILE-19
+FileType: SOURCE
+FileChecksum: SHA1: a93ad36df9560de3a5312c1d14f69d938099fa64
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org), 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org)   --></text>
+FileComment: <text>Powerful, fast and easy to use HTML and XML parser for Java</text>
+
+
+# File
+
+FileName: ../b_c/jose4j/0.7.6/jose4j-0.7.6.jar
+SPDXID: SPDXRef-FILE-83
+FileType: SOURCE
+FileChecksum: SHA1: 4685155beaabc2fd671809da90002e0189974336
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2019 Copyright 2012-2019 Copyright</text>
+FileComment: <text>The jose.4.j library is a robust and easy to use open source implementation of JSON Web Token (JWT) and the JOSE specification suite (JWS, JWE, and JWK).
+     It is written in Java and relies solely on the JCA APIs for cryptography.
+     Please see https://bitbucket.org/b_c/jose4j/wiki/Home for more info, examples, etc..</text>
+
+
+# File
+
+FileName: ../beust/jcommander/1.72/jcommander-1.72.jar
+SPDXID: SPDXRef-FILE-16
+FileType: SOURCE
+FileChecksum: SHA1: 6375e521c1e11d6563d4f25a07ce124ccf8cd171
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the <a class="white" href="/licen</text>
+FileComment: <text>Command line parsing</text>
+
+
+# File
+
+FileName: ../bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar
+SPDXID: SPDXRef-FILE-22
+FileType: SOURCE
+FileChecksum: SHA1: 8531ad5ac454cc2deb9d4d32c40c4d7451939b5d
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-CDDL-1.1
+LicenseInfoInFile: LicenseRef-GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>Copyright 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program in, Copyright 1991 , June, Copyright 1995 Oct, Copyright 2017-2018 Oracle and</text>
+FileComment: <text>JAXB (JSR 222) API</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-actuator-autoconfigure/2.4.3/spring-boot-actuator-autoconfigure-2.4.3.jar
+SPDXID: SPDXRef-FILE-102
+FileType: SOURCE
+FileChecksum: SHA1: 02f5f728f5f9e6d9b4af928f7beb08b8b9fc2da6
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Spring Boot Actuator AutoConfigure</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-actuator/2.4.3/spring-boot-actuator-2.4.3.jar
+SPDXID: SPDXRef-FILE-108
+FileType: SOURCE
+FileChecksum: SHA1: 1a5f125bbcb97200ba7f412f625475d21dedd776
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Spring Boot Actuator</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-actuator/2.4.3/spring-boot-starter-actuator-2.4.3.jar
+SPDXID: SPDXRef-FILE-103
+FileType: SOURCE
+FileChecksum: SHA1: 399139fae18f055ba53185fac92e770b0595636f
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for using Spring Boot's Actuator which provides production ready features to help you monitor and manage your application</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-aop/2.4.3/spring-boot-starter-aop-2.4.3.jar
+SPDXID: SPDXRef-FILE-109
+FileType: SOURCE
+FileChecksum: SHA1: 333593abae74bf7ecc883460751dcc69afb82604
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for aspect-oriented programming with Spring AOP and AspectJ</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-data-jpa/2.4.3/spring-boot-starter-data-jpa-2.4.3.jar
+SPDXID: SPDXRef-FILE-106
+FileType: SOURCE
+FileChecksum: SHA1: 356d18d4bb10915f3d13c845fc38b5c068f2e075
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for using Spring Data JPA with Hibernate</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-jdbc/2.4.3/spring-boot-starter-jdbc-2.4.3.jar
+SPDXID: SPDXRef-FILE-101
+FileType: SOURCE
+FileChecksum: SHA1: 2c5853339333cd2b545816d57f12f9d0a0fe6932
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for using JDBC with the HikariCP connection pool</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-json/2.4.3/spring-boot-starter-json-2.4.3.jar
+SPDXID: SPDXRef-FILE-110
+FileType: SOURCE
+FileChecksum: SHA1: 7b26abb0a0379a00b58a2a50e010b29cf4f16b80
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for reading and writing json</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-security/2.4.3/spring-boot-starter-security-2.4.3.jar
+SPDXID: SPDXRef-FILE-99
+FileType: SOURCE
+FileChecksum: SHA1: 1279b678adb2c991797cec49f83d8f6b8ce14df9
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for using Spring Security</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-thymeleaf/2.4.3/spring-boot-starter-thymeleaf-2.4.3.jar
+SPDXID: SPDXRef-FILE-100
+FileType: SOURCE
+FileChecksum: SHA1: 64fdb078f965cba7e5ec1f04c9fdeee87a4b788d
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for building MVC web applications using Thymeleaf views</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-undertow/2.4.3/spring-boot-starter-undertow-2.4.3.jar
+SPDXID: SPDXRef-FILE-107
+FileType: SOURCE
+FileChecksum: SHA1: 97bd5c32d9d240f0ccb22d233605a2845ece3d7f
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for using Undertow as the embedded servlet container. An alternative to spring-boot-starter-tomcat</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-validation/2.4.3/spring-boot-starter-validation-2.4.3.jar
+SPDXID: SPDXRef-FILE-105
+FileType: SOURCE
+FileChecksum: SHA1: 4fcad7c11f72ab8db3075a48f29b8fc1646d9796
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for using Java Bean Validation with Hibernate Validator</text>
+
+
+# File
+
+FileName: ../boot/spring-boot-starter-web/2.4.3/spring-boot-starter-web-2.4.3.jar
+SPDXID: SPDXRef-FILE-104
+FileType: SOURCE
+FileChecksum: SHA1: 4f5554ea183af87e52d8c31bb82aada0d74c40b0
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc</text>
+FileComment: <text>Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container</text>
+
+
+# File
+
+FileName: ../cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar
+SPDXID: SPDXRef-FILE-5
+FileType: SOURCE
+FileChecksum: SHA1: 59afed7ab65e7ec6585d5bc60556c3cbd203532b
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2002 Copyright 2000-2002 2003 INRIA, France Telecom</text>
+FileComment: <text>Code generation library with shaded ASM dependecies</text>
+
+
+# File
+
+FileName: ../checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar
+SPDXID: SPDXRef-FILE-55
+FileType: SOURCE
+FileChecksum: SHA1: 2f50520c8abea66fbd8d26e481d3aef5c673b510
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-MIT
+FileCopyrightText: <text>MIT - 2004 Copyright 2004 by the Checker Framework developers</text>
+FileComment: <text>Checker Qual is the set of annotations (qualifiers) and supporting classes
+        used by the Checker Framework to type check Java source code.
+
+        Please
+        see artifact:
+        org.checkerframework:checker</text>
+
+
+# File
+
+FileName: ../client/wildfly-client-config/1.0.1.Final/wildfly-client-config-1.0.1.Final.jar
+SPDXID: SPDXRef-FILE-24
+FileType: SOURCE
+FileChecksum: SHA1: 2a803b23c40a0de0f03a90d1fd3755747bc05f4b
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2015 Copyright 2015 Red Hat, Inc., and individual contributors</text>
+FileComment: <text>Library for supporting WildFly common client configuration</text>
+
+
+# File
+
+FileName: ../common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar
+SPDXID: SPDXRef-FILE-59
+FileType: SOURCE
+FileChecksum: SHA1: e59ffdbc6ad09eeb33507b39ffcf287679a498c8
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-LGPL-2.1
+FileCopyrightText: <text>LGPL 2.1 - Unspecified Copyright</text>
+FileComment: <text>Common reflection code used in support of annotation processing</text>
+
+
+# File
+
+FileName: ../common/wildfly-common/1.5.2.Final/wildfly-common-1.5.2.Final.jar
+SPDXID: SPDXRef-FILE-32
+FileType: SOURCE
+FileChecksum: SHA1: 8eba40cfe86bcfcc223551e75201e6e7574c7c36
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2019 Copyright 2019 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc., and individual contributors</text>
+FileComment: <text>Provides, via submodules, a base configuration for JBoss project builds, as well as a derived configuration supporting multi-release JARs</text>
+
+
+# File
+
+FileName: ../commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+SPDXID: SPDXRef-FILE-50
+FileType: SOURCE
+FileChecksum: SHA1: 0ce1edb914c94ebc388f086c6827e8bdeec71ac2
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2001-2011 Copyright 2001-2011 The Apache Software Foundation</text>
+FileComment: <text>Commons Lang, a package of Java utility classes for the
+        classes that are in java.lang's hierarchy, or are considered to be so
+        standard as to justify existence in java.lang.</text>
+
+
+# File
+
+FileName: ../commons/commons-exec/1.3/commons-exec-1.3.jar
+SPDXID: SPDXRef-FILE-11
+FileType: SOURCE
+FileChecksum: SHA1: 8dfb9facd0830a27b1b5f29f84593f0aeee7773b
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation</text>
+FileComment: <text>Apache Commons Exec is a library to reliably execute external processes from within the JVM.</text>
+
+
+# File
+
+FileName: ../core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar
+SPDXID: SPDXRef-FILE-63
+FileType: SOURCE
+FileChecksum: SHA1: 2c3f5c079330f3a01726686a078979420f547ae4
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - FasterXML, LLC</text>
+FileComment: <text>Core annotations used for value types, used by Jackson data binding package.</text>
+
+
+# File
+
+FileName: ../core/jackson-core/2.11.4/jackson-core-2.11.4.jar
+SPDXID: SPDXRef-FILE-64
+FileType: SOURCE
+FileChecksum: SHA1: 593f7b18bab07a76767f181e2a2336135ce82cc4
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - FasterXML, LLC</text>
+FileComment: <text>Core Jackson processing abstractions (aka Streaming API), implementation for JSON</text>
+
+
+# File
+
+FileName: ../core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar
+SPDXID: SPDXRef-FILE-61
+FileType: SOURCE
+FileChecksum: SHA1: 5d9f3d441f99d721b957e3497f0a6465c764fad4
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - FasterXML, LLC</text>
+FileComment: <text>General data-binding functionality for Jackson: works on core streaming API</text>
+
+
+# File
+
+FileName: ../data/spring-data-commons/2.4.5/spring-data-commons-2.4.5.jar
+SPDXID: SPDXRef-FILE-112
+FileType: SOURCE
+FileChecksum: SHA1: 571945cb8debeb12815cb3bf6554bd5e388935e5
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - VMware, Inc.</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../data/spring-data-jpa/2.4.5/spring-data-jpa-2.4.5.jar
+SPDXID: SPDXRef-FILE-111
+FileType: SOURCE
+FileChecksum: SHA1: 73596ed30853bf9338fd8358ec804f0097b6d73b
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - VMware, Inc.</text>
+FileComment: <text>Spring Data module for JPA repositories.</text>
+
+
+# File
+
+FileName: ../datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar
+SPDXID: SPDXRef-FILE-66
+FileType: SOURCE
+FileChecksum: SHA1: e1540dea3c6c681ea4e335a960f730861ee3bedb
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - FasterXML, LLC</text>
+FileComment: <text>Add-on module for Jackson (http://jackson.codehaus.org) to support
+JDK 8 data types.</text>
+
+
+# File
+
+FileName: ../datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar
+SPDXID: SPDXRef-FILE-62
+FileType: SOURCE
+FileChecksum: SHA1: ce6fc76bba06623720e5a9308386b6ae74753f4d
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - FasterXML, LLC</text>
+FileComment: <text>Add-on module to support JSR-310 (Java 8 Date & Time API) data types.</text>
+
+
+# File
+
+FileName: ../dom4j/dom4j/2.1.3/dom4j-2.1.3.jar
+SPDXID: SPDXRef-FILE-43
+FileType: SOURCE
+FileChecksum: SHA1: a75914155a9f5808963170ec20653668a2ffd2fd
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: <text>Dom4j - 2001-2016 Copyright 2001-2016 (C) MetaStuff, Ltd. and DOM4J contributors</text>
+FileComment: <text>flexible XML framework for Java</text>
+
+
+# File
+
+FileName: ../extras/thymeleaf-extras-java8time/3.0.4.RELEASE/thymeleaf-extras-java8time-3.0.4.RELEASE.jar
+SPDXID: SPDXRef-FILE-26
+FileType: SOURCE
+FileChecksum: SHA1: 36e7175ddce36c486fff4578b5af7bb32f54f5df
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), 2011-2014 Copyright 2011-2014 The THYMELEAF team (http://www.thymeleaf.org)</text>
+FileComment: <text>Modern server-side Java template engine for both web and standalone environments</text>
+
+
+# File
+
+FileName: ../extras/thymeleaf-extras-springsecurity5/3.0.4.RELEASE/thymeleaf-extras-springsecurity5-3.0.4.RELEASE.jar
+SPDXID: SPDXRef-FILE-23
+FileType: SOURCE
+FileChecksum: SHA1: 88bb10bf73ce285208dd848e8eb17f897ebb02d4
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org)</text>
+FileComment: <text>Modern server-side Java template engine for both web and standalone environments</text>
+
+
+# File
+
+FileName: ../fasterxml/classmate/1.5.1/classmate-1.5.1.jar
+SPDXID: SPDXRef-FILE-36
+FileType: SOURCE
+FileChecksum: SHA1: 3fe0bed568c62df5e89f4f174c101eab25345b6c
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - FasterXML, 2011 FasterXML LLC</text>
+FileComment: <text>Library for introspecting types with full generic information
+        including resolving of field and method types.</text>
+
+
+# File
+
+FileName: ../flywaydb/flyway-core/7.1.1/flyway-core-7.1.1.jar
+SPDXID: SPDXRef-FILE-60
+FileType: SOURCE
+FileChecksum: SHA1: 2bb2fefbe3bf1efb3b181cde315720a0e548cc7c
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2010-2020 Copyright 2010-2020 Red Gate Software Ltd</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar
+SPDXID: SPDXRef-FILE-31
+FileType: SOURCE
+FileChecksum: SHA1: dab46ee1ee23f7197c13d7c40fce14817c9017df
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>Copyright 1997-2018 Oracle and, Copyright 2013 Oracle and/or its affiliates</text>
+FileComment: <text>Jakarta Expression Language provides a specification document, API, reference implementation and TCK 
+        that describes an expression language for Java applications.</text>
+
+
+# File
+
+FileName: ../hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar
+SPDXID: SPDXRef-FILE-37
+FileType: SOURCE
+FileChecksum: SHA1: 6eb7552156e0d517ae80cc2247be1427c8d90452
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-2-Clause
+LicenseInfoInFile: LicenseRef-CC0-1.0
+FileCopyrightText: <text>Copyright 2012-2013 2014, 2015, 2016 Gil Tene, Copyright 2014 Matt Warren, Copyright 2014 Michael Barker</text>
+FileComment: <text>HdrHistogram supports the recording and analyzing sampled data value
+        counts across a configurable integer value range with configurable value
+        precision within the range. Value precision is expressed as the number of
+        significant digits in the value recording, and provides control over value
+        quantization behavior across the value range and the subsequent value
+        resolution at any given level.</text>
+
+
+# File
+
+FileName: ../headius/backport9/1.8/backport9-1.8.jar
+SPDXID: SPDXRef-FILE-58
+FileType: SOURCE
+FileChecksum: SHA1: 33ae5b6599bd82989f08c897c3658f3b6e0726db
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../headius/invokebinder/1.11/invokebinder-1.11.jar
+SPDXID: SPDXRef-FILE-25
+FileType: SOURCE
+FileChecksum: SHA1: 05dff3f694f5ab7f48457138f57ac4af95e739c9
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Apache Software Foundation</text>
+FileComment: <text>Sonatype helps open source projects to set up Maven repositories on https://oss.sonatype.org/</text>
+
+
+# File
+
+FileName: ../headius/options/1.4/options-1.4.jar
+SPDXID: SPDXRef-FILE-15
+FileType: SOURCE
+FileChecksum: SHA1: 34bd3630af4e516fdb4d90d16732b8a3dd2f7b46
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Unspecified Copyright</text>
+FileComment: <text>Sonatype helps open source projects to set up Maven repositories on https://oss.sonatype.org/</text>
+
+
+# File
+
+FileName: ../hibernate/hibernate-core/5.4.28.Final/hibernate-core-5.4.28.Final.jar
+SPDXID: SPDXRef-FILE-84
+FileType: SOURCE
+FileChecksum: SHA1: c096dbb27f83655ec252165340b532733c58e8fb
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-LGPL-2.1
+FileCopyrightText: <text>LGPL 2.1 - Hibernate</text>
+FileComment: <text>Hibernate's core ORM functionality</text>
+
+
+# File
+
+FileName: ../hsqldb/hsqldb/2.5.1/hsqldb-2.5.1.jar
+SPDXID: SPDXRef-FILE-54
+FileType: SOURCE
+FileChecksum: SHA1: b1f720a63a8756867895cc22dd74b51fb70e90ac
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 1995-2000 Copyright 1995-2000 by the Hypersonic SQL Group, 2001-2020 Copyright 2001-2020 The HSQL Development Group</text>
+FileComment: <text>HSQLDB - Lightweight 100% Java SQL Database Engine</text>
+
+
+# File
+
+FileName: ../istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar
+SPDXID: SPDXRef-FILE-46
+FileType: SOURCE
+FileChecksum: SHA1: 4293b5f4e4e89d598f62bb2ba73b32132e7c3a27
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2020 Copyright 1997-2020 Oracle and/or its affiliates</text>
+FileComment: <text>istack common utility code</text>
+
+
+# File
+
+FileName: ../javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar
+SPDXID: SPDXRef-FILE-41
+FileType: SOURCE
+FileChecksum: SHA1: f63e6aa899e15eca8fdaa402a79af4c417252213
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+LicenseInfoInFile: LicenseRef-LGPL-2.1
+LicenseInfoInFile: LicenseRef-MPL-1.1
+FileCopyrightText: <text>Copyright 1999 Shigeru Chiba, Copyright 2019 The Apache Software Foundation, Licensed under the <a class="white" href="/licen</text>
+FileComment: <text>Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation
+    simple.  It is a class library for editing bytecodes in Java.</text>
+
+
+# File
+
+FileName: ../jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar
+SPDXID: SPDXRef-FILE-47
+FileType: SOURCE
+FileChecksum: SHA1: c46b68a6e3a2d84ba4eb14c6a8a1a9a7be4048bc
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2013-2020 Copyright 2013-2020 Oracle and/or its affiliates</text>
+FileComment: <text>JAXB (JSR 222) Reference Implementation</text>
+
+
+# File
+
+FileName: ../jaxb/txw2/2.3.3/txw2-2.3.3.jar
+SPDXID: SPDXRef-FILE-48
+FileType: SOURCE
+FileChecksum: SHA1: 12f70b0ea4fc1ad45315e842f63f7c9a46f46530
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2020 Copyright 2005-2020 Oracle and/or its affiliates</text>
+FileComment: <text>TXW is a library that allows you to write XML documents.</text>
+
+
+# File
+
+FileName: ../jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar
+SPDXID: SPDXRef-FILE-80
+FileType: SOURCE
+FileChecksum: SHA1: d3865101f0666b63586683bd811d754517f331ab
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2013 Red Hat, Inc.</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../jcodings/jcodings/1.0.46/jcodings-1.0.46.jar
+SPDXID: SPDXRef-FILE-40
+FileType: SOURCE
+FileChecksum: SHA1: 781db88772093f825d8caf4014e4fb99121beb2f
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>Byte based encoding support library for java</text>
+
+
+# File
+
+FileName: ../jcraft/jzlib/1.1.3/jzlib-1.1.3.jar
+SPDXID: SPDXRef-FILE-10
+FileType: SOURCE
+FileChecksum: SHA1: c01428efa717624f7aabf4df319939dda9646b2d
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+FileCopyrightText: <text>Copyright 1995-1998 Jean-loup Gailly and Mark Adler, Copyright 2000-2011 ymnk, JCraft,Inc</text>
+FileComment: <text>JZlib is a re-implementation of zlib in pure Java</text>
+
+
+# File
+
+FileName: ../jnr/jffi/1.3.1/jffi-1.3.1-native.jar
+SPDXID: SPDXRef-FILE-75
+FileType: SOURCE
+FileChecksum: SHA1: 84ceb6309d1caaf53b265519ee0b139cbacc5dfa
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+FileComment: <text>Java Foreign Function Interface</text>
+
+
+# File
+
+FileName: ../jnr/jffi/1.3.1/jffi-1.3.1.jar
+SPDXID: SPDXRef-FILE-79
+FileType: SOURCE
+FileChecksum: SHA1: 9ea24476a32d02fd02487d7ef4870893ffa36b4d
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Unspecified Copyright</text>
+FileComment: <text>Java Foreign Function Interface</text>
+
+
+# File
+
+FileName: ../jnr/jnr-constants/0.10.1/jnr-constants-0.10.1.jar
+SPDXID: SPDXRef-FILE-76
+FileType: SOURCE
+FileChecksum: SHA1: 604b6d9714aeefb40300fb35a2ab39599e44cfd6
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Unspecified Copyright</text>
+FileComment: <text>A set of platform constants (e.g. errno values)</text>
+
+
+# File
+
+FileName: ../jnr/jnr-enxio/0.32.3/jnr-enxio-0.32.3.jar
+SPDXID: SPDXRef-FILE-70
+FileType: SOURCE
+FileChecksum: SHA1: e6007f2a4b9b00af26ab2dff3aecd21f0adb48ae
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+FileComment: <text>Native I/O access for java</text>
+
+
+# File
+
+FileName: ../jnr/jnr-netdb/1.2.0/jnr-netdb-1.2.0.jar
+SPDXID: SPDXRef-FILE-71
+FileType: SOURCE
+FileChecksum: SHA1: 1bb5527cac7dadaea7c3bd1e3d86dd95ed0d3b87
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+FileComment: <text>Lookup TCP and UDP services from java</text>
+
+
+# File
+
+FileName: ../jnr/jnr-posix/3.1.4/jnr-posix-3.1.4.jar
+SPDXID: SPDXRef-FILE-77
+FileType: SOURCE
+FileChecksum: SHA1: 960341f4ed3d548bdab63a9698626ffce505caf1
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0
+LicenseInfoInFile: LicenseRef-LGPL-2.1
+FileCopyrightText: NOASSERTION
+FileComment: <text>Common cross-project/cross-platform POSIX APIs</text>
+
+
+# File
+
+FileName: ../jnr/jnr-unixsocket/0.38.5/jnr-unixsocket-0.38.5.jar
+SPDXID: SPDXRef-FILE-74
+FileType: SOURCE
+FileChecksum: SHA1: 5b4428d124be6d94c122cc2ad63312be6d85e80a
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - None</text>
+FileComment: <text>UNIX socket channels for java</text>
+
+
+# File
+
+FileName: ../joda-time/joda-time/2.10.5/joda-time-2.10.5.jar
+SPDXID: SPDXRef-FILE-35
+FileType: SOURCE
+FileChecksum: SHA1: 7f1d89817cd20a32444d5ab4160f035ab9b864e7
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Joda.org</text>
+FileComment: <text>Date and time library to replace JDK date handling</text>
+
+
+# File
+
+FileName: ../joni/joni/2.1.31/joni-2.1.31.jar
+SPDXID: SPDXRef-FILE-39
+FileType: SOURCE
+FileChecksum: SHA1: d7902dfb0a0c89bc613ff1eae281174ac59def96
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-MIT
+FileCopyrightText: <text>MIT - 2017 Copyright 2017 JRuby Team</text>
+FileComment: <text>Java port of Oniguruma: http://www.geocities.jp/kosako3/oniguruma
+    that uses byte arrays directly instead of java Strings and chars</text>
+
+
+# File
+
+FileName: ../jruby/dirgra/0.3/dirgra-0.3.jar
+SPDXID: SPDXRef-FILE-14
+FileType: SOURCE
+FileChecksum: SHA1: fcdf20c966ff7bd3299c3d7fb3e7bfb14e38d4ee
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-1.0
+FileCopyrightText: <text>Eclipse 1.0 - Unspecified Copyright</text>
+FileComment: <text>Simple Directed Graph</text>
+
+
+# File
+
+FileName: ../jruby/jruby-core/9.2.14.0/jruby-core-9.2.14.0.jar
+SPDXID: SPDXRef-FILE-78
+FileType: SOURCE
+FileChecksum: SHA1: c187cc532a0c113e470a5cc7f1e68c1e609096a6
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0
+LicenseInfoInFile: LicenseRef-LGPL-2.1
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../jruby/jruby-stdlib/9.2.14.0/jruby-stdlib-9.2.14.0.jar
+SPDXID: SPDXRef-FILE-72
+FileType: SOURCE
+FileChecksum: SHA1: cf5cbacc8ded277625dfdf5c0e8ab4dd5d2efe44
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0
+LicenseInfoInFile: LicenseRef-LGPL-2.1
+FileCopyrightText: <text>Copyright 1993-2013 Yukihiro Matsumoto, Copyright 2000-2006 The Legion Of The Bouncy Castle, Copyright 2000-2011 INRIA, Copyright 2000-2011 ymnk, Copyright 2002-2012 the original author or authors, Copyright 2003-2004 Jim Weirich, Copyright 2007-2018 The JRuby project, Copyright 2008-2009 Petr Kobalicek <kobalicek.petr, Copyright 2010 Wayne Meissner</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../jruby/jruby/9.2.14.0/jruby-9.2.14.0.jar
+SPDXID: SPDXRef-FILE-73
+FileType: SOURCE
+FileChecksum: SHA1: e184da3237a294205fe5c0bee81e210035954f7c
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0
+LicenseInfoInFile: LicenseRef-LGPL-2.1
+FileCopyrightText: <text>Copyright 1993-2013 Yukihiro Matsumoto, Copyright 2000-2006 The Legion Of The Bouncy Castle, Copyright 2000-2011 INRIA, Copyright 2000-2011 ymnk, Copyright 2002-2012 the original author or authors, Copyright 2003-2004 Jim Weirich, Copyright 2007-2018 The JRuby project, Copyright 2008-2009 Petr Kobalicek <kobalicek.petr, Copyright 2010 Wayne Meissner</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1.jar
+SPDXID: SPDXRef-FILE-21
+FileType: SOURCE
+FileChecksum: SHA1: 54d2abfc3e63a28824d35bf600d6a5d627da681a
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2014 Copyright 2014 jsonwebtoken.io, 2019 Copyright 2019 The Apache Software Foundation, Licensed under the <a class="white" href="/licen</text>
+FileComment: <text>Sonatype helps open source projects to set up Maven repositories on https://oss.sonatype.org/</text>
+
+
+# File
+
+FileName: ../latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar
+SPDXID: SPDXRef-FILE-13
+FileType: SOURCE
+FileChecksum: SHA1: 769c0b82cb2421c8256300e907298a9410a2a3d3
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-CC0-1.0
+FileCopyrightText: <text>CC0 - 2014 Gil Tene</text>
+FileComment: <text>LatencyUtils is a package that provides latency recording and reporting utilities.</text>
+
+
+# File
+
+FileName: ../logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar
+SPDXID: SPDXRef-FILE-27
+FileType: SOURCE
+FileChecksum: SHA1: 40fd4d696c55793e996d1ff3c475833f836c2498
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2020 Red Hat Inc</text>
+FileComment: <text>The JBoss Logging Framework</text>
+
+
+# File
+
+FileName: ../martiansoftware/nailgun-server/0.9.1/nailgun-server-0.9.1.jar
+SPDXID: SPDXRef-FILE-9
+FileType: SOURCE
+FileChecksum: SHA1: d57ea0a6f6c1bb1b616c5b3b311b3726c6ff35ad
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012 Martian Software Inc</text>
+FileComment: <text>Nailgun is a client, protocol, and server for running Java programs from 
+        the command line without incurring the JVM startup overhead. Programs run 
+        in the server (which is implemented in Java), and are triggered by the 
+        client (written in C), which handles all I/O.
+        
+        This project contains the SERVER ONLY.</text>
+
+
+# File
+
+FileName: ../micrometer/micrometer-core/1.6.4/micrometer-core-1.6.4.jar
+SPDXID: SPDXRef-FILE-96
+FileType: SOURCE
+FileChecksum: SHA1: f91b9be9301947483ee3ab7f0874c1dad3cb04f7
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2001-2019 Copyright 2001-2019 Copyright, 2002-2019 Copyright 2002-2019 Copyright, 2017 Copyright 2017 VMware, Inc, 2013 Copyright 2013 The Netty Project, 2010 Copyright 2010 Google Inc</text>
+FileComment: <text>Application monitoring instrumentation facade</text>
+
+
+# File
+
+FileName: ../module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar
+SPDXID: SPDXRef-FILE-67
+FileType: SOURCE
+FileChecksum: SHA1: 432e050d79f2282a66c320375d628f1b0842cb12
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - FasterXML, LLC</text>
+FileComment: <text>Add-on module for Jackson (http://jackson.codehaus.org) to support
+introspection of method/constructor parameter names, without having to add explicit property name annotation.</text>
+
+
+# File
+
+FileName: ../nulab-inc/zxcvbn/1.4.0/zxcvbn-1.4.0.jar
+SPDXID: SPDXRef-FILE-115
+FileType: SOURCE
+FileChecksum: SHA1: 7cf830b18fe2d2b137396417d9189ad41cf6498e
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-MIT
+FileCopyrightText: <text>MIT - None</text>
+FileComment: <text>This is a java port of zxcvbn, which is a JavaScript password strength generator.</text>
+
+
+# File
+
+FileName: ../persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar
+SPDXID: SPDXRef-FILE-29
+FileType: SOURCE
+FileChecksum: SHA1: 8f6ea5daedc614f07a3654a455660145286f024e
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+LicenseInfoInFile: LicenseRef-EPL-2.0
+FileCopyrightText: <text>Copyright 2007 Eclipse Foundation, Inc. and its licensors, Copyright 2018-2019 Oracle and/or its affiliates, Copyright 2019 Eclipse Foundation, Copyright 2019 Oracle and/or its affiliates</text>
+FileComment: <text>Eclipse Enterprise for Java (EE4J) is an open source initiative to create standard APIs,
+        implementations of those APIs, and technology compatibility kits for Java runtimes
+        that enable development, deployment, and management of server-side and cloud-native applications.</text>
+
+
+# File
+
+FileName: ../postgresql/postgresql/42.2.18/postgresql-42.2.18.jar
+SPDXID: SPDXRef-FILE-57
+FileType: SOURCE
+FileChecksum: SHA1: a0a9c1d43c7727eeaf1b729477891185d3c71751
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-2-Clause
+FileCopyrightText: <text>BSD 2 - 1996-2021 Copyright 1996-2021 The PostgreSQL Global Development Group, 2003-2020 Copyright 2003-2020 PostgreSQL Global Developme, 1997 Copyright 1997 PostgreSQL Global Development Group, Copyright nt Group</text>
+FileComment: <text>PostgreSQL JDBC Driver Postgresql</text>
+
+
+# File
+
+FileName: ../security/spring-security-config/5.4.5/spring-security-config-5.4.5.jar
+SPDXID: SPDXRef-FILE-97
+FileType: SOURCE
+FileChecksum: SHA1: 3835ea09e7bb914249fe03041d3a70d0a23de6cb
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - VMware, Inc.</text>
+FileComment: <text>spring-security-config</text>
+
+
+# File
+
+FileName: ../security/spring-security-core/5.4.5/spring-security-core-5.4.5.jar
+SPDXID: SPDXRef-FILE-98
+FileType: SOURCE
+FileChecksum: SHA1: 90f805783a261f5cdfaf924e4a5ab418ae026671
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - VMware, Inc.</text>
+FileComment: <text>spring-security-core</text>
+
+
+# File
+
+FileName: ../security/spring-security-web/5.4.5/spring-security-web-5.4.5.jar
+SPDXID: SPDXRef-FILE-113
+FileType: SOURCE
+FileChecksum: SHA1: 0450d209579c49b4e5373394b23444fa034a8bd3
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - VMware, Inc.</text>
+FileComment: <text>spring-security-web</text>
+
+
+# File
+
+FileName: ../servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar
+SPDXID: SPDXRef-FILE-53
+FileType: SOURCE
+FileChecksum: SHA1: b8a1142e04838fe54194049c6e7a18dae8f9b960
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>Copyright 1997-2018 Oracle and</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../springframework/spring-aop/5.3.4/spring-aop-5.3.4.jar
+SPDXID: SPDXRef-FILE-87
+FileType: SOURCE
+FileChecksum: SHA1: b7180a6427ab524bc1cbd31bf38dd2182632515f
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2006-2019 Copyright 2006-2019 Joe Walnes, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring AOP</text>
+
+
+# File
+
+FileName: ../springframework/spring-aspects/5.3.4/spring-aspects-5.3.4.jar
+SPDXID: SPDXRef-FILE-93
+FileType: SOURCE
+FileChecksum: SHA1: ddbef9615d0c71c44e48dc466781963f24fa27cf
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring Aspects</text>
+
+
+# File
+
+FileName: ../springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar
+SPDXID: SPDXRef-FILE-89
+FileType: SOURCE
+FileChecksum: SHA1: ac6c5ea0ba82f555405f74104cf378f8071c6d25
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring Beans</text>
+
+
+# File
+
+FileName: ../springframework/spring-context/5.3.4/spring-context-5.3.4.jar
+SPDXID: SPDXRef-FILE-92
+FileType: SOURCE
+FileChecksum: SHA1: fbeadeb0e4d272599a938ec345e99e5f9a76e919
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring Context</text>
+
+
+# File
+
+FileName: ../springframework/spring-expression/5.3.4/spring-expression-5.3.4.jar
+SPDXID: SPDXRef-FILE-90
+FileType: SOURCE
+FileChecksum: SHA1: 42b71fa955e43a86471509aef14cefe756fc3794
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring Expression Language (SpEL)</text>
+
+
+# File
+
+FileName: ../springframework/spring-jdbc/5.3.4/spring-jdbc-5.3.4.jar
+SPDXID: SPDXRef-FILE-95
+FileType: SOURCE
+FileChecksum: SHA1: df5dccc508ae9f75f17fcfe6b96ec41e982b9950
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring JDBC</text>
+
+
+# File
+
+FileName: ../springframework/spring-orm/5.3.4/spring-orm-5.3.4.jar
+SPDXID: SPDXRef-FILE-85
+FileType: SOURCE
+FileChecksum: SHA1: fa4d4d624be8303ab75affb5cc5bbaaccb57629d
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2006-2019 Copyright 2006-2019 Joe Walnes, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring Object/Relational Mapping</text>
+
+
+# File
+
+FileName: ../springframework/spring-tx/5.3.4/spring-tx-5.3.4.jar
+SPDXID: SPDXRef-FILE-94
+FileType: SOURCE
+FileChecksum: SHA1: 1c4ab5fa203c54f9d7f8c7bbb3cc201962ccf4ab
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring Transaction</text>
+
+
+# File
+
+FileName: ../springframework/spring-web/5.3.4/spring-web-5.3.4.jar
+SPDXID: SPDXRef-FILE-88
+FileType: SOURCE
+FileChecksum: SHA1: d93829e24a50ed22e781f2302680a210cac5ee84
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring Web</text>
+
+
+# File
+
+FileName: ../springframework/spring-webmvc/5.3.4/spring-webmvc-5.3.4.jar
+SPDXID: SPDXRef-FILE-91
+FileType: SOURCE
+FileChecksum: SHA1: 8dd52fbe8eafcc7c80998087ec6635baf7a98c20
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW</text>
+FileComment: <text>Spring Web MVC</text>
+
+
+# File
+
+FileName: ../threads/jboss-threads/3.1.0.Final/jboss-threads-3.1.0.Final.jar
+SPDXID: SPDXRef-FILE-42
+FileType: SOURCE
+FileChecksum: SHA1: 9b260c0302f637a84a52d3d118214a3c59217615
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2017 Copyright 2017 Red Hat, Inc., and individual contributors</text>
+FileComment: <text>Provides, via submodules, a base configuration for JBoss project builds, as well as a derived configuration supporting multi-release JARs</text>
+
+
+# File
+
+FileName: ../thymeleaf/thymeleaf-spring5/3.0.12.RELEASE/thymeleaf-spring5-3.0.12.RELEASE.jar
+SPDXID: SPDXRef-FILE-68
+FileType: SOURCE
+FileChecksum: SHA1: aa640b214411978a23cbe271c3fb9569d1bda608
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team, 2011-2016 Copyright 2011-2016 The THYMELEAF team</text>
+FileComment: <text>Modern server-side Java template engine for both web and standalone environments</text>
+
+
+# File
+
+FileName: ../thymeleaf/thymeleaf/3.0.12.RELEASE/thymeleaf-3.0.12.RELEASE.jar
+SPDXID: SPDXRef-FILE-69
+FileType: SOURCE
+FileChecksum: SHA1: de1865b0d58590a50c33900115a293335dd8ef25
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team, 2011-2016 Copyright 2011-2016 The THYMELEAF team</text>
+FileComment: <text>Modern server-side Java template engine for both web and standalone environments</text>
+
+
+# File
+
+FileName: ../transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar
+SPDXID: SPDXRef-FILE-28
+FileType: SOURCE
+FileChecksum: SHA1: c4179d48720a1e87202115fbed6089bdc4195405
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>Copyright 2012-2018 Oracle and</text>
+FileComment: <text>Jakarta Transactions</text>
+
+
+# File
+
+FileName: ../unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar
+SPDXID: SPDXRef-FILE-20
+FileType: SOURCE
+FileChecksum: SHA1: 7b90360afb2b860e09e8347112800d12c12b2a13
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)  -->, 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)</text>
+FileComment: <text>Advanced yet easy-to-use escape/unescape library for Java</text>
+
+
+# File
+
+FileName: ../undertow/undertow-core/2.2.4.Final/undertow-core-2.2.4.Final.jar
+SPDXID: SPDXRef-FILE-81
+FileType: SOURCE
+FileChecksum: SHA1: 78650b4029dd9280c4769d9425b5559f12cb83bf
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../undertow/undertow-servlet/2.2.4.Final/undertow-servlet-2.2.4.Final.jar
+SPDXID: SPDXRef-FILE-82
+FileType: SOURCE
+FileChecksum: SHA1: e8e9cf5672a053889d92a1ba3f778e19ebd3a7e8
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../undertow/undertow-websockets-jsr/2.2.4.Final/undertow-websockets-jsr-2.2.4.Final.jar
+SPDXID: SPDXRef-FILE-86
+FileType: SOURCE
+FileChecksum: SHA1: 2e4b1ca599fe7bd78e4ccb04cf880f78b11c6a5b
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors</text>
+FileComment: <text></text>
+
+
+# File
+
+FileName: ../validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar
+SPDXID: SPDXRef-FILE-30
+FileType: SOURCE
+FileChecksum: SHA1: 5eacc6522521f7eacb081f95cee1e231648461e7
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2019 Copyright 2019 Eclipse Foundation</text>
+FileComment: <text>Jakarta Bean Validation API</text>
+
+
+# File
+
+FileName: ../validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar
+SPDXID: SPDXRef-FILE-65
+FileType: SOURCE
+FileChecksum: SHA1: 8d10290c5b23b7d061c79ad804dca107b335cb36
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Hibernate</text>
+FileComment: <text>Hibernate's Jakarta Bean Validation reference implementation.</text>
+
+
+# File
+
+FileName: ../webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar
+SPDXID: SPDXRef-FILE-12
+FileType: SOURCE
+FileChecksum: SHA1: d6aeba80236573ed585baa657dac2b951caa8e7e
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0</text>
+FileComment: <text>WebJar for Bootstrap</text>
+
+
+# File
+
+FileName: ../webjars/jquery/3.5.1/jquery-3.5.1.jar
+SPDXID: SPDXRef-FILE-52
+FileType: SOURCE
+FileChecksum: SHA1: 2392938e374f561c27c53872bdc9b6b351b6ba34
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-MIT
+FileCopyrightText: <text>MIT - 2021 OpenJS Foundation</text>
+FileComment: <text>WebJar for jQuery</text>
+
+
+# File
+
+FileName: ../websocket/jboss-websocket-api_1.1_spec/2.0.0.Final/jboss-websocket-api_1.1_spec-2.0.0.Final.jar
+SPDXID: SPDXRef-FILE-33
+FileType: SOURCE
+FileChecksum: SHA1: 4a1f6158985b825d5b13885da33016567fd60b78
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-EPL-2.0
+LicenseInfoInFile: LicenseRef-GPL-2.0-with-classpath-exception
+FileCopyrightText: <text>Copyright 2018 Oracle and/or its affiliates and others</text>
+FileComment: <text>Jakarta WebSocket - Server API</text>
+
+
+# File
+
+FileName: ../xml-resolver/xml-resolver/1.2/xml-commons-resolver-1.2.jar
+SPDXID: SPDXRef-FILE-6
+FileType: SOURCE
+FileChecksum: SHA1: 3d0f97750b3a03e0971831566067754ba4bfd68c
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - Unspecified Copyright, 2009 Apache Software Foundation</text>
+FileComment: <text>xml-commons provides an Apache-hosted set of DOM, SAX, and 
+    JAXP interfaces for use in other xml-based projects. Our hope is that we 
+    can standardize on both a common version and packaging scheme for these 
+    critical XML standards interfaces to make the lives of both our developers 
+    and users easier.</text>
+
+
+# File
+
+FileName: ../xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+SPDXID: SPDXRef-FILE-1
+FileType: SOURCE
+FileChecksum: SHA1: 2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-CC-PDDC
+FileCopyrightText: <text>Public Domain - Unspecified Copyright</text>
+
+
+# File
+
+FileName: ../xnio/xnio-api/3.8.0.Final/xnio-api-3.8.0.Final.jar
+SPDXID: SPDXRef-FILE-45
+FileType: SOURCE
+FileChecksum: SHA1: e2c29acf42ac6f42c34f0b74ba089e3f3d1b2394
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2017 Copyright 2017 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates</text>
+FileComment: <text>The API JAR of the XNIO project</text>
+
+
+# File
+
+FileName: ../xnio/xnio-nio/3.8.0.Final/xnio-nio-3.8.0.Final.jar
+SPDXID: SPDXRef-FILE-44
+FileType: SOURCE
+FileChecksum: SHA1: 90c57dcf7f8c846b4da331d0e6e048c39842c92a
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates</text>
+FileComment: <text>The NIO implementation of the XNIO project</text>
+
+
+# File
+
+FileName: ../xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+SPDXID: SPDXRef-FILE-49
+FileType: SOURCE
+FileChecksum: SHA1: 19d4e90b43059058f6e056f794f0ea4030d60b86
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-CC-PDDC
+FileCopyrightText: <text>Extreme! Lab</text>
+FileComment: <text>MXP1 is a stable XmlPull parsing engine that is based on ideas from XPP and in particular XPP2 but completely revised and rewritten to take the best advantage of latest JIT JVMs such as Hotspot in JDK 1.4+.</text>
+
+
+# File
+
+FileName: ../xstream/xstream/1.4.5/xstream-1.4.5.jar
+SPDXID: SPDXRef-FILE-8
+FileType: SOURCE
+FileChecksum: SHA1: 61c0a127b237182fdf2ccc9cc2efbb5779a64a3b
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-BSD-3-Clause
+FileCopyrightText: <text>BSD 3 - 2006-2007 Copyright 2006-2007 2008, 2009, 2010, 2011, 2012, 2013 XStream committers, 2006 Copyright 2006 Joe Walnes</text>
+FileComment: <text>XStream is a serialization library from Java objects to XML and back.</text>
+
+
+# File
+
+FileName: ../zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar
+SPDXID: SPDXRef-FILE-51
+FileType: SOURCE
+FileChecksum: SHA1: aa1a2c00aae8e4ba8308e19940711bb9525b103d
+LicenseConcluded: NONE
+LicenseInfoInFile: LicenseRef-Apache-2.0
+FileCopyrightText: <text>Apache 2.0 - 2014 Brett Wooldridge</text>
+FileComment: <text>Ultimate JDBC Connection Pool</text>
+
+
+# File
+
+FileName: auth-bypass-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-134
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: bypass-restrictions-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-122
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: challenge-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-119
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: chrome-dev-tools-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-145
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: cia-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-132
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: client-side-filtering-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-143
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: cross-site-scripting-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-130
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: crypto-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-131
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: csrf-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-141
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: html-tampering-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-137
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: http-basics-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-125
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: http-proxies-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-146
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: idor-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-121
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: insecure-deserialization-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-123
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: insecure-login-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-133
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: jwt-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-144
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: missing-function-ac-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-124
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: password-reset-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-135
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: path-traversal-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-142
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: secure-passwords-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-140
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: sql-injection-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-139
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: ssrf-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-127
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: vulnerable-components-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-126
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: webgoat-container-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-117
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: webgoat-introduction-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-129
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: webgoat-lesson-template-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-120
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: webgoat-server-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-118
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: webwolf-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-136
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: webwolf-introduction-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-138
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# File
+
+FileName: xxe-8.2.0-SNAPSHOT.jar
+SPDXID: SPDXRef-FILE-128
+FileType: SOURCE
+FileChecksum: SHA1: 
+LicenseConcluded: NONE
+LicenseInfoInFile: NOASSERTION
+FileCopyrightText: NOASSERTION
+FileComment: <text></text>
+
+
+# Extracted Licenses
+
+LicenseID: LicenseRef-Apache-2.0
+LicenseName: Apache-2.0
+ExtractedText: <text>Apache-2.0</text>
+
+
+LicenseID: LicenseRef-BSD-2-Clause
+LicenseName: BSD-2-Clause
+ExtractedText: <text>BSD-2-Clause</text>
+
+
+LicenseID: LicenseRef-BSD-3-Clause
+LicenseName: BSD-3-Clause
+ExtractedText: <text>BSD-3-Clause</text>
+
+
+LicenseID: LicenseRef-CC-PDDC
+LicenseName: CC-PDDC
+ExtractedText: <text>CC-PDDC</text>
+
+
+LicenseID: LicenseRef-CC0-1.0
+LicenseName: CC0-1.0
+ExtractedText: <text>CC0-1.0</text>
+
+
+LicenseID: LicenseRef-CDDL-1.0
+LicenseName: CDDL-1.0
+ExtractedText: <text>CDDL-1.0</text>
+
+
+LicenseID: LicenseRef-CDDL-1.1
+LicenseName: CDDL-1.1
+ExtractedText: <text>CDDL-1.1</text>
+
+
+LicenseID: LicenseRef-Dom4j
+LicenseName: Dom4j
+ExtractedText: <text>Dom4j</text>
+
+
+LicenseID: LicenseRef-EPL-1.0
+LicenseName: EPL-1.0
+ExtractedText: <text>EPL-1.0</text>
+
+
+LicenseID: LicenseRef-EPL-2.0
+LicenseName: EPL-2.0
+ExtractedText: <text>EPL-2.0</text>
+
+
+LicenseID: LicenseRef-GPL-2.0
+LicenseName: GPL-2.0
+ExtractedText: <text>GPL-2.0</text>
+
+
+LicenseID: LicenseRef-GPL-2.0-with-classpath-exception
+LicenseName: GPL-2.0-with-classpath-exception
+ExtractedText: <text>GPL-2.0-with-classpath-exception</text>
+
+
+LicenseID: LicenseRef-Indiana University Extreme!
+LicenseName: Indiana University Extreme!
+ExtractedText: <text>Indiana University Extreme!</text>
+
+
+LicenseID: LicenseRef-LGPL
+LicenseName: LGPL
+ExtractedText: <text>LGPL</text>
+
+
+LicenseID: LicenseRef-LGPL-2.1
+LicenseName: LGPL-2.1
+ExtractedText: <text>LGPL-2.1</text>
+
+
+LicenseID: LicenseRef-MIT
+LicenseName: MIT
+ExtractedText: <text>MIT</text>
+
+
+LicenseID: LicenseRef-MPL-1.1
+LicenseName: MPL-1.1
+ExtractedText: <text>MPL-1.1</text>
+
+

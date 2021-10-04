@@ -1,0 +1,3375 @@
+{
+    "Document": {
+        "specVersion": "SPDX-2.2",
+        "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
+        "creationInfo": {
+            "creators": [
+                "Organization: PS CI environment (org@email.address)",
+                "Tool: White Source SBOM Report Generator",
+                "Person: person name (person@email.address)"
+            ],
+            "created": "2021-09-01T11:54:18Z",
+            "licenseListVersion": "3.6"
+        },
+        "dataLicense": "CC0-1.0",
+        "id": "SPDXRef-DOCUMENT",
+        "name": "WhiteSource webgoat-integration-tests - 8.2.0-SNAPSHOT SBOM report",
+        "documentDescribes": [
+            {
+                "Package": {
+                    "id": "SPDXRef-PACKAGE-1",
+                    "name": "webgoat-integration-tests - 8.2.0-SNAPSHOT",
+                    "downloadLocation": "http://package/location",
+                    "packageVerificationCode": {
+                        "value": "c57c3be25b65e432e717dbcd7abfc993c0d458a3"
+                    },
+                    "licenseConcluded": "NOASSERTION",
+                    "licenseInfoFromFiles": [
+                        "LicenseRef-CC-PDDC",
+                        "LicenseRef-CC0-1.0",
+                        "LicenseRef-GPL-2.0",
+                        "LicenseRef-LGPL-2.1",
+                        "LicenseRef-CDDL-1.1",
+                        "LicenseRef-BSD-3-Clause",
+                        "LicenseRef-EPL-2.0",
+                        "LicenseRef-BSD-2-Clause",
+                        "NOASSERTION",
+                        "LicenseRef-MPL-1.1",
+                        "LicenseRef-EPL-1.0",
+                        "LicenseRef-GPL-2.0-with-classpath-exception",
+                        "LicenseRef-MIT",
+                        "LicenseRef-Apache-2.0",
+                        "LicenseRef-CDDL-1.0"
+                    ],
+                    "licenseDeclared": "LicenseRef-MIT",
+                    "copyrightText": "Apache 2.0 - 2000-2002 Copyright 2000-2002 2003 INRIA, France Telecom, Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW, Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2006-2019 Copyright 2006-2019 Joe Walnes, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 1999-2009 Copyright 1999-2009 OW, Apache 2.0 - 2001-2011 Copyright 2001-2011 The Apache Software Foundation, Apache 2.0 - 2001-2019 Copyright 2001-2019 Copyright, 2002-2019 Copyright 2002-2019 Copyright, 2017 Copyright 2017 VMware, Inc, 2013 Copyright 2013 The Netty Project, 2010 Copyright 2010 Google Inc, Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation, Apache 2.0 - 2010-2020 Copyright 2010-2020 Red Gate Software Ltd, Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), 2011-2014 Copyright 2011-2014 The THYMELEAF team (http://www.thymeleaf.org), Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team, 2011-2016 Copyright 2011-2016 The THYMELEAF team, Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors, Apache 2.0 - 2012 Martian Software Inc, Apache 2.0 - 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org), 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org)   -->, Apache 2.0 - 2012-2019 Copyright 2012-2019 Copyright, Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc, Apache 2.0 - 2013 Red Hat, Inc., Apache 2.0 - 2014 Brett Wooldridge, Apache 2.0 - 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, Apache 2.0 - 2014 Copyright 2014 jsonwebtoken.io, 2019 Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen, Apache 2.0 - 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)  -->, 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org), Apache 2.0 - 2015 Copyright 2015 Red Hat, Inc., and individual contributors, Apache 2.0 - 2017 Copyright 2017 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates, Apache 2.0 - 2017 Copyright 2017 Red Hat, Inc., and individual contributors, Apache 2.0 - 2019 Copyright 2019 Eclipse Foundation, Apache 2.0 - 2019 Copyright 2019 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc., and individual contributors, Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen, Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0, Apache 2.0 - 2020 Red Hat Inc, Apache 2.0 - Apache Software Foundation, Apache 2.0 - FasterXML, 2011 FasterXML LLC, Apache 2.0 - FasterXML, LLC, Apache 2.0 - Hibernate, Apache 2.0 - Joda.org, Apache 2.0 - None, Apache 2.0 - Unspecified Copyright, Apache 2.0 - Unspecified Copyright, 2009 Apache Software Foundation, Apache 2.0 - VMware, Inc., BSD 2 - 1996-2021 Copyright 1996-2021 The PostgreSQL Global Development Group, 2003-2020 Copyright 2003-2020 PostgreSQL Global Developme, 1997 Copyright 1997 PostgreSQL Global Development Group, Copyright nt Group, BSD 3 - 1995-2000 Copyright 1995-2000 by the Hypersonic SQL Group, 2001-2020 Copyright 2001-2020 The HSQL Development Group, BSD 3 - 2006-2007 Copyright 2006-2007 2008, 2009, 2010, 2011, 2012, 2013 XStream committers, 2006 Copyright 2006 Joe Walnes, BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2020 Copyright 1997-2020 Oracle and/or its affiliates, BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2019 Copyright 2019 Eclipse Foundation, 2018 Copyright 2018 Oracle and/or its affiliates, 1997-2019 Copyright 1997-2019 Oracle and/or its affiliates, BSD 3 - 2014 Terence Parr, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2020 Copyright 2005-2020 Oracle and/or its affiliates, BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2013-2020 Copyright 2013-2020 Oracle and/or its affiliates, CC0 - 2014 Gil Tene, CDDL 1.0 - 2021 Oracle, CDDL 1.1 - 1989 Copyright 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program in, 2012-2017 Copyright 2012-2017 Oracle and, 1995 Copyright 1995 Oct, 1991 Copyright 1991 , June, Copyright 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program in, Copyright 1991 , June, Copyright 1993-2013 Yukihiro Matsumoto, Copyright 1995 Oct, Copyright 1995-1998 Jean-loup Gailly and Mark Adler, Copyright 1997-2018 Oracle and, Copyright 1999 Shigeru Chiba, Copyright 2000-2006 The Legion Of The Bouncy Castle, Copyright 2000-2011 INRIA, Copyright 2000-2011 ymnk, Copyright 2000-2011 ymnk, JCraft,Inc, Copyright 2002-2012 the original author or authors, Copyright 2003-2004 Jim Weirich, Copyright 2007 Eclipse Foundation, Inc. and its licensors, Copyright 2007-2018 The JRuby project, Copyright 2008-2009 Petr Kobalicek <kobalicek.petr, Copyright 2010 Wayne Meissner, Copyright 2012-2013 2014, 2015, 2016 Gil Tene, Copyright 2012-2018 Oracle and, Copyright 2013 Oracle and/or its affiliates, Copyright 2014 Matt Warren, Copyright 2014 Michael Barker, Copyright 2017-2018 Oracle and, Copyright 2018 Oracle and/or its affiliates and others, Copyright 2018-2019 Oracle and/or its affiliates, Copyright 2019 Eclipse Foundation, Copyright 2019 Oracle and/or its affiliates, Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen, Dom4j - 2001-2016 Copyright 2001-2016 (C) MetaStuff, Ltd. and DOM4J contributors, Eclipse 1.0 - 2002 Copyright 2002 Palo Alto Research Center, Incorporated (PARC), 2003-2019 Copyright 2003-2019 Contributors, 1999-2001 Copyright 1999-2001 Xerox Corporation, Eclipse 1.0 - Unspecified Copyright, Extreme! Lab, GPL 2.0 Classpath - 1997-2017 Copyright 1997-2017 Oracle and, LGPL 2.1 - Hibernate, LGPL 2.1 - Unspecified Copyright, MIT - 2004 Copyright 2004 by the Checker Framework developers, MIT - 2017 Copyright 2017 JRuby Team, MIT - 2021 OpenJS Foundation, MIT - None, Public Domain - Unspecified Copyright",
+                    "supplier": "Person: supplier name (supplier@email.address)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha1",
+                            "value": ""
+                        }
+                    ],
+                    "sha1": "",
+                    "files": [
+                        {
+                            "File": {
+                                "name": "../xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar",
+                                "id": "SPDXRef-FILE-1",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-CC-PDDC"
+                                ],
+                                "copyrightText": "Public Domain - Unspecified Copyright",
+                                "sha1": "2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../ant/ant-launcher/1.6.5/ant-launcher-1.6.5.jar",
+                                "id": "SPDXRef-FILE-2",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "b06fd72d7cabd5ec39cea153a21fa5cea5d37f71"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - None",
+                                "sha1": "b06fd72d7cabd5ec39cea153a21fa5cea5d37f71",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../antlr/antlr/2.7.7/antlr-2.7.7.jar",
+                                "id": "SPDXRef-FILE-3",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "83cd2cd674a217ade95a4bb83a8a14f351f48bd0"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause"
+                                ],
+                                "copyrightText": "BSD 3 - 2014 Terence Parr",
+                                "sha1": "83cd2cd674a217ade95a4bb83a8a14f351f48bd0",
+                                "comment": "A framework for constructing recognizers, compilers,\n    and translators from grammatical descriptions containing\n    Java, C#, C++, or Python actions.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../ant/ant/1.6.5/ant-1.6.5.jar",
+                                "id": "SPDXRef-FILE-4",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "7d18faf23df1a5c3a43613952e0e8a182664564b"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - Apache Software Foundation",
+                                "sha1": "7d18faf23df1a5c3a43613952e0e8a182664564b",
+                                "comment": "The Apache Software Foundation provides support for the Apache community of open-source software projects.\n    The Apache projects are characterized by a collaborative, consensus based development process, an open and\n    pragmatic software license, and a desire to create high quality software that leads the way in its field.\n    We consider ourselves not simply a group of projects sharing a server, but rather a community of developers\n    and users.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar",
+                                "id": "SPDXRef-FILE-5",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "59afed7ab65e7ec6585d5bc60556c3cbd203532b"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2002 Copyright 2000-2002 2003 INRIA, France Telecom",
+                                "sha1": "59afed7ab65e7ec6585d5bc60556c3cbd203532b",
+                                "comment": "Code generation library with shaded ASM dependecies",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../xml-resolver/xml-resolver/1.2/xml-commons-resolver-1.2.jar",
+                                "id": "SPDXRef-FILE-6",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "3d0f97750b3a03e0971831566067754ba4bfd68c"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - Unspecified Copyright, 2009 Apache Software Foundation",
+                                "sha1": "3d0f97750b3a03e0971831566067754ba4bfd68c",
+                                "comment": "xml-commons provides an Apache-hosted set of DOM, SAX, and \n    JAXP interfaces for use in other xml-based projects. Our hope is that we \n    can standardize on both a common version and packaging scheme for these \n    critical XML standards interfaces to make the lives of both our developers \n    and users easier.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../activation/activation/1.1.1/activation-1.1.1.jar",
+                                "id": "SPDXRef-FILE-7",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "485de3a253e23f645037828c07f1d7f1af40763a"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-CDDL-1.0"
+                                ],
+                                "copyrightText": "CDDL 1.0 - 2021 Oracle",
+                                "sha1": "485de3a253e23f645037828c07f1d7f1af40763a",
+                                "comment": "The JavaBeans(TM) Activation Framework is used by the JavaMail(TM) API to manage MIME data",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../xstream/xstream/1.4.5/xstream-1.4.5.jar",
+                                "id": "SPDXRef-FILE-8",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "61c0a127b237182fdf2ccc9cc2efbb5779a64a3b"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause"
+                                ],
+                                "copyrightText": "BSD 3 - 2006-2007 Copyright 2006-2007 2008, 2009, 2010, 2011, 2012, 2013 XStream committers, 2006 Copyright 2006 Joe Walnes",
+                                "sha1": "61c0a127b237182fdf2ccc9cc2efbb5779a64a3b",
+                                "comment": "XStream is a serialization library from Java objects to XML and back.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../martiansoftware/nailgun-server/0.9.1/nailgun-server-0.9.1.jar",
+                                "id": "SPDXRef-FILE-9",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "d57ea0a6f6c1bb1b616c5b3b311b3726c6ff35ad"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012 Martian Software Inc",
+                                "sha1": "d57ea0a6f6c1bb1b616c5b3b311b3726c6ff35ad",
+                                "comment": "Nailgun is a client, protocol, and server for running Java programs from \n        the command line without incurring the JVM startup overhead. Programs run \n        in the server (which is implemented in Java), and are triggered by the \n        client (written in C), which handles all I/O.\n        \n        This project contains the SERVER ONLY.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jcraft/jzlib/1.1.3/jzlib-1.1.3.jar",
+                                "id": "SPDXRef-FILE-10",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "c01428efa717624f7aabf4df319939dda9646b2d"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause"
+                                ],
+                                "copyrightText": "Copyright 1995-1998 Jean-loup Gailly and Mark Adler, Copyright 2000-2011 ymnk, JCraft,Inc",
+                                "sha1": "c01428efa717624f7aabf4df319939dda9646b2d",
+                                "comment": "JZlib is a re-implementation of zlib in pure Java",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../commons/commons-exec/1.3/commons-exec-1.3.jar",
+                                "id": "SPDXRef-FILE-11",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "8dfb9facd0830a27b1b5f29f84593f0aeee7773b"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2005-2014 Copyright 2005-2014 The Apache Software Foundation",
+                                "sha1": "8dfb9facd0830a27b1b5f29f84593f0aeee7773b",
+                                "comment": "Apache Commons Exec is a library to reliably execute external processes from within the JVM.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar",
+                                "id": "SPDXRef-FILE-12",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "d6aeba80236573ed585baa657dac2b951caa8e7e"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the Apache License, Version 2.0",
+                                "sha1": "d6aeba80236573ed585baa657dac2b951caa8e7e",
+                                "comment": "WebJar for Bootstrap",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar",
+                                "id": "SPDXRef-FILE-13",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "769c0b82cb2421c8256300e907298a9410a2a3d3"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-CC0-1.0"
+                                ],
+                                "copyrightText": "CC0 - 2014 Gil Tene",
+                                "sha1": "769c0b82cb2421c8256300e907298a9410a2a3d3",
+                                "comment": "LatencyUtils is a package that provides latency recording and reporting utilities.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jruby/dirgra/0.3/dirgra-0.3.jar",
+                                "id": "SPDXRef-FILE-14",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "fcdf20c966ff7bd3299c3d7fb3e7bfb14e38d4ee"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-1.0"
+                                ],
+                                "copyrightText": "Eclipse 1.0 - Unspecified Copyright",
+                                "sha1": "fcdf20c966ff7bd3299c3d7fb3e7bfb14e38d4ee",
+                                "comment": "Simple Directed Graph",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../headius/options/1.4/options-1.4.jar",
+                                "id": "SPDXRef-FILE-15",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "34bd3630af4e516fdb4d90d16732b8a3dd2f7b46"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - Unspecified Copyright",
+                                "sha1": "34bd3630af4e516fdb4d90d16732b8a3dd2f7b46",
+                                "comment": "Sonatype helps open source projects to set up Maven repositories on https://oss.sonatype.org/",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../beust/jcommander/1.72/jcommander-1.72.jar",
+                                "id": "SPDXRef-FILE-16",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "6375e521c1e11d6563d4f25a07ce124ccf8cd171"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2019 Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen",
+                                "sha1": "6375e521c1e11d6563d4f25a07ce124ccf8cd171",
+                                "comment": "Command line parsing",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar",
+                                "id": "SPDXRef-FILE-17",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "85262acf3ca9816f9537ca47d5adeabaead7cb16"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-GPL-2.0-with-classpath-exception"
+                                ],
+                                "copyrightText": "GPL 2.0 Classpath - 1997-2017 Copyright 1997-2017 Oracle and",
+                                "sha1": "85262acf3ca9816f9537ca47d5adeabaead7cb16",
+                                "comment": "JavaBeans Activation Framework API jar",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar",
+                                "id": "SPDXRef-FILE-18",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "934c04d3cfef185a8008e7bf34331b79730a9d43"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-CDDL-1.1"
+                                ],
+                                "copyrightText": "CDDL 1.1 - 1989 Copyright 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program in, 2012-2017 Copyright 2012-2017 Oracle and, 1995 Copyright 1995 Oct, 1991 Copyright 1991 , June",
+                                "sha1": "934c04d3cfef185a8008e7bf34331b79730a9d43",
+                                "comment": "Common Annotations for the JavaTM Platform API",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar",
+                                "id": "SPDXRef-FILE-19",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "a93ad36df9560de3a5312c1d14f69d938099fa64"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org), 2012-2014 Copyright 2012-2014 The ATTOPARSER team (http://www.attoparser.org)   -->",
+                                "sha1": "a93ad36df9560de3a5312c1d14f69d938099fa64",
+                                "comment": "Powerful, fast and easy to use HTML and XML parser for Java",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar",
+                                "id": "SPDXRef-FILE-20",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "7b90360afb2b860e09e8347112800d12c12b2a13"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)  -->, 2014-2017 Copyright 2014-2017 The UNBESCAPE team (http://www.unbescape.org)",
+                                "sha1": "7b90360afb2b860e09e8347112800d12c12b2a13",
+                                "comment": "Advanced yet easy-to-use escape/unescape library for Java",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1.jar",
+                                "id": "SPDXRef-FILE-21",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "54d2abfc3e63a28824d35bf600d6a5d627da681a"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2014 Copyright 2014 jsonwebtoken.io, 2019 Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen",
+                                "sha1": "54d2abfc3e63a28824d35bf600d6a5d627da681a",
+                                "comment": "Sonatype helps open source projects to set up Maven repositories on https://oss.sonatype.org/",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar",
+                                "id": "SPDXRef-FILE-22",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "8531ad5ac454cc2deb9d4d32c40c4d7451939b5d"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-CDDL-1.1",
+                                    "LicenseRef-GPL-2.0-with-classpath-exception"
+                                ],
+                                "copyrightText": "Copyright 1989 Ty Coon, President of Vice This General Public License does not permit incorporating your program in, Copyright 1991 , June, Copyright 1995 Oct, Copyright 2017-2018 Oracle and",
+                                "sha1": "8531ad5ac454cc2deb9d4d32c40c4d7451939b5d",
+                                "comment": "JAXB (JSR 222) API",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../extras/thymeleaf-extras-springsecurity5/3.0.4.RELEASE/thymeleaf-extras-springsecurity5-3.0.4.RELEASE.jar",
+                                "id": "SPDXRef-FILE-23",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "88bb10bf73ce285208dd848e8eb17f897ebb02d4"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org)",
+                                "sha1": "88bb10bf73ce285208dd848e8eb17f897ebb02d4",
+                                "comment": "Modern server-side Java template engine for both web and standalone environments",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../client/wildfly-client-config/1.0.1.Final/wildfly-client-config-1.0.1.Final.jar",
+                                "id": "SPDXRef-FILE-24",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "2a803b23c40a0de0f03a90d1fd3755747bc05f4b"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2015 Copyright 2015 Red Hat, Inc., and individual contributors",
+                                "sha1": "2a803b23c40a0de0f03a90d1fd3755747bc05f4b",
+                                "comment": "Library for supporting WildFly common client configuration",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../headius/invokebinder/1.11/invokebinder-1.11.jar",
+                                "id": "SPDXRef-FILE-25",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "05dff3f694f5ab7f48457138f57ac4af95e739c9"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - Apache Software Foundation",
+                                "sha1": "05dff3f694f5ab7f48457138f57ac4af95e739c9",
+                                "comment": "Sonatype helps open source projects to set up Maven repositories on https://oss.sonatype.org/",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../extras/thymeleaf-extras-java8time/3.0.4.RELEASE/thymeleaf-extras-java8time-3.0.4.RELEASE.jar",
+                                "id": "SPDXRef-FILE-26",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "36e7175ddce36c486fff4578b5af7bb32f54f5df"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team (http://www.thymeleaf.org), 2011-2014 Copyright 2011-2014 The THYMELEAF team (http://www.thymeleaf.org)",
+                                "sha1": "36e7175ddce36c486fff4578b5af7bb32f54f5df",
+                                "comment": "Modern server-side Java template engine for both web and standalone environments",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar",
+                                "id": "SPDXRef-FILE-27",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "40fd4d696c55793e996d1ff3c475833f836c2498"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2020 Red Hat Inc",
+                                "sha1": "40fd4d696c55793e996d1ff3c475833f836c2498",
+                                "comment": "The JBoss Logging Framework",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar",
+                                "id": "SPDXRef-FILE-28",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "c4179d48720a1e87202115fbed6089bdc4195405"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0-with-classpath-exception"
+                                ],
+                                "copyrightText": "Copyright 2012-2018 Oracle and",
+                                "sha1": "c4179d48720a1e87202115fbed6089bdc4195405",
+                                "comment": "Jakarta Transactions",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar",
+                                "id": "SPDXRef-FILE-29",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "8f6ea5daedc614f07a3654a455660145286f024e"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause",
+                                    "LicenseRef-EPL-2.0"
+                                ],
+                                "copyrightText": "Copyright 2007 Eclipse Foundation, Inc. and its licensors, Copyright 2018-2019 Oracle and/or its affiliates, Copyright 2019 Eclipse Foundation, Copyright 2019 Oracle and/or its affiliates",
+                                "sha1": "8f6ea5daedc614f07a3654a455660145286f024e",
+                                "comment": "Eclipse Enterprise for Java (EE4J) is an open source initiative to create standard APIs,\n        implementations of those APIs, and technology compatibility kits for Java runtimes\n        that enable development, deployment, and management of server-side and cloud-native applications.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar",
+                                "id": "SPDXRef-FILE-30",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "5eacc6522521f7eacb081f95cee1e231648461e7"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2019 Copyright 2019 Eclipse Foundation",
+                                "sha1": "5eacc6522521f7eacb081f95cee1e231648461e7",
+                                "comment": "Jakarta Bean Validation API",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar",
+                                "id": "SPDXRef-FILE-31",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "dab46ee1ee23f7197c13d7c40fce14817c9017df"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0-with-classpath-exception"
+                                ],
+                                "copyrightText": "Copyright 1997-2018 Oracle and, Copyright 2013 Oracle and/or its affiliates",
+                                "sha1": "dab46ee1ee23f7197c13d7c40fce14817c9017df",
+                                "comment": "Jakarta Expression Language provides a specification document, API, reference implementation and TCK \n        that describes an expression language for Java applications.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../common/wildfly-common/1.5.2.Final/wildfly-common-1.5.2.Final.jar",
+                                "id": "SPDXRef-FILE-32",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "8eba40cfe86bcfcc223551e75201e6e7574c7c36"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2019 Copyright 2019 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc., and individual contributors",
+                                "sha1": "8eba40cfe86bcfcc223551e75201e6e7574c7c36",
+                                "comment": "Provides, via submodules, a base configuration for JBoss project builds, as well as a derived configuration supporting multi-release JARs",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../websocket/jboss-websocket-api_1.1_spec/2.0.0.Final/jboss-websocket-api_1.1_spec-2.0.0.Final.jar",
+                                "id": "SPDXRef-FILE-33",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "4a1f6158985b825d5b13885da33016567fd60b78"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0-with-classpath-exception"
+                                ],
+                                "copyrightText": "Copyright 2018 Oracle and/or its affiliates and others",
+                                "sha1": "4a1f6158985b825d5b13885da33016567fd60b78",
+                                "comment": "Jakarta WebSocket - Server API",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../annotation/jboss-annotations-api_1.3_spec/2.0.1.Final/jboss-annotations-api_1.3_spec-2.0.1.Final.jar",
+                                "id": "SPDXRef-FILE-34",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "b3744f492ce9a65d1197a5b24645dff93fa85424"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0-with-classpath-exception"
+                                ],
+                                "copyrightText": "Copyright 2012-2018 Oracle and",
+                                "sha1": "b3744f492ce9a65d1197a5b24645dff93fa85424",
+                                "comment": "JBoss Jakarta Annotations API",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../joda-time/joda-time/2.10.5/joda-time-2.10.5.jar",
+                                "id": "SPDXRef-FILE-35",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "7f1d89817cd20a32444d5ab4160f035ab9b864e7"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - Joda.org",
+                                "sha1": "7f1d89817cd20a32444d5ab4160f035ab9b864e7",
+                                "comment": "Date and time library to replace JDK date handling",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../fasterxml/classmate/1.5.1/classmate-1.5.1.jar",
+                                "id": "SPDXRef-FILE-36",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "3fe0bed568c62df5e89f4f174c101eab25345b6c"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - FasterXML, 2011 FasterXML LLC",
+                                "sha1": "3fe0bed568c62df5e89f4f174c101eab25345b6c",
+                                "comment": "Library for introspecting types with full generic information\n        including resolving of field and method types.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar",
+                                "id": "SPDXRef-FILE-37",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "6eb7552156e0d517ae80cc2247be1427c8d90452"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-2-Clause",
+                                    "LicenseRef-CC0-1.0"
+                                ],
+                                "copyrightText": "Copyright 2012-2013 2014, 2015, 2016 Gil Tene, Copyright 2014 Matt Warren, Copyright 2014 Michael Barker",
+                                "sha1": "6eb7552156e0d517ae80cc2247be1427c8d90452",
+                                "comment": "HdrHistogram supports the recording and analyzing sampled data value\n        counts across a configurable integer value range with configurable value\n        precision within the range. Value precision is expressed as the number of\n        significant digits in the value recording, and provides control over value\n        quantization behavior across the value range and the subsequent value\n        resolution at any given level.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar",
+                                "id": "SPDXRef-FILE-38",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "74548703f9851017ce2f556066659438019e7eb5"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause"
+                                ],
+                                "copyrightText": "BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2019 Copyright 2019 Eclipse Foundation, 2018 Copyright 2018 Oracle and/or its affiliates, 1997-2019 Copyright 1997-2019 Oracle and/or its affiliates",
+                                "sha1": "74548703f9851017ce2f556066659438019e7eb5",
+                                "comment": "${project.name}",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../joni/joni/2.1.31/joni-2.1.31.jar",
+                                "id": "SPDXRef-FILE-39",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "d7902dfb0a0c89bc613ff1eae281174ac59def96"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-MIT"
+                                ],
+                                "copyrightText": "MIT - 2017 Copyright 2017 JRuby Team",
+                                "sha1": "d7902dfb0a0c89bc613ff1eae281174ac59def96",
+                                "comment": "Java port of Oniguruma: http://www.geocities.jp/kosako3/oniguruma\n    that uses byte arrays directly instead of java Strings and chars",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jcodings/jcodings/1.0.46/jcodings-1.0.46.jar",
+                                "id": "SPDXRef-FILE-40",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "781db88772093f825d8caf4014e4fb99121beb2f"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-MIT"
+                                ],
+                                "copyrightText": "MIT - None",
+                                "sha1": "781db88772093f825d8caf4014e4fb99121beb2f",
+                                "comment": "Byte based encoding support library for java",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar",
+                                "id": "SPDXRef-FILE-41",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "f63e6aa899e15eca8fdaa402a79af4c417252213"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0",
+                                    "LicenseRef-LGPL-2.1",
+                                    "LicenseRef-MPL-1.1"
+                                ],
+                                "copyrightText": "Copyright 1999 Shigeru Chiba, Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen",
+                                "sha1": "f63e6aa899e15eca8fdaa402a79af4c417252213",
+                                "comment": "Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation\n    simple.  It is a class library for editing bytecodes in Java.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../threads/jboss-threads/3.1.0.Final/jboss-threads-3.1.0.Final.jar",
+                                "id": "SPDXRef-FILE-42",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "9b260c0302f637a84a52d3d118214a3c59217615"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2017 Copyright 2017 Red Hat, Inc., and individual contributors",
+                                "sha1": "9b260c0302f637a84a52d3d118214a3c59217615",
+                                "comment": "Provides, via submodules, a base configuration for JBoss project builds, as well as a derived configuration supporting multi-release JARs",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../dom4j/dom4j/2.1.3/dom4j-2.1.3.jar",
+                                "id": "SPDXRef-FILE-43",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "a75914155a9f5808963170ec20653668a2ffd2fd"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "Dom4j - 2001-2016 Copyright 2001-2016 (C) MetaStuff, Ltd. and DOM4J contributors",
+                                "sha1": "a75914155a9f5808963170ec20653668a2ffd2fd",
+                                "comment": "flexible XML framework for Java",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../xnio/xnio-nio/3.8.0.Final/xnio-nio-3.8.0.Final.jar",
+                                "id": "SPDXRef-FILE-44",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "90c57dcf7f8c846b4da331d0e6e048c39842c92a"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates",
+                                "sha1": "90c57dcf7f8c846b4da331d0e6e048c39842c92a",
+                                "comment": "The NIO implementation of the XNIO project",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../xnio/xnio-api/3.8.0.Final/xnio-api-3.8.0.Final.jar",
+                                "id": "SPDXRef-FILE-45",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "e2c29acf42ac6f42c34f0b74ba089e3f3d1b2394"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2017 Copyright 2017 JBoss, a division of Red Hat, Inc, 2014 Copyright 2014 Red Hat, Inc. and/or its affiliates",
+                                "sha1": "e2c29acf42ac6f42c34f0b74ba089e3f3d1b2394",
+                                "comment": "The API JAR of the XNIO project",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar",
+                                "id": "SPDXRef-FILE-46",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "4293b5f4e4e89d598f62bb2ba73b32132e7c3a27"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause"
+                                ],
+                                "copyrightText": "BSD 3 - 2007 Copyright 2007 Eclipse Foundation, Inc. and its licensors, 2017 Copyright 2017 Oracle and/or its affiliates, 1997-2020 Copyright 1997-2020 Oracle and/or its affiliates",
+                                "sha1": "4293b5f4e4e89d598f62bb2ba73b32132e7c3a27",
+                                "comment": "istack common utility code",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar",
+                                "id": "SPDXRef-FILE-47",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "c46b68a6e3a2d84ba4eb14c6a8a1a9a7be4048bc"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause"
+                                ],
+                                "copyrightText": "BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2013-2020 Copyright 2013-2020 Oracle and/or its affiliates",
+                                "sha1": "c46b68a6e3a2d84ba4eb14c6a8a1a9a7be4048bc",
+                                "comment": "JAXB (JSR 222) Reference Implementation",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jaxb/txw2/2.3.3/txw2-2.3.3.jar",
+                                "id": "SPDXRef-FILE-48",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "12f70b0ea4fc1ad45315e842f63f7c9a46f46530"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause"
+                                ],
+                                "copyrightText": "BSD 3 - 2018 Copyright 2018 Oracle and/or its affiliates, 2005-2020 Copyright 2005-2020 Oracle and/or its affiliates",
+                                "sha1": "12f70b0ea4fc1ad45315e842f63f7c9a46f46530",
+                                "comment": "TXW is a library that allows you to write XML documents.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar",
+                                "id": "SPDXRef-FILE-49",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "19d4e90b43059058f6e056f794f0ea4030d60b86"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-CC-PDDC"
+                                ],
+                                "copyrightText": "Extreme! Lab",
+                                "sha1": "19d4e90b43059058f6e056f794f0ea4030d60b86",
+                                "comment": "MXP1 is a stable XmlPull parsing engine that is based on ideas from XPP and in particular XPP2 but completely revised and rewritten to take the best advantage of latest JIT JVMs such as Hotspot in JDK 1.4+.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../commons-lang/commons-lang/2.6/commons-lang-2.6.jar",
+                                "id": "SPDXRef-FILE-50",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "0ce1edb914c94ebc388f086c6827e8bdeec71ac2"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2001-2011 Copyright 2001-2011 The Apache Software Foundation",
+                                "sha1": "0ce1edb914c94ebc388f086c6827e8bdeec71ac2",
+                                "comment": "Commons Lang, a package of Java utility classes for the\n        classes that are in java.lang's hierarchy, or are considered to be so\n        standard as to justify existence in java.lang.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar",
+                                "id": "SPDXRef-FILE-51",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "aa1a2c00aae8e4ba8308e19940711bb9525b103d"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2014 Brett Wooldridge",
+                                "sha1": "aa1a2c00aae8e4ba8308e19940711bb9525b103d",
+                                "comment": "Ultimate JDBC Connection Pool",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../webjars/jquery/3.5.1/jquery-3.5.1.jar",
+                                "id": "SPDXRef-FILE-52",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "2392938e374f561c27c53872bdc9b6b351b6ba34"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-MIT"
+                                ],
+                                "copyrightText": "MIT - 2021 OpenJS Foundation",
+                                "sha1": "2392938e374f561c27c53872bdc9b6b351b6ba34",
+                                "comment": "WebJar for jQuery",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar",
+                                "id": "SPDXRef-FILE-53",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "b8a1142e04838fe54194049c6e7a18dae8f9b960"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0-with-classpath-exception"
+                                ],
+                                "copyrightText": "Copyright 1997-2018 Oracle and",
+                                "sha1": "b8a1142e04838fe54194049c6e7a18dae8f9b960",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../hsqldb/hsqldb/2.5.1/hsqldb-2.5.1.jar",
+                                "id": "SPDXRef-FILE-54",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "b1f720a63a8756867895cc22dd74b51fb70e90ac"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-3-Clause"
+                                ],
+                                "copyrightText": "BSD 3 - 1995-2000 Copyright 1995-2000 by the Hypersonic SQL Group, 2001-2020 Copyright 2001-2020 The HSQL Development Group",
+                                "sha1": "b1f720a63a8756867895cc22dd74b51fb70e90ac",
+                                "comment": "HSQLDB - Lightweight 100% Java SQL Database Engine",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar",
+                                "id": "SPDXRef-FILE-55",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "2f50520c8abea66fbd8d26e481d3aef5c673b510"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-MIT"
+                                ],
+                                "copyrightText": "MIT - 2004 Copyright 2004 by the Checker Framework developers",
+                                "sha1": "2f50520c8abea66fbd8d26e481d3aef5c673b510",
+                                "comment": "Checker Qual is the set of annotations (qualifiers) and supporting classes\n        used by the Checker Framework to type check Java source code.\n\n        Please\n        see artifact:\n        org.checkerframework:checker",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar",
+                                "id": "SPDXRef-FILE-56",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "ee3b73aa16df35179255f17354d9dfd8e7822835"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-1.0"
+                                ],
+                                "copyrightText": "Eclipse 1.0 - 2002 Copyright 2002 Palo Alto Research Center, Incorporated (PARC), 2003-2019 Copyright 2003-2019 Contributors, 1999-2001 Copyright 1999-2001 Xerox Corporation",
+                                "sha1": "ee3b73aa16df35179255f17354d9dfd8e7822835",
+                                "comment": "The AspectJ weaver introduces advices to java classes",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../postgresql/postgresql/42.2.18/postgresql-42.2.18.jar",
+                                "id": "SPDXRef-FILE-57",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "a0a9c1d43c7727eeaf1b729477891185d3c71751"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-BSD-2-Clause"
+                                ],
+                                "copyrightText": "BSD 2 - 1996-2021 Copyright 1996-2021 The PostgreSQL Global Development Group, 2003-2020 Copyright 2003-2020 PostgreSQL Global Developme, 1997 Copyright 1997 PostgreSQL Global Development Group, Copyright nt Group",
+                                "sha1": "a0a9c1d43c7727eeaf1b729477891185d3c71751",
+                                "comment": "PostgreSQL JDBC Driver Postgresql",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../headius/backport9/1.8/backport9-1.8.jar",
+                                "id": "SPDXRef-FILE-58",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "33ae5b6599bd82989f08c897c3658f3b6e0726db"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - None",
+                                "sha1": "33ae5b6599bd82989f08c897c3658f3b6e0726db",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar",
+                                "id": "SPDXRef-FILE-59",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "e59ffdbc6ad09eeb33507b39ffcf287679a498c8"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-LGPL-2.1"
+                                ],
+                                "copyrightText": "LGPL 2.1 - Unspecified Copyright",
+                                "sha1": "e59ffdbc6ad09eeb33507b39ffcf287679a498c8",
+                                "comment": "Common reflection code used in support of annotation processing",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../flywaydb/flyway-core/7.1.1/flyway-core-7.1.1.jar",
+                                "id": "SPDXRef-FILE-60",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "2bb2fefbe3bf1efb3b181cde315720a0e548cc7c"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2010-2020 Copyright 2010-2020 Red Gate Software Ltd",
+                                "sha1": "2bb2fefbe3bf1efb3b181cde315720a0e548cc7c",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar",
+                                "id": "SPDXRef-FILE-61",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "5d9f3d441f99d721b957e3497f0a6465c764fad4"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - FasterXML, LLC",
+                                "sha1": "5d9f3d441f99d721b957e3497f0a6465c764fad4",
+                                "comment": "General data-binding functionality for Jackson: works on core streaming API",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar",
+                                "id": "SPDXRef-FILE-62",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "ce6fc76bba06623720e5a9308386b6ae74753f4d"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - FasterXML, LLC",
+                                "sha1": "ce6fc76bba06623720e5a9308386b6ae74753f4d",
+                                "comment": "Add-on module to support JSR-310 (Java 8 Date & Time API) data types.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar",
+                                "id": "SPDXRef-FILE-63",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "2c3f5c079330f3a01726686a078979420f547ae4"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - FasterXML, LLC",
+                                "sha1": "2c3f5c079330f3a01726686a078979420f547ae4",
+                                "comment": "Core annotations used for value types, used by Jackson data binding package.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../core/jackson-core/2.11.4/jackson-core-2.11.4.jar",
+                                "id": "SPDXRef-FILE-64",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "593f7b18bab07a76767f181e2a2336135ce82cc4"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - FasterXML, LLC",
+                                "sha1": "593f7b18bab07a76767f181e2a2336135ce82cc4",
+                                "comment": "Core Jackson processing abstractions (aka Streaming API), implementation for JSON",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar",
+                                "id": "SPDXRef-FILE-65",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "8d10290c5b23b7d061c79ad804dca107b335cb36"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - Hibernate",
+                                "sha1": "8d10290c5b23b7d061c79ad804dca107b335cb36",
+                                "comment": "Hibernate's Jakarta Bean Validation reference implementation.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar",
+                                "id": "SPDXRef-FILE-66",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "e1540dea3c6c681ea4e335a960f730861ee3bedb"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - FasterXML, LLC",
+                                "sha1": "e1540dea3c6c681ea4e335a960f730861ee3bedb",
+                                "comment": "Add-on module for Jackson (http://jackson.codehaus.org) to support\nJDK 8 data types.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar",
+                                "id": "SPDXRef-FILE-67",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "432e050d79f2282a66c320375d628f1b0842cb12"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - FasterXML, LLC",
+                                "sha1": "432e050d79f2282a66c320375d628f1b0842cb12",
+                                "comment": "Add-on module for Jackson (http://jackson.codehaus.org) to support\nintrospection of method/constructor parameter names, without having to add explicit property name annotation.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../thymeleaf/thymeleaf-spring5/3.0.12.RELEASE/thymeleaf-spring5-3.0.12.RELEASE.jar",
+                                "id": "SPDXRef-FILE-68",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "aa640b214411978a23cbe271c3fb9569d1bda608"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team, 2011-2016 Copyright 2011-2016 The THYMELEAF team",
+                                "sha1": "aa640b214411978a23cbe271c3fb9569d1bda608",
+                                "comment": "Modern server-side Java template engine for both web and standalone environments",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../thymeleaf/thymeleaf/3.0.12.RELEASE/thymeleaf-3.0.12.RELEASE.jar",
+                                "id": "SPDXRef-FILE-69",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "de1865b0d58590a50c33900115a293335dd8ef25"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2011-2018 Copyright 2011-2018 The THYMELEAF team, 2011-2016 Copyright 2011-2016 The THYMELEAF team",
+                                "sha1": "de1865b0d58590a50c33900115a293335dd8ef25",
+                                "comment": "Modern server-side Java template engine for both web and standalone environments",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jnr/jnr-enxio/0.32.3/jnr-enxio-0.32.3.jar",
+                                "id": "SPDXRef-FILE-70",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "e6007f2a4b9b00af26ab2dff3aecd21f0adb48ae"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - None",
+                                "sha1": "e6007f2a4b9b00af26ab2dff3aecd21f0adb48ae",
+                                "comment": "Native I/O access for java",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jnr/jnr-netdb/1.2.0/jnr-netdb-1.2.0.jar",
+                                "id": "SPDXRef-FILE-71",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "1bb5527cac7dadaea7c3bd1e3d86dd95ed0d3b87"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - None",
+                                "sha1": "1bb5527cac7dadaea7c3bd1e3d86dd95ed0d3b87",
+                                "comment": "Lookup TCP and UDP services from java",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jruby/jruby-stdlib/9.2.14.0/jruby-stdlib-9.2.14.0.jar",
+                                "id": "SPDXRef-FILE-72",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "cf5cbacc8ded277625dfdf5c0e8ab4dd5d2efe44"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0",
+                                    "LicenseRef-LGPL-2.1"
+                                ],
+                                "copyrightText": "Copyright 1993-2013 Yukihiro Matsumoto, Copyright 2000-2006 The Legion Of The Bouncy Castle, Copyright 2000-2011 INRIA, Copyright 2000-2011 ymnk, Copyright 2002-2012 the original author or authors, Copyright 2003-2004 Jim Weirich, Copyright 2007-2018 The JRuby project, Copyright 2008-2009 Petr Kobalicek <kobalicek.petr, Copyright 2010 Wayne Meissner",
+                                "sha1": "cf5cbacc8ded277625dfdf5c0e8ab4dd5d2efe44",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jruby/jruby/9.2.14.0/jruby-9.2.14.0.jar",
+                                "id": "SPDXRef-FILE-73",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "e184da3237a294205fe5c0bee81e210035954f7c"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0",
+                                    "LicenseRef-LGPL-2.1"
+                                ],
+                                "copyrightText": "Copyright 1993-2013 Yukihiro Matsumoto, Copyright 2000-2006 The Legion Of The Bouncy Castle, Copyright 2000-2011 INRIA, Copyright 2000-2011 ymnk, Copyright 2002-2012 the original author or authors, Copyright 2003-2004 Jim Weirich, Copyright 2007-2018 The JRuby project, Copyright 2008-2009 Petr Kobalicek <kobalicek.petr, Copyright 2010 Wayne Meissner",
+                                "sha1": "e184da3237a294205fe5c0bee81e210035954f7c",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jnr/jnr-unixsocket/0.38.5/jnr-unixsocket-0.38.5.jar",
+                                "id": "SPDXRef-FILE-74",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "5b4428d124be6d94c122cc2ad63312be6d85e80a"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - None",
+                                "sha1": "5b4428d124be6d94c122cc2ad63312be6d85e80a",
+                                "comment": "UNIX socket channels for java",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jnr/jffi/1.3.1/jffi-1.3.1-native.jar",
+                                "id": "SPDXRef-FILE-75",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "84ceb6309d1caaf53b265519ee0b139cbacc5dfa"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - None",
+                                "sha1": "84ceb6309d1caaf53b265519ee0b139cbacc5dfa",
+                                "comment": "Java Foreign Function Interface",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jnr/jnr-constants/0.10.1/jnr-constants-0.10.1.jar",
+                                "id": "SPDXRef-FILE-76",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "604b6d9714aeefb40300fb35a2ab39599e44cfd6"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - Unspecified Copyright",
+                                "sha1": "604b6d9714aeefb40300fb35a2ab39599e44cfd6",
+                                "comment": "A set of platform constants (e.g. errno values)",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jnr/jnr-posix/3.1.4/jnr-posix-3.1.4.jar",
+                                "id": "SPDXRef-FILE-77",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "960341f4ed3d548bdab63a9698626ffce505caf1"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0",
+                                    "LicenseRef-LGPL-2.1"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "960341f4ed3d548bdab63a9698626ffce505caf1",
+                                "comment": "Common cross-project/cross-platform POSIX APIs",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jruby/jruby-core/9.2.14.0/jruby-core-9.2.14.0.jar",
+                                "id": "SPDXRef-FILE-78",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "c187cc532a0c113e470a5cc7f1e68c1e609096a6"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-EPL-2.0",
+                                    "LicenseRef-GPL-2.0",
+                                    "LicenseRef-LGPL-2.1"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "c187cc532a0c113e470a5cc7f1e68c1e609096a6",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jnr/jffi/1.3.1/jffi-1.3.1.jar",
+                                "id": "SPDXRef-FILE-79",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "9ea24476a32d02fd02487d7ef4870893ffa36b4d"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - Unspecified Copyright",
+                                "sha1": "9ea24476a32d02fd02487d7ef4870893ffa36b4d",
+                                "comment": "Java Foreign Function Interface",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar",
+                                "id": "SPDXRef-FILE-80",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "d3865101f0666b63586683bd811d754517f331ab"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2013 Red Hat, Inc.",
+                                "sha1": "d3865101f0666b63586683bd811d754517f331ab",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../undertow/undertow-core/2.2.4.Final/undertow-core-2.2.4.Final.jar",
+                                "id": "SPDXRef-FILE-81",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "78650b4029dd9280c4769d9425b5559f12cb83bf"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors",
+                                "sha1": "78650b4029dd9280c4769d9425b5559f12cb83bf",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../undertow/undertow-servlet/2.2.4.Final/undertow-servlet-2.2.4.Final.jar",
+                                "id": "SPDXRef-FILE-82",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "e8e9cf5672a053889d92a1ba3f778e19ebd3a7e8"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors",
+                                "sha1": "e8e9cf5672a053889d92a1ba3f778e19ebd3a7e8",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../b_c/jose4j/0.7.6/jose4j-0.7.6.jar",
+                                "id": "SPDXRef-FILE-83",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "4685155beaabc2fd671809da90002e0189974336"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2019 Copyright 2012-2019 Copyright",
+                                "sha1": "4685155beaabc2fd671809da90002e0189974336",
+                                "comment": "The jose.4.j library is a robust and easy to use open source implementation of JSON Web Token (JWT) and the JOSE specification suite (JWS, JWE, and JWK).\n     It is written in Java and relies solely on the JCA APIs for cryptography.\n     Please see https://bitbucket.org/b_c/jose4j/wiki/Home for more info, examples, etc..",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../hibernate/hibernate-core/5.4.28.Final/hibernate-core-5.4.28.Final.jar",
+                                "id": "SPDXRef-FILE-84",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "c096dbb27f83655ec252165340b532733c58e8fb"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-LGPL-2.1"
+                                ],
+                                "copyrightText": "LGPL 2.1 - Hibernate",
+                                "sha1": "c096dbb27f83655ec252165340b532733c58e8fb",
+                                "comment": "Hibernate's core ORM functionality",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-orm/5.3.4/spring-orm-5.3.4.jar",
+                                "id": "SPDXRef-FILE-85",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "fa4d4d624be8303ab75affb5cc5bbaaccb57629d"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2006-2019 Copyright 2006-2019 Joe Walnes, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "fa4d4d624be8303ab75affb5cc5bbaaccb57629d",
+                                "comment": "Spring Object/Relational Mapping",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../undertow/undertow-websockets-jsr/2.2.4.Final/undertow-websockets-jsr-2.2.4.Final.jar",
+                                "id": "SPDXRef-FILE-86",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "2e4b1ca599fe7bd78e4ccb04cf880f78b11c6a5b"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012 Copyright 2012 Red Hat, Inc., and individual contributors",
+                                "sha1": "2e4b1ca599fe7bd78e4ccb04cf880f78b11c6a5b",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-aop/5.3.4/spring-aop-5.3.4.jar",
+                                "id": "SPDXRef-FILE-87",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "b7180a6427ab524bc1cbd31bf38dd2182632515f"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2006-2019 Copyright 2006-2019 Joe Walnes, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "b7180a6427ab524bc1cbd31bf38dd2182632515f",
+                                "comment": "Spring AOP",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-web/5.3.4/spring-web-5.3.4.jar",
+                                "id": "SPDXRef-FILE-88",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "d93829e24a50ed22e781f2302680a210cac5ee84"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "d93829e24a50ed22e781f2302680a210cac5ee84",
+                                "comment": "Spring Web",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar",
+                                "id": "SPDXRef-FILE-89",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "ac6c5ea0ba82f555405f74104cf378f8071c6d25"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "ac6c5ea0ba82f555405f74104cf378f8071c6d25",
+                                "comment": "Spring Beans",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-expression/5.3.4/spring-expression-5.3.4.jar",
+                                "id": "SPDXRef-FILE-90",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "42b71fa955e43a86471509aef14cefe756fc3794"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "42b71fa955e43a86471509aef14cefe756fc3794",
+                                "comment": "Spring Expression Language (SpEL)",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-webmvc/5.3.4/spring-webmvc-5.3.4.jar",
+                                "id": "SPDXRef-FILE-91",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "8dd52fbe8eafcc7c80998087ec6635baf7a98c20"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "8dd52fbe8eafcc7c80998087ec6635baf7a98c20",
+                                "comment": "Spring Web MVC",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-context/5.3.4/spring-context-5.3.4.jar",
+                                "id": "SPDXRef-FILE-92",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "fbeadeb0e4d272599a938ec345e99e5f9a76e919"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "fbeadeb0e4d272599a938ec345e99e5f9a76e919",
+                                "comment": "Spring Context",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-aspects/5.3.4/spring-aspects-5.3.4.jar",
+                                "id": "SPDXRef-FILE-93",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "ddbef9615d0c71c44e48dc466781963f24fa27cf"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "ddbef9615d0c71c44e48dc466781963f24fa27cf",
+                                "comment": "Spring Aspects",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-tx/5.3.4/spring-tx-5.3.4.jar",
+                                "id": "SPDXRef-FILE-94",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "1c4ab5fa203c54f9d7f8c7bbb3cc201962ccf4ab"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "1c4ab5fa203c54f9d7f8c7bbb3cc201962ccf4ab",
+                                "comment": "Spring Transaction",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../springframework/spring-jdbc/5.3.4/spring-jdbc-5.3.4.jar",
+                                "id": "SPDXRef-FILE-95",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "df5dccc508ae9f75f17fcfe6b96ec41e982b9950"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2000-2011 Copyright 2000-2011 INRIA, 2002-2021 Copyright 2002-2021 Pivotal, Inc, 2006-2019 Copyright 2006-2019 Joe Walnes, 1999-2009 Copyright 1999-2009 OW",
+                                "sha1": "df5dccc508ae9f75f17fcfe6b96ec41e982b9950",
+                                "comment": "Spring JDBC",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../micrometer/micrometer-core/1.6.4/micrometer-core-1.6.4.jar",
+                                "id": "SPDXRef-FILE-96",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "f91b9be9301947483ee3ab7f0874c1dad3cb04f7"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2001-2019 Copyright 2001-2019 Copyright, 2002-2019 Copyright 2002-2019 Copyright, 2017 Copyright 2017 VMware, Inc, 2013 Copyright 2013 The Netty Project, 2010 Copyright 2010 Google Inc",
+                                "sha1": "f91b9be9301947483ee3ab7f0874c1dad3cb04f7",
+                                "comment": "Application monitoring instrumentation facade",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../security/spring-security-config/5.4.5/spring-security-config-5.4.5.jar",
+                                "id": "SPDXRef-FILE-97",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "3835ea09e7bb914249fe03041d3a70d0a23de6cb"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - VMware, Inc.",
+                                "sha1": "3835ea09e7bb914249fe03041d3a70d0a23de6cb",
+                                "comment": "spring-security-config",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../security/spring-security-core/5.4.5/spring-security-core-5.4.5.jar",
+                                "id": "SPDXRef-FILE-98",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "90f805783a261f5cdfaf924e4a5ab418ae026671"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - VMware, Inc.",
+                                "sha1": "90f805783a261f5cdfaf924e4a5ab418ae026671",
+                                "comment": "spring-security-core",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-security/2.4.3/spring-boot-starter-security-2.4.3.jar",
+                                "id": "SPDXRef-FILE-99",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "1279b678adb2c991797cec49f83d8f6b8ce14df9"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "1279b678adb2c991797cec49f83d8f6b8ce14df9",
+                                "comment": "Starter for using Spring Security",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-thymeleaf/2.4.3/spring-boot-starter-thymeleaf-2.4.3.jar",
+                                "id": "SPDXRef-FILE-100",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "64fdb078f965cba7e5ec1f04c9fdeee87a4b788d"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "64fdb078f965cba7e5ec1f04c9fdeee87a4b788d",
+                                "comment": "Starter for building MVC web applications using Thymeleaf views",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-jdbc/2.4.3/spring-boot-starter-jdbc-2.4.3.jar",
+                                "id": "SPDXRef-FILE-101",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "2c5853339333cd2b545816d57f12f9d0a0fe6932"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "2c5853339333cd2b545816d57f12f9d0a0fe6932",
+                                "comment": "Starter for using JDBC with the HikariCP connection pool",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-actuator-autoconfigure/2.4.3/spring-boot-actuator-autoconfigure-2.4.3.jar",
+                                "id": "SPDXRef-FILE-102",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "02f5f728f5f9e6d9b4af928f7beb08b8b9fc2da6"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "02f5f728f5f9e6d9b4af928f7beb08b8b9fc2da6",
+                                "comment": "Spring Boot Actuator AutoConfigure",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-actuator/2.4.3/spring-boot-starter-actuator-2.4.3.jar",
+                                "id": "SPDXRef-FILE-103",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "399139fae18f055ba53185fac92e770b0595636f"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "399139fae18f055ba53185fac92e770b0595636f",
+                                "comment": "Starter for using Spring Boot's Actuator which provides production ready features to help you monitor and manage your application",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-web/2.4.3/spring-boot-starter-web-2.4.3.jar",
+                                "id": "SPDXRef-FILE-104",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "4f5554ea183af87e52d8c31bb82aada0d74c40b0"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "4f5554ea183af87e52d8c31bb82aada0d74c40b0",
+                                "comment": "Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-validation/2.4.3/spring-boot-starter-validation-2.4.3.jar",
+                                "id": "SPDXRef-FILE-105",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "4fcad7c11f72ab8db3075a48f29b8fc1646d9796"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "4fcad7c11f72ab8db3075a48f29b8fc1646d9796",
+                                "comment": "Starter for using Java Bean Validation with Hibernate Validator",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-data-jpa/2.4.3/spring-boot-starter-data-jpa-2.4.3.jar",
+                                "id": "SPDXRef-FILE-106",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "356d18d4bb10915f3d13c845fc38b5c068f2e075"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "356d18d4bb10915f3d13c845fc38b5c068f2e075",
+                                "comment": "Starter for using Spring Data JPA with Hibernate",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-undertow/2.4.3/spring-boot-starter-undertow-2.4.3.jar",
+                                "id": "SPDXRef-FILE-107",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "97bd5c32d9d240f0ccb22d233605a2845ece3d7f"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "97bd5c32d9d240f0ccb22d233605a2845ece3d7f",
+                                "comment": "Starter for using Undertow as the embedded servlet container. An alternative to spring-boot-starter-tomcat",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-actuator/2.4.3/spring-boot-actuator-2.4.3.jar",
+                                "id": "SPDXRef-FILE-108",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "1a5f125bbcb97200ba7f412f625475d21dedd776"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "1a5f125bbcb97200ba7f412f625475d21dedd776",
+                                "comment": "Spring Boot Actuator",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-aop/2.4.3/spring-boot-starter-aop-2.4.3.jar",
+                                "id": "SPDXRef-FILE-109",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "333593abae74bf7ecc883460751dcc69afb82604"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "333593abae74bf7ecc883460751dcc69afb82604",
+                                "comment": "Starter for aspect-oriented programming with Spring AOP and AspectJ",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../boot/spring-boot-starter-json/2.4.3/spring-boot-starter-json-2.4.3.jar",
+                                "id": "SPDXRef-FILE-110",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "7b26abb0a0379a00b58a2a50e010b29cf4f16b80"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - 2012-2021 Copyright 2012-2021 Pivotal, Inc",
+                                "sha1": "7b26abb0a0379a00b58a2a50e010b29cf4f16b80",
+                                "comment": "Starter for reading and writing json",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../data/spring-data-jpa/2.4.5/spring-data-jpa-2.4.5.jar",
+                                "id": "SPDXRef-FILE-111",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "73596ed30853bf9338fd8358ec804f0097b6d73b"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - VMware, Inc.",
+                                "sha1": "73596ed30853bf9338fd8358ec804f0097b6d73b",
+                                "comment": "Spring Data module for JPA repositories.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../data/spring-data-commons/2.4.5/spring-data-commons-2.4.5.jar",
+                                "id": "SPDXRef-FILE-112",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "571945cb8debeb12815cb3bf6554bd5e388935e5"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - VMware, Inc.",
+                                "sha1": "571945cb8debeb12815cb3bf6554bd5e388935e5",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../security/spring-security-web/5.4.5/spring-security-web-5.4.5.jar",
+                                "id": "SPDXRef-FILE-113",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "0450d209579c49b4e5373394b23444fa034a8bd3"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - VMware, Inc.",
+                                "sha1": "0450d209579c49b4e5373394b23444fa034a8bd3",
+                                "comment": "spring-security-web",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../asciidoctor/asciidoctorj/2.4.3/asciidoctorj-2.4.3.jar",
+                                "id": "SPDXRef-FILE-114",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "58c98a3ec44d15288a13dae8b8ca4218f14b039b"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - None",
+                                "sha1": "58c98a3ec44d15288a13dae8b8ca4218f14b039b",
+                                "comment": "AsciidoctorJ provides Java bindings for the Asciidoctor RubyGem (asciidoctor) using JRuby.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../nulab-inc/zxcvbn/1.4.0/zxcvbn-1.4.0.jar",
+                                "id": "SPDXRef-FILE-115",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "7cf830b18fe2d2b137396417d9189ad41cf6498e"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-MIT"
+                                ],
+                                "copyrightText": "MIT - None",
+                                "sha1": "7cf830b18fe2d2b137396417d9189ad41cf6498e",
+                                "comment": "This is a java port of zxcvbn, which is a JavaScript password strength generator.",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "../asciidoctor/asciidoctorj-api/2.4.3/asciidoctorj-api-2.4.3.jar",
+                                "id": "SPDXRef-FILE-116",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": "945f57c009c9d028c655bf276efe9c63cfb08e59"
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "LicenseRef-Apache-2.0"
+                                ],
+                                "copyrightText": "Apache 2.0 - None",
+                                "sha1": "945f57c009c9d028c655bf276efe9c63cfb08e59",
+                                "comment": "API for AsciidoctorJ",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "webgoat-container-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-117",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "webgoat-server-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-118",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "challenge-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-119",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "webgoat-lesson-template-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-120",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "idor-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-121",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "bypass-restrictions-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-122",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "insecure-deserialization-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-123",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "missing-function-ac-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-124",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "http-basics-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-125",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "vulnerable-components-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-126",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "ssrf-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-127",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "xxe-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-128",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "webgoat-introduction-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-129",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "cross-site-scripting-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-130",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "crypto-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-131",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "cia-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-132",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "insecure-login-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-133",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "auth-bypass-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-134",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "password-reset-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-135",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "webwolf-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-136",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "html-tampering-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-137",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "webwolf-introduction-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-138",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "sql-injection-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-139",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "secure-passwords-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-140",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "csrf-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-141",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "path-traversal-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-142",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "client-side-filtering-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-143",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "jwt-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-144",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "chrome-dev-tools-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-145",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        },
+                        {
+                            "File": {
+                                "name": "http-proxies-8.2.0-SNAPSHOT.jar",
+                                "id": "SPDXRef-FILE-146",
+                                "checksums": [
+                                    {
+                                        "algorithm": "checksumAlgorithm_sha1",
+                                        "value": ""
+                                    }
+                                ],
+                                "licenseConcluded": "NONE",
+                                "licenseInfoFromFiles": [
+                                    "NOASSERTION"
+                                ],
+                                "copyrightText": "NOASSERTION",
+                                "sha1": "",
+                                "comment": "",
+                                "fileTypes": [
+                                    "fileType_source"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "extractedLicenseInfos": [
+            {
+                "licenseId": "LicenseRef-Apache-2.0",
+                "extractedText": "Apache-2.0",
+                "name": "Apache-2.0"
+            },
+            {
+                "licenseId": "LicenseRef-BSD-2-Clause",
+                "extractedText": "BSD-2-Clause",
+                "name": "BSD-2-Clause"
+            },
+            {
+                "licenseId": "LicenseRef-BSD-3-Clause",
+                "extractedText": "BSD-3-Clause",
+                "name": "BSD-3-Clause"
+            },
+            {
+                "licenseId": "LicenseRef-CC-PDDC",
+                "extractedText": "CC-PDDC",
+                "name": "CC-PDDC"
+            },
+            {
+                "licenseId": "LicenseRef-CC0-1.0",
+                "extractedText": "CC0-1.0",
+                "name": "CC0-1.0"
+            },
+            {
+                "licenseId": "LicenseRef-CDDL-1.0",
+                "extractedText": "CDDL-1.0",
+                "name": "CDDL-1.0"
+            },
+            {
+                "licenseId": "LicenseRef-CDDL-1.1",
+                "extractedText": "CDDL-1.1",
+                "name": "CDDL-1.1"
+            },
+            {
+                "licenseId": "LicenseRef-Dom4j",
+                "extractedText": "Dom4j",
+                "name": "Dom4j"
+            },
+            {
+                "licenseId": "LicenseRef-EPL-1.0",
+                "extractedText": "EPL-1.0",
+                "name": "EPL-1.0"
+            },
+            {
+                "licenseId": "LicenseRef-EPL-2.0",
+                "extractedText": "EPL-2.0",
+                "name": "EPL-2.0"
+            },
+            {
+                "licenseId": "LicenseRef-GPL-2.0",
+                "extractedText": "GPL-2.0",
+                "name": "GPL-2.0"
+            },
+            {
+                "licenseId": "LicenseRef-GPL-2.0-with-classpath-exception",
+                "extractedText": "GPL-2.0-with-classpath-exception",
+                "name": "GPL-2.0-with-classpath-exception"
+            },
+            {
+                "licenseId": "LicenseRef-Indiana University Extreme!",
+                "extractedText": "Indiana University Extreme!",
+                "name": "Indiana University Extreme!"
+            },
+            {
+                "licenseId": "LicenseRef-LGPL",
+                "extractedText": "LGPL",
+                "name": "LGPL"
+            },
+            {
+                "licenseId": "LicenseRef-LGPL-2.1",
+                "extractedText": "LGPL-2.1",
+                "name": "LGPL-2.1"
+            },
+            {
+                "licenseId": "LicenseRef-MIT",
+                "extractedText": "MIT",
+                "name": "MIT"
+            },
+            {
+                "licenseId": "LicenseRef-MPL-1.1",
+                "extractedText": "MPL-1.1",
+                "name": "MPL-1.1"
+            }
+        ]
+    }
+}
