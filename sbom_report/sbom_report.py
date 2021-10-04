@@ -24,7 +24,7 @@ SOURCE_SUFFICES = ("JavaScript")
 
 def init():
     global ws_conn, extra_conf
-    ws_conn = WS(url=args.ws_url, user_key=args.ws_user_key, token=args.ws_token)
+    ws_conn = WS(url=args.ws_url, user_key=args.ws_user_key, token=args.ws_token, tool_details=("ps-sbom-report", "0.2.2"))
     try:
         fp = open(args.extra, 'r')
         extra_conf = json.loads(fp.read())
@@ -50,7 +50,6 @@ def filter_dups_and_sort(items: list) -> list:
 
 def create_sbom_doc():
     global ws_conn, args
-    init()
     scope = ws_conn.get_scope_by_token(args.scope_token)
     logging.info(f"Starting to work on SBOM Document of {scope['type']} {scope['name']} (token: {args.scope_token})")
     doc = create_document(args.scope_token)
@@ -347,6 +346,7 @@ def parse_args():
 def main():
     global args
     args = parse_args()
+    init()
     file_path = create_sbom_doc()
 
     return file_path
