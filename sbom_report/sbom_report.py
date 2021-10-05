@@ -6,11 +6,11 @@ from spdx import file, package, version, creationinfo
 from spdx.checksum import Algorithm
 from spdx.document import Document, License, ExtractedLicense
 from spdx.utils import NoAssert, SPDXNone
-from ws_sdk import ws_utilities
+from ws_sdk import ws_utilities, ws_constants
 from ws_sdk.web import WS
 import re
 
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.INFO,
                     handlers=[logging.StreamHandler(stream=sys.stdout)],
                     format='%(levelname)s %(asctime)s %(thread)d: %(message)s',
                     datefmt='%y-%m-%d %H:%M:%S')
@@ -24,7 +24,8 @@ SOURCE_SUFFICES = ("JavaScript")
 
 def init():
     global ws_conn, extra_conf
-    ws_conn = WS(url=args.ws_url, user_key=args.ws_user_key, token=args.ws_token, tool_details=("ps-sbom-report", "0.2.2"))
+    ws_conn = WS(url=args.ws_url, user_key=args.ws_user_key, token=args.ws_token)
+    extra_conf = {}
     try:
         fp = open(args.extra, 'r')
         extra_conf = json.loads(fp.read())
@@ -32,8 +33,6 @@ def init():
         logging.warning(f"Extra configuration file: {args.extra} was not found")
     except json.JSONDecodeError:
         logging.error(f"Unable to parse file: {args.extra}")
-    finally:
-        fp.close()
 
 
 def filter_dups_and_sort(items: list) -> list:
@@ -50,6 +49,7 @@ def filter_dups_and_sort(items: list) -> list:
 
 def create_sbom_doc():
     global ws_conn, args
+    init()
     scope = ws_conn.get_scope_by_token(args.scope_token)
     logging.info(f"Starting to work on SBOM Document of {scope['type']} {scope['name']} (token: {args.scope_token})")
     doc = create_document(args.scope_token)
@@ -81,7 +81,7 @@ def create_document(token: str) -> Document:
     global ws_conn
     scope_name = ws_conn.get_scope_name_by_token(token)
     document = Document(name=f"WhiteSource {scope_name} SBOM report",
-                        namespace=extra_conf.get('namespace'),
+                        namespace=extra_conf.get('namespace', 'NAMESPACE'),
                         spdx_id="SPDXRef-DOCUMENT",
                         version=version.Version(2, 2),
                         data_license=License.from_identifier("CC0-1.0"))
@@ -309,6 +309,15 @@ def set_file_type(file_type: str, filename: str):
     return ret
 
 
+def replace_invalid_chars(filename: str) -> str:
+    old_name = filename
+    for char in ws_constants.INVALID_FS_CHARS:
+        filename = filename.replace(char, "_")
+    logging.debug(f"Original name:'{old_name}' Fixed filename: '{filename}'")
+
+    return filename
+
+
 def write_file(doc: Document, type: str) -> ():
                   # Type: (suffix, module_name, f_open_flags, encoding)
     file_types = {"json": ("json", "spdx.writers.json", "w", None),
@@ -317,7 +326,7 @@ def write_file(doc: Document, type: str) -> ():
                   "xml": ("xml", "spdx.writers.xml", "wb", None),
                   "yaml": ("yml", "spdx.writers.yaml", "wb", None)}
 
-    report_file = f"{doc.name}-{doc.version}.{file_types[type][0]}"
+    report_file = replace_invalid_chars(f"{doc.name}-{doc.version}.{file_types[type][0]}")
     full_path = os.path.join(args.out_dir, report_file)
     import importlib
     module = importlib.import_module(file_types[type][1])           # Dynamically loading appropriate writer module
@@ -346,7 +355,6 @@ def parse_args():
 def main():
     global args
     args = parse_args()
-    init()
     file_path = create_sbom_doc()
 
     return file_path
