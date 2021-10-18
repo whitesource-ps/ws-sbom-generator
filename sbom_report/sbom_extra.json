@@ -2,12 +2,5 @@
   "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
   "org_email": "org@email.address",
   "person": "person name",
-  "person_email": "person@email.address",
-  "package_location": "http://package/location",
-  "package_sha1": "",
-  "package_copyright_text": "COPYRIGHT_TEXT",
-  "package_conc_licenses": "CONC_LICENSES",
-  "package_license_identifier": "MIT",
-  "package_supplier": "supplier name",
-  "package_supplier_email": "supplier@email.address"
+  "person_email": "person@email.address"
 }
