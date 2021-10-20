@@ -11,7 +11,7 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     env:
-      TOOL_PATH: sbom_generator
+      TOOL_DIR: sbom_generator
       TOOL_NAME: sbom_generator.py
     strategy:
       matrix:
