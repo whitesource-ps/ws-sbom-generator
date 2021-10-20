@@ -1,3 +1,4 @@
+import importlib
 import json
 import logging
 import os
@@ -12,7 +13,7 @@ from spdx.creationinfo import CreationInfo
 from spdx.document import Document, License
 from spdx.package import Package
 from spdx.relationship import Relationship, RelationshipType
-from spdx.utils import SPDXNone, UnKnown, NoAssert
+from spdx.utils import SPDXNone, NoAssert
 from ws_sdk import ws_constants, WS, ws_utilities
 
 logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.INFO,
@@ -27,11 +28,10 @@ VERSION = "0.3"
 args = None
 
 
-def create_sbom_doc() -> spdx.document.Document:
-    init()
-    scope = args.ws_conn.get_scope_by_token(args.scope_token)
+def create_sbom_doc(scope_token) -> spdx.document.Document:
+    scope = args.ws_conn.get_scope_by_token(scope_token)
     logging.info(f"Creating SBOM Document from WhiteSource {scope['type']} {scope['name']}")
-    scope_name = args.ws_conn.get_scope_name_by_token(args.scope_token)
+    scope_name = args.ws_conn.get_scope_name_by_token(scope_token)
     namespace = args.extra_conf.get('namespace', 'http://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]')
     doc, doc_spdx_id = create_document(scope_name, namespace)
 
@@ -40,8 +40,8 @@ def create_sbom_doc() -> spdx.document.Document:
                                              args.extra_conf.get('person', 'PERSON'),
                                              args.extra_conf.get('person_email', 'PERSON_EMAIL'))
 
-    due_dil = args.ws_conn.get_due_diligence(token=args.scope_token)
-    libs_from_lic_report = args.ws_conn.get_licenses(token=args.scope_token, full_spdx=True)
+    due_dil = args.ws_conn.get_due_diligence(token=scope_token)
+    libs_from_lic_report = args.ws_conn.get_licenses(token=scope_token, full_spdx=True)
     doc.packages, pkgs_spdx_ids = create_packages(libs_from_lic_report, due_dil)
 
     for pkg_id in pkgs_spdx_ids:
@@ -130,8 +130,8 @@ def create_package(lib, dd_dict):
     package = Package(name=lib["name"],
                       spdx_id=pkg_spdx_id,
                       download_location=download_location,
-                      version=lib.get('version', UnKnown()),
-                      file_name=lib.get('filename', UnKnown()),
+                      version=lib.get('version', NoAssert()),
+                      file_name=lib.get('filename', NoAssert()),
                       supplier=originator,
                       originator=originator)
 
@@ -189,9 +189,10 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
     parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', required=True)
     parser.add_argument('-k', '--token', help="WS Organization Key", dest='ws_token', required=True)
-    parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=True)
+    parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token')
     parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default="saas")
-    parser.add_argument('-t', '--type', help="Output type", dest='type', choices=["tv", "json", "xml", "rdf", "yaml", "all"], default='tv')
+    parser.add_argument('-t', '--type', help="Output type", dest='type', default='tv',
+                        choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.path.join(real_path, "output"))
 
@@ -208,67 +209,73 @@ def replace_invalid_chars(filename: str) -> str:
 
 
 def write_report(doc: Document, file_type: str) -> str:
-    class SPDXFileType(Enum):
-        # Type = (suffix, module_classpath, f_flags, encoding)
-        JSON = ("json", "spdx.writers.json", "w", None)
-        TV = ("tv", "spdx.writers.tagvalue", "w", "utf-8")
-        RDF = ("xml", "spdx.writers.rdf", "wb", None)
-        XML = ("xml", "spdx.writers.xml", "wb", None)
-        YAML = ("yml", "spdx.writers.yaml", "wb", None)
-
-        def __str__(self):
-            return self.name
-
-        @classmethod
-        def get_file_type(cls, f_t: str):
-            return cls.__dict__[f_t.upper()]
-
-        @property
-        def suffix(self):
-            return self.value[0]
-
-        @property
-        def module_classpath(self):
-            return self.value[1]
-
-        @property
-        def f_flags(self):
-            return self.value[2]
-
-        @property
-        def encoding(self):
-            return self.value[3]
-
-    f_types = SPDXFileType.__members__ if file_type == "all" else [file_type]
+    f_types = [f_t.lower() for f_t in SPDXFileType.__members__.keys()] if file_type == "all" else [file_type]
     full_paths = []
-    for f_type in f_types:
-        full_path = write_file(SPDXFileType, doc, f_type, file_type)
 
+    for f_type in f_types:
+        full_path = write_file(SPDXFileType, doc, f_type)
         full_paths.append(full_path)
 
     return full_paths
 
 
-def write_file(spdx_f_t_enum, doc, f_type, file_type):
-    logging.info(f"Saving report in {json} format")
-    spdx_file_type = spdx_f_t_enum.get_file_type(f_type)
+def write_file(spdx_f_t_enum, doc, file_type):
+    logging.info(f"Saving report in {file_type} format")
+    spdx_file_type = spdx_f_t_enum.get_file_type(file_type)
     report_filename = replace_invalid_chars(f"{doc.name}-{doc.version}.{spdx_file_type.suffix}")
     full_path = os.path.join(args.out_dir, report_filename)
-    import importlib
-    module = importlib.import_module(
-        spdx_file_type.module_classpath)  # Dynamically loading appropriate writer module
+    module = importlib.import_module(spdx_file_type.module_classpath)  # Dynamically loading appropriate writer module
     logging.debug(f"Writing file: {full_path} in format: {file_type}")
     with open(full_path, mode=spdx_file_type.f_flags, encoding=spdx_file_type.encoding) as fp:
         module.write_document(doc, fp)
+
     return full_path
+
+
+class SPDXFileType(Enum):
+    # JSON = ("json", "spdx.writers.json", "w", None)  # Disabled due to spdx bug: Object of type NoAssert is not JSON serializable
+    TV = ("tv", "spdx.writers.tagvalue", "w", "utf-8")
+    RDF = ("xml", "spdx.writers.rdf", "wb", None)
+    XML = ("xml", "spdx.writers.xml", "wb", None)
+    # YAML = ("yml", "spdx.writers.yaml", "wb", None)   # Disabled due to a bug
+
+    def __str__(self):
+        return self.name
+
+    @classmethod
+    def get_file_type(cls, f_t: str):
+        return cls.__dict__[f_t.upper()]
+
+    @property
+    def suffix(self):
+        return self.value[0]
+
+    @property
+    def module_classpath(self):
+        return self.value[1]
+
+    @property
+    def f_flags(self):
+        return self.value[2]
+
+    @property
+    def encoding(self):
+        return self.value[3]
 
 
 def main():
     global args
     args = parse_args()
-    file_path = create_sbom_doc()
+    init()
+    if args.scope_token and ws_utilities.is_token(args.scope_token): #TODO Remove None check after ws-sdk 0.6.0.4 released
+        file_paths = create_sbom_doc(args.scope_token)
+    else:
+        logging.info("Creating SBOM reports on all Organization Projects")
+        scopes = args.ws_conn.get_projects()
+        for scope in scopes:
+            file_paths = create_sbom_doc(scope['token'])
 
-    return file_path
+    return file_paths
 
 
 if __name__ == '__main__':

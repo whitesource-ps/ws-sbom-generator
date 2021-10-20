@@ -10,6 +10,8 @@ on:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
+    env:
+      TOOL_DIR: sbom_generator
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9]
@@ -35,15 +37,15 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Full test JSON
         run: |
-          cd sbom_report
+          cd ${env.TOOL_DIR}
           python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_PYTHON }}
       - name: Full test RDF
         run: |
-          cd sbom_report
+          cd ${env.TOOL_DIR}
           python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_GO }} -t rdf
       - name: Full test TV (tag-value)
         run: |
-          cd sbom_report
+          cd ${env.TOOL_DIR}
           python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_JAVA_MAVEN }} -t tv
       - name: Zip release
         uses: papeloto/action-zip@v1

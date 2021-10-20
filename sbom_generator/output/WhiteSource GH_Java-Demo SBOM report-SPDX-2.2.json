@@ -1,0 +1,1618 @@
+{
+    "Document": {
+        "spdxVersion": "SPDX-2.2",
+        "documentNamespace": "http://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]",
+        "creationInfo": {
+            "creators": [
+                "Organization: GarySegal-Demo (ORG_EMAIL)",
+                "Tool: White Source SBOM Report Generator",
+                "Person: PERSON (PERSON_EMAIL)"
+            ],
+            "created": "2021-10-20T12:29:31Z",
+            "licenseListVersion": "3.6"
+        },
+        "dataLicense": "CC0-1.0",
+        "SPDXID": "SPDXRef-DOCUMENT",
+        "name": "WhiteSource GH_Java-Demo SBOM report",
+        "documentDescribes": [
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-activation-1.1.jar",
+                    "name": "JavaBeans Activation Framework (JAF)",
+                    "downloadLocation": "http://java.sun.com/products/javabeans/jaf/index.jsp",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "CDDL-1.1",
+                    "licenseInfoFromFiles": [
+                        "CDDL-1.1"
+                    ],
+                    "licenseDeclared": "CDDL-1.1",
+                    "copyrightText": "['Oracle']",
+                    "versionInfo": "1.1",
+                    "packageFileName": "activation-1.1.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "e6cb541461c2834bdea3eb920f1884d1eb508b50"
+                        }
+                    ],
+                    "sha1": "e6cb541461c2834bdea3eb920f1884d1eb508b50",
+                    "homepage": "http://java.sun.com/products/javabeans/jaf/index.jsp",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-jtidy-r938.jar",
+                    "name": "JTidy",
+                    "downloadLocation": "http://jtidy.sourceforge.net",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "JTidy License",
+                    "licenseInfoFromFiles": [
+                        "JTidy License"
+                    ],
+                    "licenseDeclared": "JTidy License",
+                    "copyrightText": "['Copyright 1998-2000 World Wide Web Consortium (Massachusetts']",
+                    "versionInfo": "r938",
+                    "packageFileName": "jtidy-r938.jar",
+                    "supplier": "Organization: sourceforge (NOASSERTION)",
+                    "originator": "Organization: sourceforge (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "ab08d87a225a715a69107732b67f21e1da930349"
+                        }
+                    ],
+                    "sha1": "ab08d87a225a715a69107732b67f21e1da930349",
+                    "homepage": "http://jtidy.sourceforge.net",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-hamcrest-core-1.1.jar",
+                    "name": "Hamcrest Core",
+                    "downloadLocation": "NOASSERTION",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "BSD-3-Clause",
+                    "licenseInfoFromFiles": [
+                        "BSD-3-Clause"
+                    ],
+                    "licenseDeclared": "BSD-3-Clause",
+                    "copyrightText": "['www.hamcrest.org']",
+                    "versionInfo": "1.1",
+                    "packageFileName": "hamcrest-core-1.1.jar",
+                    "supplier": "Organization: Hamcrest (NOASSERTION)",
+                    "originator": "Organization: Hamcrest (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "860340562250678d1a344907ac75754e259cdb14"
+                        }
+                    ],
+                    "sha1": "860340562250678d1a344907ac75754e259cdb14",
+                    "homepage": "NOASSERTION",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-junit-4.10.jar",
+                    "name": "JUnit",
+                    "downloadLocation": "http://junit.org",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "CPL-1.0",
+                    "licenseInfoFromFiles": [
+                        "CPL-1.0"
+                    ],
+                    "licenseDeclared": "CPL-1.0",
+                    "copyrightText": "['Copyright 2000-2006 www.hamcrest.org']",
+                    "versionInfo": "4.10",
+                    "packageFileName": "junit-4.10.jar",
+                    "supplier": "Organization: JUnit (NOASSERTION)",
+                    "originator": "Organization: JUnit (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "e4f1766ce7404a08f45d859fb9c226fc9e41a861"
+                        }
+                    ],
+                    "sha1": "e4f1766ce7404a08f45d859fb9c226fc9e41a861",
+                    "homepage": "http://junit.org",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-jstl-1.2.jar",
+                    "name": "jstl",
+                    "downloadLocation": "NOASSERTION",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "CDDL-1.0",
+                    "licenseInfoFromFiles": [
+                        "CDDL-1.0"
+                    ],
+                    "licenseDeclared": "CDDL-1.0",
+                    "copyrightText": "['Copyright 1995 Oct']",
+                    "versionInfo": "1.2",
+                    "packageFileName": "jstl-1.2.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "74aca283cd4f4b4f3e425f5820cda58f44409547"
+                        }
+                    ],
+                    "sha1": "74aca283cd4f4b4f3e425f5820cda58f44409547",
+                    "homepage": "NOASSERTION",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-log4j-1.2.7.jar",
+                    "name": "log4j",
+                    "downloadLocation": "NOASSERTION",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['The Apache Software Foundation']",
+                    "versionInfo": "1.2.7",
+                    "packageFileName": "log4j-1.2.7.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "5b8a2a161048eb7481407ef0a81c2d90489ed412"
+                        }
+                    ],
+                    "sha1": "5b8a2a161048eb7481407ef0a81c2d90489ed412",
+                    "homepage": "NOASSERTION",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-json-simple-1.1.1.jar",
+                    "name": "JSON.simple",
+                    "downloadLocation": "http://code.google.com/p/json-simple/",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Unspecified Copyright']",
+                    "versionInfo": "1.1.1",
+                    "packageFileName": "json-simple-1.1.1.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "c9ad4a0850ab676c5c64461a05ca524cdfff59f1"
+                        }
+                    ],
+                    "sha1": "c9ad4a0850ab676c5c64461a05ca524cdfff59f1",
+                    "homepage": "http://code.google.com/p/json-simple/",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-mail-1.4.7.jar",
+                    "name": "JavaMail API (compat)",
+                    "downloadLocation": "http://kenai.com/projects/javamail/mail",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "GPL-2.0-with-classpath-exception",
+                    "licenseInfoFromFiles": [
+                        "GPL-2.0-with-classpath-exception",
+                        "CDDL-1.1"
+                    ],
+                    "licenseDeclared": "GPL-2.0-with-classpath-exception",
+                    "copyrightText": "['Copyright 1997-2011 Oracle and']",
+                    "versionInfo": "1.4.7",
+                    "packageFileName": "mail-1.4.7.jar",
+                    "supplier": "Organization: Oracle (NOASSERTION)",
+                    "originator": "Organization: Oracle (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "9add058589d5d85adeb625859bf2c5eeaaedf12d"
+                        }
+                    ],
+                    "sha1": "9add058589d5d85adeb625859bf2c5eeaaedf12d",
+                    "homepage": "http://kenai.com/projects/javamail/mail",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-mysql-connector-java-5.1.24.jar",
+                    "name": "MySQL Connector/J",
+                    "downloadLocation": "http://dev.mysql.com/doc/connector-j/en/",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "GPL-2.0",
+                    "licenseInfoFromFiles": [
+                        "GPL-2.0"
+                    ],
+                    "licenseDeclared": "GPL-2.0",
+                    "copyrightText": "['Copyright 2000-2013 Oracle and/or its affiliates', 'Copyright 2001-2003 Ant-Contrib project']",
+                    "versionInfo": "5.1.24",
+                    "packageFileName": "mysql-connector-java-5.1.24.jar",
+                    "supplier": "Organization: Oracle Corporation (NOASSERTION)",
+                    "originator": "Organization: Oracle Corporation (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "a7d599d73b86a928303909b9be7573a4ea0ed28e"
+                        }
+                    ],
+                    "sha1": "a7d599d73b86a928303909b9be7573a4ea0ed28e",
+                    "homepage": "http://dev.mysql.com/doc/connector-j/en/",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-stax2-api-3.1.4.jar",
+                    "name": "Stax2 API",
+                    "downloadLocation": "NOASSERTION",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "BSD-2-Clause",
+                    "licenseInfoFromFiles": [
+                        "BSD-2-Clause"
+                    ],
+                    "licenseDeclared": "BSD-2-Clause",
+                    "copyrightText": "['Unspecified Copyright']",
+                    "versionInfo": "3.1.4",
+                    "packageFileName": "stax2-api-3.1.4.jar",
+                    "supplier": "Organization: fasterxml.com (NOASSERTION)",
+                    "originator": "Organization: fasterxml.com (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "ac19014b1e6a7c08aad07fe114af792676b685b7"
+                        }
+                    ],
+                    "sha1": "ac19014b1e6a7c08aad07fe114af792676b685b7",
+                    "homepage": "NOASSERTION",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-slf4j-api-1.7.12.jar",
+                    "name": "SLF4J API Module",
+                    "downloadLocation": "http://www.slf4j.org",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "['QOS.ch']",
+                    "versionInfo": "1.7.12",
+                    "packageFileName": "slf4j-api-1.7.12.jar",
+                    "supplier": "Organization: QOS.ch (NOASSERTION)",
+                    "originator": "Organization: QOS.ch (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "8e20852d05222dc286bf1c71d78d0531e177c317"
+                        }
+                    ],
+                    "sha1": "8e20852d05222dc286bf1c71d78d0531e177c317",
+                    "homepage": "http://www.slf4j.org",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-commons-lang3-3.4.jar",
+                    "name": "Apache Commons Lang",
+                    "downloadLocation": "http://commons.apache.org/proper/commons-lang/",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2001-2015 The Apache Software Foundation']",
+                    "versionInfo": "3.4",
+                    "packageFileName": "commons-lang3-3.4.jar",
+                    "supplier": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "originator": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "5fe28b9518e58819180a43a850fbc0dd24b7c050"
+                        }
+                    ],
+                    "sha1": "5fe28b9518e58819180a43a850fbc0dd24b7c050",
+                    "homepage": "http://commons.apache.org/proper/commons-lang/",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-jsoup-1.8.2.jar",
+                    "name": "jsoup",
+                    "downloadLocation": "http://jsoup.org/",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "NONE",
+                    "versionInfo": "1.8.2",
+                    "packageFileName": "jsoup-1.8.2.jar",
+                    "supplier": "Organization: Jonathan Hedley (NOASSERTION)",
+                    "originator": "Organization: Jonathan Hedley (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "64238922c4006c3d0a9951c4c03983ecc6a1e1a0"
+                        }
+                    ],
+                    "sha1": "64238922c4006c3d0a9951c4c03983ecc6a1e1a0",
+                    "homepage": "http://jsoup.org/",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-jna-4.2.1.jar",
+                    "name": "Java Native Access",
+                    "downloadLocation": "https://github.com/java-native-access/jna",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "LGPL-2.1",
+                    "licenseInfoFromFiles": [
+                        "LGPL-2.1",
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "LGPL-2.1",
+                    "copyrightText": "['Copyright 2014-2015 2016, 2018 Free Software Foundation, Inc']",
+                    "versionInfo": "4.2.1",
+                    "packageFileName": "jna-4.2.1.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "fcc5b10cb812c41b00708e7b57baccc3aee5567c"
+                        }
+                    ],
+                    "sha1": "fcc5b10cb812c41b00708e7b57baccc3aee5567c",
+                    "homepage": "https://github.com/java-native-access/jna",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-commons-io-2.5.jar",
+                    "name": "Apache Commons IO",
+                    "downloadLocation": "http://commons.apache.org/proper/commons-io/",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2002-2016 The Apache Software Foundation']",
+                    "versionInfo": "2.5",
+                    "packageFileName": "commons-io-2.5.jar",
+                    "supplier": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "originator": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "2852e6e05fbb95076fc091f6d1780f1f8fe35e0f"
+                        }
+                    ],
+                    "sha1": "2852e6e05fbb95076fc091f6d1780f1f8fe35e0f",
+                    "homepage": "http://commons.apache.org/proper/commons-io/",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-woodstox-core-5.0.3.jar",
+                    "name": "Woodstox",
+                    "downloadLocation": "https://github.com/FasterXML/woodstox",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['FasterXML LLC']",
+                    "versionInfo": "5.0.3",
+                    "packageFileName": "woodstox-core-5.0.3.jar",
+                    "supplier": "Organization: FasterXML (NOASSERTION)",
+                    "originator": "Organization: FasterXML (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "10aa199207fda142eff01cd61c69244877d71770"
+                        }
+                    ],
+                    "sha1": "10aa199207fda142eff01cd61c69244877d71770",
+                    "homepage": "https://github.com/FasterXML/woodstox",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-mongo-java-driver-3.4.1.jar",
+                    "name": "MongoDB Java Driver",
+                    "downloadLocation": "http://www.mongodb.org",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "NONE",
+                    "versionInfo": "3.4.1",
+                    "packageFileName": "mongo-java-driver-3.4.1.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "cc204fde3e80dc4417bcba5e4b22dae8c7647cb6"
+                        }
+                    ],
+                    "sha1": "cc204fde3e80dc4417bcba5e4b22dae8c7647cb6",
+                    "homepage": "http://www.mongodb.org",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-encoder-1.2.1.jar",
+                    "name": "Java Encoder",
+                    "downloadLocation": "https://www.owasp.org/index.php/OWASP_Java_Encoder_Project/encoder",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "BSD-3-Clause",
+                    "licenseInfoFromFiles": [
+                        "BSD-3-Clause"
+                    ],
+                    "licenseDeclared": "BSD-3-Clause",
+                    "copyrightText": "['Copyright 2015 OWASP']",
+                    "versionInfo": "1.2.1",
+                    "packageFileName": "encoder-1.2.1.jar",
+                    "supplier": "Organization: OWASP (Open Web-Application Security Project) (NOASSERTION)",
+                    "originator": "Organization: OWASP (Open Web-Application Security Project) (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "a0583521083f7c1532ffd01716c46568d97109f0"
+                        }
+                    ],
+                    "sha1": "a0583521083f7c1532ffd01716c46568d97109f0",
+                    "homepage": "https://www.owasp.org/index.php/OWASP_Java_Encoder_Project/encoder",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-argon2-jvm-2.2.jar",
+                    "name": "Argon2 JVM",
+                    "downloadLocation": "https://github.com/phxql/argon2-jvm",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "LGPL-3.0",
+                    "licenseInfoFromFiles": [
+                        "LGPL-3.0"
+                    ],
+                    "licenseDeclared": "LGPL-3.0",
+                    "copyrightText": "NONE",
+                    "versionInfo": "2.2",
+                    "packageFileName": "argon2-jvm-2.2.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "7770dea6840c8de26f01f26a65c5e46a3cb603c3"
+                        }
+                    ],
+                    "sha1": "7770dea6840c8de26f01f26a65c5e46a3cb603c3",
+                    "homepage": "https://github.com/phxql/argon2-jvm",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-objenesis-2.6.jar",
+                    "name": "Objenesis",
+                    "downloadLocation": "http://objenesis.org",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2006-2017 Joe Walnes, Henri Tremblay, Leonardo Mesquita']",
+                    "versionInfo": "2.6",
+                    "packageFileName": "objenesis-2.6.jar",
+                    "supplier": "Organization: Joe Walnes, Henri Tremblay, Leonardo Mesquita (NOASSERTION)",
+                    "originator": "Organization: Joe Walnes, Henri Tremblay, Leonardo Mesquita (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "639033469776fd37c08358c6b92a4761feb2af4b"
+                        }
+                    ],
+                    "sha1": "639033469776fd37c08358c6b92a4761feb2af4b",
+                    "homepage": "http://objenesis.org",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-jquery-ui-1.11.4.min.js",
+                    "name": "jqueryui",
+                    "downloadLocation": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "['OpenJS Foundation and jQuery contributors']",
+                    "versionInfo": "1.11.4",
+                    "packageFileName": "jquery-ui-1.11.4.min.js",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "7f650ee30c6a4d3eea04032039b20ff72997559b"
+                        }
+                    ],
+                    "sha1": "7f650ee30c6a4d3eea04032039b20ff72997559b",
+                    "homepage": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-jquery-ui-1.8.19.min.js",
+                    "name": "jqueryui",
+                    "downloadLocation": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "NONE",
+                    "versionInfo": "1.8.19",
+                    "packageFileName": "jquery-ui-1.8.19.min.js",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "431b7ebb5e36d5af5e7890b782789ac983e28d00"
+                        }
+                    ],
+                    "sha1": "431b7ebb5e36d5af5e7890b782789ac983e28d00",
+                    "homepage": "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.19/jquery-ui.min.js",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-jquery.mCustomScrollbar.concat-3.0.9.min.js",
+                    "name": "malihu-custom-scrollbar-plugin",
+                    "downloadLocation": "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.0.9/jquery.mCustomScrollbar.concat.min.js",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "NONE",
+                    "versionInfo": "3.0.9",
+                    "packageFileName": "jquery.mCustomScrollbar.concat-3.0.9.min.js",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "56906b9b9f41df67063091b7a66c8584d87d748f"
+                        }
+                    ],
+                    "sha1": "56906b9b9f41df67063091b7a66c8584d87d748f",
+                    "homepage": "https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.0.9/jquery.mCustomScrollbar.concat.min.js",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-SecurityShepherd-v3.0",
+                    "name": "SecurityShepherdv3.0",
+                    "downloadLocation": "https://api.github.com/repos/OWASP/SecurityShepherd",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "GPL-3.0",
+                    "licenseInfoFromFiles": [
+                        "GPL-3.0"
+                    ],
+                    "licenseDeclared": "GPL-3.0",
+                    "copyrightText": "['OWASP Foundation Inc.']",
+                    "versionInfo": "v3.0",
+                    "packageFileName": "SecurityShepherd-v3.0",
+                    "supplier": "Organization: OWASP (NOASSERTION)",
+                    "originator": "Organization: OWASP (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "d8138309eab320fc895e502d6b60e0f2552168b0"
+                        }
+                    ],
+                    "sha1": "d8138309eab320fc895e502d6b60e0f2552168b0",
+                    "homepage": "https://api.github.com/repos/OWASP/SecurityShepherd",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-memory-game-master_2012-04-02",
+                    "name": "memory-gamemaster_2012-04-02",
+                    "downloadLocation": "https://api.github.com/repos/jcarrig/memory-game",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "NONE",
+                    "licenseInfoFromFiles": [],
+                    "licenseDeclared": "NONE",
+                    "copyrightText": "NONE",
+                    "versionInfo": "master_2012-04-02",
+                    "packageFileName": "memory-game-master_2012-04-02",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "c574792f447ad0bab4b484cc5892936bda42fa87"
+                        }
+                    ],
+                    "sha1": "c574792f447ad0bab4b484cc5892936bda42fa87",
+                    "homepage": "https://api.github.com/repos/jcarrig/memory-game",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-stream-master_2012-01-31",
+                    "name": "streammaster_2012-01-31",
+                    "downloadLocation": "https://api.github.com/repos/invincibleanks/stream",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "NONE",
+                    "licenseInfoFromFiles": [],
+                    "licenseDeclared": "NONE",
+                    "copyrightText": "NONE",
+                    "versionInfo": "master_2012-01-31",
+                    "packageFileName": "stream-master_2012-01-31",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "03582cc40680a38abe16fbea3ebed2647f23eb90"
+                        }
+                    ],
+                    "sha1": "03582cc40680a38abe16fbea3ebed2647f23eb90",
+                    "homepage": "https://api.github.com/repos/invincibleanks/stream",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-json-20180130.jar",
+                    "name": "JSON in Java",
+                    "downloadLocation": "https://github.com/douglascrockford/JSON-java",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "JSON",
+                    "licenseInfoFromFiles": [
+                        "JSON"
+                    ],
+                    "licenseDeclared": "JSON",
+                    "copyrightText": "['Copyright 2002 JSON.org']",
+                    "versionInfo": "20180130",
+                    "packageFileName": "json-20180130.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "26ba2ec0e791a32ea5dfbedfcebf36447ee5b12c"
+                        }
+                    ],
+                    "sha1": "26ba2ec0e791a32ea5dfbedfcebf36447ee5b12c",
+                    "homepage": "https://github.com/douglascrockford/JSON-java",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-spring-beans-5.0.7.RELEASE.jar",
+                    "name": "Spring Beans",
+                    "downloadLocation": "https://github.com/spring-projects/spring-framework",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>']",
+                    "versionInfo": "5.0.7.RELEASE",
+                    "packageFileName": "spring-beans-5.0.7.RELEASE.jar",
+                    "supplier": "Organization: Spring IO (NOASSERTION)",
+                    "originator": "Organization: Spring IO (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "c1196cb3e56da83e3c3a02ef323699f4b05feedc"
+                        }
+                    ],
+                    "sha1": "c1196cb3e56da83e3c3a02ef323699f4b05feedc",
+                    "homepage": "https://github.com/spring-projects/spring-framework",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-byte-buddy-agent-1.9.0.jar",
+                    "name": "Byte Buddy Java agent",
+                    "downloadLocation": "http://bytebuddy.net",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "NONE",
+                    "versionInfo": "1.9.0",
+                    "packageFileName": "byte-buddy-agent-1.9.0.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "37b5703b4a6290be3fffc63ae9c6bcaaee0ff856"
+                        }
+                    ],
+                    "sha1": "37b5703b4a6290be3fffc63ae9c6bcaaee0ff856",
+                    "homepage": "http://bytebuddy.net",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-byte-buddy-1.9.0.jar",
+                    "name": "Byte Buddy (without dependencies)",
+                    "downloadLocation": "http://bytebuddy.net",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "NONE",
+                    "versionInfo": "1.9.0",
+                    "packageFileName": "byte-buddy-1.9.0.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "8cb0d5baae526c9df46ae17693bbba302640538b"
+                        }
+                    ],
+                    "sha1": "8cb0d5baae526c9df46ae17693bbba302640538b",
+                    "homepage": "http://bytebuddy.net",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-mockito-core-2.23.0.jar",
+                    "name": "mockito-core",
+                    "downloadLocation": "https://github.com/mockito/mockito",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "['Copyright 2007 Mockito contributors']",
+                    "versionInfo": "2.23.0",
+                    "packageFileName": "mockito-core-2.23.0.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "497ddb32fd5d01f9dbe99a2ec790aeb931dff1b1"
+                        }
+                    ],
+                    "sha1": "497ddb32fd5d01f9dbe99a2ec790aeb931dff1b1",
+                    "homepage": "https://github.com/mockito/mockito",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-spring-aop-5.1.1.RELEASE.jar",
+                    "name": "Spring AOP",
+                    "downloadLocation": "https://github.com/spring-projects/spring-framework",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>']",
+                    "versionInfo": "5.1.1.RELEASE",
+                    "packageFileName": "spring-aop-5.1.1.RELEASE.jar",
+                    "supplier": "Organization: Spring IO (NOASSERTION)",
+                    "originator": "Organization: Spring IO (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "d7b2873a244ea6bbe42e6f63a95b7e3b71817508"
+                        }
+                    ],
+                    "sha1": "d7b2873a244ea6bbe42e6f63a95b7e3b71817508",
+                    "homepage": "https://github.com/spring-projects/spring-framework",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-spring-tx-5.1.1.RELEASE.jar",
+                    "name": "Spring Transaction",
+                    "downloadLocation": "https://github.com/spring-projects/spring-framework",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>']",
+                    "versionInfo": "5.1.1.RELEASE",
+                    "packageFileName": "spring-tx-5.1.1.RELEASE.jar",
+                    "supplier": "Organization: Spring IO (NOASSERTION)",
+                    "originator": "Organization: Spring IO (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "a3c577ae3a20797e9cfcb3c3af841777e8ebc5de"
+                        }
+                    ],
+                    "sha1": "a3c577ae3a20797e9cfcb3c3af841777e8ebc5de",
+                    "homepage": "https://github.com/spring-projects/spring-framework",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-spring-context-5.1.1.RELEASE.jar",
+                    "name": "Spring Context",
+                    "downloadLocation": "https://github.com/spring-projects/spring-framework",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen']",
+                    "versionInfo": "5.1.1.RELEASE",
+                    "packageFileName": "spring-context-5.1.1.RELEASE.jar",
+                    "supplier": "Organization: Spring IO (NOASSERTION)",
+                    "originator": "Organization: Spring IO (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "f1d8a23e90bf4f6532f0a4c868c55c0930d88108"
+                        }
+                    ],
+                    "sha1": "f1d8a23e90bf4f6532f0a4c868c55c0930d88108",
+                    "homepage": "https://github.com/spring-projects/spring-framework",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-spring-expression-5.1.1.RELEASE.jar",
+                    "name": "Spring Expression Language (SpEL)",
+                    "downloadLocation": "https://github.com/spring-projects/spring-framework",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>']",
+                    "versionInfo": "5.1.1.RELEASE",
+                    "packageFileName": "spring-expression-5.1.1.RELEASE.jar",
+                    "supplier": "Organization: Spring IO (NOASSERTION)",
+                    "originator": "Organization: Spring IO (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "75979adece6da931d5d3718db0d253f14f249c26"
+                        }
+                    ],
+                    "sha1": "75979adece6da931d5d3718db0d253f14f249c26",
+                    "homepage": "https://github.com/spring-projects/spring-framework",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-spring-data-commons-2.1.1.RELEASE.jar",
+                    "name": "Spring Data Core",
+                    "downloadLocation": "http://www.spring.io/spring-data",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen']",
+                    "versionInfo": "2.1.1.RELEASE",
+                    "packageFileName": "spring-data-commons-2.1.1.RELEASE.jar",
+                    "supplier": "Organization: Pivotal Software, Inc. (NOASSERTION)",
+                    "originator": "Organization: Pivotal Software, Inc. (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "62648df81233a4f4072ee317e6d10cdfcfe39f35"
+                        }
+                    ],
+                    "sha1": "62648df81233a4f4072ee317e6d10cdfcfe39f35",
+                    "homepage": "http://www.spring.io/spring-data",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-spring-data-mongodb-2.1.1.RELEASE.jar",
+                    "name": "Spring Data MongoDB - Core",
+                    "downloadLocation": "http://projects.spring.io/spring-data-mongodb",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen']",
+                    "versionInfo": "2.1.1.RELEASE",
+                    "packageFileName": "spring-data-mongodb-2.1.1.RELEASE.jar",
+                    "supplier": "Organization: Pivotal Software, Inc. (NOASSERTION)",
+                    "originator": "Organization: Pivotal Software, Inc. (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "44d6c4d29a74aeb9ee7b988eed1a130154b400ac"
+                        }
+                    ],
+                    "sha1": "44d6c4d29a74aeb9ee7b988eed1a130154b400ac",
+                    "homepage": "http://projects.spring.io/spring-data-mongodb",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-joda-time-2.10.3.jar",
+                    "name": "Joda-Time",
+                    "downloadLocation": "https://www.joda.org/joda-time/",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Joda.org']",
+                    "versionInfo": "2.10.3",
+                    "packageFileName": "joda-time-2.10.3.jar",
+                    "supplier": "Organization: Joda.org (NOASSERTION)",
+                    "originator": "Organization: Joda.org (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "2e5366cf1f77ca3bafffecf6e87d30e1d504e959"
+                        }
+                    ],
+                    "sha1": "2e5366cf1f77ca3bafffecf6e87d30e1d504e959",
+                    "homepage": "https://www.joda.org/joda-time/",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-xmlsec-2.1.4.jar",
+                    "name": "Apache XML Security for Java",
+                    "downloadLocation": "https://santuario.apache.org/",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2000-2019 The Apache Software Foundation']",
+                    "versionInfo": "2.1.4",
+                    "packageFileName": "xmlsec-2.1.4.jar",
+                    "supplier": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "originator": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "cb43326f02e3e77526c24269c8b5d3cc3f7f6653"
+                        }
+                    ],
+                    "sha1": "cb43326f02e3e77526c24269c8b5d3cc3f7f6653",
+                    "homepage": "https://santuario.apache.org/",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-java-saml-2.5.0.jar",
+                    "name": "OneLogin java-saml Toolkit",
+                    "downloadLocation": "https://github.com/onelogin/java-saml",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "['Copyright 2010-2016 OneLogin, Inc']",
+                    "versionInfo": "2.5.0",
+                    "packageFileName": "java-saml-2.5.0.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "98ef55b85676076f1fc94cc68d359e826170a16b"
+                        }
+                    ],
+                    "sha1": "98ef55b85676076f1fc94cc68d359e826170a16b",
+                    "homepage": "https://github.com/onelogin/java-saml",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-java-saml-core-2.5.0.jar",
+                    "name": "OneLogin java-saml Toolkit Core",
+                    "downloadLocation": "https://github.com/onelogin/java-saml",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "['Copyright 2010-2016 OneLogin, Inc']",
+                    "versionInfo": "2.5.0",
+                    "packageFileName": "java-saml-core-2.5.0.jar",
+                    "supplier": "NOASSERTION",
+                    "originator": "NOASSERTION",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "ec4c26db2b833511836f2cf37f445c275d0dff45"
+                        }
+                    ],
+                    "sha1": "ec4c26db2b833511836f2cf37f445c275d0dff45",
+                    "homepage": "https://github.com/onelogin/java-saml",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-clipboard-v1.4.1",
+                    "name": "clipboardv1.4.1",
+                    "downloadLocation": "https://github.com/shennit/clipboard.git",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "NONE",
+                    "versionInfo": "v1.4.1",
+                    "packageFileName": "clipboard-v1.4.1",
+                    "supplier": "Organization: shennit (NOASSERTION)",
+                    "originator": "Organization: shennit (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "b3ad81570e7763eb1dd476f54d89ae3abed2506f"
+                        }
+                    ],
+                    "sha1": "b3ad81570e7763eb1dd476f54d89ae3abed2506f",
+                    "homepage": "https://github.com/shennit/clipboard.git",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-commons-codec-1.6.jar",
+                    "name": "Commons Codec",
+                    "downloadLocation": "http://commons.apache.org/codec/",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2002 Kevin Atkinson (kevina@gnu.org)', 'Copyright 2002-2011 The Apache Software Foundation']",
+                    "versionInfo": "1.6",
+                    "packageFileName": "commons-codec-1.6.jar",
+                    "supplier": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "originator": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "b7f0fc8f61ecadeb3695f0b9464755eee44374d4"
+                        }
+                    ],
+                    "sha1": "b7f0fc8f61ecadeb3695f0b9464755eee44374d4",
+                    "homepage": "http://commons.apache.org/codec/",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-commons-logging-1.2.jar",
+                    "name": "Apache Commons Logging",
+                    "downloadLocation": "NOASSERTION",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "Apache-2.0",
+                    "licenseInfoFromFiles": [
+                        "Apache-2.0"
+                    ],
+                    "licenseDeclared": "Apache-2.0",
+                    "copyrightText": "['Copyright 2003-2014 The Apache Software Foundation']",
+                    "versionInfo": "1.2",
+                    "packageFileName": "commons-logging-1.2.jar",
+                    "supplier": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "originator": "Organization: The Apache Software Foundation (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "4bfc12adfe4842bf07b657f0369c4cb522955686"
+                        }
+                    ],
+                    "sha1": "4bfc12adfe4842bf07b657f0369c4cb522955686",
+                    "homepage": "NOASSERTION",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-clipboard-rails-v1.4.1",
+                    "name": "clipboard-railsv1.4.1",
+                    "downloadLocation": "https://api.github.com/repos/sadiqmmm/clipboard-rails",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "MIT",
+                    "licenseInfoFromFiles": [
+                        "MIT"
+                    ],
+                    "licenseDeclared": "MIT",
+                    "copyrightText": "NONE",
+                    "versionInfo": "v1.4.1",
+                    "packageFileName": "clipboard-rails-v1.4.1",
+                    "supplier": "Organization: sadiqmmm (NOASSERTION)",
+                    "originator": "Organization: sadiqmmm (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "575d373f5b26fa6005d3b4080538bfa37eec0684"
+                        }
+                    ],
+                    "sha1": "575d373f5b26fa6005d3b4080538bfa37eec0684",
+                    "homepage": "https://api.github.com/repos/sadiqmmm/clipboard-rails",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-mariadb-java-client-2.7.1.jar",
+                    "name": "mariadb-java-client",
+                    "downloadLocation": "NOASSERTION",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "LGPL-2.1",
+                    "licenseInfoFromFiles": [
+                        "LGPL-2.1"
+                    ],
+                    "licenseDeclared": "LGPL-2.1",
+                    "copyrightText": "['Copyright 2009-2011 Marcus Eriksson', 'Copyright 2012-2014 Monty Program Ab', 'Copyright 2015-2020 MariaDB Corporation Ab']",
+                    "versionInfo": "2.7.1",
+                    "packageFileName": "mariadb-java-client-2.7.1.jar",
+                    "supplier": "Organization: mariadb.com (NOASSERTION)",
+                    "originator": "Organization: mariadb.com (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "3b8c972f7518d4e0e2a070e9e877ebcfba2d2db8"
+                        }
+                    ],
+                    "sha1": "3b8c972f7518d4e0e2a070e9e877ebcfba2d2db8",
+                    "homepage": "NOASSERTION",
+                    "files": []
+                }
+            },
+            {
+                "Package": {
+                    "SPDXID": "SPDXRef-PACKAGE-SecurityShepherd-v3.1",
+                    "name": "SecurityShepherdv3.1",
+                    "downloadLocation": "https://github.com/OWASP/SecurityShepherd.git",
+                    "packageVerificationCode": {
+                        "packageVerificationCodeValue": null
+                    },
+                    "licenseConcluded": "GPL-3.0",
+                    "licenseInfoFromFiles": [
+                        "GPL-3.0"
+                    ],
+                    "licenseDeclared": "GPL-3.0",
+                    "copyrightText": "NONE",
+                    "versionInfo": "v3.1",
+                    "packageFileName": "SecurityShepherd-v3.1",
+                    "supplier": "Organization: OWASP (NOASSERTION)",
+                    "originator": "Organization: OWASP (NOASSERTION)",
+                    "checksums": [
+                        {
+                            "algorithm": "checksumAlgorithm_sha-1",
+                            "checksumValue": "d5c716629a9ff66b9dce2360e7b11a0c34bc9674"
+                        }
+                    ],
+                    "sha1": "d5c716629a9ff66b9dce2360e7b11a0c34bc9674",
+                    "homepage": "https://github.com/OWASP/SecurityShepherd.git",
+                    "files": []
+                }
+            }
+        ],
+        "relationships": [
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-activation-1.1.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-jtidy-r938.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-hamcrest-core-1.1.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-junit-4.10.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-jstl-1.2.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-log4j-1.2.7.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-json-simple-1.1.1.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-mail-1.4.7.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-mysql-connector-java-5.1.24.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-stax2-api-3.1.4.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-slf4j-api-1.7.12.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-commons-lang3-3.4.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-jsoup-1.8.2.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-jna-4.2.1.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-commons-io-2.5.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-woodstox-core-5.0.3.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-mongo-java-driver-3.4.1.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-encoder-1.2.1.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-argon2-jvm-2.2.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-objenesis-2.6.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-jquery-ui-1.11.4.min.js",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-jquery-ui-1.8.19.min.js",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-jquery.mCustomScrollbar.concat-3.0.9.min.js",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-SecurityShepherd-v3.0",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-memory-game-master_2012-04-02",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-stream-master_2012-01-31",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-json-20180130.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-spring-beans-5.0.7.RELEASE.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-byte-buddy-agent-1.9.0.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-byte-buddy-1.9.0.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-mockito-core-2.23.0.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-spring-aop-5.1.1.RELEASE.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-spring-tx-5.1.1.RELEASE.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-spring-context-5.1.1.RELEASE.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-spring-expression-5.1.1.RELEASE.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-spring-data-commons-2.1.1.RELEASE.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-spring-data-mongodb-2.1.1.RELEASE.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-joda-time-2.10.3.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-xmlsec-2.1.4.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-java-saml-2.5.0.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-java-saml-core-2.5.0.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-clipboard-v1.4.1",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-commons-codec-1.6.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-commons-logging-1.2.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-clipboard-rails-v1.4.1",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-mariadb-java-client-2.7.1.jar",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            },
+            {
+                "spdxElementId": "SPDXRef-PACKAGE-SecurityShepherd-v3.1",
+                "relatedSpdxElement": "SPDXRef-DOCUMENT",
+                "relationshipType": "DESCRIBED_BY"
+            }
+        ]
+    }
+}
