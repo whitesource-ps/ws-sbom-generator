@@ -3,6 +3,7 @@ import logging
 import os
 import argparse
 import sys
+from enum import Enum
 
 import spdx.document
 from spdx import version, creationinfo
@@ -46,8 +47,8 @@ def create_sbom_doc() -> spdx.document.Document:
     for pkg_id in pkgs_spdx_ids:
         doc.relationships.append(Relationship(relationship=f"{pkg_id} {RelationshipType.DESCRIBED_BY.name} {doc_spdx_id}"))
 
-    file_path = write_file(doc, args.type)
-    logging.info("Finished report")
+    file_path = write_report(doc, args.type)
+    logging.info(f"Finished report: {scope['type']}")
 
     return file_path
 
@@ -105,14 +106,18 @@ def create_package(lib, dd_dict):
     dd_keys = [(lib.get('filename'), lic['name']) for lic in lib_licenses]
     dd_entities = [dd_dict.get(dd_key) for dd_key in dd_keys]
     originator = NoAssert()
-    if dd_entities:
+    lib_copyrights = lib.get('copyrightReferences')
+
+    if dd_entities:                                             # Trying to get Author from Due Diligence
         author = dd_entities[0].get('author')
-        if author:
-            originator = creationinfo.Organization(author, NoAssert())
+    if not author:                                              # If failed from DD, trying from lib
+        logging.debug("No author found from Due Diligence data. Will to get copyright from library data")
+        author = get_author_from_cr(lib_copyrights)
+    if author:
+        originator = creationinfo.Organization(author, NoAssert())
     else:
         logging.warning(f"Unable to find the author of library: {lib['name']} ")
 
-    lib_copyrights = lib.get('copyrightReferences')
     copyrights = [c.get('copyright') for c in lib_copyrights]
     if not copyrights:
         logging.warning(f"No copyright info found for library: {lib['name']}")
@@ -135,13 +140,10 @@ def create_package(lib, dd_dict):
     package.check_sum = Algorithm(identifier="SHA-1", value=lib['sha1'])
 
     licenses = [License(full_name=lic.get('name'), identifier=lic.get('spdxName')) for lic in lib_licenses]
-    for lic in licenses:
-        package.add_lics_from_file(lic)
-
+    package.licenses_from_files = licenses
     if len(licenses) > 1:
         logging.warning(f"Library {lib['name']} has {len(licenses)} licenses. Using the 1st one")
-
-    if licenses:                                # TODO should be fixed in SPDX-TOOLS as it is possible to have multiple lics
+    if licenses:                         # TODO should be fixed in SPDX-TOOLS as it is possible to have multiple lics
         licenses = licenses[0]
     else:
         logging.warning(f"No license found for library: {lib['name']}")
@@ -150,10 +152,20 @@ def create_package(lib, dd_dict):
     package.conc_lics = licenses
 
     package.license_declared = licenses
-    package.cr_text = copyrights                                        # TODO should be fixed in SPDX-TOOLS as is possible to have multiple copyrights
+    package.cr_text = copyrights         # TODO should be fixed in SPDX-TOOLS as is possible to have multiple copyrights
     logging.debug(f"Finished creating Package {pkg_spdx_id}")
 
     return package, pkg_spdx_id
+
+
+def get_author_from_cr(copyright_references: list) -> str:
+    authors = [a['author'] for a in copyright_references if a.get('author')]
+    if len(authors) > 1:
+        logging.warning(f"Found {len(authors)} authors on the lib. Will return the 1st")
+    elif not authors:
+        logging.warning("No author data found on lib")
+
+    return authors.pop() if authors else None
 
 
 def init():
@@ -166,20 +178,22 @@ def init():
         fp = open(args.extra, 'r')
         args.extra_conf = json.loads(fp.read())
     except FileNotFoundError:
-        logging.warning(f"Extra configuration file: {args.extra} was not found")
+        logging.warning(f"{args.extra} configuration file was not found")
     except json.JSONDecodeError:
         logging.error(f"Unable to parse file: {args.extra}")
 
 
 def parse_args():
+    real_path = os.path.dirname(os.path.realpath(__file__))
+    resource_real_path = os.path.join(real_path, "resources")
     parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
     parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', required=True)
     parser.add_argument('-k', '--token', help="WS Organization Key", dest='ws_token', required=True)
     parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=True)
     parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default="saas")
-    parser.add_argument('-t', '--type', help="Output type", dest='type', choices=["tv", "json", "xml", "rdf", "yaml"], default='json')
-    parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default='sbom_extra.json')
-    parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
+    parser.add_argument('-t', '--type', help="Output type", dest='type', choices=["tv", "json", "xml", "rdf", "yaml", "all"], default='tv')
+    parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
+    parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.path.join(real_path, "output"))
 
     return parser.parse_args()
 
@@ -193,24 +207,59 @@ def replace_invalid_chars(filename: str) -> str:
     return filename
 
 
-def write_file(doc: Document, type: str) -> ():
-    # Type: (suffix, module_name, f_open_flags, encoding)
-    file_types = {"json": ("json", "spdx.writers.json", "w", None),
-                  "tv": ("tv", "spdx.writers.tagvalue", "w", "utf-8"),
-                  "rdf": ("xml", "spdx.writers.rdf", "wb", None),
-                  "xml": ("xml", "spdx.writers.xml", "wb", None),
-                  "yaml": ("yml", "spdx.writers.yaml", "wb", None)}
+def write_report(doc: Document, file_type: str) -> str:
+    class SPDXFileType(Enum):
+        # Type = (suffix, module_classpath, f_flags, encoding)
+        JSON = ("json", "spdx.writers.json", "w", None)
+        TV = ("tv", "spdx.writers.tagvalue", "w", "utf-8")
+        RDF = ("xml", "spdx.writers.rdf", "wb", None)
+        XML = ("xml", "spdx.writers.xml", "wb", None)
+        YAML = ("yml", "spdx.writers.yaml", "wb", None)
 
-    report_file = replace_invalid_chars(f"{doc.name}-{doc.version}.{file_types[type][0]}")
-    full_path = os.path.join(args.out_dir, report_file)
+        def __str__(self):
+            return self.name
+
+        @classmethod
+        def get_file_type(cls, f_t: str):
+            return cls.__dict__[f_t.upper()]
+
+        @property
+        def suffix(self):
+            return self.value[0]
+
+        @property
+        def module_classpath(self):
+            return self.value[1]
+
+        @property
+        def f_flags(self):
+            return self.value[2]
+
+        @property
+        def encoding(self):
+            return self.value[3]
+
+    f_types = SPDXFileType.__members__ if file_type == "all" else [file_type]
+    full_paths = []
+    for f_type in f_types:
+        full_path = write_file(SPDXFileType, doc, f_type, file_type)
+
+        full_paths.append(full_path)
+
+    return full_paths
+
+
+def write_file(spdx_f_t_enum, doc, f_type, file_type):
+    logging.info(f"Saving report in {json} format")
+    spdx_file_type = spdx_f_t_enum.get_file_type(f_type)
+    report_filename = replace_invalid_chars(f"{doc.name}-{doc.version}.{spdx_file_type.suffix}")
+    full_path = os.path.join(args.out_dir, report_filename)
     import importlib
-
-    module = importlib.import_module(file_types[type][1])  # Dynamically loading appropriate writer module
-    logging.debug(f"Writing file: {full_path} in format: {type}")
-
-    with open(full_path, file_types[type][2], encoding=file_types[type][3]) as fp:
+    module = importlib.import_module(
+        spdx_file_type.module_classpath)  # Dynamically loading appropriate writer module
+    logging.debug(f"Writing file: {full_path} in format: {file_type}")
+    with open(full_path, mode=spdx_file_type.f_flags, encoding=spdx_file_type.encoding) as fp:
         module.write_document(doc, fp)
-
     return full_path
 
 

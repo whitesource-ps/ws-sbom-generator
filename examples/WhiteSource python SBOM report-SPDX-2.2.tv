@@ -1,0 +1,852 @@
+# Document Information
+
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+DocumentNamespace: http://CreatorWebsite/pathToSpdx/DocumentName-UUID
+DocumentName: WhiteSource python SBOM report
+SPDXID: SPDXRef-DOCUMENT
+
+
+# Creation Info
+
+Creator: Organization: PS CI environment (org@email.address)
+Creator: Tool: White Source SBOM Report Generator
+Creator: Person: person name (person@email.address)
+Created: 2021-10-17T20:39:57Z
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-xregexp-all-3.2.0.js DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-ol-4.6.5.js DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-alabaster-0.7.12-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-imagesize-1.2.0-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-docutils-0.16-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-pyparsing-2.4.7-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-jquery-3.5.1.min.js DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-jquery-3.5.1.js DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-select2.full-4.0.13.js DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-idna-2.10-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-typing_extensions-3.7.4.3-py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-colorama-0.4.4-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-Babel-2.9.0-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-sphinxcontrib_spelling-7.1.0-py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-certifi-2020.12.5-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-chardet-4.0.0-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-requests-2.25.1-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-snowballstemmer-2.1.0-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-packaging-20.9-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-Jinja2-2.11.3-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-pytz-2021.1-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-zipp-3.4.1-py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-Pygments-2.8.1-py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-urllib3-1.26.4-py2.py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-setuptools-56.0.0-py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-Sphinx-3.5.4-py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-django-d4d800ca1addc4141e03c5440a849bb64d1582cd DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-importlib_metadata-4.0.1-py3-none-any.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Relationships
+
+Relationship: SPDXRef-PACKAGE-pyenchant-3.2.0-py3-none-win_amd64.whl DESCRIBED_BY SPDXRef-DOCUMENT
+
+
+# Package
+
+PackageName: xregexp
+SPDXID: SPDXRef-PACKAGE-xregexp-all-3.2.0.js
+PackageVersion: 3.2.0
+PackageDownloadLocation: https://cdnjs.cloudflare.com/ajax/libs/xregexp/3.2.0/xregexp-all.js
+FilesAnalyzed: False
+PackageFileName: xregexp-all-3.2.0.js
+PackageSupplier: NOASSERTION
+PackageOriginator: NOASSERTION
+PackageChecksum: SHA-1: 756e1901e014b1e1bfa87918d8ee5ca1fca6f184
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: NONE
+PackageHomePage: https://cdnjs.cloudflare.com/ajax/libs/xregexp/3.2.0/xregexp-all.js
+
+
+# Package
+
+PackageName: openlayers
+SPDXID: SPDXRef-PACKAGE-ol-4.6.5.js
+PackageVersion: 4.6.5
+PackageDownloadLocation: https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js
+FilesAnalyzed: False
+PackageFileName: ol-4.6.5.js
+PackageSupplier: NOASSERTION
+PackageOriginator: NOASSERTION
+PackageChecksum: SHA-1: 7ef35d903abc427d8d856be6d7c6dbe061a9e953
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: NONE
+PackageHomePage: https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js
+
+
+# Package
+
+PackageName: alabaster
+SPDXID: SPDXRef-PACKAGE-alabaster-0.7.12-py2.py3-none-any.whl
+PackageVersion: 0.7.12
+PackageDownloadLocation: https://files.pythonhosted.org/packages/10/ad/00b090d23a222943eb0eda509720a404f531a439e803f6538f35136cae9e/alabaster-0.7.12-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: alabaster-0.7.12-py2.py3-none-any.whl
+PackageSupplier: Organization: Jeff Forcier (NOASSERTION)
+PackageOriginator: Organization: Jeff Forcier (NOASSERTION)
+PackageChecksum: SHA-1: 2f921fdec63547d20d171de41bc50916aebf5fd2
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2018 Jeff Forcier', 'Copyright 2011 Kenneth Reitz and copyright (c) 2010']
+PackageHomePage: https://files.pythonhosted.org/packages/10/ad/00b090d23a222943eb0eda509720a404f531a439e803f6538f35136cae9e/alabaster-0.7.12-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: sphinxcontrib-jsmath
+SPDXID: SPDXRef-PACKAGE-sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+PackageVersion: 1.0.1
+PackageDownloadLocation: https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+PackageSupplier: Organization: Georg Brandl (NOASSERTION)
+PackageOriginator: Organization: Georg Brandl (NOASSERTION)
+PackageChecksum: SHA-1: beff4fc35d13a5f2883bc129f28ac031046195c5
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2007-2019 by the Sphinx team']
+PackageHomePage: https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: MarkupSafe
+SPDXID: SPDXRef-PACKAGE-MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl
+PackageVersion: 1.1.1
+PackageDownloadLocation: https://files.pythonhosted.org/packages/b9/82/833c7714951bff8f502ed054e6fbd8bd00e083d1fd96de6a46905cf23378/MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl
+FilesAnalyzed: False
+PackageFileName: MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl
+PackageSupplier: Organization: Armin Ronacher (NOASSERTION)
+PackageOriginator: Organization: Armin Ronacher (NOASSERTION)
+PackageChecksum: SHA-1: bab0d6dfa83f230c705d7eefca449177779065af
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageCopyrightText: ['Copyright 2010 Pallets']
+PackageHomePage: https://files.pythonhosted.org/packages/b9/82/833c7714951bff8f502ed054e6fbd8bd00e083d1fd96de6a46905cf23378/MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl
+
+
+# Package
+
+PackageName: imagesize
+SPDXID: SPDXRef-PACKAGE-imagesize-1.2.0-py2.py3-none-any.whl
+PackageVersion: 1.2.0
+PackageDownloadLocation: https://files.pythonhosted.org/packages/31/b2/b5522a0c8d11e4aff83f8342f3f0dea68c2fb25aa44403e420587f0ce204/imagesize-1.2.0-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: imagesize-1.2.0-py2.py3-none-any.whl
+PackageSupplier: Organization: Yoshiki Shibukawa (NOASSERTION)
+PackageOriginator: Organization: Yoshiki Shibukawa (NOASSERTION)
+PackageChecksum: SHA-1: 7cbbdac32029c5d0e1ccaea6eb4384956ec6c683
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Copyright 2016 Yoshiki Shibukawa']
+PackageHomePage: https://files.pythonhosted.org/packages/31/b2/b5522a0c8d11e4aff83f8342f3f0dea68c2fb25aa44403e420587f0ce204/imagesize-1.2.0-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: docutils
+SPDXID: SPDXRef-PACKAGE-docutils-0.16-py2.py3-none-any.whl
+PackageVersion: 0.16
+PackageDownloadLocation: https://files.pythonhosted.org/packages/81/44/8a15e45ffa96e6cf82956dd8d7af9e666357e16b0d93b253903475ee947f/docutils-0.16-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: docutils-0.16-py2.py3-none-any.whl
+PackageSupplier: Organization: David Goodger (NOASSERTION)
+PackageOriginator: Organization: David Goodger (NOASSERTION)
+PackageChecksum: SHA-1: 16c8a2c9de0db445973404f9d0caa1d58014f61f
+PackageLicenseDeclared: CC-PDDC
+PackageLicenseConcluded: CC-PDDC
+PackageLicenseInfoFromFiles: CC-PDDC
+PackageCopyrightText: ['Copyright 2011 Günter Milde,']
+PackageHomePage: https://files.pythonhosted.org/packages/81/44/8a15e45ffa96e6cf82956dd8d7af9e666357e16b0d93b253903475ee947f/docutils-0.16-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: sphinxcontrib-htmlhelp
+SPDXID: SPDXRef-PACKAGE-sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl
+PackageVersion: 1.0.3
+PackageDownloadLocation: https://files.pythonhosted.org/packages/36/62/8222554b29b3acde8420128d6d3999c5904d40922ef4b6ccb370e2be7421/sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl
+PackageSupplier: Organization: Georg Brandl (NOASSERTION)
+PackageOriginator: Organization: Georg Brandl (NOASSERTION)
+PackageChecksum: SHA-1: e6846cc61024255030f76313a68c29cb9ffb6523
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2007-2019 by the Sphinx team']
+PackageHomePage: https://files.pythonhosted.org/packages/36/62/8222554b29b3acde8420128d6d3999c5904d40922ef4b6ccb370e2be7421/sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: sphinxcontrib-serializinghtml
+SPDXID: SPDXRef-PACKAGE-sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl
+PackageVersion: 1.1.4
+PackageDownloadLocation: https://files.pythonhosted.org/packages/9a/ca/bfad79b79b3821d0c6361c431f0ef4aec16ee248338b2c2013008b34d345/sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl
+PackageSupplier: Organization: Georg Brandl (NOASSERTION)
+PackageOriginator: Organization: Georg Brandl (NOASSERTION)
+PackageChecksum: SHA-1: 6c84f22d87ebec63d1d75a2e27db8433013b8287
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2007-2019 by the Sphinx team']
+PackageHomePage: https://files.pythonhosted.org/packages/9a/ca/bfad79b79b3821d0c6361c431f0ef4aec16ee248338b2c2013008b34d345/sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: sphinxcontrib-applehelp
+SPDXID: SPDXRef-PACKAGE-sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl
+PackageVersion: 1.0.2
+PackageDownloadLocation: https://files.pythonhosted.org/packages/dc/47/86022665a9433d89a66f5911b558ddff69861766807ba685de2e324bd6ed/sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl
+PackageSupplier: Organization: Georg Brandl (NOASSERTION)
+PackageOriginator: Organization: Georg Brandl (NOASSERTION)
+PackageChecksum: SHA-1: 8445b42d038791c07977c082c6733dca2101b60a
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2007-2019 by the Sphinx team']
+PackageHomePage: https://files.pythonhosted.org/packages/dc/47/86022665a9433d89a66f5911b558ddff69861766807ba685de2e324bd6ed/sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: sphinxcontrib-devhelp
+SPDXID: SPDXRef-PACKAGE-sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl
+PackageVersion: 1.0.2
+PackageDownloadLocation: https://files.pythonhosted.org/packages/c5/09/5de5ed43a521387f18bdf5f5af31d099605c992fd25372b2b9b825ce48ee/sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl
+PackageSupplier: Organization: Georg Brandl (NOASSERTION)
+PackageOriginator: Organization: Georg Brandl (NOASSERTION)
+PackageChecksum: SHA-1: 6c8f3553adb32d565132b8424c3ea0506fc59eea
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2007-2019 by the Sphinx team']
+PackageHomePage: https://files.pythonhosted.org/packages/c5/09/5de5ed43a521387f18bdf5f5af31d099605c992fd25372b2b9b825ce48ee/sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: sphinxcontrib-qthelp
+SPDXID: SPDXRef-PACKAGE-sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl
+PackageVersion: 1.0.3
+PackageDownloadLocation: https://files.pythonhosted.org/packages/2b/14/05f9206cf4e9cfca1afb5fd224c7cd434dcc3a433d6d9e4e0264d29c6cdb/sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl
+PackageSupplier: Organization: Georg Brandl (NOASSERTION)
+PackageOriginator: Organization: Georg Brandl (NOASSERTION)
+PackageChecksum: SHA-1: 328d8183d0d578bab53bcc9a827070ae005ee568
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2007-2019 by the Sphinx team']
+PackageHomePage: https://files.pythonhosted.org/packages/2b/14/05f9206cf4e9cfca1afb5fd224c7cd434dcc3a433d6d9e4e0264d29c6cdb/sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: pyparsing
+SPDXID: SPDXRef-PACKAGE-pyparsing-2.4.7-py2.py3-none-any.whl
+PackageVersion: 2.4.7
+PackageDownloadLocation: https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: pyparsing-2.4.7-py2.py3-none-any.whl
+PackageSupplier: Organization: Paul McGuire (NOASSERTION)
+PackageOriginator: Organization: Paul McGuire (NOASSERTION)
+PackageChecksum: SHA-1: c8307f47e3b75a2d02af72982a2dfefa3f56e407
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Unspecified Copyright']
+PackageHomePage: https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: jquery
+SPDXID: SPDXRef-PACKAGE-jquery-3.5.1.min.js
+PackageVersion: 3.5.1
+PackageDownloadLocation: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js
+FilesAnalyzed: False
+PackageFileName: jquery-3.5.1.min.js
+PackageSupplier: NOASSERTION
+PackageOriginator: NOASSERTION
+PackageChecksum: SHA-1: c8e1c8b386dc5b7a9184c763c88d19a346eb3342
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Copyright 2020 OpenJS Foundation and jQuery contributors']
+PackageHomePage: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js
+
+
+# Package
+
+PackageName: jquery
+SPDXID: SPDXRef-PACKAGE-jquery-3.5.1.js
+PackageVersion: 3.5.1
+PackageDownloadLocation: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js
+FilesAnalyzed: False
+PackageFileName: jquery-3.5.1.js
+PackageSupplier: NOASSERTION
+PackageOriginator: NOASSERTION
+PackageChecksum: SHA-1: ad16c4a132ad2a03b4951185fed46d55397b5e88
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['OpenJS Foundation and other contributors']
+PackageHomePage: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js
+
+
+# Package
+
+PackageName: select2
+SPDXID: SPDXRef-PACKAGE-select2.full-4.0.13.js
+PackageVersion: 4.0.13
+PackageDownloadLocation: https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.js
+FilesAnalyzed: False
+PackageFileName: select2.full-4.0.13.js
+PackageSupplier: NOASSERTION
+PackageOriginator: NOASSERTION
+PackageChecksum: SHA-1: 6245cdab59b33350a6833637df0941a3b2b5ab6f
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Copyright jQuery Foundation and other contributors']
+PackageHomePage: https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.js
+
+
+# Package
+
+PackageName: idna
+SPDXID: SPDXRef-PACKAGE-idna-2.10-py2.py3-none-any.whl
+PackageVersion: 2.10
+PackageDownloadLocation: https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: idna-2.10-py2.py3-none-any.whl
+PackageSupplier: Organization: Kim Davies (NOASSERTION)
+PackageOriginator: Organization: Kim Davies (NOASSERTION)
+PackageChecksum: SHA-1: 999b6718b4d789d8ca0d2ddf7c07826154291825
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageCopyrightText: ['Copyright 2013-2020 Kim Davies']
+PackageHomePage: https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: typing-extensions
+SPDXID: SPDXRef-PACKAGE-typing_extensions-3.7.4.3-py3-none-any.whl
+PackageVersion: 3.7.4.3
+PackageDownloadLocation: https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: typing_extensions-3.7.4.3-py3-none-any.whl
+PackageSupplier: Organization: Guido van Rossum, Jukka Lehtosalo, Lukasz Langa, Michael Lee (NOASSERTION)
+PackageOriginator: Organization: Guido van Rossum, Jukka Lehtosalo, Lukasz Langa, Michael Lee (NOASSERTION)
+PackageChecksum: SHA-1: 0737ee9410a7c82511dd5e732092ce4ab66d51b4
+PackageLicenseDeclared: Python-2.0
+PackageLicenseConcluded: Python-2.0
+PackageLicenseInfoFromFiles: Python-2.0
+PackageCopyrightText: ['Copyright 2001-2002 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,', 'Copyright 1991-1995 Stichting Mathematisch Centrum Amsterdam,']
+PackageHomePage: https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl
+
+
+# Package
+
+PackageName: colorama
+SPDXID: SPDXRef-PACKAGE-colorama-0.4.4-py2.py3-none-any.whl
+PackageVersion: 0.4.4
+PackageDownloadLocation: https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: colorama-0.4.4-py2.py3-none-any.whl
+PackageSupplier: Organization: Jonathan Hartley (NOASSERTION)
+PackageOriginator: Organization: Jonathan Hartley (NOASSERTION)
+PackageChecksum: SHA-1: 69a966ff2db15bee941f4efbc592d1e33024c67b
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageCopyrightText: ['Copyright 2013-2020 Arnon Yaari,', 'Copyright 2010 Jonathan Hartley']
+PackageHomePage: https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: Babel
+SPDXID: SPDXRef-PACKAGE-Babel-2.9.0-py2.py3-none-any.whl
+PackageVersion: 2.9.0
+PackageDownloadLocation: https://files.pythonhosted.org/packages/dd/a5/81076e10b5ef74493cf08a8e419e61b64324c9c55db4aa7f89c0240c4873/Babel-2.9.0-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: Babel-2.9.0-py2.py3-none-any.whl
+PackageSupplier: Organization: Armin Ronacher (NOASSERTION)
+PackageOriginator: Organization: Armin Ronacher (NOASSERTION)
+PackageChecksum: SHA-1: a9eac8945a74c8662a792aa456b966604ebb4abe
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2013-2020 by the Babel Team']
+PackageHomePage: https://files.pythonhosted.org/packages/dd/a5/81076e10b5ef74493cf08a8e419e61b64324c9c55db4aa7f89c0240c4873/Babel-2.9.0-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: sphinxcontrib-spelling
+SPDXID: SPDXRef-PACKAGE-sphinxcontrib_spelling-7.1.0-py3-none-any.whl
+PackageVersion: 7.1.0
+PackageDownloadLocation: https://files.pythonhosted.org/packages/f6/62/796d8ae02732c162f8d53406f520c9f3c886a9ab24de4ef6995404c2b1d8/sphinxcontrib_spelling-7.1.0-py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: sphinxcontrib_spelling-7.1.0-py3-none-any.whl
+PackageSupplier: Organization: Doug Hellmann (NOASSERTION)
+PackageOriginator: Organization: Doug Hellmann (NOASSERTION)
+PackageChecksum: SHA-1: d5a9665c8bf4443f54c4e6c62ecf1d63e403291f
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright 2010 by Doug Hellmann']
+PackageHomePage: https://files.pythonhosted.org/packages/f6/62/796d8ae02732c162f8d53406f520c9f3c886a9ab24de4ef6995404c2b1d8/sphinxcontrib_spelling-7.1.0-py3-none-any.whl
+
+
+# Package
+
+PackageName: certifi
+SPDXID: SPDXRef-PACKAGE-certifi-2020.12.5-py2.py3-none-any.whl
+PackageVersion: 2020.12.5
+PackageDownloadLocation: https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: certifi-2020.12.5-py2.py3-none-any.whl
+PackageSupplier: Organization: Kenneth Reitz (NOASSERTION)
+PackageOriginator: Organization: Kenneth Reitz (NOASSERTION)
+PackageChecksum: SHA-1: 7dff15a2066b8809c8772a243991bd1a25740ec3
+PackageLicenseDeclared: MPL-2.0
+PackageLicenseConcluded: MPL-2.0
+PackageLicenseInfoFromFiles: MPL-2.0
+PackageCopyrightText: ['Unspecified Copyright']
+PackageHomePage: https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: chardet
+SPDXID: SPDXRef-PACKAGE-chardet-4.0.0-py2.py3-none-any.whl
+PackageVersion: 4.0.0
+PackageDownloadLocation: https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: chardet-4.0.0-py2.py3-none-any.whl
+PackageSupplier: Organization: Mark Pilgrim (NOASSERTION)
+PackageOriginator: Organization: Mark Pilgrim (NOASSERTION)
+PackageChecksum: SHA-1: e9eb83c71c09b3c8249bd7d6d2619b65fff03874
+PackageLicenseDeclared: LGPL-3.0
+PackageLicenseConcluded: LGPL-3.0
+PackageLicenseInfoFromFiles: LGPL-3.0
+PackageCopyrightText: ['Mark Pilgrim & Dan Blanchard & Ian Cordasco']
+PackageHomePage: https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: requests
+SPDXID: SPDXRef-PACKAGE-requests-2.25.1-py2.py3-none-any.whl
+PackageVersion: 2.25.1
+PackageDownloadLocation: https://files.pythonhosted.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: requests-2.25.1-py2.py3-none-any.whl
+PackageSupplier: Organization: Kenneth Reitz (NOASSERTION)
+PackageOriginator: Organization: Kenneth Reitz (NOASSERTION)
+PackageChecksum: SHA-1: b1009d9fd6acadc64e1a3cecb6f0083fe047e753
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageCopyrightText: ['Kenneth Reitz']
+PackageHomePage: https://files.pythonhosted.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: snowballstemmer
+SPDXID: SPDXRef-PACKAGE-snowballstemmer-2.1.0-py2.py3-none-any.whl
+PackageVersion: 2.1.0
+PackageDownloadLocation: https://files.pythonhosted.org/packages/f6/6e/7e07970c90a57c21da92013c5ba47f8e9598c17e88cc35b008ca61225ed3/snowballstemmer-2.1.0-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: snowballstemmer-2.1.0-py2.py3-none-any.whl
+PackageSupplier: Organization: Snowball Developers (NOASSERTION)
+PackageOriginator: Organization: Snowball Developers (NOASSERTION)
+PackageChecksum: SHA-1: b5a04c99dd056dfb2618e4cf5f26d14dff451bfb
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageCopyrightText: ['Copyright 2004-2005 Richard Boulton', 'Copyright 2001 Dr Martin Porter', 'Copyright 2013 Yoshiki Shibukawa', 'Copyright 2006-2019 Olly Betts']
+PackageHomePage: https://files.pythonhosted.org/packages/f6/6e/7e07970c90a57c21da92013c5ba47f8e9598c17e88cc35b008ca61225ed3/snowballstemmer-2.1.0-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: packaging
+SPDXID: SPDXRef-PACKAGE-packaging-20.9-py2.py3-none-any.whl
+PackageVersion: 20.9
+PackageDownloadLocation: https://files.pythonhosted.org/packages/3e/89/7ea760b4daa42653ece2380531c90f64788d979110a2ab51049d92f408af/packaging-20.9-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: packaging-20.9-py2.py3-none-any.whl
+PackageSupplier: Organization: Donald Stufft and individual contributors (NOASSERTION)
+PackageOriginator: Organization: Donald Stufft and individual contributors (NOASSERTION)
+PackageChecksum: SHA-1: 2b10cb7681bc678ba4ff3be524b28d783e4095ce
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageCopyrightText: ['Copyright Donald Stufft and individual contributors']
+PackageHomePage: https://files.pythonhosted.org/packages/3e/89/7ea760b4daa42653ece2380531c90f64788d979110a2ab51049d92f408af/packaging-20.9-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: Jinja2
+SPDXID: SPDXRef-PACKAGE-Jinja2-2.11.3-py2.py3-none-any.whl
+PackageVersion: 2.11.3
+PackageDownloadLocation: https://files.pythonhosted.org/packages/7e/c2/1eece8c95ddbc9b1aeb64f5783a9e07a286de42191b7204d67b7496ddf35/Jinja2-2.11.3-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: Jinja2-2.11.3-py2.py3-none-any.whl
+PackageSupplier: Organization: Armin Ronacher (NOASSERTION)
+PackageOriginator: Organization: Armin Ronacher (NOASSERTION)
+PackageChecksum: SHA-1: db210cdb4e96524d8fe39f59c3dbe0bfc4378665
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageCopyrightText: ['Copyright 2007 Pallets']
+PackageHomePage: https://files.pythonhosted.org/packages/7e/c2/1eece8c95ddbc9b1aeb64f5783a9e07a286de42191b7204d67b7496ddf35/Jinja2-2.11.3-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: pytz
+SPDXID: SPDXRef-PACKAGE-pytz-2021.1-py2.py3-none-any.whl
+PackageVersion: 2021.1
+PackageDownloadLocation: https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: pytz-2021.1-py2.py3-none-any.whl
+PackageSupplier: Organization: Stuart Bishop (NOASSERTION)
+PackageOriginator: Organization: Stuart Bishop (NOASSERTION)
+PackageChecksum: SHA-1: b97c6966fb8fd273f0bc8533cf0dee4978b9f373
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Copyright 2003-2019 Stuart Bishop <stuart@stuartbishop.net>', 'Copyright 1987-2006 implementation only works for dates between']
+PackageHomePage: https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: zipp
+SPDXID: SPDXRef-PACKAGE-zipp-3.4.1-py3-none-any.whl
+PackageVersion: 3.4.1
+PackageDownloadLocation: https://files.pythonhosted.org/packages/0f/8c/715c54e9e34c0c4820f616a913a7de3337d0cd79074dd1bed4dd840f16ae/zipp-3.4.1-py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: zipp-3.4.1-py3-none-any.whl
+PackageSupplier: Organization: Jason R. Coombs (NOASSERTION)
+PackageOriginator: Organization: Jason R. Coombs (NOASSERTION)
+PackageChecksum: SHA-1: 93ce9842312d434a7f2270ec9b02d903e22d7017
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Copyright Jason R']
+PackageHomePage: https://files.pythonhosted.org/packages/0f/8c/715c54e9e34c0c4820f616a913a7de3337d0cd79074dd1bed4dd840f16ae/zipp-3.4.1-py3-none-any.whl
+
+
+# Package
+
+PackageName: Pygments
+SPDXID: SPDXRef-PACKAGE-Pygments-2.8.1-py3-none-any.whl
+PackageVersion: 2.8.1
+PackageDownloadLocation: https://files.pythonhosted.org/packages/3a/80/a52c0a7c5939737c6dca75a831e89658ecb6f590fb7752ac777d221937b9/Pygments-2.8.1-py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: Pygments-2.8.1-py3-none-any.whl
+PackageSupplier: Organization: Georg Brandl (NOASSERTION)
+PackageOriginator: Organization: Georg Brandl (NOASSERTION)
+PackageChecksum: SHA-1: f835ef1da083bac157e005b4d3e61e7ae54bbbab
+PackageLicenseDeclared: BSD-2-Clause
+PackageLicenseConcluded: BSD-2-Clause
+PackageLicenseInfoFromFiles: BSD-2-Clause
+PackageLicenseInfoFromFiles: PIL Software License
+PackageCopyrightText: ['Copyright 2006-2021 by the respective authors', 'Copyright 2006-2021 by the Pygments team']
+PackageHomePage: https://files.pythonhosted.org/packages/3a/80/a52c0a7c5939737c6dca75a831e89658ecb6f590fb7752ac777d221937b9/Pygments-2.8.1-py3-none-any.whl
+
+
+# Package
+
+PackageName: urllib3
+SPDXID: SPDXRef-PACKAGE-urllib3-1.26.4-py2.py3-none-any.whl
+PackageVersion: 1.26.4
+PackageDownloadLocation: https://files.pythonhosted.org/packages/09/c6/d3e3abe5b4f4f16cf0dfc9240ab7ce10c2baa0e268989a4e3ec19e90c84e/urllib3-1.26.4-py2.py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: urllib3-1.26.4-py2.py3-none-any.whl
+PackageSupplier: Organization: Andrey Petrov (NOASSERTION)
+PackageOriginator: Organization: Andrey Petrov (NOASSERTION)
+PackageChecksum: SHA-1: ed6d9706f74bc3e27b341884e2dc9e577e7f9cb5
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Copyright 2008-2020 Andrey Petrov and contributors']
+PackageHomePage: https://files.pythonhosted.org/packages/09/c6/d3e3abe5b4f4f16cf0dfc9240ab7ce10c2baa0e268989a4e3ec19e90c84e/urllib3-1.26.4-py2.py3-none-any.whl
+
+
+# Package
+
+PackageName: setuptools
+SPDXID: SPDXRef-PACKAGE-setuptools-56.0.0-py3-none-any.whl
+PackageVersion: 56.0.0
+PackageDownloadLocation: https://files.pythonhosted.org/packages/ae/42/2876a3a136f8bfa9bd703518441c8db78ff1eeaddf174baa85c083c1fd15/setuptools-56.0.0-py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: setuptools-56.0.0-py3-none-any.whl
+PackageSupplier: Organization: Python Packaging Authority (NOASSERTION)
+PackageOriginator: Organization: Python Packaging Authority (NOASSERTION)
+PackageChecksum: SHA-1: 51898889f2036fe499dd04c3c428dc31f8894900
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Copyright Jason R']
+PackageHomePage: https://files.pythonhosted.org/packages/ae/42/2876a3a136f8bfa9bd703518441c8db78ff1eeaddf174baa85c083c1fd15/setuptools-56.0.0-py3-none-any.whl
+
+
+# Package
+
+PackageName: Sphinx
+SPDXID: SPDXRef-PACKAGE-Sphinx-3.5.4-py3-none-any.whl
+PackageVersion: 3.5.4
+PackageDownloadLocation: https://files.pythonhosted.org/packages/a3/e7/9af5e0766e801cf0ad64eedab70dcea17646c3a0d309980b25426ccc53ec/Sphinx-3.5.4-py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: Sphinx-3.5.4-py3-none-any.whl
+PackageSupplier: Organization: Georg Brandl (NOASSERTION)
+PackageOriginator: Organization: Georg Brandl (NOASSERTION)
+PackageChecksum: SHA-1: 7bd64440d3a02990789361919d681cd9b9caacc3
+PackageLicenseDeclared: MIT
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageLicenseInfoFromFiles: MIT
+PackageCopyrightText: ['Copyright 2009 Jeremy Ashkenas, DocumentCloud', 'Copyright 2003 John Gruber', 'Copyright 2008 John Resig, https://jquery.com/', 'Copyright 2007-2021 by the Sphinx team', 'Copyright 2008 Stefan van der Walt <stefan@mentat.za.net>, Pauli Virtanen <pav@iki.fi>']
+PackageHomePage: https://files.pythonhosted.org/packages/a3/e7/9af5e0766e801cf0ad64eedab70dcea17646c3a0d309980b25426ccc53ec/Sphinx-3.5.4-py3-none-any.whl
+
+
+# Package
+
+PackageName: djangod4d800ca1addc4141e03c5440a849bb64d1582cd
+SPDXID: SPDXRef-PACKAGE-django-d4d800ca1addc4141e03c5440a849bb64d1582cd
+PackageVersion: d4d800ca1addc4141e03c5440a849bb64d1582cd
+PackageDownloadLocation: https://github.com/django/django.git
+FilesAnalyzed: False
+PackageFileName: django-d4d800ca1addc4141e03c5440a849bb64d1582cd
+PackageSupplier: Organization: django (NOASSERTION)
+PackageOriginator: Organization: django (NOASSERTION)
+PackageChecksum: SHA-1: d4d800ca1addc4141e03c5440a849bb64d1582cd
+PackageLicenseDeclared: BSD-3-Clause
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageLicenseInfoFromFiles: Python-2.0
+PackageCopyrightText: NONE
+PackageHomePage: https://github.com/django/django.git
+
+
+# Package
+
+PackageName: importlib-metadata
+SPDXID: SPDXRef-PACKAGE-importlib_metadata-4.0.1-py3-none-any.whl
+PackageVersion: 4.0.1
+PackageDownloadLocation: https://files.pythonhosted.org/packages/8e/e2/49966924c93909d47612bb47d911448140a2f6c1390aec2f4c1afbe3748f/importlib_metadata-4.0.1-py3-none-any.whl
+FilesAnalyzed: False
+PackageFileName: importlib_metadata-4.0.1-py3-none-any.whl
+PackageSupplier: Organization: Jason R. Coombs (NOASSERTION)
+PackageOriginator: Organization: Jason R. Coombs (NOASSERTION)
+PackageChecksum: SHA-1: 9111cb7551946d031af709b095ce08e8daadb203
+PackageLicenseDeclared: Apache-2.0
+PackageLicenseConcluded: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageCopyrightText: ['Copyright 2017-2019 Jason R']
+PackageHomePage: https://files.pythonhosted.org/packages/8e/e2/49966924c93909d47612bb47d911448140a2f6c1390aec2f4c1afbe3748f/importlib_metadata-4.0.1-py3-none-any.whl
+
+
+# Package
+
+PackageName: pyenchant
+SPDXID: SPDXRef-PACKAGE-pyenchant-3.2.0-py3-none-win_amd64.whl
+PackageVersion: 3.2.0
+PackageDownloadLocation: https://files.pythonhosted.org/packages/52/70/eddb38504182286eb25976cb369dbfc314f8a904d4f6484e7618103f1e9f/pyenchant-3.2.0-py3-none-win_amd64.whl
+FilesAnalyzed: False
+PackageFileName: pyenchant-3.2.0-py3-none-win_amd64.whl
+PackageSupplier: Organization: Dimitri Merejkowsky (NOASSERTION)
+PackageOriginator: Organization: Dimitri Merejkowsky (NOASSERTION)
+PackageChecksum: SHA-1: 09f5054a9eb775404d9815bb8d77d13b32fb34af
+PackageLicenseDeclared: LGPL-3.0
+PackageLicenseConcluded: LGPL-3.0
+PackageLicenseInfoFromFiles: LGPL-2.1
+PackageLicenseInfoFromFiles: LGPL-3.0
+PackageCopyrightText: NONE
+PackageHomePage: https://files.pythonhosted.org/packages/52/70/eddb38504182286eb25976cb369dbfc314f8a904d4f6484e7618103f1e9f/pyenchant-3.2.0-py3-none-win_amd64.whl
+
+
+# Extracted Licenses
+

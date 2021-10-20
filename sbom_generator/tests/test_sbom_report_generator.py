@@ -3,25 +3,25 @@ import unittest
 from unittest import TestCase
 from unittest.mock import MagicMock
 
-from sbom_report import sbom_report_generator
+from sbom_generator import sbom_generator
 
 
 class SbomReportTest(TestCase):
     ws_token = os.environ.get('WS_SCOPE_PROJ')
-    sbom_report_generator.parse_args = MagicMock()
-    sbom_report_generator.parse_args.return_value.ws_user_key = os.environ.get('WS_USER_KEY')
-    sbom_report_generator.parse_args.return_value.ws_token = os.environ.get('WS_SCOPE_ORG')
-    sbom_report_generator.parse_args.return_value.scope_token = os.environ.get('WS_SCOPE_PROJ')
-    sbom_report_generator.parse_args.return_value.ws_url = 'saas'
-    sbom_report_generator.parse_args.return_value.type = 'tv'
-    sbom_report_generator.parse_args.return_value.extra = os.path.join(os.getcwd(), 'sbom_report/sbom_extra.json')
-    sbom_report_generator.parse_args.return_value.out_dir = '.'
+    sbom_generator.parse_args = MagicMock()
+    sbom_generator.parse_args.return_value.ws_user_key = os.environ.get('WS_USER_KEY')
+    sbom_generator.parse_args.return_value.ws_token = os.environ.get('WS_SCOPE_ORG')
+    sbom_generator.parse_args.return_value.scope_token = os.environ.get('WS_SCOPE_PROJ')
+    sbom_generator.parse_args.return_value.ws_url = 'saas'
+    sbom_generator.parse_args.return_value.type = 'tv'
+    sbom_generator.parse_args.return_value.extra = os.path.join(os.getcwd(), 'sbom_report/sbom_extra.json')
+    sbom_generator.parse_args.return_value.out_dir = '.'
 
     def setUp(self) -> None:
         self.maxDiff = 2147483648
 
     # def test_main(self):
-    #     ret = sbom_report_generator.main()
+    #     ret = sbom_generator.main()
     #     compared_file = get_file(f'examples/{os.path.split(ret)[1]}')
     #     created_file = get_file(ret)
     #     import re

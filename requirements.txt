@@ -1,4 +1,4 @@
 spdx~=2.5.1
-spdx-tools~=0.7.0
+#spdx-tools~=0.7.0
 ws-sdk==0.6.0.3
 
