@@ -11,11 +11,14 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     env:
-      TOOL_DIR: sbom_generator
+      TOOL_PATH: sbom_generator
+      TOOL_NAME: sbom_generator.py
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9]
     steps:
+      - name: Set Env Vars
+        run: echo "TOOL_PATH=$TOOL_DIR/$TOOL_NAME" >> $GITHUB_ENV
       - uses: actions/checkout@v2
       - uses: UnicornGlobal/trufflehog-actions-scan@master
         with:
@@ -36,21 +39,15 @@ jobs:
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Full test JSON
-        run: |
-          cd ${env.TOOL_DIR}
-          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_PYTHON }}
+        run:  python ${TOOL_PATH} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_PYTHON }}
       - name: Full test RDF
-        run: |
-          cd ${env.TOOL_DIR}
-          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_GO }} -t rdf
+        run: python python ${TOOL_PATH} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_GO }} -t rdf
       - name: Full test TV (tag-value)
-        run: |
-          cd ${env.TOOL_DIR}
-          python sbom_report.py -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_JAVA_MAVEN }} -t tv
+        run: python python ${TOOL_PATH} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_JAVA_MAVEN }} -t tv
       - name: Zip release
         uses: papeloto/action-zip@v1
         with:
-          files: requirements.txt LICENSE README.md CLA.md sbom_generator/
+          files: requirements.txt LICENSE README.md CLA.md $TOOL_DIR
           dest: ws-sbom-report.zip
           recursive: false
       - name: Create Release
