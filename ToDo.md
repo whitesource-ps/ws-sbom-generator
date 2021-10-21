@@ -1,3 +1,4 @@
 # To Do List
-- Multithreading   
-- Item 2  
+- Unittesting
+- CI testing
+- Multiprocessing + Multithreading?

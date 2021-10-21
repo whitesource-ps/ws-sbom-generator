@@ -18,8 +18,12 @@ from ws_sdk import ws_constants, WS, ws_utilities
 
 logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.INFO,
                     handlers=[logging.StreamHandler(stream=sys.stdout)],
-                    format='%(levelname)s %(asctime)s %(thread)d: %(message)s',
+                    format='%(levelname)s %(asctime)s %(thread)d %(name)s: %(message)s',
                     datefmt='%y-%m-%d %H:%M:%S')
+
+logging.getLogger('root').setLevel(logging.INFO)
+logging.getLogger('urllib3').setLevel(logging.INFO)
+logging.getLogger('chardet').setLevel(logging.INFO)
 
 ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz", ".gem", ".whl")
 BIN_SUFFICES = (".dll", ".so", ".exe")
@@ -30,38 +34,51 @@ args = None
 
 def create_sbom_doc(scope_token) -> spdx.document.Document:
     scope = args.ws_conn.get_scope_by_token(scope_token)
-    logging.info(f"Creating SBOM Document from WhiteSource {scope['type']} {scope['name']}")
+    logging.info(f"Creating SBOM Document from WhiteSource {scope['type']}: {scope['name']}")
     scope_name = args.ws_conn.get_scope_name_by_token(scope_token)
-    namespace = args.extra_conf.get('namespace', 'http://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]')
+    namespace = args.extra_conf.get('namespace', 'https://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]')
     doc, doc_spdx_id = create_document(scope_name, namespace)
 
     doc.creation_info = create_creation_info(args.ws_conn.get_name(),
                                              args.extra_conf.get('org_email', 'ORG_EMAIL'),
                                              args.extra_conf.get('person', 'PERSON'),
                                              args.extra_conf.get('person_email', 'PERSON_EMAIL'))
-
-    due_dil = args.ws_conn.get_due_diligence(token=scope_token)
     libs_from_lic_report = args.ws_conn.get_licenses(token=scope_token, full_spdx=True)
-    doc.packages, pkgs_spdx_ids = create_packages(libs_from_lic_report, due_dil)
+    file_path = None
+    if libs_from_lic_report:
+        logging.debug(f"Handling {len(libs_from_lic_report)} libraries in {scope['type']}: {scope['name']}")
+        logging.info(f"Finished report: {scope['type']}: {scope['name']}")
+        due_dil_report = args.ws_conn.get_due_diligence(token=scope_token)
+        lib_heirarchy_report = args.ws_conn.get_inventory(token=scope_token, with_dependencies=True)
+        doc.packages, pkgs_spdx_ids, pkg_relationships = create_packages(libs_from_lic_report, due_dil_report, lib_heirarchy_report)    # TODO SPDX Design issue - Relationship between packages should be on package level
 
-    for pkg_id in pkgs_spdx_ids:
-        doc.relationships.append(Relationship(relationship=f"{pkg_id} {RelationshipType.DESCRIBED_BY.name} {doc_spdx_id}"))
+        doc.relationships = get_document_relationships(pkgs_spdx_ids, doc_spdx_id)
+        doc.relationships.extend(pkg_relationships)
 
-    file_path = write_report(doc, args.type)
-    logging.info(f"Finished report: {scope['type']}")
+        file_path = write_report(doc, args.type)
+    else:
+        logging.error(f"{scope['type'].capitalize()}: {scope['name']} Has no libraries. Report will not be generated")
 
     return file_path
 
 
+def get_document_relationships(pkgs_spdx_ids: list, doc_spdx_id: str) -> list:
+    doc_relationships = []
+    for pkg_id in pkgs_spdx_ids:
+        doc_relationships.append(Relationship(relationship=f"{pkg_id} {RelationshipType.DESCRIBED_BY.name} {doc_spdx_id}"))
+
+    return doc_relationships
+
+
 def create_document(scope_name: str, namespace) -> Document:
-    logging.debug(f"Creating SBOM Document entity")
+    logging.debug(f"Creating SBOM Document entity on: {scope_name}")
     doc_spdx_id = "SPDXRef-DOCUMENT"
     document = Document(name=f"WhiteSource {scope_name} SBOM report",
                         namespace=namespace,
                         spdx_id=doc_spdx_id,
                         version=version.Version(2, 2),
                         data_license=License.from_identifier("CC0-1.0"))
-    logging.debug(f"Finished SBOM Document entity")
+    logging.debug(f"Finished SBOM Document entity on {scope_name}")
 
     return document, doc_spdx_id
 
@@ -82,24 +99,26 @@ def create_creation_info(org_name, org_email, person_name, person_email):
     return creation_info
 
 
-def create_packages(libs, due_dil) -> tuple:
+def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
     logging.debug(f"Creating Packages entity")
     for d in due_dil:
         d['library'] = d['library'].rstrip('*')
     dd_dict = ws_utilities.convert_dict_list_to_dict(lst=due_dil, key_desc=('library', 'name'))
+    libs_hierarchy_dict = ws_utilities.convert_dict_list_to_dict(lst=lib_hierarchy, key_desc='keyUuid')
     packages = []
     pkgs_spdx_ids = []
-
+    pkgs_relationships = []
     for lib in libs:
-        pkg, pkg_spdx_id = create_package(lib, dd_dict)
+        pkg, pkg_spdx_id, pkg_relationships = create_package(lib, dd_dict, libs_hierarchy_dict.get(lib['keyUuid'], {}))
         packages.append(pkg)
         pkgs_spdx_ids.append(pkg_spdx_id)
+        pkgs_relationships.extend(pkg_relationships)
     logging.debug(f"Finished creating Packages entity")
 
-    return packages, pkgs_spdx_ids
+    return packages, pkgs_spdx_ids, pkgs_relationships
 
 
-def create_package(lib, dd_dict):
+def create_package(lib, dd_dict, lib_hierarchy_dict):
     pkg_spdx_id = f"SPDXRef-PACKAGE-{lib['filename']}"
     logging.debug(f"Creating Package {pkg_spdx_id}")
     lib_licenses = lib.get('licenses')
@@ -107,11 +126,12 @@ def create_package(lib, dd_dict):
     dd_entities = [dd_dict.get(dd_key) for dd_key in dd_keys]
     originator = NoAssert()
     lib_copyrights = lib.get('copyrightReferences')
+    author = None
 
     if dd_entities:                                             # Trying to get Author from Due Diligence
         author = dd_entities[0].get('author')
     if not author:                                              # If failed from DD, trying from lib
-        logging.debug("No author found from Due Diligence data. Will to get copyright from library data")
+        logging.debug("No author found from Due Diligence data. Trying to get copyright from library data")
         author = get_author_from_cr(lib_copyrights)
     if author:
         originator = creationinfo.Organization(author, NoAssert())
@@ -142,7 +162,7 @@ def create_package(lib, dd_dict):
     licenses = [License(full_name=lic.get('name'), identifier=lic.get('spdxName')) for lic in lib_licenses]
     package.licenses_from_files = licenses
     if len(licenses) > 1:
-        logging.warning(f"Library {lib['name']} has {len(licenses)} licenses. Using the 1st one")
+        logging.warning(f"Found {len(licenses)} licenses on library: {lib['name']}. Using the first one")
     if licenses:                         # TODO should be fixed in SPDX-TOOLS as it is possible to have multiple lics
         licenses = licenses[0]
     else:
@@ -150,12 +170,21 @@ def create_package(lib, dd_dict):
         licenses = SPDXNone()
 
     package.conc_lics = licenses
-
     package.license_declared = licenses
     package.cr_text = copyrights         # TODO should be fixed in SPDX-TOOLS as is possible to have multiple copyrights
-    logging.debug(f"Finished creating Package {pkg_spdx_id}")
+    pkg_relationships = get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id)
 
-    return package, pkg_spdx_id
+    logging.debug(f"Finished creating Package: {pkg_spdx_id}")
+
+    return package, pkg_spdx_id, pkg_relationships
+
+
+def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:
+    pkg_relationships = []
+    for dep_lib in lib_hierarchy_dict.get('dependencies', []):
+        pkg_relationships.append(Relationship(relationship=f"{pkg_spdx_id} {RelationshipType.DEPENDS_ON.name} SPDXRef-PACKAGE-{dep_lib['filename']}"))
+
+    return pkg_relationships
 
 
 def get_author_from_cr(copyright_references: list) -> str:
@@ -233,11 +262,11 @@ def write_file(spdx_f_t_enum, doc, file_type):
 
 
 class SPDXFileType(Enum):
-    # JSON = ("json", "spdx.writers.json", "w", None)  # Disabled due to spdx bug: Object of type NoAssert is not JSON serializable
+    JSON = ("json", "spdx.writers.json", "w", None)  # Disabled due to spdx bug: Object of type NoAssert is not JSON serializable
     TV = ("tv", "spdx.writers.tagvalue", "w", "utf-8")
     RDF = ("xml", "spdx.writers.rdf", "wb", None)
     XML = ("xml", "spdx.writers.xml", "wb", None)
-    # YAML = ("yml", "spdx.writers.yaml", "wb", None)   # Disabled due to a bug
+    # YAML = ("yml", "spdx.writers.yaml", "wb", None)   # Disabled due to spdx bug
 
     def __str__(self):
         return self.name
@@ -267,13 +296,20 @@ def main():
     global args
     args = parse_args()
     init()
-    if args.scope_token and ws_utilities.is_token(args.scope_token): #TODO Remove None check after ws-sdk 0.6.0.4 released
-        file_paths = create_sbom_doc(args.scope_token)
+    if args.scope_token and ws_utilities.is_token(args.scope_token): # TODO Remove None check after ws-sdk 0.6.0.4 released
+        scope_type = args.ws_conn.get_scope_type_by_token(args.scope_token)
+
+    if scope_type == ws_constants.PROJECT:
+        scopes = args.ws_conn.get_scope_by_token(scope_type)
+    elif scope_type == ws_constants.PRODUCT:
+        scopes = args.ws_conn.get_projects(product_token=args.scope_token)
+        logging.info(f"Creating SBOM reports on {scope_type}: {scopes[0]['productName']}")
     else:
         logging.info("Creating SBOM reports on all Organization Projects")
         scopes = args.ws_conn.get_projects()
-        for scope in scopes:
-            file_paths = create_sbom_doc(scope['token'])
+
+    for scope in scopes:
+        file_paths = create_sbom_doc(scope['token'])
 
     return file_paths
 

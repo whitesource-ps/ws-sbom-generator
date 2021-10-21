@@ -8,7 +8,7 @@
                 "Tool: White Source SBOM Report Generator",
                 "Person: PERSON (PERSON_EMAIL)"
             ],
-            "created": "2021-10-20T12:29:31Z",
+            "created": "2021-10-20T18:02:52Z",
             "licenseListVersion": "3.6"
         },
         "dataLicense": "CC0-1.0",
@@ -147,8 +147,8 @@
                     "copyrightText": "['Copyright 1995 Oct']",
                     "versionInfo": "1.2",
                     "packageFileName": "jstl-1.2.jar",
-                    "supplier": "NOASSERTION",
-                    "originator": "NOASSERTION",
+                    "supplier": "Organization: Oct (NOASSERTION)",
+                    "originator": "Organization: Oct (NOASSERTION)",
                     "checksums": [
                         {
                             "algorithm": "checksumAlgorithm_sha-1",
@@ -401,17 +401,17 @@
                     "packageVerificationCode": {
                         "packageVerificationCodeValue": null
                     },
-                    "licenseConcluded": "LGPL-2.1",
+                    "licenseConcluded": "Apache-2.0",
                     "licenseInfoFromFiles": [
-                        "LGPL-2.1",
-                        "Apache-2.0"
+                        "Apache-2.0",
+                        "LGPL-2.1"
                     ],
-                    "licenseDeclared": "LGPL-2.1",
+                    "licenseDeclared": "Apache-2.0",
                     "copyrightText": "['Copyright 2014-2015 2016, 2018 Free Software Foundation, Inc']",
                     "versionInfo": "4.2.1",
                     "packageFileName": "jna-4.2.1.jar",
-                    "supplier": "NOASSERTION",
-                    "originator": "NOASSERTION",
+                    "supplier": "Organization: 2016, 2018 Free Software Foundation, Inc (NOASSERTION)",
+                    "originator": "Organization: 2016, 2018 Free Software Foundation, Inc (NOASSERTION)",
                     "checksums": [
                         {
                             "algorithm": "checksumAlgorithm_sha-1",
@@ -783,8 +783,8 @@
                     "copyrightText": "['Copyright 2002 JSON.org']",
                     "versionInfo": "20180130",
                     "packageFileName": "json-20180130.jar",
-                    "supplier": "NOASSERTION",
-                    "originator": "NOASSERTION",
+                    "supplier": "Organization: JSON.org (NOASSERTION)",
+                    "originator": "Organization: JSON.org (NOASSERTION)",
                     "checksums": [
                         {
                             "algorithm": "checksumAlgorithm_sha-1",
@@ -809,7 +809,7 @@
                         "Apache-2.0"
                     ],
                     "licenseDeclared": "Apache-2.0",
-                    "copyrightText": "['Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>']",
+                    "copyrightText": "['Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2000-2011 INRIA, France Telecom', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>', 'Copyright 2002-2018 Pivotal, Inc']",
                     "versionInfo": "5.0.7.RELEASE",
                     "packageFileName": "spring-beans-5.0.7.RELEASE.jar",
                     "supplier": "Organization: Spring IO (NOASSERTION)",
@@ -899,8 +899,8 @@
                     "copyrightText": "['Copyright 2007 Mockito contributors']",
                     "versionInfo": "2.23.0",
                     "packageFileName": "mockito-core-2.23.0.jar",
-                    "supplier": "NOASSERTION",
-                    "originator": "NOASSERTION",
+                    "supplier": "Organization: Mockito contributors (NOASSERTION)",
+                    "originator": "Organization: Mockito contributors (NOASSERTION)",
                     "checksums": [
                         {
                             "algorithm": "checksumAlgorithm_sha-1",
@@ -925,7 +925,7 @@
                         "Apache-2.0"
                     ],
                     "licenseDeclared": "Apache-2.0",
-                    "copyrightText": "['Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>']",
+                    "copyrightText": "['Copyright 2000-2011 INRIA, France Telecom', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen']",
                     "versionInfo": "5.1.1.RELEASE",
                     "packageFileName": "spring-aop-5.1.1.RELEASE.jar",
                     "supplier": "Organization: Spring IO (NOASSERTION)",
@@ -954,7 +954,7 @@
                         "Apache-2.0"
                     ],
                     "licenseDeclared": "Apache-2.0",
-                    "copyrightText": "['Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>']",
+                    "copyrightText": "['Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>', 'Copyright 2002-2018 Pivotal, Inc']",
                     "versionInfo": "5.1.1.RELEASE",
                     "packageFileName": "spring-tx-5.1.1.RELEASE.jar",
                     "supplier": "Organization: Spring IO (NOASSERTION)",
@@ -983,7 +983,7 @@
                         "Apache-2.0"
                     ],
                     "licenseDeclared": "Apache-2.0",
-                    "copyrightText": "['Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen']",
+                    "copyrightText": "['Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>', 'Copyright 2000-2011 INRIA, France Telecom']",
                     "versionInfo": "5.1.1.RELEASE",
                     "packageFileName": "spring-context-5.1.1.RELEASE.jar",
                     "supplier": "Organization: Spring IO (NOASSERTION)",
@@ -1012,7 +1012,7 @@
                         "Apache-2.0"
                     ],
                     "licenseDeclared": "Apache-2.0",
-                    "copyrightText": "['Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2002-2018 Pivotal, Inc', 'Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>']",
+                    "copyrightText": "['Copyright 1999-2009 OW2 Consortium <http://www.ow2.org/>', 'Copyright 2000-2011 INRIA, France Telecom', 'Copyright 2019 The Apache Software Foundation, Licensed under the <a class=\"white\" href=\"/licen', 'Copyright 2002-2018 Pivotal, Inc']",
                     "versionInfo": "5.1.1.RELEASE",
                     "packageFileName": "spring-expression-5.1.1.RELEASE.jar",
                     "supplier": "Organization: Spring IO (NOASSERTION)",
@@ -1160,8 +1160,8 @@
                     "copyrightText": "['Copyright 2010-2016 OneLogin, Inc']",
                     "versionInfo": "2.5.0",
                     "packageFileName": "java-saml-2.5.0.jar",
-                    "supplier": "NOASSERTION",
-                    "originator": "NOASSERTION",
+                    "supplier": "Organization: OneLogin, Inc (NOASSERTION)",
+                    "originator": "Organization: OneLogin, Inc (NOASSERTION)",
                     "checksums": [
                         {
                             "algorithm": "checksumAlgorithm_sha-1",
@@ -1189,8 +1189,8 @@
                     "copyrightText": "['Copyright 2010-2016 OneLogin, Inc']",
                     "versionInfo": "2.5.0",
                     "packageFileName": "java-saml-core-2.5.0.jar",
-                    "supplier": "NOASSERTION",
-                    "originator": "NOASSERTION",
+                    "supplier": "Organization: OneLogin, Inc (NOASSERTION)",
+                    "originator": "Organization: OneLogin, Inc (NOASSERTION)",
                     "checksums": [
                         {
                             "algorithm": "checksumAlgorithm_sha-1",
@@ -1244,7 +1244,7 @@
                         "Apache-2.0"
                     ],
                     "licenseDeclared": "Apache-2.0",
-                    "copyrightText": "['Copyright 2002 Kevin Atkinson (kevina@gnu.org)', 'Copyright 2002-2011 The Apache Software Foundation']",
+                    "copyrightText": "['Copyright 2002-2011 The Apache Software Foundation', 'Copyright 2002 Kevin Atkinson (kevina@gnu.org)']",
                     "versionInfo": "1.6",
                     "packageFileName": "commons-codec-1.6.jar",
                     "supplier": "Organization: The Apache Software Foundation (NOASSERTION)",
