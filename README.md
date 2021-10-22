@@ -21,7 +21,7 @@ Python 3.6+
 
 ## Installation
 1. Download and unzip the tool.
-2. Install requirements: `pip install -r sbom_report/reqirements.txt`
+2. Install requirements: `pip install -r sbom_report/requirements.txt`
 3. Edit the file **sbom_extra.json** with the appropriate values to complete the report:
 
 ## Usage
