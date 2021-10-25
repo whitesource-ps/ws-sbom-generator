@@ -1,3 +1,5 @@
+dataclasses~=0.8
 spdx~=2.5.1
 spdx-tools~=0.6.1
 ws-sdk==0.6.0.1
+
