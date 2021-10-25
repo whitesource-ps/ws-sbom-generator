@@ -17,8 +17,10 @@ class SbomReportTest(TestCase):
     sbom_generator.parse_args.return_value.extra = os.path.join(os.getcwd(), 'sbom_report/sbom_extra.json')
     sbom_generator.parse_args.return_value.out_dir = '.'
 
-    def setUp(self) -> None:
-        self.maxDiff = 2147483648
+    # def setUp(self) -> None:
+    #     self.maxDiff = 2147483648
+
+
 
     # def test_main(self):
     #     ret = sbom_generator.main()

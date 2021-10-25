@@ -20,14 +20,6 @@ logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.
                     handlers=[logging.StreamHandler(stream=sys.stdout)],
                     format='%(levelname)s %(asctime)s %(thread)d %(name)s: %(message)s',
                     datefmt='%y-%m-%d %H:%M:%S')
-
-logging.getLogger('root').setLevel(logging.INFO)
-logging.getLogger('urllib3').setLevel(logging.INFO)
-logging.getLogger('chardet').setLevel(logging.INFO)
-
-ARCHIVE_SUFFICES = (".jar", ".zip", ".tar", ".gz", ".tgz", ".gem", ".whl")
-BIN_SUFFICES = (".dll", ".so", ".exe")
-SOURCE_SUFFICES = ("JavaScript")
 VERSION = "0.3"
 args = None
 
@@ -49,8 +41,8 @@ def create_sbom_doc(scope_token) -> spdx.document.Document:
         logging.debug(f"Handling {len(libs_from_lic_report)} libraries in {scope['type']}: {scope['name']}")
         logging.info(f"Finished report: {scope['type']}: {scope['name']}")
         due_dil_report = args.ws_conn.get_due_diligence(token=scope_token)
-        lib_heirarchy_report = args.ws_conn.get_inventory(token=scope_token, with_dependencies=True)
-        doc.packages, pkgs_spdx_ids, pkg_relationships = create_packages(libs_from_lic_report, due_dil_report, lib_heirarchy_report)    # TODO SPDX Design issue - Relationship between packages should be on package level
+        lib_hierarchy_report = args.ws_conn.get_inventory(token=scope_token, with_dependencies=True)
+        doc.packages, pkgs_spdx_ids, pkg_relationships = create_packages(libs_from_lic_report, due_dil_report, lib_hierarchy_report)    # TODO SPDX Design issue - Relationship between packages should be on package level
 
         doc.relationships = get_document_relationships(pkgs_spdx_ids, doc_spdx_id)
         doc.relationships.extend(pkg_relationships)
@@ -72,7 +64,7 @@ def get_document_relationships(pkgs_spdx_ids: list, doc_spdx_id: str) -> list:
 
 def create_document(scope_name: str, namespace) -> Document:
     logging.debug(f"Creating SBOM Document entity on: {scope_name}")
-    doc_spdx_id = "SPDXRef-DOCUMENT"
+    doc_spdx_id = generate_spdx_id("SPDXRef-DOCUMENT")
     document = Document(name=f"WhiteSource {scope_name} SBOM report",
                         namespace=namespace,
                         spdx_id=doc_spdx_id,
@@ -119,7 +111,7 @@ def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
 
 
 def create_package(lib, dd_dict, lib_hierarchy_dict):
-    pkg_spdx_id = f"SPDXRef-PACKAGE-{lib['filename']}"
+    pkg_spdx_id = generate_spdx_id(f"SPDXRef-PACKAGE-{lib['filename']}")
     logging.debug(f"Creating Package {pkg_spdx_id}")
     lib_licenses = lib.get('licenses')
     dd_keys = [(lib.get('filename'), lic['name']) for lic in lib_licenses]
@@ -256,7 +248,10 @@ def write_file(spdx_f_t_enum, doc, file_type):
     module = importlib.import_module(spdx_file_type.module_classpath)  # Dynamically loading appropriate writer module
     logging.debug(f"Writing file: {full_path} in format: {file_type}")
     with open(full_path, mode=spdx_file_type.f_flags, encoding=spdx_file_type.encoding) as fp:
-        module.write_document(doc, fp)
+        try:
+            module.write_document(doc, fp)
+        except TypeError:
+            logging.exception("Error writing file")
 
     return full_path
 
@@ -266,7 +261,7 @@ class SPDXFileType(Enum):
     TV = ("tv", "spdx.writers.tagvalue", "w", "utf-8")
     RDF = ("xml", "spdx.writers.rdf", "wb", None)
     XML = ("xml", "spdx.writers.xml", "wb", None)
-    # YAML = ("yml", "spdx.writers.yaml", "wb", None)   # Disabled due to spdx bug
+    YAML = ("yml", "spdx.writers.yaml", "wb", None)   # TODO: this will only work if  bug fix in spdx_tools: yaml.py -> write_document
 
     def __str__(self):
         return self.name
@@ -292,18 +287,26 @@ class SPDXFileType(Enum):
         return self.value[3]
 
 
+def generate_spdx_id(id_val) -> str:
+    spdx_id = id_val.replace(' ', '_')      # TODO SPDX issue: RELATIONSHIP are parsed as a text (better tuple it)
+    logging.debug(f"Generating SPDX ID: Received value: '{id_val}'. ID value: '{spdx_id}'")
+
+    return spdx_id
+
+
 def main():
     global args
     args = parse_args()
     init()
-    if args.scope_token and ws_utilities.is_token(args.scope_token): # TODO Remove None check after ws-sdk 0.6.0.4 released
+    scope_type = None
+    if ws_utilities.is_token(args.scope_token):
         scope_type = args.ws_conn.get_scope_type_by_token(args.scope_token)
 
     if scope_type == ws_constants.PROJECT:
-        scopes = args.ws_conn.get_scope_by_token(scope_type)
+        scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
     elif scope_type == ws_constants.PRODUCT:
         scopes = args.ws_conn.get_projects(product_token=args.scope_token)
-        logging.info(f"Creating SBOM reports on {scope_type}: {scopes[0]['productName']}")
+        logging.info(f"Creating SBOM report per project in {scope_type}: {scopes[0]['productName']}")
     else:
         logging.info("Creating SBOM reports on all Organization Projects")
         scopes = args.ws_conn.get_projects()
