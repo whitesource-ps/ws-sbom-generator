@@ -111,16 +111,16 @@ def test_write_report_json(mock_write_file):
     assert returned == ["FULL_PATH"]
 
 
-@patch('spdx.writers.json.write_document')
-@patch('sbom_generator.sbom_generator.args')
-@patch('sbom_generator.sbom_generator.open')
-def test_write_file_json(mock_open, mock_args, mock_write_document):
-    mock_args.return_value = "DIR"
-    spdx_f_t_enum = sbom_generator.SPDXFileType
-    doc = document.Document(name="NAME", version="VERSION")
-    returned = sbom_generator.write_file(spdx_f_t_enum, doc, "json")
-
-    assert isinstance(returned, str)  # == "DIR\\NAME-VERSION.json"
+# @patch('spdx.writers.json.write_document')
+# @patch('sbom_generator.sbom_generator.args')
+# @patch('sbom_generator.sbom_generator.open')
+# def test_write_file_json(mock_open, mock_args, mock_write_document):
+#     mock_args.return_value = "DIR"
+#     spdx_f_t_enum = sbom_generator.SPDXFileType
+#     doc = document.Document(name="NAME", version="VERSION")
+#     returned = sbom_generator.write_file(spdx_f_t_enum, doc, "json")
+#
+#     assert isinstance(returned, str)  # == "DIR\\NAME-VERSION.json"
 
 
 def test_generate_spdx_id():
