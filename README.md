@@ -5,30 +5,55 @@
 [![GitHub release](https://img.shields.io/github/v/release/whitesource-ps/ws-sbom-spdx-report)](https://github.com/whitesource-ps/ws-sbom-spdx-report/releases/latest)  
 
 # WS SBOM Report Generator in SPDX format 
-CLI Tool to generate SBOM report on chosen scope in [SPDX format](https://spdx.org).
+CLI Tool and a Docker image to generate SBOM report on in [SPDX format](https://spdx.org).
+* The tool support the following scopes (defined with: **-s/WS_SCOPE**):
+  * Project token - tool will generate report on project token.
+  * Product token - tool will generate report on all the projects within the product.
+  * No Token specified - tool Will generate report on all the projects within the organization.
 * The tool utilizes [spdx-tools](https://github.com/spdx/tools).
-* The tool can be executed on WS Product or Project scope.
-* The tool accepts additional values which are unknown to WS via `sbom_extra.json`.
-* If not stated, the tool will access SAAS.
-* If not stated, the tool will produce report in JSON format.
-
+* The tool accepts additional values which are unknown to WhiteSource via `sbom_extra.json`.
+* If URL is not stated (defined with: **-a/WS_URL**), the tool will access **saas**.
+* If report type is not stated (defined with: **-t/WS_REPORT_TYPE**) the tool will generate the report in **tag-value** format.  
+  * Supported file formats: json, tv, rdf, xml and yaml.
 ## Supported Operating Systems
 - **Linux (Bash):**	CentOS, Debian, Ubuntu, RedHat
 - **Windows (PowerShell):**	10, 2012, 2016
 
 ## Prerequisites
-Python 3.6+ 
+Python 3.7+ 
 
-## Installation
+## Docker container
+### Installation 
+```shell
+docker pull whitesourcetools/ws-sbom-generator:latest 
+ ```
+### Execution
+```shell
+docker run --name ws-sbom-generator \ 
+  -v /<EXTRA_CONF_DIR>:/opt/ws-sbom-generator/sbom-generator/resources \ 
+  -v /<REPORT_OUTPUT_DIR>:/opt/ws-sbom-generator/sbom-generator/output \
+  -e WS_USER_KEY=<USER_KEY> \ 
+  -e WS_TOKEN=<ORG_WS_TOKEN \
+  -e WS_SCOPE=<WS_SCOPE> \
+  -e WS_URL=<WS_URL> \
+  -e WS_TYPE=<WS_TYPE> \
+  whitesourcetools/ws-sbom-generator 
+````
+
+## GitHub Package
+### Installation 
 1. Download and unzip the tool.
 2. Install requirements: `pip install -r sbom_report/requirements.txt`
 3. Edit the file **sbom_extra.json** with the appropriate values to complete the report:
 
-## Usage
+## Execution
+Execution instructions:
 ```
-sbom_report.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN]
-                      [-a WS_URL] [-t {tv,json,xml,rdf,yaml}] [-e EXTRA]
-                      [-o OUT_DIR]
+python sbom_report.py -u <USER_KEY> -k <TOKEN> -s <SCOPE_TOKEN> -a <URL> -t <REPORT_TYPE> -e <PATH_TO_EXTRA_CONF> -o <OUT_DIR>
+```
+
+```
+usage: sbom_generator.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN] [-a WS_URL] [-t {json,tv,rdf,xml,yaml,all}] [-e EXTRA] [-o OUT_DIR]
 
 Utility to create SBOM from WhiteSource data
 
@@ -42,16 +67,10 @@ optional arguments:
                         Scope token of SBOM report to generate
   -a WS_URL, --wsUrl WS_URL
                         WS URL
-  -t {tv,json,xml,rdf,yaml}, --type {tv,json,xml,rdf,yaml}
+  -t {json,tv,rdf,xml,yaml,all}, --type {json,tv,rdf,xml,yaml,all}
                         Output type
   -e EXTRA, --extra EXTRA
                         Extra configuration of SBOM
   -o OUT_DIR, --out OUT_DIR
                         Output directory
-```
-
-## Execution
-Execution instructions:  
-```
-python sbom_report.py -u <USER_KEY> -k <TOKEN> -s <SCOPE_TOKEN>
 ```

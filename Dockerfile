@@ -1,5 +1,7 @@
 FROM python:3.9-slim-buster
 
+VOLUME /opt/ws-sbom-generator/sbom_generator/resources
+VOLUME /opt/ws-sbom-generator/sbom_generator/output
 COPY . /opt/ws-sbom-generator
 
 RUN python3 -m pip install --upgrade pip

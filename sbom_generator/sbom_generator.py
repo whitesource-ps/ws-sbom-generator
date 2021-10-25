@@ -199,7 +199,14 @@ def init():
         fp = open(args.extra, 'r')
         args.extra_conf = json.loads(fp.read())
     except FileNotFoundError:
-        logging.warning(f"{args.extra} configuration file was not found")
+        logging.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure:
+            {{
+                "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
+                "org_email": "org@email.address",
+                "person": "person name",
+                "person_email": "person@email.address"
+            }}
+        ''')
     except json.JSONDecodeError:
         logging.error(f"Unable to parse file: {args.extra}")
 
@@ -208,16 +215,24 @@ def parse_args():
     real_path = os.path.dirname(os.path.realpath(__file__))
     resource_real_path = os.path.join(real_path, "resources")
     parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
-    parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', required=True)
-    parser.add_argument('-k', '--token', help="WS Organization Key", dest='ws_token', required=True)
-    parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token')
-    parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default="saas")
-    parser.add_argument('-t', '--type', help="Output type", dest='type', default='tv',
+    parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', default=os.environ.get("WS_USER_KEY"))
+    parser.add_argument('-k', '--token', help="WS Organization Key", dest='ws_token', default=os.environ.get("WS_TOKEN"))
+    parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_SCOPE"))
+    parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default=os.environ.get("WS_URL"))
+    parser.add_argument('-t', '--type', help="Output type", dest='type', default=os.environ.get("WS_REPORT_TYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.path.join(real_path, "output"))
+    arguments = parser.parse_args()
 
-    return parser.parse_args()
+    if arguments.ws_user_key is None:
+        logging.error("No User Key is specified")
+        raise ValueError
+    if arguments.ws_token is None:
+        logging.error("No Organization Token is specified")
+        raise ValueError
+
+    return arguments
 
 
 def replace_invalid_chars(filename: str) -> str:
@@ -257,7 +272,7 @@ def write_file(spdx_f_t_enum, doc, file_type):
 
 
 class SPDXFileType(Enum):
-    JSON = ("json", "spdx.writers.json", "w", None)  # Disabled due to spdx bug: Object of type NoAssert is not JSON serializable
+    JSON = ("json", "spdx.writers.json", "w", None)  # TODO open spdx bug: Object of type NoAssert is not JSON serializable
     TV = ("tv", "spdx.writers.tagvalue", "w", "utf-8")
     RDF = ("xml", "spdx.writers.rdf", "wb", None)
     XML = ("xml", "spdx.writers.xml", "wb", None)
@@ -299,6 +314,7 @@ def main():
     args = parse_args()
     init()
     scope_type = None
+    file_paths = []
     if ws_utilities.is_token(args.scope_token):
         scope_type = args.ws_conn.get_scope_type_by_token(args.scope_token)
 
@@ -318,4 +334,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except ValueError:
+        logging.error("Error running SBOM Generator")
