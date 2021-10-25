@@ -33,7 +33,7 @@ docker run --name ws-sbom-generator \
   -v /<EXTRA_CONF_DIR>:/opt/ws-sbom-generator/sbom-generator/resources \ 
   -v /<REPORT_OUTPUT_DIR>:/opt/ws-sbom-generator/sbom-generator/output \
   -e WS_USER_KEY=<USER_KEY> \ 
-  -e WS_TOKEN=<ORG_WS_TOKEN \
+  -e WS_TOKEN=<ORG_WS_TOKEN> \
   -e WS_SCOPE=<WS_SCOPE> \
   -e WS_URL=<WS_URL> \
   -e WS_TYPE=<WS_TYPE> \

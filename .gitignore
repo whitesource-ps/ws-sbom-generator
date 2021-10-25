@@ -20,3 +20,4 @@ target/
 # Excluded Files - Naming Convention
 local-env.*
 /venv/
+/main.py

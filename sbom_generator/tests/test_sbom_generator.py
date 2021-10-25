@@ -18,8 +18,13 @@ from sbom_generator import sbom_generator
 #     sbom_generator.parse_args.return_value.extra = os.path.join(os.getcwd(), 'sbom_report/sbom_extra.json')
 #     sbom_generator.parse_args.return_value.out_dir = '.'
 
-# @patch('sbom_generator.args.ws_conn.get_scope_by_token', return_value= {})
-# def test_create_sbom_doc_project():
+# @patch('sbom_generator.sbom_generator.create_creation_info', return_values=None)
+# @patch('sbom_generator.sbom_generator.create_document', return_value=("SCOPE_NAME", "NAMESPACE"))
+# def test_create_sbom_doc_project(mock_create_document, mock_create_creation_info):
+#     sbom_generator.args = MagicMock()
+#     sbom_generator.args.return_value.ws_conn = MagicMock()
+#     sbom_generator.args.return_value.ws_conn.return_value.get_scope_by_token = {}
+#     # sbom_generator.args.return_value.ws_conn =
 #
 #     returned = sbom_generator.create_sbom_doc("PROJECT_TOKEN")
 #
@@ -74,6 +79,52 @@ def test_create_package(mock_get_author_from_cr):
     returned = sbom_generator.create_package(lib, dd_dict, lib_hierarchy_dict)
 
     assert isinstance(returned[0], package.Package) and returned[1] == "SPDXRef-PACKAGE-FILENAME" and returned[2] == []
+
+
+def test_get_pkg_relationships():
+    filename = "FILENAME"
+    expected = [relationship.Relationship(relationship=f"SPDX-PKG_ID1 {relationship.RelationshipType.DEPENDS_ON.name} SPDXRef-PACKAGE-{filename}")]
+    lib_hierarchy_dict = {'dependencies': [{'filename': filename}]}
+    pkg_spdx_id = "SPDX-PKG_ID1"
+    returned = sbom_generator.get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id)
+
+    assert returned == expected
+
+
+def test_get_author_from_cr():
+    lib_copyrights = [{'author': "AUTHOR1"}, {'author': "AUTHOR2"}]
+    returned = sbom_generator.get_author_from_cr(lib_copyrights)
+
+    assert returned == "AUTHOR2"
+
+
+def test_replace_invalid_chars():
+    returned = sbom_generator.replace_invalid_chars("FILE:NAME")
+
+    assert returned == "FILE_NAME"
+
+
+@patch('sbom_generator.sbom_generator.write_file', return_value="FULL_PATH")
+def test_write_report_json(mock_write_file):
+    returned = sbom_generator.write_report(document.Document(), "json")
+
+    assert returned == ["FULL_PATH"]
+
+
+@patch('spdx.writers.json.write_document')
+@patch('sbom_generator.sbom_generator.args')
+@patch('sbom_generator.sbom_generator.open')
+def test_write_file_json(mock_open, mock_args, mock_write_document):
+    mock_args.return_value = "DIR"
+    spdx_f_t_enum = sbom_generator.SPDXFileType
+    doc = document.Document(name="NAME", version="VERSION")
+    returned = sbom_generator.write_file(spdx_f_t_enum, doc, "json")
+
+    assert isinstance(returned, str)  # == "DIR\\NAME-VERSION.json"
+
+
+def test_generate_spdx_id():
+    assert sbom_generator.generate_spdx_id("SP ACE") == "SP_ACE"
 
 
 if __name__ == '__main__':

@@ -182,7 +182,7 @@ def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:
 def get_author_from_cr(copyright_references: list) -> str:
     authors = [a['author'] for a in copyright_references if a.get('author')]
     if len(authors) > 1:
-        logging.warning(f"Found {len(authors)} authors on the lib. Will return the 1st")
+        logging.warning(f"Found {len(authors)} authors on the lib. Report will contain one")
     elif not authors:
         logging.warning("No author data found on lib")
 
