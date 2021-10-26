@@ -18,10 +18,37 @@ CLI Tool and a Docker image to generate SBOM report on in [SPDX format](https://
 ## Supported Operating Systems
 - **Linux (Bash):**	CentOS, Debian, Ubuntu, RedHat
 - **Windows (PowerShell):**	10, 2012, 2016
-
 ## Prerequisites
-Python 3.7+ 
+Python 3.7+
+## Deployment and Usage
+### From PyPi (simplest)
 
+## Install as PyPi package simplest):
+1. Execute: `pip install ws_sbom_generator`
+   1. Usage:
+       ```shell
+       usage: sbom_generator.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN] [-a WS_URL] [-t {json,tv,rdf,xml,yaml,all}] [-e EXTRA] [-o OUT_DIR]
+    
+       Utility to create SBOM from WhiteSource data
+    
+       optional arguments:
+         -h, --help            show this help message and exit
+         -u WS_USER_KEY, --userKey WS_USER_KEY
+                               WS User Key
+         -k WS_TOKEN, --token WS_TOKEN
+                               WS Organization Key
+         -s SCOPE_TOKEN, --scope SCOPE_TOKEN
+                               Scope token of SBOM report to generate
+         -a WS_URL, --wsUrl WS_URL
+                               WS URL
+         -t {json,tv,rdf,xml,yaml,all}, --type {json,tv,rdf,xml,yaml,all}
+                               Output type
+         -e EXTRA, --extra EXTRA
+                               Extra configuration of SBOM
+         -o OUT_DIR, --out OUT_DIR
+                               Output directory
+       ```
+      Example: `sbomgenerator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a saas -s <WS_PROJECT_TOKEN> -t tv -e /<path/to>/sbom_extra.json -o </path/reports>`
 ## Docker container
 ### Installation 
 ```shell
@@ -39,13 +66,6 @@ docker run --name ws-sbom-generator \
   -e WS_TYPE=<WS_TYPE> \
   whitesourcetools/ws-sbom-generator 
 ````
-
-## Install as PyPi package:
-Execute 
-```shell
-pip install ws_sbom_generator
-```
-
 ## GitHub Package
 ### Installation 
 1. Download and unzip the tool.
@@ -53,30 +73,4 @@ pip install ws_sbom_generator
 3. Edit the file **sbom_extra.json** with the appropriate values to complete the report:
 
 ## Execution
-Execution instructions:
-```
-python sbom_report.py -u <USER_KEY> -k <TOKEN> -s <SCOPE_TOKEN> -a <URL> -t <REPORT_TYPE> -e <PATH_TO_EXTRA_CONF> -o <OUT_DIR>
-```
-
-```
-usage: sbom_generator.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN] [-a WS_URL] [-t {json,tv,rdf,xml,yaml,all}] [-e EXTRA] [-o OUT_DIR]
-
-Utility to create SBOM from WhiteSource data
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -u WS_USER_KEY, --userKey WS_USER_KEY
-                        WS User Key
-  -k WS_TOKEN, --token WS_TOKEN
-                        WS Organization Key
-  -s SCOPE_TOKEN, --scope SCOPE_TOKEN
-                        Scope token of SBOM report to generate
-  -a WS_URL, --wsUrl WS_URL
-                        WS URL
-  -t {json,tv,rdf,xml,yaml,all}, --type {json,tv,rdf,xml,yaml,all}
-                        Output type
-  -e EXTRA, --extra EXTRA
-                        Extra configuration of SBOM
-  -o OUT_DIR, --out OUT_DIR
-                        Output directory
-```
+Same as PyPi package but prefix script with `python sbom_report.py...`

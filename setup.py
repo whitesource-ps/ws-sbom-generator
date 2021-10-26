@@ -14,8 +14,8 @@ setuptools.setup(
     license='LICENSE.txt',
     packages=setuptools.find_packages(),
     python_requires='>=3.7',
-    install_requires=open("requirements.txt").read(),
-    long_description=[line.strip() for line in open("requirements.txt").readlines()],
+    install_requires=[line.strip() for line in open("requirements.txt").readlines()],
+    long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     classifiers=[
         "Programming Language :: Python :: 3",

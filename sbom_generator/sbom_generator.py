@@ -52,6 +52,8 @@ def create_sbom_doc(scope_token) -> spdx.document.Document:
     else:
         logging.error(f"{scope['type'].capitalize()}: {scope['name']} Has no libraries. Report will not be generated")
 
+        logging.info(f"Report saved at {file_path}")
+
     return file_path
 
 
@@ -265,6 +267,11 @@ def write_file(spdx_f_t_enum, doc, file_type):
     spdx_file_type = spdx_f_t_enum.get_file_type(file_type)
     report_filename = replace_invalid_chars(f"{doc.name}-{doc.version}.{spdx_file_type.suffix}")
     full_path = os.path.join(args.out_dir, report_filename)
+
+    if not os.path.exists(args.out_dir):
+        logging.info(f"Dir: {args.out_dir} does not exist. Creating it")
+        os.mkdir(args.out_dir)
+
     module = importlib.import_module(spdx_file_type.module_classpath)  # Dynamically loading appropriate writer module
     logging.debug(f"Writing file: {full_path} in format: {file_type}")
     with open(full_path, mode=spdx_file_type.f_flags, encoding=spdx_file_type.encoding) as fp:
@@ -338,8 +345,8 @@ def main():
     except ValueError:
         logging.error("Error running SBOM Generator")
 
-    return file_paths
+    # return file_paths
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())
