@@ -40,6 +40,12 @@ docker run --name ws-sbom-generator \
   whitesourcetools/ws-sbom-generator 
 ````
 
+## Install as PyPi package:
+Execute 
+```shell
+pip install ws_sbom_generator
+```
+
 ## GitHub Package
 ### Installation 
 1. Download and unzip the tool.

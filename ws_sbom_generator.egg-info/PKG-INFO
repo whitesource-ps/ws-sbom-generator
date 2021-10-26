@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ws-sbom-generator
+Version: 0.3a1
+Summary: WS SBOM Generator in SPDX format
+Home-page: https://github.com/whitesource-ps/ws-sbom-generator
+Author: WhiteSource Professional Services
+Author-email: ps@whitesourcesoftware.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+['spdx~=2.5.1', '#spdx-tools~=0.7.0', 'ws-sdk==0.6.0.4']
+

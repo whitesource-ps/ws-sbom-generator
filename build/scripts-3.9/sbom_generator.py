@@ -226,15 +226,11 @@ def parse_args():
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.path.join(real_path, "output"))
     arguments = parser.parse_args()
 
-    missing_arg = False
     if arguments.ws_user_key is None:
         logging.error("No User Key is specified")
-        missing_arg = True
+        raise ValueError
     if arguments.ws_token is None:
         logging.error("No Organization Token is specified")
-        missing_arg = True
-
-    if missing_arg:
         raise ValueError
 
     return arguments
@@ -316,30 +312,30 @@ def generate_spdx_id(id_val) -> str:
 
 def main():
     global args
+    args = parse_args()
+    init()
+    scope_type = None
     file_paths = []
-    try:
-        args = parse_args()
-        init()
-        scope_type = None
-        if ws_utilities.is_token(args.scope_token):
-            scope_type = args.ws_conn.get_scope_type_by_token(args.scope_token)
+    if ws_utilities.is_token(args.scope_token):
+        scope_type = args.ws_conn.get_scope_type_by_token(args.scope_token)
 
-        if scope_type == ws_constants.PROJECT:
-            scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
-        elif scope_type == ws_constants.PRODUCT:
-            scopes = args.ws_conn.get_projects(product_token=args.scope_token)
-            logging.info(f"Creating SBOM report per project in {scope_type}: {scopes[0]['productName']}")
-        else:
-            logging.info("Creating SBOM reports on all Organization Projects")
-            scopes = args.ws_conn.get_projects()
+    if scope_type == ws_constants.PROJECT:
+        scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
+    elif scope_type == ws_constants.PRODUCT:
+        scopes = args.ws_conn.get_projects(product_token=args.scope_token)
+        logging.info(f"Creating SBOM report per project in {scope_type}: {scopes[0]['productName']}")
+    else:
+        logging.info("Creating SBOM reports on all Organization Projects")
+        scopes = args.ws_conn.get_projects()
 
-        for scope in scopes:
-            file_paths = create_sbom_doc(scope['token'])
-    except ValueError:
-        logging.error("Error running SBOM Generator")
+    for scope in scopes:
+        file_paths = create_sbom_doc(scope['token'])
 
     return file_paths
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except ValueError:
+        logging.error("Error running SBOM Generator")

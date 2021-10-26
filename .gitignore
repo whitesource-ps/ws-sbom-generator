@@ -21,3 +21,9 @@ target/
 local-env.*
 /venv/
 /main.py
+/sbom_generator/tests/.pytest_cache/
+/build/
+/.pytest_cache/
+/build/
+/dist/
+/ws_sbom_generator.egg-info/

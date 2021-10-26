@@ -1,0 +1,3 @@
+[console_scripts]
+sbom_generator = sbom_generator.sbom_generator:main
+
