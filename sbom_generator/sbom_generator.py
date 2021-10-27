@@ -16,12 +16,12 @@ from spdx.package import Package
 from spdx.relationship import Relationship, RelationshipType
 from spdx.utils import SPDXNone, NoAssert
 from ws_sdk import ws_constants, WS, ws_utilities
+from sbom_generator._version import __version__
 
 logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.INFO,
                     handlers=[logging.StreamHandler(stream=sys.stdout)],
                     format='%(levelname)s %(asctime)s %(thread)d %(name)s: %(message)s',
                     datefmt='%y-%m-%d %H:%M:%S')
-VERSION = "0.3"
 args = None
 
 
@@ -196,7 +196,7 @@ def init():
     args.ws_conn = WS(url=args.ws_url,
                       user_key=args.ws_user_key,
                       token=args.ws_token,
-                      tool_details=("ps-sbom-generator", VERSION))
+                      tool_details=("ps-sbom-generator", __version__))
     args.extra_conf = {}
     try:
         fp = open(args.extra, 'r')
