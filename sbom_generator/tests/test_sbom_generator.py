@@ -92,8 +92,7 @@ def test_get_pkg_relationships():
 
 
 def test_get_author_from_cr():
-    lib_copyrights = [{'author': "AUTHOR1"}, {'author': "AUTHOR2"}]
-    returned = sbom_generator.get_author_from_cr(lib_copyrights)
+    returned = sbom_generator.get_author_from_cr([{'author': "AUTHOR1"}, {'author': "AUTHOR2"}])
 
     assert returned == "AUTHOR2"
 
@@ -120,7 +119,8 @@ def test_write_file_json(mock_open, mock_args, mock_write_document):
     doc = document.Document(name="NAME", version="VERSION")
     returned = sbom_generator.write_file(spdx_f_t_enum, doc, "json")
 
-    assert isinstance(returned, str)  # == "DIR\\NAME-VERSION.json"
+    assert isinstance(returned, str)
+    # assert returned == "DIR\\NAME-VERSION.json"
 
 
 def test_generate_spdx_id():

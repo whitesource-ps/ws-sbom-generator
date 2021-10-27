@@ -9,7 +9,7 @@ setuptools.setup(
         'console_scripts': [
             f'{tool_name}={tool_name}.{tool_name}:main'
         ]},
-    version=open(os.path.join(tool_name, '_version.py'), 'r').read().strip(),
+    version=exec(open(os.path.join(tool_name, '_version.py'), 'r').read().strip()),
     author="WhiteSource Professional Services",
     author_email="ps@whitesourcesoftware.com",
     description="WS SBOM Generator in SPDX format",

@@ -7,7 +7,6 @@ import argparse
 import sys
 from enum import Enum
 
-import spdx.document
 from spdx import version, creationinfo
 from spdx.checksum import Algorithm
 from spdx.creationinfo import CreationInfo
@@ -25,7 +24,7 @@ logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.
 args = None
 
 
-def create_sbom_doc(scope_token) -> spdx.document.Document:
+def create_sbom_doc(scope_token) -> Document:
     scope = args.ws_conn.get_scope_by_token(scope_token)
     logging.info(f"Creating SBOM Document from WhiteSource {scope['type']}: {scope['name']}")
     scope_name = args.ws_conn.get_scope_name_by_token(scope_token)
@@ -113,7 +112,7 @@ def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
     return packages, pkgs_spdx_ids, pkgs_relationships
 
 
-def create_package(lib, dd_dict, lib_hierarchy_dict):
+def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
     pkg_spdx_id = generate_spdx_id(f"SPDXRef-PACKAGE-{lib['filename']}")
     logging.debug(f"Creating Package {pkg_spdx_id}")
     lib_licenses = lib.get('licenses')
@@ -262,7 +261,7 @@ def write_report(doc: Document, file_type: str) -> str:
     return full_paths
 
 
-def write_file(spdx_f_t_enum, doc, file_type):
+def write_file(spdx_f_t_enum, doc, file_type) -> str:
     logging.info(f"Saving report in {file_type} format")
     spdx_file_type = spdx_f_t_enum.get_file_type(file_type)
     report_filename = replace_invalid_chars(f"{doc.name}-{doc.version}.{spdx_file_type.suffix}")
