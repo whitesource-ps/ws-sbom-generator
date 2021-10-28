@@ -15,7 +15,7 @@ from spdx.package import Package
 from spdx.relationship import Relationship, RelationshipType
 from spdx.utils import SPDXNone, NoAssert
 from ws_sdk import ws_constants, WS, ws_utilities
-from sbom_generator._version import __version__
+from ws_sbom_generator._version import __version__
 
 logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.INFO,
                     handlers=[logging.StreamHandler(stream=sys.stdout)],

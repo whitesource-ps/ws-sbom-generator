@@ -1,5 +1,5 @@
-import os
 import setuptools
+from ws_sbom_generator._version import __version__
 
 tool_name = 'sbom_generator'
 
@@ -7,9 +7,9 @@ setuptools.setup(
     name=f"ws_{tool_name}",
     entry_points={
         'console_scripts': [
-            f'{tool_name}={tool_name}.{tool_name}:main'
+            f'{tool_name}=ws_{tool_name}.{tool_name}:main'
         ]},
-    version=exec(open(os.path.join(tool_name, '_version.py'), 'r').read().strip()),
+    version=__version__,
     author="WhiteSource Professional Services",
     author_email="ps@whitesourcesoftware.com",
     description="WS SBOM Generator in SPDX format",
