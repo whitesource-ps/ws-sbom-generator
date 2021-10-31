@@ -7,7 +7,7 @@ from spdx import relationship, document, creationinfo, package
 # import ws_sbom_generator
 # import ws_sbom_generator.sbom_generator as sbom_generator
 # from ws_sbom_generator import sbom_generator
-from ws_sbom_generator import sbom_generator
+from sbom_generator import sbom_generator
 
 
 # sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + '../')
@@ -72,7 +72,7 @@ def test_create_packages():
     assert returned[0] == [] and returned[1] == [] and returned[2] == []
 
 
-@patch('ws_sbom_generator.sbom_generator.get_author_from_cr', return_value="AUTHOR")
+@patch('sbom_generator.sbom_generator.get_author_from_cr', return_value="AUTHOR")
 def test_create_package(mock_get_author_from_cr):
     lib = {'name': "NAME",
            'filename': "FILENAME",
@@ -108,7 +108,7 @@ def test_replace_invalid_chars():
     assert returned == "FILE_NAME"
 
 
-@patch('ws_sbom_generator.sbom_generator.write_file', return_value="FULL_PATH")
+@patch('sbom_generator.sbom_generator.write_file', return_value="FULL_PATH")
 def test_write_report_json(mock_write_file):
     returned = sbom_generator.write_report(document.Document(), "json")
 
@@ -116,8 +116,8 @@ def test_write_report_json(mock_write_file):
 
 
 # @patch('spdx.writers.json.write_document')
-# @patch('ws_sbom_generator.sbom_generator.args')
-# @patch('ws_sbom_generator.sbom_generator.open')
+# @patch('sbom_generator.sbom_generator.args')
+# @patch('sbom_generator.sbom_generator.open')
 # def test_write_file_json(mock_open, mock_args, mock_write_document):
 #     mock_args.return_value = "DIR"
 #     spdx_f_t_enum = sbom_generator.SPDXFileType

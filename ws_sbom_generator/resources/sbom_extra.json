@@ -1,0 +1,6 @@
+{
+  "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
+  "org_email": "org@email.address",
+  "person": "person name",
+  "person_email": "person@email.address"
+}

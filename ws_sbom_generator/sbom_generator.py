@@ -17,6 +17,7 @@ from spdx.utils import SPDXNone, NoAssert
 from ws_sdk import ws_constants, WS, ws_utilities
 from ws_sbom_generator._version import __version__
 
+
 logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.INFO,
                     handlers=[logging.StreamHandler(stream=sys.stdout)],
                     format='%(levelname)s %(asctime)s %(thread)d %(name)s: %(message)s',
