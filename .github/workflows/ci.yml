@@ -98,6 +98,7 @@ jobs:
         with:
           skip_existing: true
           user: __token__
+          verbose: true
           password: ${{ secrets.PYPI_API_TOKEN }}
       - name: confluence-markdown-sync - PS documentation
         if: startsWith(github.ref, 'refs/tags/v')
