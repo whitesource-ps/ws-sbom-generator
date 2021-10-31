@@ -1,0 +1,119 @@
+name: WS SBOM Generator
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '*'
+  schedule:
+    - cron: '0 4 * * 6'
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    env:
+      TOOL_NAME: sbom_generator
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: UnicornGlobal/trufflehog-actions-scan@master
+        with:
+          branch: ${{ github.head_ref }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install wheel pytest flake8 spdx_tools-0.7.0a3_ws-py3-none-any.whl
+          pip install -r requirements.txt
+      - name: Lint with flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --ignore=E501,F841
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Run tests with pytest
+        run: pytest
+      - name: Create Wheel Package
+        run: python setup.py bdist_wheel
+      - name: Install Wheel package
+        run: ls -1 dist/*.whl | xargs pip install
+      - name: Full test JSON
+        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_PYTHON }} -o /tmp/output
+      - name: Full test RDF
+        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_GO }} -t rdf -o /tmp/output
+      - name: Full test TV (tag-value)
+        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_JAVA_MAVEN }} -t tv -o /tmp/output
+      - name: Zip release
+        uses: papeloto/action-zip@v1
+        with:
+          files: requirements.txt LICENSE README.md CLA.md $TOOL_NAME
+          dest: ws-sbom-generator.zip
+          recursive: false
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
+          artifacts: "*.zip"
+      - name: Prepare tag
+        id: prep
+        run: |
+          DOCKER_IMAGE=whitesourcetools/ws-sbom-generator
+          VERSION=latest
+          TAGS="${DOCKER_IMAGE}:${VERSION}"
+          if [[ $GITHUB_REF == refs/tags/v* ]]; then
+            VERSION=${GITHUB_REF#refs/tags/v}
+            TAGS="$TAGS,${DOCKER_IMAGE}:${VERSION}"
+          fi
+          echo ::set-output name=tags::${TAGS}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build and push to DockerHub
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ steps.prep.outputs.tags }}
+      - name: Publish to Test PyPI
+        if: startsWith(github.ref, 'refs/tags/test-v')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip_existing: true
+          user: __token__
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+      - name: Publish to PyPI
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip_existing: true
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+      - name: confluence-markdown-sync - PS documentation
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: cupcakearmy/confluence-markdown-sync@v1
+        with:
+          from: README.md
+          to: 1992262152
+          cloud: whitesource
+          user: ${{ secrets.CONFLUENCE_USER }}
+          token: ${{ secrets.CONFLUENCE_TOKEN }}
+      - name: confluence-markdown-sync - Public Community
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: cupcakearmy/confluence-markdown-sync@v1
+        with:
+          from: README.md
+          to: 2313290447
+          cloud: whitesource
+          user: ${{ secrets.CONFLUENCE_USER }}
+          token: ${{ secrets.CONFLUENCE_TOKEN }}
