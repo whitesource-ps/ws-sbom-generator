@@ -1,1 +1,3 @@
-__version__ = "0.3.0.3"
+import os
+__version__ = os.environ.get("VERSION", "0.0.0-dev")
+
