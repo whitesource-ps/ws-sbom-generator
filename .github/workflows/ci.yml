@@ -16,6 +16,10 @@ jobs:
       matrix:
         python-version: [3.7, 3.8, 3.9]
     steps:
+      - name: Set Environment Variables
+        run: |
+          echo "::set-env name=RELEASE_VERSION::$(echo github.ref | sed -r 's/^[a-z-]+//')"
+          echo "::set-env name=TOOL_DIR::ws_$TOOL_NAME"
       - uses: actions/checkout@v2
       - uses: UnicornGlobal/trufflehog-actions-scan@master
         with:
@@ -70,7 +74,7 @@ jobs:
       - name: Zip release
         uses: papeloto/action-zip@v1
         with:
-          files: requirements.txt LICENSE README.md CLA.md ws_{{$TOOL_NAME}}/
+          files: requirements.txt LICENSE README.md CLA.md $TOOL_DIR/
           dest: ws-sbom-generator.zip
           recursive: true
       - name: Create Release
@@ -106,7 +110,7 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.prep.outputs.tags }}
-          build-args: version=${GITHUB_REF#refs/tags/v}
+          build-args: version=$RELEASE_VERSION
       - name: confluence-markdown-sync - PS documentation
         if: startsWith(github.ref, 'refs/tags/v')
         uses: cupcakearmy/confluence-markdown-sync@v1
