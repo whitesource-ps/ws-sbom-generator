@@ -18,8 +18,10 @@ jobs:
     steps:
       - name: Set Environment Variables
         run: |
-          echo "RELEASE_VERSION=$(echo github.ref | sed -r 's/^[a-z-]+//')" >> $GITHUB_ENV
           echo "TOOL_DIR=ws_$TOOL_NAME" >> $GITHUB_ENV
+          if [[ $GITHUB_REF == refs/tags/* ]]; then
+            echo "VERSION=$(echo ${{github.ref}} |  sed -r 's/^[\/a-zA-z-]+//')" >> $GITHUB_ENV
+          fi
       - uses: actions/checkout@v2
       - uses: UnicornGlobal/trufflehog-actions-scan@master
         with:
@@ -85,32 +87,34 @@ jobs:
           allowUpdates: true
           artifacts: "*.zip"
       - name: Prepare tag
+        if: contains(github.ref, 'refs/tags/')
         id: prep
         run: |
           DOCKER_IMAGE=whitesourcetools/ws-sbom-generator
-          VERSION=latest
-          TAGS="${DOCKER_IMAGE}:${VERSION}"
+          TAGS="${DOCKER_IMAGE}:latest"
           if [[ $GITHUB_REF == refs/tags/v* ]]; then
-            VERSION=${GITHUB_REF#refs/tags/v}
-            TAGS="$TAGS,${DOCKER_IMAGE}:${VERSION}"
+            TAG_V=${GITHUB_REF#refs/tags/v}
+            TAGS="$TAGS,${DOCKER_IMAGE}:${TAG_V}"
           fi
           echo ::set-output name=tags::${TAGS}
       - name: Set up Docker Buildx
+        if: contains(github.ref, 'refs/tags/')
         uses: docker/setup-buildx-action@v1
       - name: Login to DockerHub
+        if: contains(github.ref, 'refs/tags/')
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push to DockerHub
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: contains(github.ref, 'refs/tags/')
         id: docker_build
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
           tags: ${{ steps.prep.outputs.tags }}
-          build-args: version=${{ env.RELEASE_VERSION }}
+          build-args: version=${{ env.VERSION }}
       - name: confluence-markdown-sync - PS documentation
         if: startsWith(github.ref, 'refs/tags/v')
         uses: cupcakearmy/confluence-markdown-sync@v1

@@ -5,8 +5,8 @@
 [![GitHub release](https://img.shields.io/github/v/release/whitesource-ps/ws-sbom-spdx-report)](https://github.com/whitesource-ps/ws-sbom-spdx-report/releases/latest)  
 
 # WS SBOM Report Generator in SPDX format 
-CLI Tool and a Docker image to generate SBOM report on in [SPDX format](https://spdx.org).
-* The tool supports the following scopes (defined with: **-s/WS_SCOPE**):
+CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spdx.org).
+* The tool can generate reports on the following scopes (defined with: **-s/WS_SCOPE**):
   * Project token - the tool will generate report on project token.
   * Product token - teh tool will generate report on all the projects within the product.
   * No Token specified - the tool will generate report on all the projects within the organization.
