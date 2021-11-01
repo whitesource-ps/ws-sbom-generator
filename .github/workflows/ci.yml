@@ -19,7 +19,7 @@ jobs:
       - name: Set Environment Variables
         run: |
           echo "RELEASE_VERSION=$(echo github.ref | sed -r 's/^[a-z-]+//')" >> $GITHUB_ENV
-          echo "TOOL_DIR=ws_${{TOOL_NAME}}" >> $GITHUB_ENV
+          echo "TOOL_DIR=ws_$TOOL_NAME" >> $GITHUB_ENV
       - uses: actions/checkout@v2
       - uses: UnicornGlobal/trufflehog-actions-scan@master
         with:
