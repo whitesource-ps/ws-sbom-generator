@@ -99,12 +99,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push to DockerHub
+        if: startsWith(github.ref, 'refs/tags/v')
         id: docker_build
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
           tags: ${{ steps.prep.outputs.tags }}
+          build-args: version=${GITHUB_REF#refs/tags/v}
       - name: confluence-markdown-sync - PS documentation
         if: startsWith(github.ref, 'refs/tags/v')
         uses: cupcakearmy/confluence-markdown-sync@v1
