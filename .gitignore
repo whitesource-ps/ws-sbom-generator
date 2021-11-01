@@ -27,3 +27,4 @@ local-env.*
 /dist/
 /ws_sbom_generator.egg-info/
 
+/out/

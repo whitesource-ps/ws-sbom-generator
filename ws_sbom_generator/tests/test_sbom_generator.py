@@ -1,14 +1,14 @@
-import os
-import sys
 from unittest.mock import patch
 
 import pytest
 from spdx import relationship, document, creationinfo, package
+
 # import sbom_generator
 # import ws_sbom_generator
 # import ws_sbom_generator.sbom_generator as sbom_generator
 # from ws_sbom_generator import sbom_generator
 from ws_sbom_generator import sbom_generator
+
 
 # sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) + '../')
 # @pytest.fixture

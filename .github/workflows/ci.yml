@@ -50,6 +50,23 @@ jobs:
       - name: Full test TV (tag-value)
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_JAVA_MAVEN }} -t tv -o /tmp/output
+      - name: Publish to Test PyPI
+        if: startsWith(github.ref, 'refs/tags/test-v')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip_existing: true
+          user: __token__
+          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
+          verbose: true
+      - name: Publish to PyPI
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip_existing: true
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          verbose: true
       - name: Zip release
         uses: papeloto/action-zip@v1
         with:
@@ -85,34 +102,9 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          context: .
           push: true
           tags: ${{ steps.prep.outputs.tags }}
-      - name: Publish to Test PyPI
-        if: startsWith(github.ref, 'refs/tags/test-v')
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          skip_existing: true
-          user: __token__
-          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-          repository_url: https://test.pypi.org/legacy/
-          verbose: true
-      - name: Publish to PyPI
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          skip_existing: true
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          verbose: true
-      - name: Publish to Test PyPI
-        if: startsWith(github.ref, 'refs/tags/test-v')
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          skip_existing: true
-          user: __token__
-          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-          repository_url: https://test.pypi.org/legacy/
-          verbose: true
       - name: confluence-markdown-sync - PS documentation
         if: startsWith(github.ref, 'refs/tags/v')
         uses: cupcakearmy/confluence-markdown-sync@v1
