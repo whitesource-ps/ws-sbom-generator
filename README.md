@@ -7,13 +7,13 @@
 # WS SBOM Generator in SPDX format 
 CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spdx.org).
 * The tool can generate reports on the following scopes (defined with: **-s/WS_SCOPE**):
-  * Project token - the tool will generate a report on project token.
+  * Project token - the tool will generate a report on the project token.
   * Product token - the tool will generate a report for all the projects within the product.
-  * No Token specified - the tool will generate report on all the projects within the organization.
+  * No Token specified - the tool will generate a report on all the projects within the organization.
 * The tool utilizes [spdx-tools](https://github.com/spdx/tools).
 * The tool accepts additional values which are unknown to WhiteSource via `sbom_extra.json`.
 * If URL is not stated (defined with: **-a/WS_URL**), the tool will access **saas**.
-* If report type is not stated (defined with: **-t/WS_REPORT_TYPE**) the tool will generate the report in **tag-value** format.  
+* If report type is not stated (defined with: **-t/WS_REPORT_TYPE**) the tool will generate a report in **tag-value** format.  
   * Supported file formats: json, tv, rdf, xml and yaml.
 ## Supported Operating Systems
 - **Linux (Bash):**	CentOS, Debian, Ubuntu, RedHat
