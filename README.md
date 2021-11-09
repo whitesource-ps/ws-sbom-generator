@@ -7,7 +7,7 @@
 # WS SBOM Generator in SPDX format 
 CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spdx.org).
 * The tool can generate reports on the following scopes (defined with: **-s/WS_SCOPE**):
-  * Project token - the tool will generate a report for the specific WS project.
+  * Project token - the tool will generate a report for the specific WS project.     
   * Product token - the tool will generate a report for all the projects within the WS product.
   * No Token specified - the tool will generate a report on all the projects within the WS organization.
 * The tool utilizes [spdx-tools](https://github.com/spdx/tools).
@@ -23,7 +23,7 @@ Python 3.7+
 ## Deployment and Usage
 ### From PyPi (simplest)
 
-## Install as PyPi package:
+## Install as a PyPi package:
 1. Execute: `pip install ws_sbom_generator`
 2. Install WS spdx-tools package that contains pre-release of spdx-tools 7 and additional fixes.
    
@@ -73,8 +73,8 @@ docker run --name ws-sbom-generator \
 ## GitHub Package
 ### Installation 
 1. Download and unzip the tool.
-2. Install requirements: `pip install -r sbom_report/requirements.txt`
+2. Install the requirements: `pip install -r sbom_report/requirements.txt`
 3. Edit the file **sbom_extra.json** with the appropriate values to complete the report:
 
 ## Execution
-Same as PyPi package but prefix script with `python sbom_report.py...`
+Same as the PyPi package but prefix the script with `python sbom_report.py...`
