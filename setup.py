@@ -1,19 +1,18 @@
 import setuptools
-from ws_sbom_generator._version import __version__
+from ws_sbom_generator._version import __version__, __tool_name__, __description__
 
-tool_name = 'sbom_generator'
 
 setuptools.setup(
-    name=f"ws_{tool_name}",
+    name=f"ws_{__tool_name__}",
     entry_points={
         'console_scripts': [
-            f'{tool_name}=ws_{tool_name}.{tool_name}:main'
+            f'{__tool_name__}=ws_{__tool_name__}.{__tool_name__}:main'
         ]},
     version=__version__,
     author="WhiteSource Professional Services",
     author_email="ps@whitesourcesoftware.com",
-    description="WS SBOM Generator in SPDX format",
-    url='https://github.com/whitesource-ps/ws-sbom-generator',
+    description=__description__,
+    url=f"https://github.com/whitesource-ps/ws-{__tool_name__.replace('_', '-')}",
     license='LICENSE.txt',
     packages=setuptools.find_packages(),
     python_requires='>=3.7',
