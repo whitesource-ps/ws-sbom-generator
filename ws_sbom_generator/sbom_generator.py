@@ -231,7 +231,7 @@ def parse_args():
     parser.add_argument('-t', '--type', help="Output type", dest='type', default=os.environ.get("WS_REPORT_TYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
-    parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.path.join(real_path, "output"))
+    parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
     arguments = parser.parse_args()
 
     missing_arg = False
