@@ -7,15 +7,21 @@ import argparse
 import sys
 from enum import Enum
 
-from spdx import version, creationinfo
-from spdx.checksum import Algorithm
-from spdx.creationinfo import CreationInfo
-from spdx.document import Document, License
-from spdx.package import Package
-from spdx.relationship import Relationship, RelationshipType
-from spdx.utils import SPDXNone, NoAssert
+
+try:                                            # TODO TEMP SOLUTION UNTIL spdx-tools can be a dependency
+    from spdx import version, creationinfo
+    from spdx.checksum import Algorithm
+    from spdx.creationinfo import CreationInfo
+    from spdx.document import Document, License
+    from spdx.package import Package
+    from spdx.relationship import Relationship, RelationshipType
+    from spdx.utils import SPDXNone, NoAssert
+except ImportError:
+    logging.error("SPDX package is missing")
+    exit(-1)
+
 from ws_sdk import ws_constants, WS, ws_utilities
-from ws_sbom_generator._version import __version__
+from ws_sbom_generator._version import __version__, __tool_name__
 
 
 logging.basicConfig(level=logging.DEBUG if os.environ.get("DEBUG") else logging.INFO,
@@ -27,7 +33,7 @@ args = None
 
 def create_sbom_doc(scope_token) -> Document:
     scope = args.ws_conn.get_scope_by_token(scope_token)
-    logging.info(f"Creating SBOM Document from WhiteSource {scope['type']}: {scope['name']}")
+    logging.info(f"Creating SBOM Document from WhiteSource {scope['type']}: '{scope['name']}'")
     scope_name = args.ws_conn.get_scope_name_by_token(scope_token)
     namespace = args.extra_conf.get('namespace', 'https://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]')
     doc, doc_spdx_id = create_document(scope_name, namespace)
@@ -196,13 +202,13 @@ def init():
     args.ws_conn = WS(url=args.ws_url,
                       user_key=args.ws_user_key,
                       token=args.ws_token,
-                      tool_details=("ps-sbom-generator", __version__))
+                      tool_details=(f"ps-{__tool_name__.replace('_','-')}", __version__))
     args.extra_conf = {}
     try:
         fp = open(args.extra, 'r')
         args.extra_conf = json.loads(fp.read())
     except FileNotFoundError:
-        logging.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure:
+        logging.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure (-e/--extra):
             {{
                 "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
                 "org_email": "org@email.address",
@@ -225,7 +231,7 @@ def parse_args():
     parser.add_argument('-t', '--type', help="Output type", dest='type', default=os.environ.get("WS_REPORT_TYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
-    parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.path.join(real_path, "output"))
+    parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
     arguments = parser.parse_args()
 
     missing_arg = False
@@ -263,7 +269,6 @@ def write_report(doc: Document, file_type: str) -> str:
 
 
 def write_file(spdx_f_t_enum, doc, file_type) -> str:
-    logging.info(f"Saving report in {file_type} format")
     spdx_file_type = spdx_f_t_enum.get_file_type(file_type)
     report_filename = replace_invalid_chars(f"{doc.name}-{doc.version}.{spdx_file_type.suffix}")
     full_path = os.path.join(args.out_dir, report_filename)
@@ -273,7 +278,7 @@ def write_file(spdx_f_t_enum, doc, file_type) -> str:
         os.mkdir(args.out_dir)
 
     module = importlib.import_module(spdx_file_type.module_classpath)  # Dynamically loading appropriate writer module
-    logging.debug(f"Writing file: {full_path} in format: {file_type}")
+    logging.info(f"Writing file: {full_path} in format: {file_type}")
     with open(full_path, mode=spdx_file_type.f_flags, encoding=spdx_file_type.encoding) as fp:
         try:
             module.write_document(doc, fp)

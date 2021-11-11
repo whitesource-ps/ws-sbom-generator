@@ -77,7 +77,7 @@ jobs:
         uses: papeloto/action-zip@v1
         with:
           files: requirements.txt LICENSE README.md CLA.md ${{ env.TOOL_DIR }}/
-          dest: ws-sbom-generator.zip
+          dest: ws_$TOOL_NAME.zip
           recursive: true
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v')
