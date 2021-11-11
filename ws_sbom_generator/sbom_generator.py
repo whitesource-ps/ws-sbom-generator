@@ -7,13 +7,19 @@ import argparse
 import sys
 from enum import Enum
 
-from spdx import version, creationinfo
-from spdx.checksum import Algorithm
-from spdx.creationinfo import CreationInfo
-from spdx.document import Document, License
-from spdx.package import Package
-from spdx.relationship import Relationship, RelationshipType
-from spdx.utils import SPDXNone, NoAssert
+
+try:                                            # TODO TEMP SOLUTION UNTIL spdx-tools can be a dependency
+    from spdx import version, creationinfo
+    from spdx.checksum import Algorithm
+    from spdx.creationinfo import CreationInfo
+    from spdx.document import Document, License
+    from spdx.package import Package
+    from spdx.relationship import Relationship, RelationshipType
+    from spdx.utils import SPDXNone, NoAssert
+except ImportError:
+    logging.error("SPDX package is missing")
+    exit(-1)
+
 from ws_sdk import ws_constants, WS, ws_utilities
 from ws_sbom_generator._version import __version__, __tool_name__
 
@@ -263,7 +269,6 @@ def write_report(doc: Document, file_type: str) -> str:
 
 
 def write_file(spdx_f_t_enum, doc, file_type) -> str:
-    logging.info(f"Saving report in {file_type} format")
     spdx_file_type = spdx_f_t_enum.get_file_type(file_type)
     report_filename = replace_invalid_chars(f"{doc.name}-{doc.version}.{spdx_file_type.suffix}")
     full_path = os.path.join(args.out_dir, report_filename)
@@ -273,7 +278,7 @@ def write_file(spdx_f_t_enum, doc, file_type) -> str:
         os.mkdir(args.out_dir)
 
     module = importlib.import_module(spdx_file_type.module_classpath)  # Dynamically loading appropriate writer module
-    logging.debug(f"Writing file: {full_path} in format: {file_type}")
+    logging.info(f"Writing file: {full_path} in format: {file_type}")
     with open(full_path, mode=spdx_file_type.f_flags, encoding=spdx_file_type.encoding) as fp:
         try:
             module.write_document(doc, fp)
