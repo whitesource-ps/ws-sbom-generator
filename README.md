@@ -73,7 +73,7 @@ docker run --name ws-sbom-generator \
 ## GitHub Package
 ### Installation 
 1. Download and unzip the tool.
-2. Install the requirements: `pip install -r sbom_report/requirements.txt`
+2. Install the requirements: `pip install -r sbom_generator/requirements.txt`
 3. Edit the file **sbom_extra.json** with the appropriate values to complete the report:
 
 ## Execution
