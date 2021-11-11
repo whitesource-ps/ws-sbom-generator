@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:ns1="http://spdx.org/rdf/terms#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:ns2="http://usefulinc.com/ns/doap#"
+>
+  <ns1:SpdxDocument rdf:about="http://www.spdx.org/tools#SPDXRef-DOCUMENT">
+    <ns1:dataLicense rdf:resource="http://spdx.org/licenses/CC0-1.0"/>
+    <ns1:describesPackage>
+      <ns1:Package rdf:about="http://www.spdx.org/tools#SPDXRef-Package">
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-Babel-2.9.0-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-chardet-4.0.0-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-colorama-0.4.4-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-zipp-3.4.1-py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-snowballstemmer-2.1.0-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-sphinxcontrib_spelling-7.1.0-py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-ol-4.6.5.js"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-idna-2.10-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-Jinja2-2.11.3-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-requests-2.25.1-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-certifi-2020.12.5-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-Pygments-2.8.1-py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-django-d4d800ca1addc4141e03c5440a849bb64d1582cd"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-imagesize-1.2.0-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-pyparsing-2.4.7-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-select2.full-4.0.13.js"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-xregexp-all-3.2.0.js"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-importlib_metadata-4.0.1-py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-pytz-2021.1-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-docutils-0.16-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-typing_extensions-3.7.4.3-py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-urllib3-1.26.4-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-pyenchant-3.2.0-py3-none-win_amd64.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-Sphinx-3.5.4-py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-jquery-3.5.1.min.js"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-setuptools-56.0.0-py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-jquery-3.5.1.js"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-packaging-20.9-py2.py3-none-any.whl"/>
+        <ns1:Package rdf:resource="SPDXRef-PACKAGE-alabaster-0.7.12-py2.py3-none-any.whl"/>
+        <ns1:packageFileName>docutils-0.16-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>idna-2.10-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl</ns1:packageFileName>
+        <ns1:packageFileName>jquery-3.5.1.min.js</ns1:packageFileName>
+        <ns1:packageFileName>Sphinx-3.5.4-py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>sphinxcontrib_spelling-7.1.0-py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>xregexp-all-3.2.0.js</ns1:packageFileName>
+        <ns1:packageFileName>pytz-2021.1-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>typing_extensions-3.7.4.3-py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>pyenchant-3.2.0-py3-none-win_amd64.whl</ns1:packageFileName>
+        <ns1:packageFileName>pyparsing-2.4.7-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>packaging-20.9-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>snowballstemmer-2.1.0-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>colorama-0.4.4-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>alabaster-0.7.12-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>urllib3-1.26.4-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>certifi-2020.12.5-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>imagesize-1.2.0-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>jquery-3.5.1.js</ns1:packageFileName>
+        <ns1:packageFileName>zipp-3.4.1-py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>select2.full-4.0.13.js</ns1:packageFileName>
+        <ns1:packageFileName>sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>Babel-2.9.0-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>importlib_metadata-4.0.1-py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>Jinja2-2.11.3-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>chardet-4.0.0-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>requests-2.25.1-py2.py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>setuptools-56.0.0-py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>Pygments-2.8.1-py3-none-any.whl</ns1:packageFileName>
+        <ns1:packageFileName>django-d4d800ca1addc4141e03c5440a849bb64d1582cd</ns1:packageFileName>
+        <ns1:packageFileName>ol-4.6.5.js</ns1:packageFileName>
+        <ns1:originator>Organization: Kim Davies (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Snowball Developers (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: django (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Georg Brandl (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Donald Stufft and individual contributors (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Andrey Petrov (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: David Goodger (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Mark Pilgrim (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Jason R. Coombs (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Armin Ronacher (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Yoshiki Shibukawa (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Jonathan Hartley (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Dimitri Merejkowsky (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Jeff Forcier (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Stuart Bishop (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Python Packaging Authority (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Guido van Rossum, Jukka Lehtosalo, Lukasz Langa, Michael Lee (NOASSERTION)</ns1:originator>
+        <ns1:originator rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+        <ns1:originator>Organization: Kenneth Reitz (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Doug Hellmann (NOASSERTION)</ns1:originator>
+        <ns1:originator>Organization: Paul McGuire (NOASSERTION)</ns1:originator>
+        <ns1:licenseConcluded>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N43c471a3c3e54179b23571b402230c7d">
+            <ns1:licenseId>LGPL-3.0</ns1:licenseId>
+            <ns1:extractedText>None</ns1:extractedText>
+            <ns1:licenseName>LGPL-3.0</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseConcluded>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/licenses/Python-2.0"/>
+        <ns1:licenseConcluded>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nd2abf561e1874e4da5e13a2541e9db2b">
+            <ns1:extractedText>None</ns1:extractedText>
+            <ns1:licenseId>LGPL-3.0</ns1:licenseId>
+            <ns1:licenseName>LGPL-3.0</ns1:licenseName>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseConcluded>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/licenses/BSD-2-Clause"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/licenses/MIT"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/licenses/CC-PDDC"/>
+        <ns1:licenseConcluded rdf:resource="http://spdx.org/licenses/MPL-2.0"/>
+        <ns1:copyrightText>['Copyright 2017-2019 Jason R']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2010 Pallets']</ns1:copyrightText>
+        <ns1:copyrightText rdf:resource="http://spdx.org/rdf/terms#none"/>
+        <ns1:copyrightText>['Copyright 2006-2019 Olly Betts', 'Copyright 2004-2005 Richard Boulton', 'Copyright 2013 Yoshiki Shibukawa', 'Copyright 2001 Dr Martin Porter']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2016 Yoshiki Shibukawa']</ns1:copyrightText>
+        <ns1:copyrightText>['Kenneth Reitz']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2006-2021 by the Pygments team', 'Copyright 2006-2021 by the respective authors']</ns1:copyrightText>
+        <ns1:copyrightText>['Mark Pilgrim &amp; Dan Blanchard &amp; Ian Cordasco']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2013-2020 Arnon Yaari,', 'Copyright 2010 Jonathan Hartley']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright jQuery Foundation and other contributors']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright Donald Stufft and individual contributors']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2007-2019 by the Sphinx team']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2011 Günter Milde,']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2007 Pallets']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 1991-1995 Stichting Mathematisch Centrum Amsterdam,', 'Copyright 2001-2002 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,']</ns1:copyrightText>
+        <ns1:copyrightText>['Unspecified Copyright']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2010 by Doug Hellmann']</ns1:copyrightText>
+        <ns1:copyrightText><![CDATA[['Copyright 2003 John Gruber', 'Copyright 2008 Stefan van der Walt <stefan@mentat.za.net>, Pauli Virtanen <pav@iki.fi>', 'Copyright 2007-2021 by the Sphinx team', 'Copyright 2008 John Resig, https://jquery.com/', 'Copyright 2009 Jeremy Ashkenas, DocumentCloud']]]></ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2013-2020 Kim Davies']</ns1:copyrightText>
+        <ns1:copyrightText><![CDATA[['Copyright 1987-2006 implementation only works for dates between', 'Copyright 2003-2019 Stuart Bishop <stuart@stuartbishop.net>']]]></ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2020 OpenJS Foundation and jQuery contributors']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2013-2020 by the Babel Team']</ns1:copyrightText>
+        <ns1:copyrightText>['OpenJS Foundation and other contributors']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright Jason R']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2011 Kenneth Reitz and copyright (c) 2010', 'Copyright 2018 Jeff Forcier']</ns1:copyrightText>
+        <ns1:copyrightText>['Copyright 2008-2020 Andrey Petrov and contributors']</ns1:copyrightText>
+        <ns2:homepage rdf:resource="https://cdnjs.cloudflare.com/ajax/libs/xregexp/3.2.0/xregexp-all.js"/>
+        <ns2:homepage rdf:resource="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/dc/47/86022665a9433d89a66f5911b558ddff69861766807ba685de2e324bd6ed/sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/3e/89/7ea760b4daa42653ece2380531c90f64788d979110a2ab51049d92f408af/packaging-20.9-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/7e/c2/1eece8c95ddbc9b1aeb64f5783a9e07a286de42191b7204d67b7496ddf35/Jinja2-2.11.3-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/f6/62/796d8ae02732c162f8d53406f520c9f3c886a9ab24de4ef6995404c2b1d8/sphinxcontrib_spelling-7.1.0-py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/81/44/8a15e45ffa96e6cf82956dd8d7af9e666357e16b0d93b253903475ee947f/docutils-0.16-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/a3/e7/9af5e0766e801cf0ad64eedab70dcea17646c3a0d309980b25426ccc53ec/Sphinx-3.5.4-py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+        <ns2:homepage rdf:resource="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.js"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/ae/42/2876a3a136f8bfa9bd703518441c8db78ff1eeaddf174baa85c083c1fd15/setuptools-56.0.0-py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/36/62/8222554b29b3acde8420128d6d3999c5904d40922ef4b6ccb370e2be7421/sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/2b/14/05f9206cf4e9cfca1afb5fd224c7cd434dcc3a433d6d9e4e0264d29c6cdb/sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/f6/6e/7e07970c90a57c21da92013c5ba47f8e9598c17e88cc35b008ca61225ed3/snowballstemmer-2.1.0-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/9a/ca/bfad79b79b3821d0c6361c431f0ef4aec16ee248338b2c2013008b34d345/sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/c5/09/5de5ed43a521387f18bdf5f5af31d099605c992fd25372b2b9b825ce48ee/sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/8e/e2/49966924c93909d47612bb47d911448140a2f6c1390aec2f4c1afbe3748f/importlib_metadata-4.0.1-py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/0f/8c/715c54e9e34c0c4820f616a913a7de3337d0cd79074dd1bed4dd840f16ae/zipp-3.4.1-py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/3a/80/a52c0a7c5939737c6dca75a831e89658ecb6f590fb7752ac777d221937b9/Pygments-2.8.1-py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/10/ad/00b090d23a222943eb0eda509720a404f531a439e803f6538f35136cae9e/alabaster-0.7.12-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/dd/a5/81076e10b5ef74493cf08a8e419e61b64324c9c55db4aa7f89c0240c4873/Babel-2.9.0-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/52/70/eddb38504182286eb25976cb369dbfc314f8a904d4f6484e7618103f1e9f/pyenchant-3.2.0-py3-none-win_amd64.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/b9/82/833c7714951bff8f502ed054e6fbd8bd00e083d1fd96de6a46905cf23378/MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://github.com/django/django.git"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/09/c6/d3e3abe5b4f4f16cf0dfc9240ab7ce10c2baa0e268989a4e3ec19e90c84e/urllib3-1.26.4-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl"/>
+        <ns2:homepage rdf:resource="https://files.pythonhosted.org/packages/31/b2/b5522a0c8d11e4aff83f8342f3f0dea68c2fb25aa44403e420587f0ce204/imagesize-1.2.0-py2.py3-none-any.whl"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/BSD-2-Clause"/>
+        <ns1:licenseInfoFromFiles>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Nd07bfd5e5f524264a2ab88d24cefe3b3">
+            <ns1:licenseId>PIL Software License</ns1:licenseId>
+            <ns1:licenseName>PIL Software License</ns1:licenseName>
+            <ns1:extractedText>None</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoFromFiles>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/MIT"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/CC-PDDC"/>
+        <ns1:licenseInfoFromFiles>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N2789db5fd654416c8dad5064c979f115">
+            <ns1:licenseName>LGPL-2.1</ns1:licenseName>
+            <ns1:licenseId>LGPL-2.1</ns1:licenseId>
+            <ns1:extractedText>None</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoFromFiles>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/MPL-2.0"/>
+        <ns1:licenseInfoFromFiles>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="Ne855a873031042aca7550fafe1066327">
+            <ns1:licenseId>LGPL-3.0</ns1:licenseId>
+            <ns1:licenseName>LGPL-3.0</ns1:licenseName>
+            <ns1:extractedText>None</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoFromFiles>
+        <ns1:licenseInfoFromFiles>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N22477cafaac34bbfb77a794ceff1c739">
+            <ns1:licenseName>LGPL-3.0</ns1:licenseName>
+            <ns1:licenseId>LGPL-3.0</ns1:licenseId>
+            <ns1:extractedText>None</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseInfoFromFiles>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseInfoFromFiles rdf:resource="http://spdx.org/licenses/Python-2.0"/>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/f6/62/796d8ae02732c162f8d53406f520c9f3c886a9ab24de4ef6995404c2b1d8/sphinxcontrib_spelling-7.1.0-py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/8e/e2/49966924c93909d47612bb47d911448140a2f6c1390aec2f4c1afbe3748f/importlib_metadata-4.0.1-py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/0f/8c/715c54e9e34c0c4820f616a913a7de3337d0cd79074dd1bed4dd840f16ae/zipp-3.4.1-py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/81/44/8a15e45ffa96e6cf82956dd8d7af9e666357e16b0d93b253903475ee947f/docutils-0.16-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/3a/80/a52c0a7c5939737c6dca75a831e89658ecb6f590fb7752ac777d221937b9/Pygments-2.8.1-py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/ae/42/2876a3a136f8bfa9bd703518441c8db78ff1eeaddf174baa85c083c1fd15/setuptools-56.0.0-py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/36/62/8222554b29b3acde8420128d6d3999c5904d40922ef4b6ccb370e2be7421/sphinxcontrib_htmlhelp-1.0.3-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/52/70/eddb38504182286eb25976cb369dbfc314f8a904d4f6484e7618103f1e9f/pyenchant-3.2.0-py3-none-win_amd64.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/2b/14/05f9206cf4e9cfca1afb5fd224c7cd434dcc3a433d6d9e4e0264d29c6cdb/sphinxcontrib_qthelp-1.0.3-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/f6/6e/7e07970c90a57c21da92013c5ba47f8e9598c17e88cc35b008ca61225ed3/snowballstemmer-2.1.0-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/9a/ca/bfad79b79b3821d0c6361c431f0ef4aec16ee248338b2c2013008b34d345/sphinxcontrib_serializinghtml-1.1.4-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/c5/09/5de5ed43a521387f18bdf5f5af31d099605c992fd25372b2b9b825ce48ee/sphinxcontrib_devhelp-1.0.2-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://cdnjs.cloudflare.com/ajax/libs/xregexp/3.2.0/xregexp-all.js</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/10/ad/00b090d23a222943eb0eda509720a404f531a439e803f6538f35136cae9e/alabaster-0.7.12-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/dd/a5/81076e10b5ef74493cf08a8e419e61b64324c9c55db4aa7f89c0240c4873/Babel-2.9.0-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/70/94/784178ca5dd892a98f113cdd923372024dc04b8d40abe77ca76b5fb90ca6/pytz-2021.1-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/b9/82/833c7714951bff8f502ed054e6fbd8bd00e083d1fd96de6a46905cf23378/MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://github.com/django/django.git</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/09/c6/d3e3abe5b4f4f16cf0dfc9240ab7ce10c2baa0e268989a4e3ec19e90c84e/urllib3-1.26.4-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/31/b2/b5522a0c8d11e4aff83f8342f3f0dea68c2fb25aa44403e420587f0ce204/imagesize-1.2.0-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/a3/e7/9af5e0766e801cf0ad64eedab70dcea17646c3a0d309980b25426ccc53ec/Sphinx-3.5.4-py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/dc/47/86022665a9433d89a66f5911b558ddff69861766807ba685de2e324bd6ed/sphinxcontrib_applehelp-1.0.2-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/3e/89/7ea760b4daa42653ece2380531c90f64788d979110a2ab51049d92f408af/packaging-20.9-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.js</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/7e/c2/1eece8c95ddbc9b1aeb64f5783a9e07a286de42191b7204d67b7496ddf35/Jinja2-2.11.3-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:downloadLocation>https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl</ns1:downloadLocation>
+        <ns1:supplier>Organization: Jeff Forcier (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Armin Ronacher (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Stuart Bishop (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Kenneth Reitz (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Doug Hellmann (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Paul McGuire (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Kim Davies (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Snowball Developers (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: django (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Python Packaging Authority (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Georg Brandl (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Donald Stufft and individual contributors (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Guido van Rossum, Jukka Lehtosalo, Lukasz Langa, Michael Lee (NOASSERTION)</ns1:supplier>
+        <ns1:supplier rdf:resource="http://spdx.org/rdf/terms#noassertion"/>
+        <ns1:supplier>Organization: Andrey Petrov (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: David Goodger (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Mark Pilgrim (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Jason R. Coombs (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Yoshiki Shibukawa (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Jonathan Hartley (NOASSERTION)</ns1:supplier>
+        <ns1:supplier>Organization: Dimitri Merejkowsky (NOASSERTION)</ns1:supplier>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ne377d53996bc4013924812623e6a4a27">
+            <ns1:checksumValue>51898889f2036fe499dd04c3c428dc31f8894900</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N0eab57e06cf246aa9ed41aab95634536">
+            <ns1:checksumValue>a9eac8945a74c8662a792aa456b966604ebb4abe</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N1b9c82e60bba4494b25895baffd52ced">
+            <ns1:checksumValue>6c8f3553adb32d565132b8424c3ea0506fc59eea</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nbdce398e968945e99ef93307f3ace605">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>d4d800ca1addc4141e03c5440a849bb64d1582cd</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N7d16259389b34f72b9ca314edd26ef29">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>7ef35d903abc427d8d856be6d7c6dbe061a9e953</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nea366b938b4840ada93af120383dfff2">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>7bd64440d3a02990789361919d681cd9b9caacc3</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ne2f263123c7140f28594a11d4081b34f">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>ad16c4a132ad2a03b4951185fed46d55397b5e88</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nde1a4d1caaee45c5a17213117594341c">
+            <ns1:checksumValue>b1009d9fd6acadc64e1a3cecb6f0083fe047e753</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N9e5b2e12b77141019d16bf5908a295d4">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>8445b42d038791c07977c082c6733dca2101b60a</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N856e5300348442e9beac514836b74daf">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>328d8183d0d578bab53bcc9a827070ae005ee568</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N9443023a563d44e68ca1a086fec2260b">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>e6846cc61024255030f76313a68c29cb9ffb6523</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nb2340ba290eb4381b6430c925aa1958e">
+            <ns1:checksumValue>beff4fc35d13a5f2883bc129f28ac031046195c5</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nb5a28dccc93b4dcfb76d8e918e602d8f">
+            <ns1:checksumValue>16c8a2c9de0db445973404f9d0caa1d58014f61f</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N9347addececb4c58876c92000c3d0a08">
+            <ns1:checksumValue>6245cdab59b33350a6833637df0941a3b2b5ab6f</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N3ab86ee7b5ac41ab815c353d6175ef7a">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>b97c6966fb8fd273f0bc8533cf0dee4978b9f373</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N67b1a290ad984bf7bedcba9c0d568e5a">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>2b10cb7681bc678ba4ff3be524b28d783e4095ce</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N74bef7e221c64d1fae8b4ac37381a290">
+            <ns1:checksumValue>09f5054a9eb775404d9815bb8d77d13b32fb34af</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N0995840f026148229f59ae3e46c24cad">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>c8e1c8b386dc5b7a9184c763c88d19a346eb3342</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Ndd46e5dbbb2040c1bb4545592d647408">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>f835ef1da083bac157e005b4d3e61e7ae54bbbab</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Na0bfad54490a4207b2d8cf867a50464d">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>999b6718b4d789d8ca0d2ddf7c07826154291825</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nd6681467029c42c09cbf2a0a437c5290">
+            <ns1:checksumValue>c8307f47e3b75a2d02af72982a2dfefa3f56e407</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N2b24e08524d543d8afc5f96e11e7f57b">
+            <ns1:checksumValue>ed6d9706f74bc3e27b341884e2dc9e577e7f9cb5</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nd2475a2e609e4c71881b08c64ef33375">
+            <ns1:checksumValue>69a966ff2db15bee941f4efbc592d1e33024c67b</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N080e90b21ed747058ab82696167ca974">
+            <ns1:checksumValue>db210cdb4e96524d8fe39f59c3dbe0bfc4378665</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N5a0c092721454cacb883dcf74598965c">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>756e1901e014b1e1bfa87918d8ee5ca1fca6f184</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nd1bafd7645f24c3ab6a50cddaed42b23">
+            <ns1:checksumValue>2f921fdec63547d20d171de41bc50916aebf5fd2</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N98d9f2e914e74b888633f39a46dbcd86">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>93ce9842312d434a7f2270ec9b02d903e22d7017</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N73a5f8eb94084ba6ac508e2a0f72a38e">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>7cbbdac32029c5d0e1ccaea6eb4384956ec6c683</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N22b16dcee82144c9992e56216216fa2a">
+            <ns1:checksumValue>6c84f22d87ebec63d1d75a2e27db8433013b8287</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Naa854a2b0e914f2f8488c93b2f0754e9">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>7dff15a2066b8809c8772a243991bd1a25740ec3</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N204ee4b94a904ef2b4ca517687ea7b4c">
+            <ns1:checksumValue>d5a9665c8bf4443f54c4e6c62ecf1d63e403291f</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N54b04d713d20454a9c3d965fb2f3c12f">
+            <ns1:checksumValue>e9eb83c71c09b3c8249bd7d6d2619b65fff03874</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="N2ac03fd5659c45c491fe5b0bfbb2230d">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>b5a04c99dd056dfb2618e4cf5f26d14dff451bfb</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nad01238b4de9473e8dec2b2620fbe041">
+            <ns1:checksumValue>0737ee9410a7c82511dd5e732092ce4ab66d51b4</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nb49df8e999d64d00952d29a329475ee3">
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+            <ns1:checksumValue>9111cb7551946d031af709b095ce08e8daadb203</ns1:checksumValue>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:checksum>
+          <ns1:Checksum rdf:nodeID="Nfb7458108381435eafe87a0574088ce6">
+            <ns1:checksumValue>bab0d6dfa83f230c705d7eefca449177779065af</ns1:checksumValue>
+            <ns1:algorithm>SHA-1</ns1:algorithm>
+          </ns1:Checksum>
+        </ns1:checksum>
+        <ns1:name>Pygments</ns1:name>
+        <ns1:name>chardet</ns1:name>
+        <ns1:name>sphinxcontrib-qthelp</ns1:name>
+        <ns1:name>idna</ns1:name>
+        <ns1:name>pyenchant</ns1:name>
+        <ns1:name>sphinxcontrib-devhelp</ns1:name>
+        <ns1:name>importlib-metadata</ns1:name>
+        <ns1:name>alabaster</ns1:name>
+        <ns1:name>urllib3</ns1:name>
+        <ns1:name>pytz</ns1:name>
+        <ns1:name>zipp</ns1:name>
+        <ns1:name>djangod4d800ca1addc4141e03c5440a849bb64d1582cd</ns1:name>
+        <ns1:name>sphinxcontrib-jsmath</ns1:name>
+        <ns1:name>colorama</ns1:name>
+        <ns1:name>sphinxcontrib-applehelp</ns1:name>
+        <ns1:name>openlayers</ns1:name>
+        <ns1:name>certifi</ns1:name>
+        <ns1:name>jquery</ns1:name>
+        <ns1:name>typing-extensions</ns1:name>
+        <ns1:name>sphinxcontrib-htmlhelp</ns1:name>
+        <ns1:name>snowballstemmer</ns1:name>
+        <ns1:name>docutils</ns1:name>
+        <ns1:name>xregexp</ns1:name>
+        <ns1:name>sphinxcontrib-serializinghtml</ns1:name>
+        <ns1:name>MarkupSafe</ns1:name>
+        <ns1:name>select2</ns1:name>
+        <ns1:name>sphinxcontrib-spelling</ns1:name>
+        <ns1:name>setuptools</ns1:name>
+        <ns1:name>Babel</ns1:name>
+        <ns1:name>Jinja2</ns1:name>
+        <ns1:name>Sphinx</ns1:name>
+        <ns1:name>pyparsing</ns1:name>
+        <ns1:name>requests</ns1:name>
+        <ns1:name>imagesize</ns1:name>
+        <ns1:name>packaging</ns1:name>
+        <ns1:licenseDeclared rdf:resource="http://spdx.org/licenses/BSD-2-Clause"/>
+        <ns1:licenseDeclared rdf:resource="http://spdx.org/licenses/BSD-3-Clause"/>
+        <ns1:licenseDeclared rdf:resource="http://spdx.org/licenses/MIT"/>
+        <ns1:licenseDeclared rdf:resource="http://spdx.org/licenses/MPL-2.0"/>
+        <ns1:licenseDeclared>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N3293e8e240a0450dbdadf07ea5ff768d">
+            <ns1:licenseName>LGPL-3.0</ns1:licenseName>
+            <ns1:licenseId>LGPL-3.0</ns1:licenseId>
+            <ns1:extractedText>None</ns1:extractedText>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseDeclared>
+        <ns1:licenseDeclared rdf:resource="http://spdx.org/licenses/Apache-2.0"/>
+        <ns1:licenseDeclared>
+          <ns1:ExtractedLicensingInfo rdf:nodeID="N6dff1c1b19a648d2b47f63ba21c86ff4">
+            <ns1:licenseName>LGPL-3.0</ns1:licenseName>
+            <ns1:extractedText>None</ns1:extractedText>
+            <ns1:licenseId>LGPL-3.0</ns1:licenseId>
+          </ns1:ExtractedLicensingInfo>
+        </ns1:licenseDeclared>
+        <ns1:licenseDeclared rdf:resource="http://spdx.org/licenses/Python-2.0"/>
+        <ns1:licenseDeclared rdf:resource="http://spdx.org/licenses/CC-PDDC"/>
+        <ns1:versionInfo>2.10</ns1:versionInfo>
+        <ns1:versionInfo>3.5.1</ns1:versionInfo>
+        <ns1:versionInfo>0.7.12</ns1:versionInfo>
+        <ns1:versionInfo>20.9</ns1:versionInfo>
+        <ns1:versionInfo>0.4.4</ns1:versionInfo>
+        <ns1:versionInfo>4.6.5</ns1:versionInfo>
+        <ns1:versionInfo>1.0.3</ns1:versionInfo>
+        <ns1:versionInfo>1.0.2</ns1:versionInfo>
+        <ns1:versionInfo>3.5.4</ns1:versionInfo>
+        <ns1:versionInfo>7.1.0</ns1:versionInfo>
+        <ns1:versionInfo>1.1.4</ns1:versionInfo>
+        <ns1:versionInfo>4.0.1</ns1:versionInfo>
+        <ns1:versionInfo>2.4.7</ns1:versionInfo>
+        <ns1:versionInfo>1.2.0</ns1:versionInfo>
+        <ns1:versionInfo>2.11.3</ns1:versionInfo>
+        <ns1:versionInfo>2021.1</ns1:versionInfo>
+        <ns1:versionInfo>d4d800ca1addc4141e03c5440a849bb64d1582cd</ns1:versionInfo>
+        <ns1:versionInfo>4.0.0</ns1:versionInfo>
+        <ns1:versionInfo>1.26.4</ns1:versionInfo>
+        <ns1:versionInfo>2.8.1</ns1:versionInfo>
+        <ns1:versionInfo>4.0.13</ns1:versionInfo>
+        <ns1:versionInfo>2.9.0</ns1:versionInfo>
+        <ns1:versionInfo>3.7.4.3</ns1:versionInfo>
+        <ns1:versionInfo>3.2.0</ns1:versionInfo>
+        <ns1:versionInfo>1.0.1</ns1:versionInfo>
+        <ns1:versionInfo>56.0.0</ns1:versionInfo>
+        <ns1:versionInfo>2.25.1</ns1:versionInfo>
+        <ns1:versionInfo>2.1.0</ns1:versionInfo>
+        <ns1:versionInfo>2020.12.5</ns1:versionInfo>
+        <ns1:versionInfo>3.4.1</ns1:versionInfo>
+        <ns1:versionInfo>1.1.1</ns1:versionInfo>
+        <ns1:versionInfo>0.16</ns1:versionInfo>
+        <ns1:filesAnalyzed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns1:filesAnalyzed>
+      </ns1:Package>
+    </ns1:describesPackage>
+    <ns1:creationInfo>
+      <ns1:CreationInfo rdf:nodeID="Nf3642e4c227543a5983e15e8a3e93771">
+        <ns1:creator>Person: person name (person@email.address)</ns1:creator>
+        <ns1:creator>Organization: PS CI environment (org@email.address)</ns1:creator>
+        <ns1:creator>Tool: White Source SBOM Report Generator</ns1:creator>
+        <ns1:created>2021-10-17T20:39:07Z</ns1:created>
+      </ns1:CreationInfo>
+    </ns1:creationInfo>
+    <ns1:specVersion>SPDX-2.2</ns1:specVersion>
+    <ns1:name rdf:resource="WhiteSource python SBOM report"/>
+  </ns1:SpdxDocument>
+</rdf:RDF>
