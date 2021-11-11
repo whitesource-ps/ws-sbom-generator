@@ -27,7 +27,7 @@ args = None
 
 def create_sbom_doc(scope_token) -> Document:
     scope = args.ws_conn.get_scope_by_token(scope_token)
-    logging.info(f"Creating SBOM Document from WhiteSource {scope['type']}: {scope['name']}")
+    logging.info(f"Creating SBOM Document from WhiteSource {scope['type']}: '{scope['name']}'")
     scope_name = args.ws_conn.get_scope_name_by_token(scope_token)
     namespace = args.extra_conf.get('namespace', 'https://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]')
     doc, doc_spdx_id = create_document(scope_name, namespace)
@@ -202,7 +202,7 @@ def init():
         fp = open(args.extra, 'r')
         args.extra_conf = json.loads(fp.read())
     except FileNotFoundError:
-        logging.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure:
+        logging.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure (-e/--extra):
             {{
                 "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
                 "org_email": "org@email.address",
