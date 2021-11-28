@@ -11,14 +11,14 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     env:
-      TOOL_NAME: sbom_generator
+      TOOL_NAME: ws_sbom_generator
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9]
     steps:
       - name: Set Environment Variables
         run: |
-          echo "TOOL_DIR=ws_$TOOL_NAME" >> $GITHUB_ENV
+          echo "TOOL_DIR=$TOOL_NAME" >> $GITHUB_ENV
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             echo "VERSION=$(echo ${{github.ref}} |  sed -r 's/^[\/a-zA-z-]+//')" >> $GITHUB_ENV
           fi

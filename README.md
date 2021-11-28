@@ -31,7 +31,7 @@ Python 3.7+
    
    1. Usage:
        ```shell
-       usage: sbom_generator.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN] [-a WS_URL] [-t {json,tv,rdf,xml,yaml,all}] [-e EXTRA] [-o OUT_DIR]
+       usage: ws_sbom_generator.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN] [-a WS_URL] [-t {json,tv,rdf,xml,yaml,all}] [-e EXTRA] [-o OUT_DIR]
     
        Utility to create SBOM from WhiteSource data
     
@@ -56,9 +56,9 @@ Python 3.7+
 ## Example:
 ```shell
 # Create tag value report on a specific project 
-sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports>
+ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports>
 # Creating JSON report on all projects within the product 
-sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -s <WS_PRODUCT_TOKEN> -t json -e /<path/to>/sbom_extra.json -o </path/reports>
+ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -s <WS_PRODUCT_TOKEN> -t json -e /<path/to>/sbom_extra.json -o </path/reports>
 ```
 
 ## Docker container
