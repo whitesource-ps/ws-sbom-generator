@@ -27,7 +27,7 @@ Python 3.7+
 1. Execute: `pip install ws_sbom_generator`
 2. Install WS spdx-tools package that contains pre-release of spdx-tools 7 and additional fixes by: 
    1. Downloading **spdx-tools** from [here](https://github.com/whitesource-ps/ws-sbom-generator/blob/master/spdx_tools-0.7.0a3_ws-py3-none-any.whl). 
-   2. installing by executing: `pip install spdx_tools-0.7.0a3_ws-py3-none-any.whl`.
+   2. Installing by executing: `pip install spdx_tools-0.7.0a3_ws-py3-none-any.whl`.
 ## Usage:
        ```shell
        usage: ws_sbom_generator.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN] [-a WS_URL] [-t {json,tv,rdf,xml,yaml,all}] [-e EXTRA] [-o OUT_DIR]
