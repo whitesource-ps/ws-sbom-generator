@@ -11,14 +11,14 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     env:
-      TOOL_NAME: sbom_generator
+      TOOL_NAME: ws_sbom_generator
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9]
     steps:
       - name: Set Environment Variables
         run: |
-          echo "TOOL_DIR=ws_$TOOL_NAME" >> $GITHUB_ENV
+          echo "TOOL_DIR=$TOOL_NAME" >> $GITHUB_ENV
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             echo "VERSION=$(echo ${{github.ref}} |  sed -r 's/^[\/a-zA-z-]+//')" >> $GITHUB_ENV
           fi
@@ -77,7 +77,7 @@ jobs:
         uses: papeloto/action-zip@v1
         with:
           files: requirements.txt LICENSE README.md CLA.md ${{ env.TOOL_DIR }}/
-          dest: ws_$TOOL_NAME.zip
+          dest: ${{ env.TOOL_NAME }}-${{ env.VERSION}}.zip
           recursive: true
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v')
@@ -116,7 +116,7 @@ jobs:
           tags: ${{ steps.prep.outputs.tags }}
           build-args: version=${{ env.VERSION }}
       - name: confluence-markdown-sync - PS documentation
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: ${{ env.RELEASE == true }}
         uses: cupcakearmy/confluence-markdown-sync@v1
         with:
           from: README.md
@@ -125,7 +125,7 @@ jobs:
           user: ${{ secrets.CONFLUENCE_USER }}
           token: ${{ secrets.CONFLUENCE_TOKEN }}
       - name: confluence-markdown-sync - Public Community
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: ${{ env.RELEASE == true }}
         uses: cupcakearmy/confluence-markdown-sync@v1
         with:
           from: README.md
