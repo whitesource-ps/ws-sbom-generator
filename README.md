@@ -7,7 +7,7 @@
 # WS SBOM Generator in SPDX format 
 CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spdx.org).
 * The tool can generate reports on the following scopes (defined with: **-s/WS_SCOPE**):
-  * Project token - the tool will generate report on project token.
+  * Project token - the tool will generate report on a specific project.
   * Product token - teh tool will generate report on all the projects within the product.
   * No Token specified - the tool will generate report on all the projects within the organization.
 * The tool utilizes [spdx-tools](https://github.com/spdx/tools).
@@ -25,9 +25,9 @@ Python 3.7+
 
 ## Install as PyPi package:
 1. Execute: `pip install ws_sbom_generator`
-2. Install WS spdx-tools package that contains pre-release of spdx-tools 7 and additional fixes.
-   
-   Download and install spdx-tools from [here](https://github.com/whitesource-ps/ws-sbom-generator/blob/master/spdx_tools-0.7.0a3_ws-py3-none-any.whl)
+2. Install WS spdx-tools package that contains pre-release of spdx-tools 7 and additional fixes:
+    * Use this command to install the package above: `pip install --extra-index-url https://github.com/whitesource-ps/ws-sbom-generator/raw/master spdx_tools`
+    * Download spdx-tools from [here](https://github.com/whitesource-ps/ws-sbom-generator/blob/master/spdx_tools-0.7.0a3_ws-py3-none-any.whl). Following, install by execute: `pip install spdx_tools-0.7.0a3_ws-py3-none-any.whl` 
    
    1. Usage:
        ```shell
@@ -52,7 +52,15 @@ Python 3.7+
          -o OUT_DIR, --out OUT_DIR
                                Output directory
        ```
-      Example: `sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a saas -s <WS_PROJECT_TOKEN> -t tv -e /<path/to>/sbom_extra.json -o </path/reports>`
+
+## Example:
+```shell
+# Create tag value report on a specific project 
+sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports>
+# Creating JSON report on all projects within the product 
+sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -s <WS_PRODUCT_TOKEN> -t json -e /<path/to>/sbom_extra.json -o </path/reports>
+```
+
 ## Docker container
 ### Installation 
 ```shell
