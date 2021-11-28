@@ -53,7 +53,7 @@ Python 3.7+
                                Output directory
        ```
 
-## Example:
+## Examples:
 ```shell
 # Create tag value report on a specific project 
 ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports>
