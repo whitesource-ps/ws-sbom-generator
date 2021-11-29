@@ -101,11 +101,17 @@ def create_creation_info(org_name, org_email, person_name, person_email):
 
 
 def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
+    def should_replace_f(dict_a, dict_b):
+        if dict_a.get('dependencies'):
+            return True
+        else:
+            return False
+
     logging.debug(f"Creating Packages entity")
     for d in due_dil:
         d['library'] = d['library'].rstrip('*')
     dd_dict = ws_utilities.convert_dict_list_to_dict(lst=due_dil, key_desc=('library', 'name'))
-    libs_hierarchy_dict = ws_utilities.convert_dict_list_to_dict(lst=lib_hierarchy, key_desc='keyUuid')
+    libs_hierarchy_dict = ws_utilities.convert_dict_list_to_dict(lst=lib_hierarchy, key_desc='keyUuid', should_replace_f=should_replace_f)
     packages = []
     pkgs_spdx_ids = []
     pkgs_relationships = []
