@@ -78,7 +78,7 @@ jobs:
         with:
           files: requirements.txt LICENSE README.md CLA.md ${{ env.TOOL_DIR }}/
           dest: ${{ env.TOOL_NAME }}-${{ env.VERSION}}.zip
-          recursive: true
+          recursive: false
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1
@@ -86,7 +86,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           allowUpdates: true
           artifacts: "*.zip"
-          prerelease: ${{ env.RELEASE != true }}
+          prerelease: ${{ env.RELEASE == false }}
       - name: Prepare tag
         if: contains(github.ref, 'refs/tags/')
         id: prep

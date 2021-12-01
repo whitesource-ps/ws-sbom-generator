@@ -101,7 +101,7 @@ def create_creation_info(org_name, org_email, person_name, person_email):
 
 
 def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
-    def should_replace_f(dict_a, dict_b):
+    def should_replace_f(dict_a, dict_b):       # Handle case where duplicate lib returns, prefer the lib with dependencies
         if dict_a.get('dependencies'):
             return True
         else:

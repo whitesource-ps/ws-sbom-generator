@@ -21,9 +21,8 @@ CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spd
 ## Prerequisites
 Python 3.7+
 ## Deployment and Usage
-### From PyPi (simplest)
-
-## Install as a PyPi package:
+## From PyPi (simplest)
+### Install as a PyPi package:
 1. Execute: `pip install ws_sbom_generator`
 2. Install WS spdx-tools package that contains pre-release of spdx-tools 7 and additional fixes by: 
    1. Downloading **spdx-tools** from [here](https://github.com/whitesource-ps/ws-sbom-generator/blob/master/spdx_tools-0.7.0a3_ws-py3-none-any.whl). 
