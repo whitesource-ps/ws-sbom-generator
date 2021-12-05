@@ -72,8 +72,7 @@ def test_create_packages():
     assert returned[0] == [] and returned[1] == [] and returned[2] == []
 
 
-@patch('ws_sbom_generator.sbom_generator.get_author_from_cr', return_value="AUTHOR")
-def test_create_package(mock_get_author_from_cr):
+def test_create_package():
     lib = {'name': "NAME",
            'filename': "FILENAME",
            'sha1': "SHA1",
@@ -94,12 +93,6 @@ def test_get_pkg_relationships():
     returned = sbom_generator.get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id)
 
     assert returned == expected
-
-
-def test_get_author_from_cr():
-    returned = sbom_generator.get_author_from_cr([{'author': "AUTHOR1"}, {'author': "AUTHOR2"}])
-
-    assert returned == "AUTHOR2"
 
 
 def test_replace_invalid_chars():

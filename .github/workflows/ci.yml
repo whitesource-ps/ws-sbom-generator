@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install wheel pytest flake8 spdx_tools-0.7.0a3_ws-py3-none-any.whl
+          pip install wheel pytest flake8
           pip install -r requirements.txt
       - name: Lint with flake8
         run: |
@@ -78,7 +78,7 @@ jobs:
         with:
           files: requirements.txt LICENSE README.md CLA.md ${{ env.TOOL_DIR }}/
           dest: ${{ env.TOOL_NAME }}-${{ env.VERSION}}.zip
-          recursive: true
+          recursive: false
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1
@@ -86,7 +86,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           allowUpdates: true
           artifacts: "*.zip"
-          prerelease: ${{ env.RELEASE != true }}
+          prerelease: ${{ env.RELEASE == false }}
       - name: Prepare tag
         if: contains(github.ref, 'refs/tags/')
         id: prep
