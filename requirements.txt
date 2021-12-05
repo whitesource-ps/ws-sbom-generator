@@ -1,3 +1,2 @@
-#spdx-tools~=0.7.0
-# ws-sdk[SPDX]==0.7.2    # Pending new release of spdx-tools
-ws-sdk==0.7.3a1
+ws-spdx-tools==0.7.0a3
+ws-sdk[SPDX]~=0.7.3
