@@ -126,6 +126,15 @@ def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
 
 
 def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
+    def get_author_from_cr(copyright_references: list) -> str:
+        authors = [a['author'] for a in copyright_references if a.get('author')]
+        if len(authors) > 1:
+            logging.warning(f"Found {len(authors)} authors on lib '{lib['name']}'. Report will contain one")
+        elif not authors:
+            logging.warning(f"No author data found on lib: '{lib['name']}'")
+
+        return authors.pop() if authors else None
+
     pkg_spdx_id = generate_spdx_id(f"SPDXRef-PACKAGE-{lib['filename']}")
     logging.debug(f"Creating Package {pkg_spdx_id}")
     lib_licenses = lib.get('licenses')
@@ -192,16 +201,6 @@ def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:
         pkg_relationships.append(Relationship(relationship=f"{pkg_spdx_id} {RelationshipType.DEPENDS_ON.name} SPDXRef-PACKAGE-{dep_lib['filename']}"))
 
     return pkg_relationships
-
-
-def get_author_from_cr(copyright_references: list) -> str:
-    authors = [a['author'] for a in copyright_references if a.get('author')]
-    if len(authors) > 1:
-        logging.warning(f"Found {len(authors)} authors on the lib. Report will contain one")
-    elif not authors:
-        logging.warning("No author data found on lib")
-
-    return authors.pop() if authors else None
 
 
 def init():
