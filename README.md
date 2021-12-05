@@ -10,7 +10,7 @@ CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spd
   * Project token - the tool will generate report on a specific project.
   * Product token - teh tool will generate report on all the projects within the product.
   * No Token specified - the tool will generate report on all the projects within the organization.
-* The tool utilizes [spdx-tools](https://github.com/spdx/tools).
+* The tool utilizes a forked package of [spdx-tools](https://github.com/spdx/tools).
 * The tool accepts additional values which are unknown to WhiteSource via `sbom_extra.json`.
 * If URL is not stated (defined with: **-a/WS_URL**), the tool will access **saas**.
 * If report type is not stated (defined with: **-t/WS_REPORT_TYPE**) the tool will generate a report in **tag-value** format.  
@@ -23,10 +23,7 @@ Python 3.7+
 ## Deployment and Usage
 ## From PyPi (simplest)
 ### Install as a PyPi package:
-1. Execute: `pip install ws_sbom_generator`
-2. Install WS spdx-tools package that contains pre-release of spdx-tools 7 and additional fixes by: 
-   1. Downloading **spdx-tools** from [here](https://github.com/whitesource-ps/ws-sbom-generator/blob/master/spdx_tools-0.7.0a3_ws-py3-none-any.whl). 
-   2. Installing by executing: `pip install spdx_tools-0.7.0a3_ws-py3-none-any.whl`.
+Execute: `pip install ws-sbom-generator`
 ## Usage:
        ```shell
        usage: ws_sbom_generator.py [-h] -u WS_USER_KEY -k WS_TOKEN [-s SCOPE_TOKEN] [-a WS_URL] [-t {json,tv,rdf,xml,yaml,all}] [-e EXTRA] [-o OUT_DIR]
