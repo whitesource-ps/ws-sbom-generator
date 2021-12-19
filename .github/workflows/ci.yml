@@ -10,14 +10,14 @@ on:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    env:
-      TOOL_NAME: ws_sbom_generator
     strategy:
       matrix:
         python-version: [3.7, 3.8, 3.9]
     steps:
       - name: Set Environment Variables
         run: |
+          TOOL_NAME=$(echo '${{ github.repository }}' |awk -F '/' '{gsub(/-/, "_", $0) ;print $NF}')
+          echo "TOOL_NAME=$TOOL_NAME" >> $GITHUB_ENV
           echo "RELEASE=false" >> $GITHUB_ENV
           echo "VERSION=0.0.0.ci0" >> $GITHUB_ENV
           echo "TOOL_DIR=$TOOL_NAME" >> $GITHUB_ENV
@@ -88,7 +88,7 @@ jobs:
           artifacts: dist/${{ env.TOOL_DIR }}-${{ env.VERSION }}-py3-none-any.whl
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: ${{ env.RELEASE != true }}
+          prerelease: ${{ !env.RELEASE }}
       - name: Prepare tag
         if: contains(github.ref, 'refs/tags/')
         id: prep
@@ -119,7 +119,7 @@ jobs:
           tags: ${{ steps.prep.outputs.tags }}
           build-args: version=${{ env.VERSION }}
       - name: confluence-markdown-sync - PS documentation
-        if: ${{ env.RELEASE == true }}
+        if: ${{ env.RELEASE }}
         uses: cupcakearmy/confluence-markdown-sync@v1
         with:
           from: README.md
@@ -128,7 +128,7 @@ jobs:
           user: ${{ secrets.CONFLUENCE_USER }}
           token: ${{ secrets.CONFLUENCE_TOKEN }}
       - name: confluence-markdown-sync - Public Community
-        if: ${{ env.RELEASE == true }}
+        if: ${{ env.RELEASE }}
         uses: cupcakearmy/confluence-markdown-sync@v1
         with:
           from: README.md
