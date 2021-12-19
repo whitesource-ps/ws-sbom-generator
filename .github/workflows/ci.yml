@@ -1,4 +1,4 @@
-name: WS SBOM Generator
+name: CI
 on:
   push:
     branches:
