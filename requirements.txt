@@ -1,2 +1,2 @@
 ws-spdx-tools==0.7.0a3
-ws-sdk[SPDX]~=0.8.0
+ws-sdk~=0.8.0
