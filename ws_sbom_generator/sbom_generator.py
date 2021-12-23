@@ -345,7 +345,7 @@ def main():
             scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
         elif scope_type == ws_constants.PRODUCT:
             scopes = args.ws_conn.get_projects(product_token=args.scope_token)
-            logging.info(f"Creating SBOM report per project in {scope_type}: {scopes[0]['productName']}")
+            logging.info(f"Creating SBOM report per project in {scope_type}: {scopes[0]['product_name']}")
         else:
             logging.info("Creating SBOM reports on all Organization Projects")
             scopes = args.ws_conn.get_projects()
