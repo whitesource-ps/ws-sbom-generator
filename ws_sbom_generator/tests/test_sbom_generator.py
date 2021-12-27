@@ -39,7 +39,9 @@ from ws_sbom_generator import sbom_generator
 def test_get_document_relationships():
     doc_spdx_id = "SPDX-DOC_ID"
     expected = [relationship.Relationship(relationship=f"SPDX-PKG_ID1 {relationship.RelationshipType.DESCRIBED_BY.name} {doc_spdx_id}"),
-                relationship.Relationship(relationship=f"SPDX-PKG_ID2 {relationship.RelationshipType.DESCRIBED_BY.name} {doc_spdx_id}")]
+                relationship.Relationship(relationship=f"{doc_spdx_id} {relationship.RelationshipType.DESCRIBES.name} SPDX-PKG_ID1"),
+                relationship.Relationship(relationship=f"SPDX-PKG_ID2 {relationship.RelationshipType.DESCRIBED_BY.name} {doc_spdx_id}"),
+                relationship.Relationship(relationship=f"{doc_spdx_id} {relationship.RelationshipType.DESCRIBES.name} SPDX-PKG_ID2")]
     pkgs_spdx_ids = ["SPDX-PKG_ID1", "SPDX-PKG_ID2"]
     returned = sbom_generator.get_document_relationships(pkgs_spdx_ids, doc_spdx_id)
 
