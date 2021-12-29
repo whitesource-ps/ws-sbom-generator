@@ -88,7 +88,7 @@ jobs:
           artifacts: dist/${{ env.TOOL_DIR }}-${{ env.VERSION }}-py3-none-any.whl
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: ${{ !env.RELEASE }}
+          prerelease: ${{ env.RELEASE != 'true' }}
       - name: Prepare tag
         if: contains(github.ref, 'refs/tags/')
         id: prep
@@ -119,7 +119,7 @@ jobs:
           tags: ${{ steps.prep.outputs.tags }}
           build-args: version=${{ env.VERSION }}
       - name: confluence-markdown-sync - PS documentation
-        if: ${{ env.RELEASE }}
+        if: ${{ env.RELEASE == 'true' }}
         uses: cupcakearmy/confluence-markdown-sync@v1
         with:
           from: README.md
@@ -128,7 +128,7 @@ jobs:
           user: ${{ secrets.CONFLUENCE_USER }}
           token: ${{ secrets.CONFLUENCE_TOKEN }}
       - name: confluence-markdown-sync - Public Community
-        if: ${{ env.RELEASE }}
+        if: ${{ env.RELEASE == 'true' }}
         uses: cupcakearmy/confluence-markdown-sync@v1
         with:
           from: README.md
