@@ -4,6 +4,8 @@ import json
 import logging
 import os
 import argparse
+import re
+
 import sys
 from enum import Enum
 
@@ -144,6 +146,12 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
         return authors.pop() if authors else None
 
+    def fix_license_id(license_name: str):
+        license_id = re.sub(r'(?![a-zA-Z0-9-.]).', '-', license_name)
+        logger.debug(f"Converted license name '{license_name}' to {license_id}")
+
+        return license_id
+
     def extract_licenses(lib_lics: list, lib_name: str) -> tuple:
         lics = []
         extracted_lics = []
@@ -155,7 +163,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
                 lics.append(License(full_name=full_name, identifier=lic_id))
             else:
                 logger.debug(f"Found license not in SPDX list: '{full_name}' on lib: '{lib_name}'")
-                extracted_lic = ExtractedLicense(identifier=f"LicenseRef-{full_name.replace(' ','_')}")
+                extracted_lic = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")
                 extracted_lic.text = full_name
                 extracted_lics.append(extracted_lic)
 
