@@ -137,6 +137,9 @@ def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
 
 
 def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
+    def is_spdx_license(lic) -> bool:                                                   # DUE TO WSA-8931
+        return True if args.ws_conn.spdx_lic_dict.get(lic) else False
+
     def get_author_from_cr(copyright_references: list) -> str:
         authors = [a['author'] for a in copyright_references if a.get('author')]
         if len(authors) > 1:
@@ -146,7 +149,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
         return authors.pop() if authors else None
 
-    def fix_license_id(license_name: str):
+    def fix_license_id(license_name: str):              # TODO ADD TO upstream spdx-tools
         license_id = re.sub(r'(?![a-zA-Z0-9-.]).', '-', license_name)
         logger.debug(f"Converted license name '{license_name}' to {license_id}")
 
@@ -157,12 +160,12 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
         extracted_lics = []
         for lic in lib_lics:
             full_name = lic.get('name')
-            lic_id = lic.get('spdxName')
-            if lic_id:
-                logger.debug(f"Found SPDX license: '{lic_id}' on lib: '{lib_name}'")
-                lics.append(License(full_name=full_name, identifier=lic_id))
+            spdx_lic_id = lic.get('spdxName')
+            if spdx_lic_id and is_spdx_license(spdx_lic_id):
+                logger.debug(f"Found SPDX license: '{spdx_lic_id}' on lib: '{lib_name}'")
+                lics.append(License(full_name=full_name, identifier=spdx_lic_id))
             else:
-                logger.debug(f"Found license not in SPDX list: '{full_name}' on lib: '{lib_name}'")
+                logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
                 extracted_lic = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")
                 extracted_lic.text = full_name
                 extracted_lics.append(extracted_lic)
