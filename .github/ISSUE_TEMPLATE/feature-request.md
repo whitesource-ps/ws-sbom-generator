@@ -1,7 +1,7 @@
 ---
 name: Feature Request
 about: Suggest an idea for this project
-title: "[FR] [ws-tool-name] Feature Short Description"
+title: "[FR] [ws-sbom-generator] Feature Short Description"
 labels: feature request
 assignees: ''
 

@@ -4,8 +4,18 @@ import json
 import logging
 import os
 import argparse
+import re
+
 import sys
 from enum import Enum
+
+from spdx import version, creationinfo
+from spdx.checksum import Algorithm
+from spdx.creationinfo import CreationInfo
+from spdx.document import Document, License, ExtractedLicense
+from spdx.package import Package
+from spdx.relationship import Relationship, RelationshipType
+from spdx.utils import SPDXNone, NoAssert
 
 from ws_sdk import ws_constants, WS, ws_utilities
 from ws_sbom_generator._version import __version__, __tool_name__
@@ -21,25 +31,11 @@ s_handler = logging.StreamHandler()
 s_handler.setFormatter(formatter)
 s_handler.setLevel(is_debug)
 logger.addHandler(s_handler)
-
-sdk_logger = logging.getLogger(WS.__module__)
-sdk_logger.setLevel(is_debug)
-sdk_logger.addHandler(s_handler)
-sdk_logger.propagate = False
-
-try:                                            # TODO TEMP SOLUTION UNTIL spdx-tools can be a dependency
-    from spdx import version, creationinfo
-    from spdx.checksum import Algorithm
-    from spdx.creationinfo import CreationInfo
-    from spdx.document import Document, License
-    from spdx.package import Package
-    from spdx.relationship import Relationship, RelationshipType
-    from spdx.utils import SPDXNone, NoAssert
-except ImportError:
-    logger.error("SPDX package is missing")
-    exit(-1)
-
-args = None
+logger.propagate = False
+# sdk_logger = logging.getLogger(WS.__module__)
+# sdk_logger.setLevel(is_debug)
+# sdk_logger.addHandler(s_handler)
+# sdk_logger.propagate = False
 
 
 def create_sbom_doc(scope_token) -> Document:
@@ -60,7 +56,7 @@ def create_sbom_doc(scope_token) -> Document:
         logger.info(f"Finished report: {scope['type']}: {scope['name']}")
         due_dil_report = args.ws_conn.get_due_diligence(token=scope_token)
         lib_hierarchy_report = args.ws_conn.get_inventory(token=scope_token, with_dependencies=True)
-        doc.packages, pkgs_spdx_ids, pkg_relationships = create_packages(libs_from_lic_report, due_dil_report, lib_hierarchy_report)    # TODO SPDX Design issue - Relationship between packages should be on package level
+        doc.packages, pkgs_spdx_ids, pkg_relationships, doc.extracted_licenses = create_packages(libs_from_lic_report, due_dil_report, lib_hierarchy_report)    # TODO SPDX Design issue - Relationship between packages should be on package level
 
         doc.relationships = get_document_relationships(pkgs_spdx_ids, doc_spdx_id)
         doc.relationships.extend(pkg_relationships)
@@ -128,17 +124,22 @@ def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
     packages = []
     pkgs_spdx_ids = []
     pkgs_relationships = []
+    pkgs_extracted_licenses = []
     for lib in libs:
-        pkg, pkg_spdx_id, pkg_relationships = create_package(lib, dd_dict, libs_hierarchy_dict.get(lib['keyUuid'], {}))
+        pkg, pkg_spdx_id, pkg_relationships, pkg_extracted_licenses = create_package(lib, dd_dict, libs_hierarchy_dict.get(lib['keyUuid'], {}))
         packages.append(pkg)
         pkgs_spdx_ids.append(pkg_spdx_id)
         pkgs_relationships.extend(pkg_relationships)
+        pkgs_extracted_licenses.extend(pkg_extracted_licenses)
     logger.debug(f"Finished creating Packages entity")
 
-    return packages, pkgs_spdx_ids, pkgs_relationships
+    return packages, pkgs_spdx_ids, pkgs_relationships, pkgs_extracted_licenses
 
 
 def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
+    def is_spdx_license(lic) -> bool:                                                   # DUE TO WSA-8931
+        return True if args.ws_conn.spdx_lic_dict.get(lic) else False
+
     def get_author_from_cr(copyright_references: list) -> str:
         authors = [a['author'] for a in copyright_references if a.get('author')]
         if len(authors) > 1:
@@ -148,26 +149,55 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
         return authors.pop() if authors else None
 
+    def fix_license_id(license_name: str):              # TODO ADD TO upstream spdx-tools
+        license_id = re.sub(r'(?![a-zA-Z0-9-.]).', '-', license_name)
+        logger.debug(f"Converted license name '{license_name}' to {license_id}")
+
+        return license_id
+
+    def extract_licenses(lib_lics: list, lib_name: str) -> tuple:
+        lics = []
+        extracted_lics = []
+        for lic in lib_lics:
+            full_name = lic.get('name')
+            spdx_lic_id = lic.get('spdxName')
+            if spdx_lic_id and is_spdx_license(spdx_lic_id):
+                logger.debug(f"Found SPDX license: '{spdx_lic_id}' on lib: '{lib_name}'")
+                lics.append(License(full_name=full_name, identifier=spdx_lic_id))
+            else:
+                logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
+                extracted_lic = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")
+                extracted_lic.text = full_name
+                extracted_lics.append(extracted_lic)
+
+        return lics, extracted_lics
+
+    def get_originator(dd_ents, lib_copyrights_l):
+        author = get_author(dd_ents, lib_copyrights_l)
+
+        return creationinfo.Organization(author, NoAssert()) if author else NoAssert()
+
+    def get_author(dd_ent_l, lib_copyrights_l):
+        author = None
+        if dd_ent_l:                                                        # Trying to get Author from Due Diligence
+            author = dd_ent_l[0].get('author')
+        if not author:                                                      # If failed from DD, trying from lib
+            logger.debug("No author found from Due Diligence data. Trying to get copyright from library data")
+            author = get_author_from_cr(lib_copyrights_l)
+        if not author:
+            logger.warning(f"Unable to find the author of library: {lib['name']} ")
+
+        return author
+
     pkg_spdx_id = generate_spdx_id(f"SPDXRef-PACKAGE-{lib['filename']}")
     logger.debug(f"Creating Package {pkg_spdx_id}")
     lib_licenses = lib.get('licenses')
     dd_keys = [(lib.get('filename'), lic['name']) for lic in lib_licenses]
     dd_entities = [dd_dict.get(dd_key) for dd_key in dd_keys]
-    originator = NoAssert()
     lib_copyrights = lib.get('copyrightReferences')
-    author = None
-
-    if dd_entities:                                             # Trying to get Author from Due Diligence
-        author = dd_entities[0].get('author')
-    if not author:                                              # If failed from DD, trying from lib
-        logger.debug("No author found from Due Diligence data. Trying to get copyright from library data")
-        author = get_author_from_cr(lib_copyrights)
-    if author:
-        originator = creationinfo.Organization(author, NoAssert())
-    else:
-        logger.warning(f"Unable to find the author of library: {lib['name']} ")
-
     copyrights = [c.get('copyright') for c in lib_copyrights]
+    originator = get_originator(dd_entities, lib_copyrights)
+
     if not copyrights:
         logger.warning(f"No copyright info found for library: {lib['name']}")
         copyrights = SPDXNone()
@@ -186,10 +216,10 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
     package.files_analyzed = False
     package.homepage = download_location
-    package.check_sum = Algorithm(identifier="SHA-1", value=lib['sha1'])
-
-    licenses = [License(full_name=lic.get('name'), identifier=lic.get('spdxName')) for lic in lib_licenses]
+    package.check_sum = Algorithm(identifier="SHA1", value=lib['sha1'])
+    licenses, extracted_licenses = extract_licenses(lib_licenses, lib['name'])
     package.licenses_from_files = licenses
+
     if len(licenses) > 1:
         logger.warning(f"Found {len(licenses)} licenses on library: {lib['name']}. Using the first one")
     if licenses:                         # TODO should be fixed in SPDX-TOOLS as it is possible to have multiple lics
@@ -205,7 +235,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
     logger.debug(f"Finished creating Package: {pkg_spdx_id}")
 
-    return package, pkg_spdx_id, pkg_relationships
+    return package, pkg_spdx_id, pkg_relationships, extracted_licenses
 
 
 def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:

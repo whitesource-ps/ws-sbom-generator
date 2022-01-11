@@ -47,7 +47,6 @@ Execute: `pip install ws-sbom-generator`
          -o OUT_DIR, --out OUT_DIR
                                Output directory
        ```
-
 ## Examples:
 ```shell
 # Create tag value report on a specific project 
@@ -55,7 +54,6 @@ ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TO
 # Creating JSON report on all projects within the product 
 ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -s <WS_PRODUCT_TOKEN> -t json -e /<path/to>/sbom_extra.json -o </path/reports>
 ```
-
 ## Docker container
 ### Installation:
 ```shell
@@ -73,11 +71,12 @@ docker run --name ws-sbom-generator \
   -e WS_TYPE=<WS_TYPE> \
   whitesourcetools/ws-sbom-generator 
 ````
-## GitHub Package
-### Installation 
-1. Download and unzip the tool.
-2. Install the requirements: `pip install -r sbom_generator/requirements.txt`
-3. Edit the file **sbom_extra.json** with the appropriate values to complete the report:
-
-## Execution
-Same as the PyPi package but prefix the script with `python sbom_report.py...`
+## Sample extra configuration (--extra/-e switch)
+```json
+{
+  "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
+  "org_email": "org@email.address",
+  "person": "person name",
+  "person_email": "person@email.address"
+}
+```
