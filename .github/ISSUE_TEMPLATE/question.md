@@ -1,7 +1,7 @@
 ---
 name: Question
 about: General question/how-to
-title: "[Question] [ws-tool-name] Question Topic"
+title: "[Question] [ws-sbom-generator] Question Topic"
 labels: question
 assignees: ''
 
