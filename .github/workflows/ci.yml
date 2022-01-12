@@ -97,7 +97,7 @@ jobs:
           artifacts: dist/${{ env.TOOL_DIR }}-${{ env.VERSION }}-py3-none-any.whl
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: ${{ env.RELEASE == 'false' }}
+          prerelease: ${{ env.RELEASE != 'true' }}
       - name: Prepare tag
         if: contains(github.ref, 'refs/tags/')
         id: prep
