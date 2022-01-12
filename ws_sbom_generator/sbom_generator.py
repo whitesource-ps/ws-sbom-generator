@@ -156,21 +156,23 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
         return license_id
 
     def extract_licenses(lib_lics: list, lib_name: str) -> tuple:
-        lics = []
+        all_lics = []
         extracted_lics = []
         for lic in lib_lics:
             full_name = lic.get('name')
             spdx_lic_id = lic.get('spdxName')
             if spdx_lic_id and is_spdx_license(spdx_lic_id):
                 logger.debug(f"Found SPDX license: '{spdx_lic_id}' on lib: '{lib_name}'")
-                lics.append(License(full_name=full_name, identifier=spdx_lic_id))
+                license_o = License(full_name=full_name, identifier=spdx_lic_id)
             else:
                 logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
-                extracted_lic = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")
-                extracted_lic.text = full_name
-                extracted_lics.append(extracted_lic)
+                license_o = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")
+                license_o.text = full_name
+                extracted_lics.append(license_o)
 
-        return lics, extracted_lics
+        all_lics.append(license_o)
+
+        return all_lics, extracted_lics
 
     def get_originator(dd_ents, lib_copyrights_l):
         author = get_author(dd_ents, lib_copyrights_l)
