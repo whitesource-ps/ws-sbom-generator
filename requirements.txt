@@ -1,2 +1,2 @@
-ws-spdx-tools==0.7.0a3
-ws-sdk~=0.8.2.2
+ws-spdx-tools==0.7.0a3.post1
+ws-sdk~=0.8.9
