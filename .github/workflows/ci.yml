@@ -46,6 +46,8 @@ jobs:
           if (( $(date +"%u") % 2 )) ; then
             echo "Odd day - Replacing current ws-sdk version: ${sdk_c_ver} with latest release: ${sdk_t_ver}"
             sed -E -i "s/^ws-sdk.+/ws-sdk==${sdk_t_ver}/g" requirements.txt
+          else
+            echo "Even day" 
           fi
       - name: Install dependencies
         run: |
