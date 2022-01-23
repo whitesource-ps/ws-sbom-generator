@@ -5,11 +5,11 @@
 [![GitHub release](https://img.shields.io/github/v/release/whitesource-ps/ws-sbom-generator)](https://github.com/whitesource-ps/ws-sbom-generator/releases/latest)  
 
 # WS SBOM Generator in SPDX format 
-CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spdx.org).
+CLI Tool and a Docker image to generate an SBOM report in [SPDX format](https://spdx.org).
 * The tool can generate reports on the following scopes (defined with: **-s/WS_SCOPE**):
-  * Project token - the tool will generate report on a specific project.
-  * Product token - the tool will generate report on all the projects within the product.
-  * No Token specified - the tool will generate report on all the projects within the organization.
+  * Project token - the tool will generate a report on a specific project.
+  * Product token - the tool will generate a report on all the projects within the product.
+  * No Token specified - the tool will generate a report on all the projects within the organization.
 * The tool utilizes a forked package of [spdx-tools](https://github.com/spdx/tools).
 * The tool accepts additional values which are unknown to WhiteSource via `sbom_extra.json`.
 * If URL is not stated (defined with: **-a/WS_URL**), the tool will access **saas**.
@@ -17,7 +17,7 @@ CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spd
   * Supported file formats: json, tv, rdf, xml and yaml.
 ## Permissions to run the tool
 The user key used (**-u**) must be a member of one the following groups: 
- - Organization Administrator - For dynamically obtaining organization name and generating reports on all projects (in all products).
+ - Organization Administrator - For dynamically obtaining the organization name and generating reports on all projects (in all products).
  - Product Administrator (**-y** must be passed ) - For running on specific project or all projects within the product. 
 ## Prerequisites
 Python 3.7+
