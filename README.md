@@ -18,7 +18,7 @@ CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spd
 ## Permissions to run the tool
 The user key used (**-u**) must be a member of one the following groups: 
  - Organization Administrator - For dynamically obtaining organization name and generating reports on all projects (in all products).
- - Users (**-y** must be passed ) - For running on specific project or all projects within the product. 
+ - Product Administrator (**-y** must be passed ) - For running on specific project or all projects within the product. 
 ## Prerequisites
 Python 3.7+
 ## Deployment and Usage
