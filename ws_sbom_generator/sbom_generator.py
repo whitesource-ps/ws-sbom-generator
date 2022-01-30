@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import importlib
 import json
 import logging
@@ -17,7 +16,7 @@ from spdx.package import Package
 from spdx.relationship import Relationship, RelationshipType
 from spdx.utils import SPDXNone, NoAssert
 
-from ws_sdk import ws_constants, WS, ws_utilities
+from ws_sdk import ws_constants, WS, ws_utilities, ws_errors
 from ws_sbom_generator._version import __version__, __tool_name__
 
 is_debug = logging.DEBUG if bool(os.environ.get("DEBUG", 0)) else logging.INFO
@@ -32,20 +31,27 @@ s_handler.setFormatter(formatter)
 s_handler.setLevel(is_debug)
 logger.addHandler(s_handler)
 logger.propagate = False
-# sdk_logger = logging.getLogger(WS.__module__)
-# sdk_logger.setLevel(is_debug)
-# sdk_logger.addHandler(s_handler)
-# sdk_logger.propagate = False
 
 
 def create_sbom_doc(scope_token) -> Document:
+    def get_org_name():
+        org_name = args.extra_conf.get('org_name')
+        if org_name is None:
+            try:
+                org_name = args.ws_conn.get_name()
+            except ws_errors.WsSdkServerError:
+                org_name = "ORG_NAME"
+                logger.error(f"Unable to get Organization name. Using: '{org_name}'")
+
+        return org_name
+
     scope = args.ws_conn.get_scope_by_token(scope_token)
     logger.info(f"Creating SBOM Document from WhiteSource {scope['type']}: '{scope['name']}'")
     scope_name = args.ws_conn.get_scope_name_by_token(scope_token)
     namespace = args.extra_conf.get('namespace', 'https://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]')
     doc, doc_spdx_id = create_document(scope_name, namespace)
 
-    doc.creation_info = create_creation_info(args.ws_conn.get_name(),
+    doc.creation_info = create_creation_info(get_org_name(),
                                              args.extra_conf.get('org_email', 'ORG_EMAIL'),
                                              args.extra_conf.get('person', 'PERSON'),
                                              args.extra_conf.get('person_email', 'PERSON_EMAIL'))
@@ -65,7 +71,7 @@ def create_sbom_doc(scope_token) -> Document:
     else:
         logger.error(f"{scope['type'].capitalize()}: {scope['name']} Has no libraries. Report will not be generated")
 
-        logger.info(f"Report saved at {file_path}")
+    logger.info(f"Report saved at {file_path}")
 
     return file_path
 
@@ -262,6 +268,7 @@ def init():
         logger.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure (-e/--extra):
             {{
                 "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
+                "org_name": "Organization Name",
                 "org_email": "org@email.address",
                 "person": "person name",
                 "person_email": "person@email.address"
@@ -278,6 +285,7 @@ def parse_args():
     parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', default=os.environ.get("WS_USER_KEY"))
     parser.add_argument('-k', '--token', help="WS Organization Key", dest='ws_token', default=os.environ.get("WS_TOKEN"))
     parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_SCOPE"))
+    parser.add_argument('-y', '--tokenType', help="WS Token type", dest='ws_token_type', choices=[ws_constants.ScopeTypes.PRODUCT, ws_constants.ScopeTypes.PROJECT])
     parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default=os.environ.get("WS_URL"))
     parser.add_argument('-t', '--type', help="Output type", dest='type', default=os.environ.get("WS_REPORT_TYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
@@ -384,6 +392,8 @@ def main():
         args = parse_args()
         init()
         scope_type = None
+        if args.ws_token_type:
+            args.scope_token = (args.scope_token, args.ws_token_type)
         if ws_utilities.is_token(args.scope_token):
             scope_type = args.ws_conn.get_scope_type_by_token(args.scope_token)
 
