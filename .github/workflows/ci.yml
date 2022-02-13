@@ -41,7 +41,7 @@ jobs:
       - name: Change to last ws-sdk version on odd days (Mon, Wed, Fri, Sun)
         run: |
           sdk_c_ver=$(grep "ws-sdk" requirements.txt | awk -F '=' '{print $NF}')
-          sdk_t_ver=$(curl -sL https://pypi.org/pypi/ws-sdk/json | jq -r '.releases| keys[]' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -n1)
+          sdk_t_ver=$(curl -sL https://pypi.org/pypi/ws-sdk/json | jq -r '.releases| keys[]' | sort -t. -k 1,1n -k 2,2n -k 3,3n -k 4,4n | tail -n1)
           
           if (( $(date +"%u") % 2 )) ; then
             echo "Odd day - Replacing current ws-sdk version: ${sdk_c_ver} with latest release: ${sdk_t_ver}"
