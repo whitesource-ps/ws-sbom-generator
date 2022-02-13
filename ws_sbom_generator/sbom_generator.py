@@ -290,7 +290,7 @@ def parse_args():
                         dest='ws_token_type',
                         choices=[ws_constants.ScopeTypes.PRODUCT, ws_constants.ScopeTypes.ORGANIZATION],
                         default=os.environ.get("WS_TOKEN_TYPE", ws_constants.ScopeTypes.ORGANIZATION))
-    parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default=os.environ.get("WS_URL"))
+    parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default=os.environ.get("WS_URL", 'saas'))
     parser.add_argument('-t', '--type', help="Report type", dest='type', default=os.environ.get("WS_REPORT_TYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
