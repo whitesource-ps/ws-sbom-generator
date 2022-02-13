@@ -68,10 +68,12 @@ jobs:
         run: ls -1 dist/*.whl | xargs pip install
       - name: Full test JSON
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
-        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_PYTHON }} -o /tmp/output
+        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -a saas -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_PYTHON }} -o /tmp/output
+        env:
+          - DEBUG: 1
       - name: Full test RDF
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
-        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -a saas -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_GO }} -t rdf -o /tmp/output
+        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_GO }} -t rdf -o /tmp/output
       - name: Full test TV (tag-value)
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_SCOPE_PROD_JAVA_MAVEN }} -t tv -o /tmp/output
