@@ -259,6 +259,7 @@ def init():
     args.ws_conn = WS(url=args.ws_url,
                       user_key=args.ws_user_key,
                       token=args.ws_token,
+                      token_type=args.ws_token_type,
                       tool_details=(f"ps-{__tool_name__.replace('_','-')}", __version__))
     args.extra_conf = {}
     try:
@@ -283,11 +284,14 @@ def parse_args():
     resource_real_path = os.path.join(real_path, "resources")
     parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
     parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', default=os.environ.get("WS_USER_KEY"))
-    parser.add_argument('-k', '--token', help="WS Organization Key", dest='ws_token', default=os.environ.get("WS_TOKEN"))
+    parser.add_argument('-k', '--token', help="WS Key", dest='ws_token', default=os.environ.get("WS_TOKEN"))
     parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_SCOPE"))
-    parser.add_argument('-y', '--tokenType', help="WS Token type", dest='ws_token_type', choices=[ws_constants.ScopeTypes.PRODUCT, ws_constants.ScopeTypes.PROJECT])
+    parser.add_argument('-y', '--tokenType', help="Optional WS Token type to be stated in case WS userKey does not have organization level permissions",
+                        dest='ws_token_type',
+                        choices=[ws_constants.ScopeTypes.PRODUCT, ws_constants.ScopeTypes.ORGANIZATION],
+                        default=os.environ.get("WS_TOKEN_TYPE", ws_constants.ScopeTypes.ORGANIZATION))
     parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default=os.environ.get("WS_URL"))
-    parser.add_argument('-t', '--type', help="Output type", dest='type', default=os.environ.get("WS_REPORT_TYPE", 'tv'),
+    parser.add_argument('-t', '--type', help="Report type", dest='type', default=os.environ.get("WS_REPORT_TYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
@@ -391,19 +395,10 @@ def main():
     try:
         args = parse_args()
         init()
-        scope_type = None
-        if args.ws_token_type:
-            args.scope_token = (args.scope_token, args.ws_token_type)
-        if ws_utilities.is_token(args.scope_token):
-            scope_type = args.ws_conn.get_scope_type_by_token(args.scope_token)
-
-        if scope_type == ws_constants.PROJECT:
+        if args.scope_token:
             scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
-        elif scope_type == ws_constants.PRODUCT:
-            scopes = args.ws_conn.get_projects(product_token=args.scope_token)
-            logger.info(f"Creating SBOM report per project in {scope_type}: {scopes[0]['product_name']}")
         else:
-            logger.info("Creating SBOM reports on all Organization Projects")
+            logger.info("Creating SBOM reports on all Organization's Projects")
             scopes = args.ws_conn.get_projects()
 
         for scope in scopes:
