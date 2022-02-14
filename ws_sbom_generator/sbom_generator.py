@@ -285,7 +285,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
     parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', default=os.environ.get("WS_USER_KEY"))
     parser.add_argument('-k', '--token', help="WS Key", dest='ws_token', default=os.environ.get("WS_TOKEN"))
-    parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_SCOPE"))
+    parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_SCOPE_TOKEN"))
     parser.add_argument('-y', '--tokenType', help="Optional WS Token type to be stated in case WS userKey does not have organization level permissions",
                         dest='ws_token_type',
                         choices=[ws_constants.ScopeTypes.PRODUCT, ws_constants.ScopeTypes.ORGANIZATION],
