@@ -126,6 +126,15 @@ jobs:
           push: true
           tags: ${{ steps.prep.outputs.tags }}
           build-args: version=${{ env.VERSION }}
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
+          artifacts: dist/${{ env.TOOL_DIR }}-${{ env.VERSION }}-py3-none-any.whl
+          prerelease: ${{ env.RELEASE != 'true' }}
+          generateReleaseNotes: true
       - name: confluence-markdown-sync - PS documentation
         if: ${{ env.RELEASE == 'true' }}
         uses: cupcakearmy/confluence-markdown-sync@v1
