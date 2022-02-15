@@ -85,8 +85,8 @@ docker run --name ws-sbom-generator \
 ```shell
 # Run tool as Org Administrator on all projects, default extra args and output in JSON format.
 docker run --name ws-sbom-generator \  
-  -v /<EXTRA_CONF_DIR>:/opt/ws-sbom-generator/sbom-generator/resources \ 
-  -v /<REPORT_OUTPUT_DIR>:/opt/ws-sbom-generator/sbom-generator/output \
+  -v /<EXTRA_CONF_DIR>:/opt/ws-sbom-generator/sbom_generator/resources \ 
+  -v /<REPORT_OUTPUT_DIR>:/opt/ws-sbom-generator/sbom_generator/output \
   -e WS_USER_KEY=<USER_KEY> \ 
   -e WS_TOKEN=<WS_ORG_TOKEN> \
   -e WS_URL=saas \
@@ -95,8 +95,8 @@ docker run --name ws-sbom-generator \
   
 # Run tool as Org Administrator on specific project, default extra args and output in tv format.
 docker run --name ws-sbom-generator \  
-  -v /<REPORT_OUTPUT_DIR>:/opt/ws-sbom-generator/sbom-generator/output \
-  -v /<EXTRA_CONF_DIR>:/opt/ws-sbom-generator/sbom-generator/resources \
+  -v /<EXTRA_CONF_DIR>:/opt/ws-sbom-generator/sbom_generator/resources \
+  -v /<REPORT_OUTPUT_DIR>:/opt/ws-sbom-generator/sbom_generator/output \
   -e WS_USER_KEY=<USER_KEY> \ 
   -e WS_TOKEN=<WS_ORG_TOKEN> \
   -e WS_SCOPE_TOKEN=<WS_PROJECT_TOKEN> \
@@ -105,8 +105,8 @@ docker run --name ws-sbom-generator \
 
 # Run tool as Product Administrator on specific project, default extra args and output in rdf format.
 docker run --name ws-sbom-generator \  
-  -v /<REPORT_OUTPUT_DIR>:/opt/ws-sbom-generator/sbom-generator/output \
-  -v /<EXTRA_CONF_DIR>:/opt/ws-sbom-generator/sbom-generator/resources \
+  -v /<EXTRA_CONF_DIR>:/opt/ws-sbom-generator/sbom_generator/resources \
+  -v /<REPORT_OUTPUT_DIR>:/opt/ws-sbom-generator/sbom_generator/output \
   -e WS_USER_KEY=<USER_KEY> \ 
   -e WS_TOKEN=<WS_PROD_TOKEN> \
   -e WS_SCOPE_TOKEN=<WS_PROJECT_TOKEN> \
