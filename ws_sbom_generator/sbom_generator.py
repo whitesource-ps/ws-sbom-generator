@@ -356,7 +356,7 @@ class SPDXFileType(Enum):
     TV = ("tv", "spdx.writers.tagvalue", "w", "utf-8")
     RDF = ("rdf", "spdx.writers.rdf", "wb", None)
     XML = ("xml", "spdx.writers.xml", "wb", None)
-    YAML = ("yml", "spdx.writers.yaml", "wb", None)   # TODO: this will only work if  bug fix in spdx_tools: yaml.py -> write_document
+    YAML = ("yml", "spdx.writers.yaml", "w", None)   # TODO: this will only work if  bug fix in spdx_tools: yaml.py -> write_document
 
     def __str__(self):
         return self.name
