@@ -15,22 +15,23 @@ CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spd
 * If URL is not stated (defined with: **-a/WS_URL**), the tool will access **saas**.
 * If report type is not stated (defined with: **-t/WS_REPORT_TYPE**) the tool will generate a report in **tag-value** format.
   * Supported file formats: json, tv, rdf, xml and yaml.
-  * 
+  
 ## Permissions to run the tool
 The user key used (**-u**) must be a member of one of the following groups:
 - Organization Administrator - For dynamically obtaining the organization name and generating reports on all projects (in all products).
 - Product Administrator (**-y** must be passed ) - For running on a specific project or all projects within the product.
-- 
+
 ## Prerequisites
 Python 3.7+
 
 ### Installation and Execution by pulling package from PyPi:
-Execute pip install `pip install ws-sbom-generator`
-Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
-Run report: `ws_sbom_generator -u <WS_USER_KEY> -k <WS_TOKEN> -a <WS_URL> -t <WS_REPORT_TYPE> {json,tv,rdf,xml,yaml,all} -e <EXTRA> -o <OUT_DIR>`
-Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
+1. Execute pip install `pip install ws-sbom-generator`
+   * Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
+2. Run report: `ws_sbom_generator -u <WS_USER_KEY> -k <WS_TOKEN> -a <WS_URL> -t <WS_REPORT_TYPE> {json,tv,rdf,xml,yaml,all} -e <EXTRA> -o <OUT_DIR>`
+   * Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
 
-optional arguments:
+### Optional arguments:
+```shell
   -h, --help            show this help message and exit
   -u WS_USER_KEY, --userKey
                   WS User Key
