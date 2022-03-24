@@ -31,9 +31,9 @@ jobs:
       - name: Set package version
         run: |
           sed -E -i  "s/^__version__ = \"[a-z0-9\.]+\"/__version__ = \"$VERSION\"/g"  ${{ env.TOOL_DIR }}/_version.py
-      - uses: UnicornGlobal/trufflehog-actions-scan@master
-        with:
-          branch: ${{ github.head_ref }}
+#      - uses: UnicornGlobal/trufflehog-actions-scan@master
+#        with:
+#          branch: ${{ github.head_ref }}
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
