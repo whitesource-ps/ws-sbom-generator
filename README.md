@@ -1,7 +1,7 @@
 ![Logo](https://whitesource-resources.s3.amazonaws.com/ws-sig-images/Whitesource_Logo_178x44.png)  
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CI](https://github.com/whitesource-ps/ws-sbom-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/whitesource-ps/ws-sbom-generator/actions/workflows/ci.yml)
-[![Python 3.6](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Blue_Python_3.6%2B_Shield_Badge.svg/86px-Blue_Python_3.6%2B_Shield_Badge.svg.png)](https://www.python.org/downloads/release/python-360/)
+[![Python 3.7](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Blue_Python_3.7%2B_Shield_Badge.svg/86px-Blue_Python_3.7%2B_Shield_Badge.svg.png)](https://www.python.org/downloads/release/python-370/)
 [![GitHub release](https://img.shields.io/github/v/release/whitesource-ps/ws-sbom-generator)](https://github.com/whitesource-ps/ws-sbom-generator/releases/latest)  
 
 # WS SBOM Generator in SPDX format
@@ -22,7 +22,7 @@ The user key used (**-u**) must be a member of one of the following groups:
 - Product Administrator (**-y** must be passed ) - For running on a specific project or all projects within the product.
 
 ## Prerequisites
-Python 3.7+
+Python 3.8+
 
 ### Installation and Execution by pulling package from PyPi:
 1. Execute pip install `pip install ws-sbom-generator`

@@ -1,2 +1,3 @@
-ws-spdx-tools==0.7.0a3.post4
+ws-spdx-tools==0.7.0a3.post5
 ws-sdk~=0.9.0.5
+numpy==1.22.3
