@@ -1,10 +1,9 @@
+import argparse
 import importlib
 import json
 import logging
 import os
-import argparse
 import re
-
 import sys
 from enum import Enum
 
@@ -15,15 +14,14 @@ from spdx.document import Document, License, ExtractedLicense
 from spdx.package import Package
 from spdx.relationship import Relationship, RelationshipType
 from spdx.utils import SPDXNone, NoAssert
-
 from ws_sdk import ws_constants, WS, ws_utilities, ws_errors
+
 from ws_sbom_generator._version import __version__, __tool_name__
 
 is_debug = logging.DEBUG if bool(os.environ.get("DEBUG", 0)) else logging.INFO
 
 logger = logging.getLogger(__tool_name__)
 logger.setLevel(logging.DEBUG)
-
 
 formatter = logging.Formatter('%(levelname)s %(asctime)s %(thread)d %(name)s: %(message)s')
 s_handler = logging.StreamHandler()
@@ -62,7 +60,7 @@ def create_sbom_doc(scope_token) -> Document:
         logger.info(f"Finished report: {scope['type']}: {scope['name']}")
         due_dil_report = args.ws_conn.get_due_diligence(token=scope_token)
         lib_hierarchy_report = args.ws_conn.get_inventory(token=scope_token, with_dependencies=True)
-        doc.packages, pkgs_spdx_ids, pkg_relationships, doc.extracted_licenses = create_packages(libs_from_lic_report, due_dil_report, lib_hierarchy_report)    # TODO SPDX Design issue - Relationship between packages should be on package level
+        doc.packages, pkgs_spdx_ids, pkg_relationships, doc.extracted_licenses = create_packages(libs_from_lic_report, due_dil_report, lib_hierarchy_report)  # TODO SPDX Design issue - Relationship between packages should be on package level
 
         doc.relationships = get_document_relationships(pkgs_spdx_ids, doc_spdx_id)
         doc.relationships.extend(pkg_relationships)
@@ -116,7 +114,7 @@ def create_creation_info(org_name, org_email, person_name, person_email):
 
 
 def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
-    def should_replace_f(dict_a, dict_b):       # Handle case where duplicate lib returns, prefer the lib with dependencies
+    def should_replace_f(dict_a, dict_b):  # Handle case where duplicate lib returns, prefer the lib with dependencies
         if dict_a.get('dependencies'):
             return True
         else:
@@ -143,7 +141,7 @@ def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
 
 
 def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
-    def is_spdx_license(lic) -> bool:                                                   # DUE TO WSA-8931
+    def is_spdx_license(lic) -> bool:  # DUE TO WSA-8931
         return True if args.ws_conn.spdx_lic_dict.get(lic) else False
 
     def get_author_from_cr(copyright_references: list) -> str:
@@ -155,7 +153,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
         return authors.pop() if authors else None
 
-    def fix_license_id(license_name: str):              # TODO ADD TO upstream spdx-tools
+    def fix_license_id(license_name: str):  # TODO ADD TO upstream spdx-tools
         license_id = re.sub(r'(?![a-zA-Z0-9-.]).', '-', license_name)
         logger.debug(f"Converted license name '{license_name}' to {license_id}")
 
@@ -172,7 +170,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
                 license_o = License(full_name=full_name, identifier=spdx_lic_id)
             else:
                 logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
-                license_o = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")      # TODO May want to handle when full_name = 'Suspected In-House'
+                license_o = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")  # TODO May want to handle when full_name = 'Suspected In-House'
                 license_o.text = full_name
                 extracted_lics.append(license_o)
 
@@ -187,9 +185,9 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
     def get_author(dd_ent_l, lib_copyrights_l):
         author = None
-        if dd_ent_l:                                                        # Trying to get Author from Due Diligence
+        if dd_ent_l:  # Trying to get Author from Due Diligence
             author = dd_ent_l[0].get('author')
-        if not author:                                                      # If failed from DD, trying from lib
+        if not author:  # If failed from DD, trying from lib
             logger.debug("No author found from Due Diligence data. Trying to get copyright from library data")
             author = get_author_from_cr(lib_copyrights_l)
         if not author:
@@ -230,7 +228,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
     if len(licenses) > 1:
         logger.warning(f"Found {len(licenses)} licenses on library: {lib['name']}. Using the first one")
-    if licenses:                         # TODO should be fixed in SPDX-TOOLS as it is possible to have multiple lics
+    if licenses:  # TODO should be fixed in SPDX-TOOLS as it is possible to have multiple lics
         licenses = licenses[0]
     else:
         logger.warning(f"No license found for library: {lib['name']}")
@@ -238,7 +236,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
     package.conc_lics = licenses
     package.license_declared = licenses
-    package.cr_text = copyrights         # TODO should be fixed in SPDX-TOOLS as is possible to have multiple copyrights
+    package.cr_text = copyrights  # TODO should be fixed in SPDX-TOOLS as is possible to have multiple copyrights
     pkg_relationships = get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id)
 
     logger.debug(f"Finished creating Package: {pkg_spdx_id}")
@@ -260,7 +258,7 @@ def init():
                       user_key=args.ws_user_key,
                       token=args.ws_token,
                       token_type=args.ws_token_type,
-                      tool_details=(f"ps-{__tool_name__.replace('_','-')}", __version__))
+                      tool_details=(f"ps-{__tool_name__.replace('_', '-')}", __version__))
     args.extra_conf = {}
     try:
         fp = open(args.extra, 'r')
@@ -283,8 +281,8 @@ def parse_args():
     real_path = os.path.dirname(os.path.realpath(__file__))
     resource_real_path = os.path.join(real_path, "resources")
     parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
-    parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', default=os.environ.get("WS_USER_KEY"))
-    parser.add_argument('-k', '--token', help="WS Key", dest='ws_token', default=os.environ.get("WS_TOKEN"))
+    parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', default=os.environ.get("WS_USER_KEY"), required=True)
+    parser.add_argument('-k', '--token', help="WS Key", dest='ws_token', default=os.environ.get("WS_TOKEN"), required=True)
     parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_SCOPE_TOKEN"))
     parser.add_argument('-y', '--tokenType', help="Optional WS Token type to be stated in case WS userKey does not have organization level permissions",
                         dest='ws_token_type',
@@ -296,17 +294,6 @@ def parse_args():
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
     arguments = parser.parse_args()
-
-    missing_arg = False
-    if arguments.ws_user_key is None:
-        logger.error("No User Key is specified")
-        missing_arg = True
-    if arguments.ws_token is None:
-        logger.error("No Organization Token is specified")
-        missing_arg = True
-
-    if missing_arg:
-        raise ValueError
 
     return arguments
 
@@ -356,7 +343,7 @@ class SPDXFileType(Enum):
     TV = ("tv", "spdx.writers.tagvalue", "w", "utf-8")
     RDF = ("rdf", "spdx.writers.rdf", "wb", None)
     XML = ("xml", "spdx.writers.xml", "wb", None)
-    YAML = ("yml", "spdx.writers.yaml", "w", None)   # TODO: this will only work if  bug fix in spdx_tools: yaml.py -> write_document
+    YAML = ("yml", "spdx.writers.yaml", "w", None)  # TODO: this will only work if  bug fix in spdx_tools: yaml.py -> write_document
 
     def __str__(self):
         return self.name
@@ -383,7 +370,7 @@ class SPDXFileType(Enum):
 
 
 def generate_spdx_id(id_val) -> str:
-    spdx_id = id_val.replace(' ', '_')      # TODO SPDX issue: RELATIONSHIP are parsed as a text (better tuple it)
+    spdx_id = id_val.replace(' ', '_')  # TODO SPDX issue: RELATIONSHIP are parsed as a text (better tuple it)
     logger.debug(f"Generating SPDX ID: Received value: '{id_val}'. ID value: '{spdx_id}'")
 
     return spdx_id
