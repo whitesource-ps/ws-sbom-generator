@@ -15,6 +15,7 @@ from spdx.package import Package
 from spdx.relationship import Relationship, RelationshipType
 from spdx.utils import SPDXNone, NoAssert
 from ws_sdk import ws_constants, WS, ws_utilities, ws_errors
+from ws_sdk.ws_constants import ScopeTypes
 
 from ws_sbom_generator._version import __version__, __tool_name__
 
@@ -384,6 +385,10 @@ def main():
         init()
         if args.scope_token:
             scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
+
+            if scopes[0].get('type') == ScopeTypes.PRODUCT:
+                logger.info(f"Creating SBOM reports on all {scopes[0].get('name')}'s Projects")
+                scopes = args.ws_conn.get_projects(product_token=scopes[0].get('token'))
         else:
             logger.info("Creating SBOM reports on all Organization's Projects")
             scopes = args.ws_conn.get_projects()
