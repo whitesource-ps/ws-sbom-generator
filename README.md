@@ -55,9 +55,14 @@ Python 3.8+
 ```shell
 # Create tag value report on a specific project 
 ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports>
+
+# Create tag value report on all projects of product 
+ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PRODUCT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports>
+
 # Creating JSON report on all projects of organization
 ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -t json -o </path/reports>
-# Creating XML report on a project with product permissions (SAAS organization)   
+
+# Creating XML report on a project with a user which only has product permissions (SAAS organization)   
 ws_sbom_generator -u <WS_USER_KEY> -y product -k <WS_PRODUCT_TOKEN> -s <WS_PROJECT_TOKEN> -t xml -e /<path/to>/sbom_extra.json -o </path/reports>
 
 ```
