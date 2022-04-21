@@ -284,7 +284,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
     
     if 'WS_USER_KEY' in os.environ:
-            user_key_opt = { 'default': os.environ.get("WS_USER_KEY") }
+        user_key_opt = { 'default': os.environ.get("WS_USER_KEY") }
     else:
         user_key_opt = { 'required': True }
 
