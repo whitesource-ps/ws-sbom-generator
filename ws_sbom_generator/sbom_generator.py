@@ -7,7 +7,7 @@ import re
 import sys
 from enum import Enum
 
-import ws_sdk
+
 from spdx import version, creationinfo
 from spdx.checksum import Algorithm
 from spdx.creationinfo import CreationInfo
@@ -15,8 +15,7 @@ from spdx.document import Document, License, ExtractedLicense
 from spdx.package import Package
 from spdx.relationship import Relationship, RelationshipType
 from spdx.utils import SPDXNone, NoAssert
-from ws_sdk import ws_constants, ws_utilities, ws_errors
-from ws_sdk.ws_constants import ScopeTypes
+from ws_sdk import ws_constants, ws_utilities, ws_errors ,web
 
 from ws_sbom_generator._version import __version__, __tool_name__
 
@@ -256,7 +255,7 @@ def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:
 
 
 def init():
-    args.ws_conn = ws_sdk.web.WSApp(url=args.ws_url,
+    args.ws_conn = web.WSApp(url=args.ws_url,
                                     user_key=args.ws_user_key,
                                     token=args.ws_token,
                                     token_type=args.ws_token_type,
@@ -387,7 +386,7 @@ def main():
         if args.scope_token:
             scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
 
-            if scopes[0].get('type') == ScopeTypes.PRODUCT:
+            if scopes[0].get('type') == ws_constants.ScopeTypes.PRODUCT:
                 logger.info(f"Creating SBOM reports on all {scopes[0].get('name')}'s Projects")
                 scopes = args.ws_conn.get_projects(product_token=scopes[0].get('token'))
         else:
