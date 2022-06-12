@@ -124,7 +124,7 @@ def test_write_report_json(mock_write_file):
 
 
 def test_generate_spdx_id():
-    assert sbom_generator.generate_spdx_id("SP ACE") == "SP_ACE"
+    assert sbom_generator.generate_spdx_id("SP ACE") == "SP-ACE"
 
 
 if __name__ == '__main__':

@@ -257,7 +257,7 @@ def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:
 
 def normalize_spdx_enity(name : str) -> str:
     res_name = name.replace(' ', '-')
-    res_name = name.replace('\\', '-')
+    res_name = res_name.replace('\\', '-')
     return re.sub('[!@#$%^&*()_/]', '-', res_name)
 
 
