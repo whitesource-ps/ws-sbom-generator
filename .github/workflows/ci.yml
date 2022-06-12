@@ -82,7 +82,7 @@ jobs:
         run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_PROJECT_SDK }} -t rdf -o /tmp/output
       - name: Full test xml
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
-        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_PROJECT_SDK }} -t xml -o /tmp/output
+        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_PROJECT_DEMO_PIPELINE }} -t xml -o /tmp/output
       - name: Full test TV (tag-value)
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_PROJECT_TESTTEST }} -t tv -o /tmp/output
