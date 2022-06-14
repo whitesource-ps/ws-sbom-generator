@@ -26,5 +26,6 @@ local-env.*
 /.pytest_cache/
 /dist/
 /ws_sbom_generator.egg-info/
+/ws_sbom_generator/Output/
 
 /out/
