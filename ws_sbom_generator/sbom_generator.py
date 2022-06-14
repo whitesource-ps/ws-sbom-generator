@@ -249,9 +249,16 @@ def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:
     logger.debug(f"Generating relationships to package ID: '{pkg_spdx_id}'")
     pkg_relationships = []
     for dep_lib in lib_hierarchy_dict.get('dependencies', []):
-        pkg_relationships.append(Relationship(relationship=f"{pkg_spdx_id} {RelationshipType.DEPENDS_ON.name} SPDXRef-PACKAGE-{dep_lib['filename']}"))
+        dep_lib_name = normalize_spdx_enity(dep_lib['filename'])
+        pkg_relationships.append(Relationship(relationship=f"{pkg_spdx_id} {RelationshipType.DEPENDS_ON.name} SPDXRef-PACKAGE-{dep_lib_name}"))
 
     return pkg_relationships
+
+
+def normalize_spdx_enity(name : str) -> str:
+    res_name = name.replace(' ', '-')
+    res_name = res_name.replace('\\', '-')
+    return re.sub('[!@#$%^&*()_/]', '-', res_name)
 
 
 def init():
@@ -303,6 +310,7 @@ def replace_invalid_chars(filename: str) -> str:
     old_name = filename
     for char in ws_constants.INVALID_FS_CHARS:
         filename = filename.replace(char, "_")
+
     logger.debug(f"Original name:'{old_name}' Fixed filename: '{filename}'")
 
     return filename
@@ -371,9 +379,8 @@ class SPDXFileType(Enum):
 
 
 def generate_spdx_id(id_val) -> str:
-    spdx_id = id_val.replace(' ', '_')  # TODO SPDX issue: RELATIONSHIP are parsed as a text (better tuple it)
+    spdx_id = normalize_spdx_enity(id_val)
     logger.debug(f"Generating SPDX ID: Received value: '{id_val}'. ID value: '{spdx_id}'")
-
     return spdx_id
 
 
