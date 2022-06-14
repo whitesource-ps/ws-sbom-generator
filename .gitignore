@@ -27,5 +27,6 @@ local-env.*
 /dist/
 /ws_sbom_generator.egg-info/
 /ws_sbom_generator/Output/
+/ws_sbom_generator/__pycache__/
 
 /out/
