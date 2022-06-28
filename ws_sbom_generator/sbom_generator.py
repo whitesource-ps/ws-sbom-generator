@@ -5,6 +5,7 @@ import logging
 import os
 import re
 import sys
+import urllib
 from enum import Enum
 
 
@@ -172,7 +173,13 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
             else:
                 logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
                 license_o = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")  # TODO May want to handle when full_name = 'Suspected In-House'
-                license_o.text = full_name
+                try:
+                    url=f'https://spdx.org/licenses/{spdx_lic_id}.json'
+                    response = urllib.request.urlopen(url)
+                    data = json.loads(response.read())
+                    license_o.text = data['licenseText']
+                except:
+                    license_o.text = full_name
                 extracted_lics.append(license_o)
 
             all_lics.append(license_o)
