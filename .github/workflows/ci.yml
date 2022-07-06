@@ -66,7 +66,7 @@ jobs:
         run: python setup.py bdist_wheel
       - name: Install Wheel package
         run: ls -1 dist/*.whl | xargs pip install
-      - name: Full test JSON (Organization-Product)
+      - name: Full test JSON (Organization-Project)
         # from the Natalya Renamed Testing Environment (challenge - v8.1.0)
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -a saas -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_PROJECT_CHALLENGE }} -o /tmp/output
@@ -74,7 +74,7 @@ jobs:
           DEBUG: 1
       - name: Full test JSON (Organization-Product)
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
-        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -a saas -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_PRODUCT_DEMO_PRODUCT }} -o /tmp/output
+        run: ${TOOL_NAME} -u ${{ secrets.WS_USER_KEY }} -a saas -k ${{ secrets.WS_ORG_TOKEN }} -s ${{ secrets.WS_PRODUCT_IBM_PROD_TEST }} -o /tmp/output
         env:
           DEBUG: 1
       - name: Full test RDF

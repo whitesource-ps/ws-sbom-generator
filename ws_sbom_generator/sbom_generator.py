@@ -7,7 +7,8 @@ import re
 import sys
 import urllib
 from enum import Enum
-
+import zipfile
+import io
 
 from spdx import version, creationinfo
 from spdx.checksum import Algorithm
@@ -164,6 +165,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
     def extract_licenses(lib_lics: list, lib_name: str) -> tuple:
         all_lics = []
         extracted_lics = []
+
         for lic in lib_lics:
             full_name = lic.get('name')
             spdx_lic_id = lic.get('spdxName')
@@ -174,10 +176,28 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
                 logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
                 license_o = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")  # TODO May want to handle when full_name = 'Suspected In-House'
                 try:
-                    url=f'https://spdx.org/licenses/{spdx_lic_id}.json'
-                    response = urllib.request.urlopen(url)
-                    data = json.loads(response.read())
-                    license_o.text = data['licenseText']
+                    # Looking for license text in Mend by SPDX ID or Full Lic Name.
+                    # If not found then trying to get it from spdx.org
+                    lic_textfile = f"{spdx_lic_id}.txt"
+                    if lic_textfile not in lic_filenames:
+                        find_susp_pos = license_o.full_name.find('Suspected-')
+                        fname = license_o.full_name[find_susp_pos+10:] if find_susp_pos > -1 else license_o.full_name
+                        lic_textfile = f"{fname}.txt"
+
+                    if lic_textfile in lic_filenames:
+                        zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
+                                                  kv_dict={"projectToken": lic_filenames[lic_textfile]})
+                        file = io.BytesIO(zipf)
+                        with zipfile.ZipFile(file, 'r') as f:
+                            with f.open(lic_textfile) as licfile:
+                                license_o.text = licfile.read().decode('utf-8')
+                            f.close()
+                        file.close()
+                    else:
+                        url=f'https://spdx.org/licenses/{spdx_lic_id}.json'
+                        response = urllib.request.urlopen(url)
+                        data = json.loads(response.read())
+                        license_o.text = data['licenseText']
                 except:
                     license_o.text = full_name
                 extracted_lics.append(license_o)
@@ -265,7 +285,46 @@ def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:
 def normalize_spdx_enity(name : str) -> str:
     res_name = name.replace(' ', '-')
     res_name = res_name.replace('\\', '-')
-    return re.sub('[!@#$%^&*()_/:]', '-', res_name)
+    return re.sub('[!@#$%^&*()_/:+~]', '-', res_name)
+
+
+def get_prj_list(token : str) -> tuple:
+    res_lic = dict()
+    if token is None:
+        prj_lst = web.WS.call_ws_api(self=args.ws_conn, request_type="getOrganizationProjectVitals")
+    else:
+        prj_lst = web.WS.call_ws_api(self=args.ws_conn, request_type="getProductProjectVitals",
+                                     kv_dict={"productToken": token})  # if not Project Token, then Product Token
+
+    for prj in prj_lst['projectVitals']:
+        zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
+                                  kv_dict={"projectToken": prj['token']})
+        file = io.BytesIO(zipf)
+        with zipfile.ZipFile(file, 'r') as f:
+            lic_filenames = f.namelist()
+            f.close()
+        for lname in lic_filenames:
+            if lname not in res_lic:
+                res_lic[lname] = prj['token']
+    return res_lic
+
+
+def prepare_lic_text(prj_token : str) -> tuple:
+    try:
+        all_lic_text = get_prj_list(prj_token)
+    except:
+        all_lic_text = dict()
+        zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
+                                  kv_dict={"projectToken": prj_token})
+        file = io.BytesIO(zipf)
+        with zipfile.ZipFile(file, 'r') as f:
+            lic_filenames = f.namelist()
+            f.close()
+            for lname in lic_filenames:
+                if lname not in all_lic_text:
+                    all_lic_text[lname] = prj_token
+
+    return all_lic_text
 
 
 def init():
@@ -393,10 +452,13 @@ def generate_spdx_id(id_val) -> str:
 
 def main():
     global args
+    global lic_filenames
     file_paths = []
     try:
         args = parse_args()
         init()
+        lic_filenames = prepare_lic_text(args.scope_token)
+
         if args.scope_token:
             scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
 
