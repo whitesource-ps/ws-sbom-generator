@@ -188,6 +188,17 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
                     if lic_textfile in lic_filenames:
                         license_o.text = lic_filenames[lic_textfile]
+                        lic_textfile = f"{fname}.txt"
+
+                    if lic_textfile in lic_filenames:
+                        zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
+                                                  kv_dict={"projectToken": lic_filenames[lic_textfile]})
+                        file = io.BytesIO(zipf)
+                        with zipfile.ZipFile(file, 'r') as f:
+                            with f.open(lic_textfile) as licfile:
+                                license_o.text = licfile.read().decode('utf-8')
+                            f.close()
+                        file.close()
                     else:
                         url=f'https://spdx.org/licenses/{spdx_lic_id}.json'
                         response = urllib.request.urlopen(url)
