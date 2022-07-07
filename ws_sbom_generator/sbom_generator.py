@@ -182,6 +182,12 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
                     if lic_textfile not in lic_filenames:
                         find_susp_pos = license_o.full_name.find('Suspected-')
                         fname = license_o.full_name[find_susp_pos+10:] if find_susp_pos > -1 else license_o.full_name
+                        find_lic_ref = fname.find("LicenseRef-")
+                        fname = fname if find_lic_ref == -1 else fname[find_lic_ref+11:]
+                        lic_textfile = f"{fname}.txt"
+
+                    if lic_textfile in lic_filenames:
+                        license_o.text = lic_filenames[lic_textfile]
                         lic_textfile = f"{fname}.txt"
 
                     if lic_textfile in lic_filenames:
@@ -285,7 +291,7 @@ def get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id) -> list:
 def normalize_spdx_enity(name : str) -> str:
     res_name = name.replace(' ', '-')
     res_name = res_name.replace('\\', '-')
-    return re.sub('[!@#$%^&*()_/:+~]', '-', res_name)
+    return re.sub('[!@#$%^&*()_/:+~?]', '-', res_name)
 
 
 def get_prj_list(token : str) -> tuple:
@@ -302,10 +308,11 @@ def get_prj_list(token : str) -> tuple:
         file = io.BytesIO(zipf)
         with zipfile.ZipFile(file, 'r') as f:
             lic_filenames = f.namelist()
+            for lname in lic_filenames:
+                if lname not in res_lic:
+                    with f.open(lname) as licfile:
+                        res_lic[lname] = licfile.read().decode('utf-8')
             f.close()
-        for lname in lic_filenames:
-            if lname not in res_lic:
-                res_lic[lname] = prj['token']
     return res_lic
 
 
@@ -314,16 +321,19 @@ def prepare_lic_text(prj_token : str) -> tuple:
         all_lic_text = get_prj_list(prj_token)
     except:
         all_lic_text = dict()
-        zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
-                                  kv_dict={"projectToken": prj_token})
-        file = io.BytesIO(zipf)
-        with zipfile.ZipFile(file, 'r') as f:
-            lic_filenames = f.namelist()
-            f.close()
-            for lname in lic_filenames:
-                if lname not in all_lic_text:
-                    all_lic_text[lname] = prj_token
-
+        try:
+            zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
+                                      kv_dict={"projectToken": prj_token})
+            file = io.BytesIO(zipf)
+            with zipfile.ZipFile(file, 'r') as f:
+                lic_filenames = f.namelist()
+                for lname in lic_filenames:
+                    if lname not in all_lic_text:
+                        with f.open(lname) as licfile:
+                            all_lic_text[lname] = licfile.read().decode('utf-8') #prj_token
+                f.close()
+        except:
+            pass
     return all_lic_text
 
 
