@@ -35,7 +35,7 @@ jobs:
 #        with:
 #          branch: ${{ github.head_ref }}
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       - name: Change to last ws-sdk version on odd days (Mon, Wed, Fri, Sun)
