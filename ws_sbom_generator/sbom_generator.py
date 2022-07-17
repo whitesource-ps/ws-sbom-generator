@@ -33,6 +33,16 @@ s_handler.setLevel(is_debug)
 logger.addHandler(s_handler)
 logger.propagate = False
 
+class License_(License):
+    def __init__(self, full_name, identifier,text):
+        self.text = text
+        self._full_name = None
+        self._identifier = None
+        self.set_full_name(full_name)
+        self.set_identifier(identifier)
+        self.cross_ref = []
+        self.comment = None
+
 
 def create_sbom_doc(scope_token) -> Document:
     def get_org_name():
@@ -174,7 +184,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
                 license_o = License(full_name=full_name, identifier=spdx_lic_id)
             else:
                 logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
-                license_o = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")  # TODO May want to handle when full_name = 'Suspected In-House'
+                license_o = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")
                 try:
                     # Looking for license text in Mend by SPDX ID or Full Lic Name.
                     # If not found then trying to get it from spdx.org
@@ -188,22 +198,15 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
                     if lic_textfile in lic_filenames:
                         license_o.text = lic_filenames[lic_textfile]
-                        lic_textfile = f"{fname}.txt"
-
-                    if lic_textfile in lic_filenames:
-                        zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
-                                                  kv_dict={"projectToken": lic_filenames[lic_textfile]})
-                        file = io.BytesIO(zipf)
-                        with zipfile.ZipFile(file, 'r') as f:
-                            with f.open(lic_textfile) as licfile:
-                                license_o.text = licfile.read().decode('utf-8')
-                            f.close()
-                        file.close()
                     else:
-                        url=f'https://spdx.org/licenses/{spdx_lic_id}.json'
-                        response = urllib.request.urlopen(url)
-                        data = json.loads(response.read())
-                        license_o.text = data['licenseText']
+                        lic_textfile = lic_textfile.replace('-','_')
+                        if lic_textfile in lic_filenames:
+                            license_o.text = lic_filenames[lic_textfile]
+                        else:
+                            url=f'https://spdx.org/licenses/{spdx_lic_id}.json'
+                            response = urllib.request.urlopen(url)
+                            data = json.loads(response.read())
+                            license_o.text = data['licenseText']
                 except:
                     license_o.text = full_name
                 extracted_lics.append(license_o)
