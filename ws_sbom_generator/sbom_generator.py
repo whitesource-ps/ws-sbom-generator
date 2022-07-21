@@ -526,7 +526,7 @@ def main():
             logger.info("Creating SBOM reports on all Organization's Projects")
             scopes = args.ws_conn.get_projects()
         '''
-        args.outname = args.outname if len(scopes) == 1 else ''  # In case few files we can use juts native names not customized
+        args.outname = args.outname if len(scopes) == 1 else ''  # In case few files we can use just native names not customized
         for scope in scopes:
             #file_paths = create_sbom_doc(scope['token'])
             for key, value in scope.items():
