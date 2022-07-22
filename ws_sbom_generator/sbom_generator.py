@@ -17,7 +17,7 @@ from spdx.document import Document, License, ExtractedLicense
 from spdx.package import Package
 from spdx.relationship import Relationship, RelationshipType
 from spdx.utils import SPDXNone, NoAssert
-from ws_sdk import ws_constants, ws_utilities, ws_errors ,web
+from ws_sdk import ws_constants, ws_utilities, ws_errors ,web, WS
 
 from ws_sbom_generator._version import __version__, __tool_name__
 
@@ -44,7 +44,7 @@ class License_(License):
         self.comment = None
 
 
-def create_sbom_doc(scope_token) -> Document:
+def create_sbom_doc(scope_token : str, scope_name :str) -> Document:
     def get_org_name():
         org_name = args.extra_conf.get('org_name')
         if org_name is None:
@@ -56,11 +56,13 @@ def create_sbom_doc(scope_token) -> Document:
 
         return org_name
 
-    scope = args.ws_conn.get_scope_by_token(scope_token)
-    logger.info(f"Creating SBOM Document from WhiteSource {scope['type']}: '{scope['name']}'")
-    scope_name = args.ws_conn.get_scope_name_by_token(scope_token)
+    #scope = args.ws_conn.get_scope_by_token(scope_token)
+    #logger.info(f"Creating SBOM Document from Mend {scope['type']}: '{scope['name']}'")
+    logger.info(f"Creating SBOM Document from Mend '{scope_name}'")
+    #scope_name = args.ws_conn.get_scope_name_by_token(scope_token) if args.outname == '' else args.outname
+    scope_name = scope_name if args.outname == '' else args.outname
     namespace = args.extra_conf.get('namespace', 'https://[CreatorWebsite]/[pathToSpdx]/[DocumentName]-[UUID]')
-    doc, doc_spdx_id = create_document(scope_name, namespace)
+    doc, doc_spdx_id = create_document(scope_name , namespace, args.outname != '')
 
     doc.creation_info = create_creation_info(get_org_name(),
                                              args.extra_conf.get('org_email', 'ORG_EMAIL'),
@@ -69,8 +71,11 @@ def create_sbom_doc(scope_token) -> Document:
     libs_from_lic_report = args.ws_conn.get_licenses(token=scope_token, full_spdx=True)
     file_path = None
     if libs_from_lic_report:
-        logger.debug(f"Handling {len(libs_from_lic_report)} libraries in {scope['type']}: {scope['name']}")
-        logger.info(f"Finished report: {scope['type']}: {scope['name']}")
+        #logger.debug(f"Handling {len(libs_from_lic_report)} libraries in {scope['type']}: {scope['name']}")
+        #logger.info(f"Finished report: {scope['type']}: {scope['name']}")
+
+        logger.debug(f"Handling {len(libs_from_lic_report)} libraries in : {scope_name}")
+        logger.info(f"Finished report: {scope_name}")
         due_dil_report = args.ws_conn.get_due_diligence(token=scope_token)
         lib_hierarchy_report = args.ws_conn.get_inventory(token=scope_token, with_dependencies=True)
         doc.packages, pkgs_spdx_ids, pkg_relationships, doc.extracted_licenses = create_packages(libs_from_lic_report, due_dil_report, lib_hierarchy_report)  # TODO SPDX Design issue - Relationship between packages should be on package level
@@ -80,7 +85,7 @@ def create_sbom_doc(scope_token) -> Document:
 
         file_path = write_report(doc, args.type)
     else:
-        logger.error(f"{scope['type'].capitalize()}: {scope['name']} Has no libraries. Report will not be generated")
+        logger.error(f"{scope_name} Has no libraries. Report will not be generated")
 
     logger.info(f"Report saved at {file_path}")
 
@@ -97,10 +102,11 @@ def get_document_relationships(pkgs_spdx_ids: list, doc_spdx_id: str) -> list:
     return doc_relationships
 
 
-def create_document(scope_name: str, namespace) -> Document:
+def create_document(scope_name: str, namespace, customname : bool = False) -> Document:
     logger.debug(f"Creating SBOM Document entity on: {scope_name}")
+    filename = scope_name if customname else f"Mend {scope_name} SBOM report"
     doc_spdx_id = generate_spdx_id("SPDXRef-DOCUMENT")
-    document = Document(name=f"WhiteSource {scope_name} SBOM report",
+    document = Document(name=filename,
                         namespace=namespace,
                         spdx_id=doc_spdx_id,
                         version=version.Version(2, 2),
@@ -115,7 +121,7 @@ def create_creation_info(org_name, org_email, person_name, person_email):
     creation_info = CreationInfo()
     creation_info.set_created_now()
     org = creationinfo.Organization(org_name, org_email)
-    tool = creationinfo.Tool("White Source SBOM Report Generator")
+    tool = creationinfo.Tool("Mend SBOM Report Generator")
     person = creationinfo.Person(person_name, person_email)
 
     creation_info.add_creator(org)
@@ -172,6 +178,37 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
         return license_id
 
+    def set_extra_lic_attributes(fname : str, spdx : str):
+        license_o_ = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(fname)}")
+        license_o_.full_name = license_o_.full_name.replace('Suspected-','')
+        license_o_.identifier = license_o_.identifier.replace('Suspected-','')
+        try:
+            # Looking for license text in Mend by SPDX ID or Full Lic Name.
+            # If not found then trying to get it from spdx.org
+            lic_textfile = f"{spdx}.txt"
+            if lic_textfile not in lic_filenames:
+                find_susp_pos = license_o_.full_name.find('Suspected-')
+                fname = license_o_.full_name[find_susp_pos + 10:] if find_susp_pos > -1 else license_o_.full_name
+                find_lic_ref = fname.find("LicenseRef-")
+                fname = fname if find_lic_ref == -1 else fname[find_lic_ref + 11:]
+                lic_textfile = f"{fname}.txt"
+
+            if lic_textfile in lic_filenames:
+                license_o_.text = lic_filenames[lic_textfile]
+            else:
+                lic_textfile = lic_textfile.replace('-', '_')
+                if lic_textfile in lic_filenames:
+                    license_o_.text = lic_filenames[lic_textfile]
+                else:
+                    url = f'https://spdx.org/licenses/{spdx}.json'
+                    response = urllib.request.urlopen(url)
+                    data = json.loads(response.read())
+                    license_o_.text = data['licenseText']
+        except:
+            license_o_.text = fname
+
+        return license_o_
+
     def extract_licenses(lib_lics: list, lib_name: str) -> tuple:
         all_lics = []
         extracted_lics = []
@@ -182,33 +219,11 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
             if spdx_lic_id and is_spdx_license(spdx_lic_id):
                 logger.debug(f"Found SPDX license: '{spdx_lic_id}' on lib: '{lib_name}'")
                 license_o = License(full_name=full_name, identifier=spdx_lic_id)
+                if args.lictext:
+                    extracted_lics.append(set_extra_lic_attributes(fname=full_name,spdx=spdx_lic_id))
             else:
                 logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
-                license_o = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(full_name)}")
-                try:
-                    # Looking for license text in Mend by SPDX ID or Full Lic Name.
-                    # If not found then trying to get it from spdx.org
-                    lic_textfile = f"{spdx_lic_id}.txt"
-                    if lic_textfile not in lic_filenames:
-                        find_susp_pos = license_o.full_name.find('Suspected-')
-                        fname = license_o.full_name[find_susp_pos+10:] if find_susp_pos > -1 else license_o.full_name
-                        find_lic_ref = fname.find("LicenseRef-")
-                        fname = fname if find_lic_ref == -1 else fname[find_lic_ref+11:]
-                        lic_textfile = f"{fname}.txt"
-
-                    if lic_textfile in lic_filenames:
-                        license_o.text = lic_filenames[lic_textfile]
-                    else:
-                        lic_textfile = lic_textfile.replace('-','_')
-                        if lic_textfile in lic_filenames:
-                            license_o.text = lic_filenames[lic_textfile]
-                        else:
-                            url=f'https://spdx.org/licenses/{spdx_lic_id}.json'
-                            response = urllib.request.urlopen(url)
-                            data = json.loads(response.read())
-                            license_o.text = data['licenseText']
-                except:
-                    license_o.text = full_name
+                license_o = set_extra_lic_attributes(fname=full_name,spdx=spdx_lic_id)
                 extracted_lics.append(license_o)
 
             all_lics.append(license_o)
@@ -380,6 +395,8 @@ def parse_args():
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
+    parser.add_argument('-lt', '--license_text', help="Include license text for each element", dest='lictext', default=False, type=bool)
+    parser.add_argument('-on', '--out_file', help="Name of output file", dest='outname', default='')
     arguments = parser.parse_args()
 
     return arguments
@@ -463,6 +480,30 @@ def generate_spdx_id(id_val) -> str:
     return spdx_id
 
 
+def get_scope_bytoken(prj_token : str):
+    global args
+    scopes = []
+    try:
+        rt = WS.call_ws_api(self=args.ws_conn, request_type="getProjectVitals",
+                            kv_dict={"projectToken": prj_token})
+        scopes.append({rt['projectVitals'][0]['token'] : rt['projectVitals'][0]['name']})
+    except:
+        try:
+            rt = WS.call_ws_api(self=args.ws_conn, request_type="getProductProjectVitals",
+                                kv_dict={"productToken": prj_token})
+        except:
+            try:
+                rt = WS.call_ws_api(self=args.ws_conn, request_type="getOrganizationProjectVitals",
+                                    kv_dict={"orgToken": args.ws_token})
+            except:
+                rt = WS.call_ws_api(self=args.ws_conn, request_type="getProductProjectVitals",
+                                    kv_dict={"productToken": args.ws_token})
+        for prj in rt['projectVitals']:
+            scopes.append({prj['token']: prj['name']})
+
+    return scopes
+
+
 def main():
     global args
     global lic_filenames
@@ -471,7 +512,10 @@ def main():
         args = parse_args()
         init()
         lic_filenames = prepare_lic_text(args.scope_token)
-
+        scopes = get_scope_bytoken(args.scope_token)
+        #print(scopes)
+        #exit(0)
+        '''
         if args.scope_token:
             scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
 
@@ -481,9 +525,12 @@ def main():
         else:
             logger.info("Creating SBOM reports on all Organization's Projects")
             scopes = args.ws_conn.get_projects()
-
+        '''
+        args.outname = args.outname if len(scopes) == 1 else ''  # In case few files we can use just native names not customized
         for scope in scopes:
-            file_paths = create_sbom_doc(scope['token'])
+            #file_paths = create_sbom_doc(scope['token'])
+            for key, value in scope.items():
+                file_paths = create_sbom_doc(scope_token=key, scope_name=value)
     except ValueError:
         logger.error("Error running SBOM Generator")
 

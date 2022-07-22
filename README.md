@@ -50,6 +50,13 @@ Python 3.8+
                   Extra configuration of SBOM
   -o OUT_DIR, --out 
                   Output directory
+  -on OUT_NAME, --out_file
+                  Name of output file
+  -lt LICENSE_TEXT, --license_text 
+                  Include license text for each element
+  * Note: Name of output file can be used just for single report (Project layer)
+          LICENSE_TEXT flag has default value **False**. 
+          In case **True** : The report will include a full license text for each library, not only for libraries that are not in the SPDX list.
 ```
 ## Examples:
 ```shell
@@ -64,7 +71,10 @@ ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourceso
 
 # Creating XML report on a project with a user which only has product permissions (SAAS organization)   
 ws_sbom_generator -u <WS_USER_KEY> -y product -k <WS_PRODUCT_TOKEN> -s <WS_PROJECT_TOKEN> -t xml -e /<path/to>/sbom_extra.json -o </path/reports>
-
+# Creating JSON report for specific project with customized name
+ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports> -on <filename>
+#Creating JSON report on all projects of organization with Full License Text option
+ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -t json -o </path/reports> -lt True
 ```
 ## Docker container
 ### Installation:
