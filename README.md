@@ -50,12 +50,12 @@ Python 3.8+
                   Extra configuration of SBOM
   -o OUT_DIR, --out 
                   Output directory
-  -on OUTNAME, --outfile
+  -on OUT_NAME, --out_file
                   Name of output file
-  -lt LICENSETEXT, --licenses 
+  -lt LICENSE_TEXT, --license_text 
                   Include license text for each element
   * Note: Name of output file can be used just for single report (Project layer)
-          LICENSETEXT flag has default value **False**. 
+          LICENSE_TEXT flag has default value **False**. 
           In case **True** : The report will include a full license text for each library, not only for libraries that are not in the SPDX list.
 ```
 ## Examples:

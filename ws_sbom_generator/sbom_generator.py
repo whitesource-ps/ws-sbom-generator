@@ -395,8 +395,8 @@ def parse_args():
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
-    parser.add_argument('-lt', '--licenses', help="Include license text for each element", dest='lictext', default=False, type=bool)
-    parser.add_argument('-on', '--outfile', help="Name of output file", dest='outname', default='')
+    parser.add_argument('-lt', '--license_text', help="Include license text for each element", dest='lictext', default=False, type=bool)
+    parser.add_argument('-on', '--out_file', help="Name of output file", dest='outname', default='')
     arguments = parser.parse_args()
 
     return arguments
