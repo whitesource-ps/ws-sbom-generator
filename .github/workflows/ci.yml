@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - '**'
+      - '!ws-iac-scan-results/**'
+      - '!whitesource-remediate/master-all**'
+      - '!whitesource/migrate-configuration**'
     tags:
       - '*'
   schedule:
