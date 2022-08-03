@@ -77,6 +77,32 @@ def create_sbom_doc(scope_token : str, scope_name :str) -> Document:
         logger.debug(f"Handling {len(libs_from_lic_report)} libraries in : {scope_name}")
         logger.info(f"Finished report: {scope_name}")
         due_dil_report = args.ws_conn.get_due_diligence(token=scope_token)
+
+        inhouse_lib = args.ws_conn.get_in_house_libraries(token=scope_token)
+        for inhouse_el in inhouse_lib:
+            new_lib_due = {
+                "library" : f"{inhouse_el['filename']}",
+                "reference" : "No license was assigned",
+                "projectName" : f"{inhouse_el['projectName']}",
+                "productName": f"{inhouse_el['productName']}",
+                "reference_type": "Other",
+                "name" : "Unspecified License"
+            }
+            new_lib_lic = {
+                "keyUuid" : f"{inhouse_el['keyUuid']}",
+                "name" : f"{inhouse_el['filename']}",
+                "filename": f"{inhouse_el['filename']}",
+                "sha1": f"{inhouse_el['sha1']}",
+                "artifactId": f"{inhouse_el['artifactId']}",
+                "type": f"{inhouse_el['type']}",
+                "version" : "",
+                "licenses" : [{'name': 'Unspecified License',
+                  'references': [{'referenceType': 'Other', 'reference': 'No license was assigned'}]}],
+                "copyrightReferences" :[{'copyright': 'Unspecified Copyright. In-house library'}]
+            }
+            due_dil_report.append(new_lib_due)
+            libs_from_lic_report.append(new_lib_lic)
+
         lib_hierarchy_report = args.ws_conn.get_inventory(token=scope_token, with_dependencies=True)
         doc.packages, pkgs_spdx_ids, pkg_relationships, doc.extracted_licenses = create_packages(libs_from_lic_report, due_dil_report, lib_hierarchy_report)  # TODO SPDX Design issue - Relationship between packages should be on package level
 
@@ -382,7 +408,7 @@ def init():
 def parse_args():
     real_path = os.path.dirname(os.path.realpath(__file__))
     resource_real_path = os.path.join(real_path, "resources")
-    parser = argparse.ArgumentParser(description='Utility to create SBOM from WhiteSource data')
+    parser = argparse.ArgumentParser(description='Utility to create SBOM from Mend data')
     parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', default=os.environ.get("WS_USER_KEY"), required=True if not os.environ.get("WS_USER_KEY") else False)
     parser.add_argument('-k', '--token', help="WS Key", dest='ws_token', default=os.environ.get("WS_TOKEN"), required=True if not os.environ.get("WS_TOKEN") else False)
     parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_SCOPE_TOKEN"))
@@ -513,8 +539,6 @@ def main():
         init()
         lic_filenames = prepare_lic_text(args.scope_token)
         scopes = get_scope_bytoken(args.scope_token)
-        #print(scopes)
-        #exit(0)
         '''
         if args.scope_token:
             scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
