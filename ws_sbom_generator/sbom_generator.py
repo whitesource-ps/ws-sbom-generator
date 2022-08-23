@@ -9,8 +9,10 @@ import urllib
 from enum import Enum
 import zipfile
 import io
+from cyclonedx import CycloneDx
 
 from spdx import version, creationinfo
+from spdx.writers.jsonyamlxml import Writer
 from spdx.checksum import Algorithm
 from spdx.creationinfo import CreationInfo
 from spdx.document import Document, License, ExtractedLicense
@@ -204,14 +206,15 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
         return license_id
 
-    def set_extra_lic_attributes(fname : str, spdx : str):
-        license_o_ = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(fname)}")
+    def set_extra_lic_attributes(fname : str, spdx : str, lib_name : str = ""):
+        #license_o_ = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(fname)}")
+        license_o_ = ExtractedLicense(identifier=f"LicenseRef-{fix_license_id(fname if lib_name=='' else lib_name)}")
         license_o_.full_name = license_o_.full_name.replace('Suspected-','')
         license_o_.identifier = license_o_.identifier.replace('Suspected-','')
         try:
             # Looking for license text in Mend by SPDX ID or Full Lic Name.
             # If not found then trying to get it from spdx.org
-            lic_textfile = f"{spdx}.txt"
+            lic_textfile = f"{spdx}.txt" if lib_name == "" else lib_name
             if lic_textfile not in lic_filenames:
                 find_susp_pos = license_o_.full_name.find('Suspected-')
                 fname = license_o_.full_name[find_susp_pos + 10:] if find_susp_pos > -1 else license_o_.full_name
@@ -235,7 +238,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
         return license_o_
 
-    def extract_licenses(lib_lics: list, lib_name: str) -> tuple:
+    def extract_licenses(lib_lics: list, lib_name: str, lib_fname : str) -> tuple:
         all_lics = []
         extracted_lics = []
 
@@ -246,7 +249,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
                 logger.debug(f"Found SPDX license: '{spdx_lic_id}' on lib: '{lib_name}'")
                 license_o = License(full_name=full_name, identifier=spdx_lic_id)
                 if args.lictext:
-                    extracted_lics.append(set_extra_lic_attributes(fname=full_name,spdx=spdx_lic_id))
+                    extracted_lics.append(set_extra_lic_attributes(fname=full_name,spdx=spdx_lic_id,lib_name=lib_fname))
             else:
                 logger.debug(f"License: '{full_name}' on lib: '{lib_name}' is not a SPDX license:")
                 license_o = set_extra_lic_attributes(fname=full_name,spdx=spdx_lic_id)
@@ -300,8 +303,11 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
     package.files_analyzed = False
     package.homepage = download_location
-    package.check_sum = Algorithm(identifier="SHA1", value=lib['sha1'])
-    licenses, extracted_licenses = extract_licenses(lib_licenses, lib['name'])
+    try:
+        package.check_sum = Algorithm(identifier="SHA1", value=lib['sha1'])
+    except:
+        logger.error(f"SHA1 for library {lib['name']} was not found.")
+    licenses, extracted_licenses = extract_licenses(lib_licenses, lib['name'], lib['filename'])
     package.licenses_from_files = licenses
 
     if len(licenses) > 1:
@@ -338,6 +344,39 @@ def normalize_spdx_enity(name : str) -> str:
     return re.sub('[!@#$%^&*()_/:+~?]', '-', res_name)
 
 
+def get_lic_text_from_attr(data) -> dict:
+    x = 1
+    res = dict()
+    flag = True
+    try:
+        while flag:
+            pattern = fr"{x}. Library:(.*?){x + 1}. Library:"
+            substring = re.search(pattern, data, flags=re.DOTALL)
+            flag = flag if substring is not None else False
+            if not flag:
+                pattern = fr"{x}. Library:(.*?)NOTICES"
+                substring = re.search(pattern, data)
+
+            if substring:
+                el = substring.group(1)
+                try:
+                    lic = re.search(r"License Text:(.*?)==========\r\nCOPYRIGHTS", el, flags=re.DOTALL).group(1).strip()
+                except:
+                    try:
+                        lic = re.search(r"License Text:(.*?)==========\nCOPYRIGHTS", el, flags=re.DOTALL).group(
+                            1).strip()
+                    except:
+                        lic = re.search(r"License Text:(.*?)==========COPYRIGHTS", el,
+                                        flags=re.DOTALL).group(1).strip()
+
+                lib = re.search(r"(.*?)Product:", el).group(1).strip()
+                res[lib] = lic
+            x += 1
+    except:
+        pass
+    return res
+
+
 def get_prj_list(token : str) -> tuple:
     res_lic = dict()
     if token is None:
@@ -347,16 +386,10 @@ def get_prj_list(token : str) -> tuple:
                                      kv_dict={"productToken": token})  # if not Project Token, then Product Token
 
     for prj in prj_lst['projectVitals']:
-        zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
-                                  kv_dict={"projectToken": prj['token']})
-        file = io.BytesIO(zipf)
-        with zipfile.ZipFile(file, 'r') as f:
-            lic_filenames = f.namelist()
-            for lname in lic_filenames:
-                if lname not in res_lic:
-                    with f.open(lname) as licfile:
-                        res_lic[lname] = licfile.read().decode('utf-8')
-            f.close()
+        data = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectAttributionReport",
+                                  kv_dict={"projectToken": prj['token'],
+                                           "reportingAggregationMode": "BY_PROJECT", "exportFormat": "txt"})
+        res_lic.update(get_lic_text_from_attr(data=data))
     return res_lic
 
 
@@ -366,16 +399,10 @@ def prepare_lic_text(prj_token : str) -> tuple:
     except:
         all_lic_text = dict()
         try:
-            zipf = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectLicensesTextZip",
-                                      kv_dict={"projectToken": prj_token})
-            file = io.BytesIO(zipf)
-            with zipfile.ZipFile(file, 'r') as f:
-                lic_filenames = f.namelist()
-                for lname in lic_filenames:
-                    if lname not in all_lic_text:
-                        with f.open(lname) as licfile:
-                            all_lic_text[lname] = licfile.read().decode('utf-8') #prj_token
-                f.close()
+            data = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectAttributionReport",
+                                         kv_dict={"projectToken": prj_token,
+                                                  "reportingAggregationMode": "BY_PROJECT", "exportFormat": "txt"})
+            all_lic_text.update(get_lic_text_from_attr(data=data))
         except:
             pass
     return all_lic_text
@@ -443,7 +470,15 @@ def write_report(doc: Document, file_type: str) -> str:
     full_paths = []
 
     for f_type in f_types:
-        full_path = write_file(SPDXFileType, doc, f_type)
+        if f_type == "cdx":
+            report_filename = replace_invalid_chars(f"{doc.name}-{doc.version}.cdx")
+            full_path = os.path.join(args.out_dir, report_filename)
+            writer = Writer(document=doc)
+            document_object = writer.create_document()
+            cyclone = CycloneDx(document_object, "1.4")  #The last version of cyclonedx now is 1.4
+            full_path = cyclone.save_to_file(full_path)
+        else:
+            full_path = write_file(SPDXFileType, doc, f_type)
         full_paths.append(full_path)
 
     return full_paths
@@ -475,6 +510,7 @@ class SPDXFileType(Enum):
     RDF = ("rdf", "spdx.writers.rdf", "wb", None)
     XML = ("xml", "spdx.writers.xml", "wb", None)
     YAML = ("yml", "spdx.writers.yaml", "w", None)  # TODO: this will only work if  bug fix in spdx_tools: yaml.py -> write_document
+    CDX = ("cdx","","w","utf-8")
 
     def __str__(self):
         return self.name
@@ -533,23 +569,11 @@ def get_scope_bytoken(prj_token : str):
 def main():
     global args
     global lic_filenames
-    file_paths = []
     try:
         args = parse_args()
         init()
         lic_filenames = prepare_lic_text(args.scope_token)
         scopes = get_scope_bytoken(args.scope_token)
-        '''
-        if args.scope_token:
-            scopes = [args.ws_conn.get_scope_by_token(args.scope_token)]
-
-            if scopes[0].get('type') == ws_constants.ScopeTypes.PRODUCT:
-                logger.info(f"Creating SBOM reports on all {scopes[0].get('name')}'s Projects")
-                scopes = args.ws_conn.get_projects(product_token=scopes[0].get('token'))
-        else:
-            logger.info("Creating SBOM reports on all Organization's Projects")
-            scopes = args.ws_conn.get_projects()
-        '''
         args.outname = args.outname if len(scopes) == 1 else ''  # In case few files we can use just native names not customized
         for scope in scopes:
             #file_paths = create_sbom_doc(scope['token'])
@@ -557,8 +581,6 @@ def main():
                 file_paths = create_sbom_doc(scope_token=key, scope_name=value)
     except ValueError:
         logger.error("Error running SBOM Generator")
-
-    # return file_paths
 
 
 if __name__ == '__main__':
