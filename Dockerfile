@@ -11,5 +11,5 @@ COPY dist/$SBOM_GENERATOR_WHL ./
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install $SBOM_GENERATOR_WHL
 
-CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
+HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
 
