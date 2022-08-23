@@ -9,7 +9,7 @@ import urllib
 from enum import Enum
 import zipfile
 import io
-from cyclonedx import CycloneDx
+from ws_sbom_generator.cyclonedx import CycloneDx
 
 from spdx import version, creationinfo
 from spdx.writers.jsonyamlxml import Writer
