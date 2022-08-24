@@ -4,8 +4,8 @@
 [![Python 3.8](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Blue_Python_3.8_Shield_Badge.svg/76px-Blue_Python_3.8_Shield_Badge.svg.png)](https://www.python.org/downloads/release/python-380/)
 [![GitHub release](https://img.shields.io/github/v/release/whitesource-ps/ws-sbom-generator)](https://github.com/whitesource-ps/ws-sbom-generator/releases/latest)  
 
-# WS SBOM Generator in SPDX or CycloneDx format
-CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spdx.org) or in [CycloneDx format](https://cyclonedx.org/).
+# WS SBOM Generator in SPDX or CycloneDX format
+CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spdx.org) or in [CycloneDX format](https://cyclonedx.org/).
 * The tool can generate reports on the following scopes (defined with: **-s/WS_SCOPE_TOKEN**):
   * Specific Project token - the tool will generate a report on a specific project (user key and token of organization admin or of Product Admin).
   * No Token specified - the tool will generate a report on all the projects within the organization (user key and token of organization admin).
@@ -57,7 +57,7 @@ Python 3.8+
   * Note: Name of output file can be used just for single report (Project layer)
           LICENSE_TEXT flag has default value **False**. 
           In case **True** : The report will include a full license text for each library, not only for libraries that are not in the SPDX list.
-          **cdx** type : The report will be created in CycloneDx format v1.4 (JSON type of output file)
+          **cdx** type : The report will be created in CycloneDX format v1.4 (JSON type of output file)
 ```
 ## Examples:
 ```shell
