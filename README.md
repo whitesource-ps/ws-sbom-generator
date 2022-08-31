@@ -24,13 +24,13 @@ The user key used (**-u**) must be a member of one of the following groups:
 ## Prerequisites
 Python 3.8+
 
-### Installation and Execution by pulling package from PyPi:
+## Installation and Execution by pulling package from PyPi:
 1. Execute pip install `pip install ws-sbom-generator`
    * Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
 2. Run report: `ws_sbom_generator -u <WS_USER_KEY> -k <WS_TOKEN> -a <WS_URL> -t <WS_REPORT_TYPE> {json,tv,rdf,xml,yaml,all} -e <EXTRA> -o <OUT_DIR>`
    * Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
 
-### Optional arguments:
+## Optional arguments:
 ```shell
   -h, --help            show this help message and exit
   -u WS_USER_KEY, --userKey
@@ -88,7 +88,8 @@ Creating JSON report for specific project with customized name
 
 Creating JSON report on all projects of organization with Full License Text option  
 `ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -t json -o </path/reports> -lt True`
-```
+
+<br/>
 
 ## Docker container
 ### Installation:
