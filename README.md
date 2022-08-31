@@ -89,7 +89,6 @@ Creating JSON report for specific project with customized name
 Creating JSON report on all projects of organization with Full License Text option  
 `ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -t json -o </path/reports> -lt True`
 ```
-<br/>
 
 ## Docker container
 ### Installation:
