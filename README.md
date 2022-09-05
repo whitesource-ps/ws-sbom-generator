@@ -54,10 +54,13 @@ Python 3.8+
                   Name of output file
   -lt LICENSE_TEXT, --license_text 
                   Include license text for each element
+  -th NUMBER_OF_THREADS, --threads
+                  Set number of parallel threads for creation output reports                
   * Note: Name of output file can be used just for single report (Project layer)
           LICENSE_TEXT flag has default value **False**. 
           In case **True** : The report will include a full license text for each library, not only for libraries that are not in the SPDX list.
           **cdx** type : The report will be created in CycloneDX format v1.4 (JSON type of output file)
+          NUMBER_OF_THREADS has default value **10**
 ```
 ## Examples:
 
