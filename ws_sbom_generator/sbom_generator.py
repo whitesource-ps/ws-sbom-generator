@@ -1,4 +1,5 @@
 import argparse
+import concurrent
 import importlib
 import json
 import logging
@@ -7,9 +8,9 @@ import re
 import sys
 import urllib
 from enum import Enum
-import zipfile
-import io
 from ws_sbom_generator.cyclonedx import CycloneDx
+from concurrent.futures import ThreadPoolExecutor
+from typing import Tuple, List
 
 from spdx import version, creationinfo
 from spdx.writers.jsonyamlxml import Writer
@@ -34,6 +35,7 @@ s_handler.setFormatter(formatter)
 s_handler.setLevel(is_debug)
 logger.addHandler(s_handler)
 logger.propagate = False
+
 
 class License_(License):
     def __init__(self, full_name, identifier,text):
@@ -378,18 +380,50 @@ def get_lic_text_from_attr(data) -> dict:
 
 
 def get_prj_list(token : str) -> tuple:
+    global res_lic
     res_lic = dict()
+
+    def generic_thread_lic_text(ent_l: list, worker: callable) -> Tuple[list, list]:
+        data = []
+        errors = []
+
+        with ThreadPoolExecutor(max_workers=PROJECT_PARALLELISM_LEVEL) as executer:
+            futures = [executer.submit(worker, ent) for ent in ent_l]
+
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    temp_l = future.result()
+                    if temp_l:
+                        data.extend(temp_l)
+                except Exception as e:
+                    errors.append(e)
+                    logger.error(f"Error on future: {future.result()}")
+
+        return data, errors
+
+    def get_lic_text(prj):
+        try:
+            data = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectAttributionReport",
+                                      kv_dict={"projectToken": prj['token'],
+                                               "reportingAggregationMode": "BY_PROJECT", "exportFormat": "txt"})
+            res_lic.update(get_lic_text_from_attr(data=data))
+        except:
+            pass
+
     if token is None:
         prj_lst = web.WS.call_ws_api(self=args.ws_conn, request_type="getOrganizationProjectVitals")
     else:
         prj_lst = web.WS.call_ws_api(self=args.ws_conn, request_type="getProductProjectVitals",
                                      kv_dict={"productToken": token})  # if not Project Token, then Product Token
 
+    generic_thread_lic_text(ent_l=prj_lst['projectVitals'],worker=get_lic_text)
+    '''
     for prj in prj_lst['projectVitals']:
         data = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectAttributionReport",
                                   kv_dict={"projectToken": prj['token'],
                                            "reportingAggregationMode": "BY_PROJECT", "exportFormat": "txt"})
         res_lic.update(get_lic_text_from_attr(data=data))
+    '''
     return res_lic
 
 
@@ -450,6 +484,7 @@ def parse_args():
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
     parser.add_argument('-lt', '--license_text', help="Include license text for each element", dest='lictext', default=False, type=bool)
     parser.add_argument('-on', '--out_file', help="Name of output file", dest='outname', default='')
+    parser.add_argument('-th', '--threads', help="Number of threads", dest='threads', default=10)
     arguments = parser.parse_args()
 
     return arguments
@@ -566,19 +601,58 @@ def get_scope_bytoken(prj_token : str):
     return scopes
 
 
+def generic_thread_pool_sbom(ent_l: list, worker: callable) -> Tuple[list, list]:
+    data = []
+    errors = []
+
+    with ThreadPoolExecutor(max_workers=PROJECT_PARALLELISM_LEVEL) as executer:
+        futures = [executer.submit(worker, ent) for ent in ent_l]
+
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                temp_l = future.result()
+                if temp_l:
+                    data.extend(temp_l)
+            except Exception as e:
+                errors.append(e)
+                logger.error(f"Error on future: {future.result()}")
+                SystemExit()
+
+    return data, errors
+
+
+def create_sbom_doc_by_scope(scope_):
+    for key, value in scope_.items():
+        return create_sbom_doc(scope_token=key, scope_name=value)
+
+
 def main():
     global args
     global lic_filenames
+    global PROJECT_PARALLELISM_LEVEL
     try:
         args = parse_args()
         init()
-        lic_filenames = prepare_lic_text(args.scope_token)
+        try:
+            PROJECT_PARALLELISM_LEVEL = int(args.threads)
+        except:
+            PROJECT_PARALLELISM_LEVEL = 10
+
+        if args.lictext:
+            lic_filenames = prepare_lic_text(args.scope_token)
+        else:
+            lic_filenames = dict()
+
         scopes = get_scope_bytoken(args.scope_token)
         args.outname = args.outname if len(scopes) == 1 else ''  # In case few files we can use just native names not customized
+
+        generic_thread_pool_sbom(ent_l=scopes,worker=create_sbom_doc_by_scope)
+        '''
         for scope in scopes:
-            #file_paths = create_sbom_doc(scope['token'])
+            file_paths = create_sbom_doc(scope['token'])   
             for key, value in scope.items():
                 file_paths = create_sbom_doc(scope_token=key, scope_name=value)
+        '''
     except ValueError:
         logger.error("Error running SBOM Generator")
 
