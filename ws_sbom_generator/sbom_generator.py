@@ -72,12 +72,14 @@ def create_sbom_doc(scope_token : str, scope_name :str) -> Document:
                                              args.extra_conf.get('org_email', 'ORG_EMAIL'),
                                              args.extra_conf.get('person', 'PERSON'),
                                              args.extra_conf.get('person_email', 'PERSON_EMAIL'))
-    libs_from_lic_report = args.ws_conn.get_licenses(token=scope_token, full_spdx=True)
+    libs_from_lic_report = []
+    try:
+        libs_from_lic_report = args.ws_conn.get_licenses(token=scope_token, full_spdx=True)
+    except Exception as err:
+        logger.error(f"Error during getting libraries list. The details are {err}")
+
     file_path = None
     if libs_from_lic_report:
-        #logger.debug(f"Handling {len(libs_from_lic_report)} libraries in {scope['type']}: {scope['name']}")
-        #logger.info(f"Finished report: {scope['type']}: {scope['name']}")
-
         logger.debug(f"Handling {len(libs_from_lic_report)} libraries in : {scope_name}")
         logger.info(f"Finished report: {scope_name}")
         due_dil_report = args.ws_conn.get_due_diligence(token=scope_token)
@@ -653,8 +655,8 @@ def main():
             for key, value in scope.items():
                 file_paths = create_sbom_doc(scope_token=key, scope_name=value)
         '''
-    except ValueError:
-        logger.error("Error running SBOM Generator")
+    except ValueError as err:
+        logger.error(f"Error running SBOM Generator. The details are {err}")
 
 
 if __name__ == '__main__':
