@@ -91,6 +91,7 @@ def create_sbom_doc(scope_token : str, scope_name :str) -> Document:
             'trace': trace
         }))
         #logger.error(f"Error during getting libraries list. The details are {err}")
+        logger.error(f"Error during getting libraries list. The details are {err}")
 
     file_path = None
     if libs_from_lic_report:
