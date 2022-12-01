@@ -76,6 +76,21 @@ def create_sbom_doc(scope_token : str, scope_name :str) -> Document:
     try:
         libs_from_lic_report = args.ws_conn.get_licenses(token=scope_token, full_spdx=True)
     except Exception as err:
+        trace = []
+        tb = err.__traceback__
+        while tb is not None:
+            trace.append({
+                "filename": tb.tb_frame.f_code.co_filename,
+                "name": tb.tb_frame.f_code.co_name,
+                "lineno": tb.tb_lineno
+            })
+            tb = tb.tb_next
+        logger.error(str({
+            'type': type(err).__name__,
+            'message': str(err),
+            'trace': trace
+        }))
+        #logger.error(f"Error during getting libraries list. The details are {err}")
         logger.error(f"Error during getting libraries list. The details are {err}")
 
     file_path = None
