@@ -12,4 +12,4 @@ VOLUME /opt/ws-sbom-generator/sbom_generator/resources
 VOLUME /opt/ws-sbom-generator/sbom_generator/output
 
 #HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
-CMD ["python3","/ws-sbom-generator/sbom_generator.py","-o /opt/ws-sbom-generator/sbom_generator/output"]
+CMD ["python","/ws-sbom-generator/sbom_generator.py","-o /opt/ws-sbom-generator/sbom_generator/output"]
