@@ -8,8 +8,10 @@ COPY dist/$SBOM_GENERATOR_WHL ./
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install $SBOM_GENERATOR_WHL
 
-VOLUME /opt/ws-sbom-generator/sbom_generator/resources
-VOLUME /opt/ws-sbom-generator/sbom_generator/output
+#VOLUME /opt/ws-sbom-generator/sbom_generator/resources
+#VOLUME /opt/ws-sbom-generator/sbom_generator/output
+VOLUME /opt
+VOLUME /opt
 
 #HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
-ENTRYPOINT ["ws_sbom_generator","-o /opt/ws-sbom-generator/sbom_generator/output","-e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json"]
+ENTRYPOINT ["ws_sbom_generator","-o /opt","-e /opt/sbom_extra.json"]
