@@ -11,5 +11,5 @@ RUN pip3 install $SBOM_GENERATOR_WHL
 VOLUME /opt/ws-sbom-generator/sbom_generator/resources
 VOLUME /opt/ws-sbom-generator/sbom_generator/output
 
-HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
-#CMD ["python","/opt/ws-sbom-generator/ws_sbom_generator/sbom_generator.py","-o /opt/ws-sbom-generator/sbom_generator/output","-e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json"]
+#HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
+CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
