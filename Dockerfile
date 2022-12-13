@@ -11,6 +11,7 @@ HEALTHCHECK NONE
 
 VOLUME /opt/ws-sbom-generator/sbom_generator/resources
 VOLUME /opt/ws-sbom-generator/sbom_generator/output
+HEALTHCHECK NONE
 
 #HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
 CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
