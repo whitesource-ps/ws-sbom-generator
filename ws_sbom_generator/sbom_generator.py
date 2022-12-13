@@ -127,6 +127,21 @@ def create_sbom_doc(scope_token : str, scope_name :str) -> Document:
         lib_hierarchy_report = args.ws_conn.get_inventory(token=scope_token, with_dependencies=True)
         doc.packages, pkgs_spdx_ids, pkg_relationships, doc.extracted_licenses = create_packages(libs_from_lic_report, due_dil_report, lib_hierarchy_report)  # TODO SPDX Design issue - Relationship between packages should be on package level
 
+        for pkg_el_ in doc.packages:
+            try:
+                pkg_el_.licenses_from_files.sort()
+            except:
+                pass
+            try:
+                pkg_el_.cr_text.sort()
+            except:
+                pass
+            try:
+                pkg_el_.license_declared = pkg_el_.licenses_from_files[0]
+                pkg_el_.conc_lics = pkg_el_.licenses_from_files[0]
+            except:
+                pass
+
         doc.relationships = get_document_relationships(pkgs_spdx_ids, doc_spdx_id)
         doc.relationships.extend(pkg_relationships)
 
