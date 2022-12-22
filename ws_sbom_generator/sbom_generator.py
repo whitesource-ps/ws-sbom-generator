@@ -379,7 +379,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
         tmp_licenses = ""
         for lic_ in licenses:
             tmp_licenses += f"{lic_}{' WITH ' if lic_in_list(lic_, excepts_list) else ' AND '}"
-        licenses = tmp_licenses[:-5]
+        licenses = License(full_name=tmp_licenses[:-5],identifier=tmp_licenses[:-5])
         #licenses = licenses[0]
     else:
         logger.warning(f"No license found for library: {lib['name']}")
