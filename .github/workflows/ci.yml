@@ -22,8 +22,8 @@ jobs:
           TOOL_NAME=$(echo '${{ github.repository }}' |awk -F '/' '{gsub(/-/, "_", $0) ;print $NF}')
           echo "TOOL_NAME=$TOOL_NAME" >> $GITHUB_ENV
           echo "RELEASE=false" >> $GITHUB_ENV
-          #echo "VERSION=0.0.0.ci0" >> $GITHUB_ENV
-          echo {{$GITHUB_REF}}
+          echo "VERSION=0.0.0.ci0" >> $GITHUB_ENV
+          echo $GITHUB_REF
           echo "TOOL_DIR=$TOOL_NAME" >> $GITHUB_ENV
           if [[ $GITHUB_REF == refs/tags/v* || "$GITHUB_REF" == *"refs/tags/test-v"* ]]; then
             echo "VERSION=$(echo ${{github.ref}} |  sed -r 's/^[\/a-zA-z-]+//')" >> $GITHUB_ENV
