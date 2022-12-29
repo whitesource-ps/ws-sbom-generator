@@ -12,10 +12,5 @@ HEALTHCHECK NONE
 VOLUME /opt/ws-sbom-generator/sbom_generator/resources
 VOLUME /opt/ws-sbom-generator/sbom_generator/output
 
-RUN chmod 777 /opt/ws-sbom-generator/sbom_generator/output
-RUN useradd -d /home/sbom -m -s /bin/bash sbom
-USER sbom
-HEALTHCHECK NONE
-
 #HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
 CMD /home/sbom/.local/bin/ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/sbom_extra.json
