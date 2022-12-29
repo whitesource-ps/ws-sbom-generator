@@ -1,6 +1,7 @@
 FROM python:3.9-slim-buster
 
-#USER root
+RUN useradd -d /home/sbom -m -s /bin/bash sbom
+USER sbom
 ARG version
 ENV SBOM_GENERATOR_WHL="ws_sbom_generator-$version-py3-none-any.whl"
 
