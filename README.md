@@ -10,18 +10,7 @@ This tool generates SBOM reports in either [SPDX](https://spdx.org) or [CycloneD
 
 The tool can be executed either via [CLI](#sbom-generator-cli) or as a [Docker container](#sbom-generator-docker-container).  
 
-The tool also supports including additional tag values that aren't necessarily configured in Mend, by referencing a designated `sbom_extra.json` file, with the following structure:  
-**[TBC]**  
-```json
-{
-  "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
-  "org_email": "org@domain.com",
-  "person": "First Last",
-  "person_email": "first.last@domain.com"
-}
-```
-
->Note: This tool utilizes a forked package of [spdx-tools](https://github.com/spdx/tools).  
+>**Note:** This tool utilizes a forked package of [spdx-tools](https://github.com/spdx/tools).  
 
 <br/>
 
@@ -32,18 +21,28 @@ The tool also supports including additional tag values that aren't necessarily c
 - **Windows (PowerShell):**	10, 2012, 2016
 
 ## Prerequisites
-- Python 3.8+
+- Python 3.8 or later
 - Mend user with admin permissions
 
 >**Note:**  
 >The specified user (`-u, --userKey`) must be associated with a group assigned as either Organization Administrators (for generating report for all projects in the organization) or Product Administrators. For the latter, `--tokenType` must be specified (see [Command-Line Arguments](#command-line-arguments)).  
 
 ## Installation
+1. Install the PyPI package `ws-sbom-generator`
+    ```
+    pip install ws-sbom-generator
+    ```
+    > **Note:** Depending on whether the package was installed as a root user or not, you need to make sure the package installation location was added to the `$PATH` environment variable.  
 
-```
-pip install ws-sbom-generator
-```
-> **Note:** Depending on whether the package was installed as a root user or not, you need to make sure the package installation location was added to the `$PATH` environment variable.  
+1. Update the [creation info](https://spdx.github.io/spdx-spec/v2-draft/document-creation-information/#68-creator-field) as needed in the [resource/sbom_extra.json](./ws_sbom_generator/resources/sbom_extra.json) file:
+    ```json
+    {
+      "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
+      "org_email": "org@domain.com",
+      "person": "First Last",
+      "person_email": "first.last@domain.com"
+    }
+    ```
 
 ## Usage
 
@@ -64,25 +63,26 @@ ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY -
 | **&#x2011;s,&nbsp;&#x2011;&#x2011;scope**        | string | No  | Product or Project token to generate the report(s) for. When specifying a Product token, one report will be generated for each project under that product. If not specified, one report will be generated for each project in your organization. |
 | **&#x2011;o,&nbsp;&#x2011;&#x2011;out**          | string | No  | Output directory (default: `$PWD`) |
 | **&#x2011;on,&nbsp;&#x2011;&#x2011;outfile**     | string | No* | Output file name* (default: `Mend {PROJECT_NAME} SBOM report-{FORMAT}`) |
-| **&#x2011;lt,&nbsp;&#x2011;&#x2011;licensetext** | bool   | No  | **Include full license text for all libraries, not just the ones that aren't in the SPDX list (default: `False`) [TBC]** |
+| **&#x2011;lt,&nbsp;&#x2011;&#x2011;licensetext** | bool   | No  | Include full license text for all libraries* (default: `False`) |
 | **&#x2011;th,&nbsp;&#x2011;&#x2011;threads**     | int    | No  | Number of threads to run in parallel for report generation (default: `10`) |
-| **&#x2011;e,&nbsp;&#x2011;&#x2011;extra**        | string | No* | Additional SBOM configuration (default: `$PWD/resources/sbom_extra.json` |
+| **&#x2011;e,&nbsp;&#x2011;&#x2011;extra**        | string | No* | Path to a json file containing the [creation info](https://spdx.github.io/spdx-spec/v2-draft/document-creation-information/#68-creator-field) to be included in the report (default: `$PWD/resources/sbom_extra.json` |
 
 >**Notes:**  
 >\* Token type (`--tokenType product`) is required in case the specified `userKey` is associated with a group with Product Administrators permissions.  
 >\* Report type (`--type`) `cdx` will generate a JSON file in [CycloneDX v1.4](https://cyclonedx.org/docs/1.4/json/) format.  
 >\* Report type (`--type`) `all` will generate one file in each format for each specified project.  
 >\* Output file name (`--outfile`) is only supported for a single project scope.  
->\* **The tool accepts additional values which are unknown to Mend (`-e sbom_extra.json`).  [TBC]**  
+>\* Full license texts will be taken by default from the [SPDX License List](https://spdx.org/licenses/). If a given license does not exist there, the tool will attempt to take it from Mend's database.  
+>\* By default, the tool will use the placeholders in the [resource/sbom_extra.json](./ws_sbom_generator/resources/sbom_extra.json) file.  
 
 ### Execution Examples
 
-**Create tag value report on a specific project [TBC]**  
+Generating `tv` formatted SBOM report for a specific project  
 ```shell
 ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --scope $WS_PROJECTTOKEN --out $HOME/reports --extra sbom_extra.json
 ```
 
-**Create tag value report on all projects of product [TBC]**  
+Generating `tv` formatted SBOM report for all projects of a specified product  
 ```shell
 ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --scope $WS_PRODUCTTOKEN --out $HOME/reports --extra sbom_extra.json
 ```
@@ -116,7 +116,7 @@ ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY -
 - **Windows:**	10, 2012, 2016
 
 ## Prerequisites
-- Docker **version [TBC]**
+- Docker version 20 or later
 - Mend user with admin permissions
 
 >**Note:**  
