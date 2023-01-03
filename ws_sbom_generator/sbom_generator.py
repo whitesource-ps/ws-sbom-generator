@@ -133,15 +133,11 @@ def create_sbom_doc(scope_token : str, scope_name :str) -> Document:
             except:
                 pass
             try:
-                pkg_el_.cr_text.sort()
+                # Copyright text changed regarding SPDX documentation
+                pkg_el_.cr_text.sort(key=lambda x: (0 if x == pkg_el_.originator.name else 1))
+                pkg_el_.cr_text = ', '.join(pkg_el_.cr_text)
             except:
                 pass
-            try:
-                pkg_el_.license_declared = pkg_el_.licenses_from_files[0]
-                pkg_el_.conc_lics = pkg_el_.licenses_from_files[0]
-            except:
-                pass
-
         doc.relationships = get_document_relationships(pkgs_spdx_ids, doc_spdx_id)
         doc.relationships.extend(pkg_relationships)
 
@@ -195,11 +191,34 @@ def create_creation_info(org_name, org_email, person_name, person_email):
 
 
 def create_packages(libs, due_dil, lib_hierarchy) -> tuple:
+    global excepts_list
+
     def should_replace_f(dict_a, dict_b):  # Handle case where duplicate lib returns, prefer the lib with dependencies
         if dict_a.get('dependencies'):
             return True
         else:
             return False
+
+    def get_spdx_exceptions_list():  # Trying to get license exception list from SPDX GH
+        import requests
+        url = "https://api.github.com/repos"
+        owner = 'spdx'
+        repo = 'license-list-data'
+        path = 'json/exceptions.json'
+
+        r = requests.get(
+            f'{url}/{owner}/{repo}/contents/{path}'.format(
+                owner=owner, repo=repo, path=path),
+            headers={
+                'accept': 'application/vnd.github.v3.raw',
+            }
+        )
+        try:
+            return r.json()['exceptions']
+        except:
+            return []
+
+    excepts_list = get_spdx_exceptions_list()
 
     logger.debug(f"Creating Packages entity")
     for d in due_dil:
@@ -232,7 +251,7 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
         elif not authors:
             logger.warning(f"No author data found on lib: '{lib['name']}'")
 
-        return authors.pop() if authors else None
+        return authors.pop(0) if authors else None # Taking first author
 
     def fix_license_id(license_name: str):  # TODO ADD TO upstream spdx-tools
         license_id = re.sub(r'(?![a-zA-Z0-9-.]).', '-', license_name)
@@ -296,19 +315,29 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
     def get_originator(dd_ents, lib_copyrights_l):
         author = get_author(dd_ents, lib_copyrights_l)
 
-        return creationinfo.Organization(author, NoAssert()) if author else NoAssert()
+        return creationinfo.Organization(author, "") if author else NoAssert()
 
     def get_author(dd_ent_l, lib_copyrights_l):
-        author = None
-        if dd_ent_l:  # Trying to get Author from Due Diligence
-            author = dd_ent_l[0].get('author')
-        if not author:  # If failed from DD, trying from lib
-            logger.debug("No author found from Due Diligence data. Trying to get copyright from library data")
+        try:
+            logger.debug("Trying to get copyright from library data")
             author = get_author_from_cr(lib_copyrights_l)
-        if not author:
-            logger.warning(f"Unable to find the author of library: {lib['name']} ")
+            if not author:  # If failed from lib, trying from DD
+                logger.debug("No author found from Library data. Trying to get copyright from Due Diligence data.")
+                if dd_ent_l:  # Trying to get Author from Due Diligence
+                    author = dd_ent_l[0].get('author')
+            if not author:
+                logger.warning(f"Unable to find the author of library: {lib['name']} ")
+            return author
+        except:
+            return None
 
-        return author
+    def lic_in_list(lic : str, lic_lst : list)-> bool :
+        res = False
+        for lc_ in lic_lst:
+            if lic == lc_["name"]:
+                res = True
+                break
+        return res
 
     pkg_spdx_id = generate_spdx_id(f"SPDXRef-PACKAGE-{lib['filename']}")
     logger.debug(f"Creating Package {pkg_spdx_id}")
@@ -346,15 +375,19 @@ def create_package(lib, dd_dict, lib_hierarchy_dict) -> tuple:
 
     if len(licenses) > 1:
         logger.warning(f"Found {len(licenses)} licenses on library: {lib['name']}. Using the first one")
-    if licenses:  # TODO should be fixed in SPDX-TOOLS as it is possible to have multiple lics
-        licenses = licenses[0]
+    if licenses:
+        tmp_licenses = ""
+        for lic_ in licenses:
+            tmp_licenses += f"{lic_}{' WITH ' if lic_in_list(lic_, excepts_list) else ' AND '}"
+        licenses = License(full_name=tmp_licenses[:-5],identifier=tmp_licenses[:-5])
+        #licenses = licenses[0]
     else:
         logger.warning(f"No license found for library: {lib['name']}")
         licenses = SPDXNone()
 
     package.conc_lics = licenses
     package.license_declared = licenses
-    package.cr_text = copyrights  # TODO should be fixed in SPDX-TOOLS as is possible to have multiple copyrights
+    package.cr_text = copyrights
     pkg_relationships = get_pkg_relationships(lib_hierarchy_dict, pkg_spdx_id)
 
     logger.debug(f"Finished creating Package: {pkg_spdx_id}")
@@ -411,7 +444,7 @@ def get_lic_text_from_attr(data) -> dict:
     return res
 
 
-def get_prj_list(token : str) -> tuple:
+def get_prj_list(token : str) -> dict:
     global res_lic
     res_lic = dict()
 
@@ -459,7 +492,7 @@ def get_prj_list(token : str) -> tuple:
     return res_lic
 
 
-def prepare_lic_text(prj_token : str) -> tuple:
+def prepare_lic_text(prj_token : str) -> dict:
     try:
         all_lic_text = get_prj_list(prj_token)
     except:
@@ -514,8 +547,8 @@ def parse_args():
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
-    parser.add_argument('-lt', '--license_text', help="Include license text for each element", dest='lictext', default=False, type=bool)
-    parser.add_argument('-on', '--out_file', help="Name of output file", dest='outname', default='')
+    parser.add_argument('-lt', '--licensetext', help="Include license text for each element", dest='lictext', default=False, type=bool)
+    parser.add_argument('-on', '--outfile', help="Name of output file", dest='outname', default='')
     parser.add_argument('-th', '--threads', help="Number of threads", dest='threads', default=10)
     arguments = parser.parse_args()
 
@@ -564,7 +597,7 @@ def write_file(spdx_f_t_enum, doc, file_type) -> str:
     logger.info(f"Writing file: {full_path} in format: {file_type}")
     with open(full_path, mode=spdx_file_type.f_flags, encoding=spdx_file_type.encoding) as fp:
         try:
-            module.write_document(doc, fp)
+            module.write_document(doc, fp, False) # Due to changing licenseDeclared and licenseCocluded creation - set verification to Off
         except TypeError:
             logging.exception("Error writing file")
 
@@ -679,12 +712,6 @@ def main():
         args.outname = args.outname if len(scopes) == 1 else ''  # In case few files we can use just native names not customized
 
         generic_thread_pool_sbom(ent_l=scopes,worker=create_sbom_doc_by_scope)
-        '''
-        for scope in scopes:
-            file_paths = create_sbom_doc(scope['token'])   
-            for key, value in scope.items():
-                file_paths = create_sbom_doc(scope_token=key, scope_name=value)
-        '''
     except ValueError as err:
         logger.error(f"Error running SBOM Generator. The details are {err}")
 

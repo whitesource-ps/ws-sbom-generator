@@ -11,84 +11,64 @@ CLI Tool and a Docker image to generate SBOM report in [SPDX format](https://spd
   * No Token specified - the tool will generate a report on all the projects within the organization (user key and token of organization admin).
 * To run the tool with product-level permissions pass `-y product` along with the product token (-k) and user key with permission on this product (-u).
 * The tool utilizes a forked package of [spdx-tools](https://github.com/spdx/tools).
-* The tool accepts additional values which are unknown to Mend (`-e sbom_extra.json`).
-* If URL is not stated (defined with: **-a/WS_URL**), the tool will access **saas**.
-* If report type is not stated (defined with: **-t/WS_REPORT_TYPE**) the tool will generate a report in **tag-value** format.
-  * Supported file formats: json, tv, rdf, xml and yaml.
-  
+
+## Supported Operating Systems
+- **Linux (Bash):**	CentOS, Debian, Ubuntu, RedHat
+- **Windows (PowerShell):**	10, 2012, 2016
+
+## Prerequisites
+Python 3.8+
+
 ## Permissions to run the tool
 The user key used (**-u**) must be a member of one of the following groups:
 - Organization Administrator - For dynamically obtaining the organization name and generating reports on all projects (in all products).
 - Product Administrator (**-y** must be passed ) - For running on a specific project or all projects within the product.
 
-## Prerequisites
-Python 3.8+
-
 ## Installation and Execution by pulling package from PyPi:
 1. Execute pip install `pip install ws-sbom-generator`
    * Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
-2. Run report: `ws_sbom_generator -u <WS_USER_KEY> -k <WS_TOKEN> -a <WS_URL> -t <WS_REPORT_TYPE> {json,tv,rdf,xml,yaml,all} -e <EXTRA> -o <OUT_DIR>`
-   * Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
 
-## Optional arguments:
-```shell
-  -h, --help            show this help message and exit
-  -u WS_USER_KEY, --userKey
-                  WS User Key
-  -k WS_TOKEN, --token 
-                  Mend Org Token (API Key) or Mend Product Token
-  -s WS_SCOPE_TOKEN, --scope 
-                  Scope token of SBOM report to generate
-  -y WS_TOKEN_TYPE, --tokenType {product, organization}
-                  Optional WS Token type to be stated in case Mend Org Token
-                  does not have organization level permissions
-  -a WS_URL, --wsUrl {saas, app, app-eu, saas-eu, your_url}
-                  Mend URL 
-  -t WS_REPORT_TYPE, --type {json,tv,rdf,xml,yaml,cdx,all}
-                  Report type
-  -e EXTRA, --extra 
-                  Extra configuration of SBOM
-  -o OUT_DIR, --out 
-                  Output directory
-  -on OUT_NAME, --out_file
-                  Name of output file
-  -lt LICENSE_TEXT, --license_text 
-                  Include license text for each element
-  -th NUMBER_OF_THREADS, --threads
-                  Set number of parallel threads for creation output reports                
-  * Note: Name of output file can be used just for single report (Project layer)
-          LICENSE_TEXT flag has default value **False**. 
-          In case **True** : The report will include a full license text for each library, not only for libraries that are not in the SPDX list.
-          **cdx** type : The report will be created in CycloneDX format v1.4 (JSON type of output file)
-          NUMBER_OF_THREADS has default value **10**
-```
-## Examples:
+### Command-Line Arguments
+
+| Parameter                                        |  Type  | Required | Description                                                                                        |
+|:-------------------------------------------------|:------:|:--------:|:---------------------------------------------------------------------------------------------------|
+| **&#x2011;h,&nbsp;&#x2011;&#x2011;help**         | switch |    No    | Show help and exit                                                                                 |
+| **&#x2011;u,&nbsp;&#x2011;&#x2011;userKey**      | string |   Yes    | Mend User Key                                                                                      |
+| **&#x2011;k,&nbsp;&#x2011;&#x2011;token**        | string |   Yes    | Mend API Key                                                                                       |
+| **&#x2011;y,&nbsp;&#x2011;&#x2011;tokenType**    | string |    No    | To be stated in case Mend Org Token does not have organization level permissions                   |
+| **&#x2011;e,&nbsp;&#x2011;&#x2011;extra**        | string |   No*    | Extra configuration of SBOM (Default : `$PWD/resources/sbom_extra.json`                            |
+| **&#x2011;s,&nbsp;&#x2011;&#x2011;scope**        | string |    No    | Scope token of SBOM report to generate                                                             |
+| **&#x2011;a,&nbsp;&#x2011;&#x2011;wsUrl**        | string |    No    | Mend server URL (Available values: **saas, app, app-eu, saas-eu, your_url**). Default value : saas |
+| **&#x2011;t,&nbsp;&#x2011;&#x2011;type**         | string |   No*    | Report type (Available values: **json,tv,rdf,xml,yaml,cdx,all**). Default value: tv                |
+| **&#x2011;o,&nbsp;&#x2011;&#x2011;out**          | string |    No    | Output directory (Default: `$PWD`)                                                                 |
+| **&#x2011;on,&nbsp;&#x2011;&#x2011;outfile**     | string |   No*    | Name of output file                                                                                |
+| **&#x2011;lt,&nbsp;&#x2011;&#x2011;licensetext** |  bool  |   No*    | Include license text for each package (default: `False`)                                           |
+| **&#x2011;th,&nbsp;&#x2011;&#x2011;threads**     | string |    No    | Number of parallel threads for creation output reports (default: `10`)                             |
+   * Note: 
+     * The tool accepts additional values which are unknown to Mend (`-e sbom_extra.json`)
+     * **cdx** type : The report will be created in CycloneDX format v1.4 (JSON type of output file)
+     * Name of output file can be used just for single report (Project layer)
+     * In case **True** : The report will include a full license text for each library, not only for libraries that are not in the SPDX list
+
+### Execution Examples
+   * Run report: `ws_sbom_generator -u <WS_USERKEY> -k <WS_TOKEN> -a <WS_URL> -t <WS_REPORTTYPE> {json,tv,rdf,xml,yaml,all} -e <EXTRA> -o <OUT_DIR>`
+   * Note: If installing packages as a non-root be sure to include the path to the executables within the Operating System paths.
 
 Create tag value report on a specific project  
 `ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports>`
-
 ---
-
 Create tag value report on all projects of product  
 `ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PRODUCT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports>`
-
 ---
-
 Creating JSON report on all projects of organization  
 `ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -t json -o </path/reports>`
-
 ---
-
 Creating XML report on a project with a user which only has product permissions (SAAS organization)   
 `ws_sbom_generator -u <WS_USER_KEY> -y product -k <WS_PRODUCT_TOKEN> -s <WS_PROJECT_TOKEN> -t xml -e /<path/to>/sbom_extra.json -o </path/reports>`
-
 ---
-
 Creating JSON report for specific project with customized name  
 `ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a app-eu -s <WS_PROJECT_TOKEN> -e /<path/to>/sbom_extra.json -o </path/reports> -on <filename>`
-
 ---
-
 Creating JSON report on all projects of organization with Full License Text option  
 `ws_sbom_generator -u <WS_USER_KEY> -k <WS_ORG_TOKEN> -a https://di.whitesourcesoftware.com -t json -o </path/reports> -lt True`
 
