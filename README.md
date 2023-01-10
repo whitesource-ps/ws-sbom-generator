@@ -25,7 +25,7 @@ The tool can be executed either via [CLI](#sbom-generator-cli) or as a [Docker c
 - Mend user with admin permissions
 
 >**Note:**  
->The specified user (`-u, --userKey`) must be associated with a group assigned as either Organization Administrators (for generating report for all projects in the organization) or Product Administrators. For the latter, `--tokenType` must be specified (see [Command-Line Arguments](#command-line-arguments)).  
+>The specified user (`--userKey`) must be associated with a group assigned as either Organization Administrators (for generating report for all projects in the organization) or Product Administrators.  
 
 ## Installation
 1. Install the PyPI package `ws-sbom-generator`
@@ -34,7 +34,7 @@ The tool can be executed either via [CLI](#sbom-generator-cli) or as a [Docker c
     ```
     > **Note:** Depending on whether the package was installed as a root user or not, you need to make sure the package installation location was added to the `$PATH` environment variable.  
 
-1. Update the [creation info](https://spdx.github.io/spdx-spec/v2-draft/document-creation-information/#68-creator-field) as needed in the [resource/sbom_extra.json](./ws_sbom_generator/resources/sbom_extra.json) file:
+1. Update the [creation info](https://spdx.github.io/spdx-spec/v2-draft/document-creation-information/#68-creator-field) as needed in the [resource/creation_info.json](https://github.com/whitesource-ps/ws-sbom-generator/blob/master/ws_sbom_generator/resources/creation_info.json) file:
     ```json
     {
       "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
@@ -47,64 +47,63 @@ The tool can be executed either via [CLI](#sbom-generator-cli) or as a [Docker c
 ## Usage
 
 ```shell
-ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --type $FORMAT --out $HOME/reports --extra resources/sbom_extra.json
+ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --type $FORMAT --out $HOME/reports --extra resources/creation_info.json
 ```
 
 ### Command-Line Arguments
 
-| Parameter | Type | Required | Description |
-|:----------|:----:|:--------:|:------------|
-| **&#x2011;h,&nbsp;&#x2011;&#x2011;help**         | switch | No  | Show help and exit |
-| **&#x2011;a,&nbsp;&#x2011;&#x2011;wsUrl**        | string | Yes | Mend server URL |
-| **&#x2011;u,&nbsp;&#x2011;&#x2011;userKey**      | string | Yes | Mend User Key |
-| **&#x2011;k,&nbsp;&#x2011;&#x2011;token**        | string | Yes | Mend API Key or Product token |
-| **&#x2011;y,&nbsp;&#x2011;&#x2011;tokenType**    | string | No* | [`organization`\|`product`*] (default: `organization`) |
-| **&#x2011;t,&nbsp;&#x2011;&#x2011;type**         | string | No* | Report format [`json`\|`tv`\|`rdf`\|`xml`\|`yaml`\|`cdx`\*\|`all`\*] (default: `tv`) |
-| **&#x2011;s,&nbsp;&#x2011;&#x2011;scope**        | string | No  | Product or Project token to generate the report(s) for. When specifying a Product token, one report will be generated for each project under that product. If not specified, one report will be generated for each project in your organization. |
-| **&#x2011;o,&nbsp;&#x2011;&#x2011;out**          | string | No  | Output directory (default: `$PWD`) |
-| **&#x2011;on,&nbsp;&#x2011;&#x2011;outfile**     | string | No* | Output file name* (default: `Mend {PROJECT_NAME} SBOM report-{FORMAT}`) |
-| **&#x2011;lt,&nbsp;&#x2011;&#x2011;licensetext** | bool   | No  | Include full license text for all libraries* (default: `False`) |
-| **&#x2011;th,&nbsp;&#x2011;&#x2011;threads**     | int    | No  | Number of threads to run in parallel for report generation (default: `10`) |
-| **&#x2011;e,&nbsp;&#x2011;&#x2011;extra**        | string | No* | Path to a json file containing the [creation info](https://spdx.github.io/spdx-spec/v2-draft/document-creation-information/#68-creator-field) to be included in the report (default: `$PWD/resources/sbom_extra.json` |
+| Parameter                                        | Type | Required | Description                                                                                                                                                                                                              |
+|:-------------------------------------------------|:----:|:--------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **&#x2011;&#x2011;help**                         | switch | No  | Show help and exit                                                                                                                                                                                                       |
+| **&#x2011;&#x2011;mendUrl**                      | string | Yes | Mend server URL                                                                                                                                                                                                          |
+| **&#x2011;&#x2011;userKey**      | string | Yes | Mend User Key                                                                                                                                                                                                            |
+| **&#x2011;&#x2011;apiKey**                       | string | Yes | Mend API Key                                                                                                                                                                                                             |
+| **&#x2011;&#x2011;type**                         | string | No* | Report format [`json` `tv` `rdf` `xml` `yaml` `cdx` `all`] (default: `tv`)                                                                                                                                               | 
+| **&#x2011;&#x2011;projectToken** | string | No  | Project token to generate the report for.                                                                                                                                                                                |
+| **&#x2011;&#x2011;productToken** | string | No  | Product token to generate the report for. When specifying a Product token, one report will be generated for each project under that product.                                                                             |
+| **&#x2011;&#x2011;out**          | string | No  | Output directory (default: `$PWD`)                                                                                                                                                                                       |
+| **&#x2011;&#x2011;outfile**     | string | No* | Output file name* (default: `Mend {PROJECT_NAME} SBOM report-{FORMAT}`)                                                                                                                                                  |
+| **&#x2011;&#x2011;licensetext** | bool   | No  | Include full license text for all libraries* (default: `False`)                                                                                                                                                          |
+| **&#x2011;&#x2011;threads**     | int    | No  | Number of threads to run in parallel for report generation (default: `10`)                                                                                                                                               |
+| **&#x2011;&#x2011;extra**        | string | No* | Path to a json file containing the [creation info](https://spdx.github.io/spdx-spec/v2-draft/document-creation-information/#68-creator-field) to be included in the report (default: `$PWD/resources/creation_info.json` |
 
 >**Notes:**  
->\* Token type (`--tokenType product`) is required in case the specified `userKey` is associated with a group with Product Administrators permissions.  
 >\* Report type (`--type`) `cdx` will generate a JSON file in [CycloneDX v1.4](https://cyclonedx.org/docs/1.4/json/) format.  
 >\* Report type (`--type`) `all` will generate one file in each format for each specified project.  
 >\* Output file name (`--outfile`) is only supported for a single project scope.  
 >\* Full license texts will be taken by default from the [SPDX License List](https://spdx.org/licenses/). If a given license does not exist there, the tool will attempt to take it from Mend's database.  
->\* By default, the tool will use the placeholders in the [resource/sbom_extra.json](./ws_sbom_generator/resources/sbom_extra.json) file.  
+>\* By default, the tool will use the placeholders in the [resource/creation_info.json](https://github.com/whitesource-ps/ws-sbom-generator/blob/master/ws_sbom_generator/resources/creation_info.json) file.  
 
 ### Execution Examples
 
 Generating `tv` formatted SBOM report for a specific project  
 ```shell
-ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --scope $WS_PROJECTTOKEN --out $HOME/reports --extra sbom_extra.json
+ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --apiKey $WS_APIKEY --projectToken $WS_PROJECTTOKEN --out $HOME/reports --extra creation_info.json
 ```
 
 Generating `tv` formatted SBOM report for all projects of a specified product  
 ```shell
-ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --scope $WS_PRODUCTTOKEN --out $HOME/reports --extra sbom_extra.json
+ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --apiKey $WS_APIKEY --projectToken $WS_PRODUCTTOKEN --out $HOME/reports --extra creation_info.json
 ```
 
 Generating `json` formatted SBOM report for all projects in the organization  
 ```shell
-ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --type json --out $HOME/reports
+ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --apiKey $WS_APIKEY --type json --out $HOME/reports
 ```
 
 Generating `json` formatted SBOM report for all projects in the organization, including full license text  
 ```shell
-ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --type json --out $HOME/reports --licensetext True
+ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --apiKey $WS_APIKEY --type json --out $HOME/reports --licensetext True
 ```
 
 Generating `xml` formatted SBOM report for a single project (executed by a product administrator)  
 ```shell
-ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_PRODUCTTOKEN --tokenType product --scope $WS_PROJECTTOKEN --type xml --out $HOME/reports --extra sbom_extra.json
+ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --productToken $WS_PRODUCTTOKEN --tokenType product --scope $WS_PROJECTTOKEN --type xml --out $HOME/reports --extra creation_info.json
 ```
 
 Generating `json` formatted SBOM report for a single project, specifying file name  
 ```shell
-ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --scope $WS_PROJECTTOKEN --type json --out $HOME/reports --extra sbom_extra.json --outfile my-project-sbom.json
+ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --scope $WS_PROJECTTOKEN --type json --out $HOME/reports --extra creation_info.json --outfile my-project-sbom.json
 ```
 
 <br/>
@@ -120,7 +119,7 @@ ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY -
 - Mend user with admin permissions
 
 >**Note:**  
->The specified user (`-u, --userKey`) must be associated with a group assigned as either Organization Administrators (for generating report for all projects in the organization) or Product Administrators. For the latter, `--tokenType` must be specified (see [Command-Line Arguments](#command-line-arguments)).  
+>The specified user (`--userKey`) must be associated with a group assigned as either Organization Administrators (for generating report for all projects in the organization) or Product Administrators.  
 
 ## Installation
 
@@ -137,7 +136,7 @@ docker run --name ws-sbom-generator \
   -e WS_URL=$WS_WSS_URL \
   -e WS_USER_KEY=$WS_USERKEY \ 
   -e WS_TOKEN=$WS_APIKEY \
-  -e WS_REPORT_TYPE=<REPORT_TYPE> \
+  -e WS_REPORTTYPE=<REPORT_TYPE> \
   whitesourcetools/ws-sbom-generator 
 ```
 
@@ -152,7 +151,7 @@ docker run --name ws-sbom-generator \
   -e WS_URL=$WS_WSS_URL \
   -e WS_USER_KEY=$WS_USERKEY \ 
   -e WS_TOKEN=$WS_APIKEY \
-  -e WS_REPORT_TYPE=json
+  -e WS_REPORTTYPE=json
   whitesourcetools/ws-sbom-generator
 ```
 
@@ -165,7 +164,7 @@ docker run --name ws-sbom-generator \
   -e WS_URL=$WS_WSS_URL \
   -e WS_USER_KEY=$WS_USERKEY \
   -e WS_TOKEN=$WS_APIKEY \
-  -e WS_SCOPE_TOKEN=<WS_PROJECT_TOKEN> \
+  -e WS_SCOPE_TOKEN=<WS_PROJECTTOKEN> \
   whitesourcetools/ws-sbom-generator
 ```
 

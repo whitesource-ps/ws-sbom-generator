@@ -20,7 +20,7 @@ from ws_sbom_generator import sbom_generator
 #     sbom_generator.parse_args.return_value.scope_token = os.environ.get('WS_SCOPE_PROJ')
 #     sbom_generator.parse_args.return_value.ws_url = 'saas'
 #     sbom_generator.parse_args.return_value.type = 'tv'
-#     sbom_generator.parse_args.return_value.extra = os.path.join(os.getcwd(), 'sbom_report/sbom_extra.json')
+#     sbom_generator.parse_args.return_value.extra = os.path.join(os.getcwd(), 'sbom_report/creation_info.json')
 #     sbom_generator.parse_args.return_value.out_dir = '.'
 
 # @patch('sbom_generator.sbom_generator.create_creation_info', return_values=None)

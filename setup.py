@@ -10,7 +10,7 @@ setuptools.setup(
             f'{ws_name}={ws_name}.{__tool_name__}:main'
         ]},
     version=__version__,
-    author="WhiteSource Professional Services",
+    author="Mend Professional Services",
     author_email="ps@whitesourcesoftware.com",
     description=__description__,
     url=f"https://github.com/whitesource-ps/{ws_name.replace('_', '-')}",

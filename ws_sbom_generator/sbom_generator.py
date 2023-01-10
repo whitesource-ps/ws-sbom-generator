@@ -482,13 +482,6 @@ def get_prj_list(token : str) -> dict:
                                      kv_dict={"productToken": token})  # if not Project Token, then Product Token
 
     generic_thread_lic_text(ent_l=prj_lst['projectVitals'],worker=get_lic_text)
-    '''
-    for prj in prj_lst['projectVitals']:
-        data = web.WS.call_ws_api(self=args.ws_conn, request_type="getProjectAttributionReport",
-                                  kv_dict={"projectToken": prj['token'],
-                                           "reportingAggregationMode": "BY_PROJECT", "exportFormat": "txt"})
-        res_lic.update(get_lic_text_from_attr(data=data))
-    '''
     return res_lic
 
 
@@ -508,7 +501,7 @@ def prepare_lic_text(prj_token : str) -> dict:
 
 
 def init():
-    args.ws_conn = web.WSApp(url=args.ws_url,
+    args.ws_conn = web.WSApp(url=extract_url(args.ws_url),
                                     user_key=args.ws_user_key,
                                     token=args.ws_token,
                                     token_type=args.ws_token_type,
@@ -518,15 +511,25 @@ def init():
         fp = open(args.extra, 'r')
         args.extra_conf = json.loads(fp.read())
     except FileNotFoundError:
-        logger.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure (-e/--extra):
-            {{
-                "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
-                "org_name": "Organization Name",
-                "org_email": "org@email.address",
-                "person": "person name",
-                "person_email": "person@email.address"
-            }}
-        ''')
+        noFile = True
+        if "creation_info.json" in args.extra: #We recommend to use creation_info.json file, but support old variant creation_info.json too
+            args.extra.replace("creation_info.json","creation_info.json")
+            try:
+                fp = open(args.extra, 'r')
+                args.extra_conf = json.loads(fp.read())
+                noFile = False
+            except:
+                pass
+        if noFile:
+            logger.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure (-e/--extra):
+                {{
+                    "namespace": "http://CreatorWebsite/pathToSpdx/DocumentName-UUID",
+                    "org_name": "Organization Name",
+                    "org_email": "org@email.address",
+                    "person": "person name",
+                    "person_email": "person@email.address"
+                }}
+            ''')
     except json.JSONDecodeError:
         logger.error(f"Unable to parse file: {args.extra}")
 
@@ -535,17 +538,18 @@ def parse_args():
     real_path = os.path.dirname(os.path.realpath(__file__))
     resource_real_path = os.path.join(real_path, "resources")
     parser = argparse.ArgumentParser(description='Utility to create SBOM from Mend data')
-    parser.add_argument('-u', '--userKey', help="WS User Key", dest='ws_user_key', default=os.environ.get("WS_USER_KEY"), required=True if not os.environ.get("WS_USER_KEY") else False)
-    parser.add_argument('-k', '--token', help="WS Key", dest='ws_token', default=os.environ.get("WS_TOKEN"), required=True if not os.environ.get("WS_TOKEN") else False)
-    parser.add_argument('-s', '--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_SCOPE_TOKEN"))
+    parser.add_argument('-u', '--userKey', help="Mend User Key", dest='ws_user_key', default=os.environ.get("WS_USERKEY"), required=True if not os.environ.get("WS_USERKEY") else False)
+    parser.add_argument('-k', '--apiKey', help="Mend Key", dest='ws_token', default=os.environ.get("WS_TOKEN"), required=True if not os.environ.get("WS_TOKEN") else False)
+    parser.add_argument('-s', '--projectToken','--scope', help="Scope token of SBOM report to generate", dest='scope_token', default=os.environ.get("WS_PROJECTTOKEN"))
     parser.add_argument('-y', '--tokenType', help="Optional WS Token type to be stated in case WS userKey does not have organization level permissions",
                         dest='ws_token_type',
                         choices=[ws_constants.ScopeTypes.PRODUCT, ws_constants.ScopeTypes.ORGANIZATION],
                         default=os.environ.get("WS_TOKEN_TYPE", ws_constants.ScopeTypes.ORGANIZATION))
-    parser.add_argument('-a', '--wsUrl', help="WS URL", dest='ws_url', default=os.environ.get("WS_URL", 'saas'))
-    parser.add_argument('-t', '--type', help="Report type", dest='type', default=os.environ.get("WS_REPORT_TYPE", 'tv'),
+    parser.add_argument('-pr', '--productToken', help="Mend Product Token", dest='ws_product', default='')
+    parser.add_argument('-a', '--mendUrl', help="Mend URL", dest='ws_url', required=True)
+    parser.add_argument('-t', '--type', help="Report type", dest='type', default=os.environ.get("WS_REPORTTYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
-    parser.add_argument('-e', '--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "sbom_extra.json"))
+    parser.add_argument('-e', '-ci','--creation-info','--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "creation_info.json"))
     parser.add_argument('-o', '--out', help="Output directory", dest='out_dir', default=os.getcwd())
     parser.add_argument('-lt', '--license_text','--licensetext', help="Include license text for each element", dest='lictext', default=False, type=bool)
     parser.add_argument('-on', '--outfile', help="Name of output file", dest='outname', default='')
@@ -649,19 +653,24 @@ def get_scope_bytoken(prj_token : str):
         rt = WS.call_ws_api(self=args.ws_conn, request_type="getProjectVitals",
                             kv_dict={"projectToken": prj_token})
         scopes.append({rt['projectVitals'][0]['token'] : rt['projectVitals'][0]['name']})
-    except:
-        try:
-            rt = WS.call_ws_api(self=args.ws_conn, request_type="getProductProjectVitals",
-                                kv_dict={"productToken": prj_token})
-        except:
+    except Exception as err:
+        if "insufficient permissions" in err.message: # The ErrorCode 5001 from WSSdk
+            scopes.append({
+                "Error" : err.message
+            })
+        else:
             try:
-                rt = WS.call_ws_api(self=args.ws_conn, request_type="getOrganizationProjectVitals",
-                                    kv_dict={"orgToken": args.ws_token})
-            except:
                 rt = WS.call_ws_api(self=args.ws_conn, request_type="getProductProjectVitals",
-                                    kv_dict={"productToken": args.ws_token})
-        for prj in rt['projectVitals']:
-            scopes.append({prj['token']: prj['name']})
+                                    kv_dict={"productToken": prj_token})
+            except Exception as err:
+                try:
+                    rt = WS.call_ws_api(self=args.ws_conn, request_type="getOrganizationProjectVitals",
+                                        kv_dict={"orgToken": args.ws_token})
+                except:
+                    rt = WS.call_ws_api(self=args.ws_conn, request_type="getProductProjectVitals",
+                                        kv_dict={"productToken": args.ws_token})
+            for prj in rt['projectVitals']:
+                scopes.append({prj['token']: prj['name']})
 
     return scopes
 
@@ -691,6 +700,12 @@ def create_sbom_doc_by_scope(scope_):
         return create_sbom_doc(scope_token=key, scope_name=value)
 
 
+def extract_url(url : str)-> str:
+    url_ = url if "https://" in url else f"https://{url}"
+    pos = url_.find("/",8)
+    return url_[0:pos] if pos>-1 else url_
+
+
 def main():
     global args
     global lic_filenames
@@ -703,15 +718,15 @@ def main():
         except:
             PROJECT_PARALLELISM_LEVEL = 10
 
-        if args.lictext:
-            lic_filenames = prepare_lic_text(args.scope_token)
-        else:
-            lic_filenames = dict()
+        args.scope_token = args.scope_token if args.scope_token else args.ws_product
+        lic_filenames = prepare_lic_text(args.scope_token) if args.lictext else dict()
 
         scopes = get_scope_bytoken(args.scope_token)
-        args.outname = args.outname if len(scopes) == 1 else ''  # In case few files we can use just native names not customized
-
-        generic_thread_pool_sbom(ent_l=scopes,worker=create_sbom_doc_by_scope)
+        if scopes[0].get("Error"):
+            logger.error(f"Error running SBOM Generator. The details are {scopes[0].get('Error')}")
+        else:
+            args.outname = args.outname if len(scopes) == 1 else ''  # In case few files we can use just native names not customized
+            generic_thread_pool_sbom(ent_l=scopes,worker=create_sbom_doc_by_scope)
     except ValueError as err:
         logger.error(f"Error running SBOM Generator. The details are {err}")
 
