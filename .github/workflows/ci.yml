@@ -120,11 +120,12 @@ jobs:
             TAG_V=${GITHUB_REF#refs/tags/v}
             TAGS="$TAGS,${DOCKER_IMAGE}:${TAG_V}"
           fi
-          if [["$GITHUB_REF" == *"refs/tags/test-v"*]]; then
+          if [[ $GITHUB_REF == refs/tags/test-v* ]]; then
             TAG_V=${GITHUB_REF#refs/tags/test-v}
             TAGS="${DOCKER_IMAGE}:test"
             TAGS="$TAGS,${DOCKER_IMAGE}:${TAG_V}"
           fi            
+          echo $TAGS
           echo ::set-output name=tags::${TAGS}
       - name: Set up Docker Buildx
         if: contains(github.ref, 'refs/tags/')
