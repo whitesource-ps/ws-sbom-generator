@@ -9,8 +9,8 @@ RUN python3 -m pip install --upgrade pip
 RUN pip3 install $SBOM_GENERATOR_WHL
 HEALTHCHECK NONE
 
+RUN chmod 777 /opt/ws-sbom-generator/sbom_generator/output
 RUN useradd sbom
-RUN usermod -a -G root sbom
 USER sbom
 
 VOLUME /opt/ws-sbom-generator/sbom_generator/resources
