@@ -54,18 +54,18 @@ ws_sbom_generator --wsUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY -
 
 | Parameter                                        | Type | Required | Description                                                                                                                                                                                                              |
 |:-------------------------------------------------|:----:|:--------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **&#x2011;&#x2011;help**                         | switch | No  | Show help and exit                                                                                                                                                                                                       |
-| **&#x2011;&#x2011;mendUrl**                      | string | Yes | Mend server URL                                                                                                                                                                                                          |
-| **&#x2011;&#x2011;userKey**      | string | Yes | Mend User Key                                                                                                                                                                                                            |
-| **&#x2011;&#x2011;apiKey**                       | string | Yes | Mend API Key                                                                                                                                                                                                             |
-| **&#x2011;&#x2011;type**                         | string | No* | Report format [`json` `tv` `rdf` `xml` `yaml` `cdx` `all`] (default: `tv`)                                                                                                                                               | 
-| **&#x2011;&#x2011;projectToken** | string | No  | Project token to generate the report for.                                                                                                                                                                                |
-| **&#x2011;&#x2011;productToken** | string | No  | Product token to generate the report for. When specifying a Product token, one report will be generated for each project under that product.                                                                             |
-| **&#x2011;&#x2011;out**          | string | No  | Output directory (default: `$PWD`)                                                                                                                                                                                       |
-| **&#x2011;&#x2011;outfile**     | string | No* | Output file name* (default: `Mend {PROJECT_NAME} SBOM report-{FORMAT}`)                                                                                                                                                  |
-| **&#x2011;&#x2011;licensetext** | bool   | No  | Include full license text for all libraries* (default: `False`)                                                                                                                                                          |
-| **&#x2011;&#x2011;threads**     | int    | No  | Number of threads to run in parallel for report generation (default: `10`)                                                                                                                                               |
-| **&#x2011;&#x2011;extra**        | string | No* | Path to a json file containing the [creation info](https://spdx.github.io/spdx-spec/v2-draft/document-creation-information/#68-creator-field) to be included in the report (default: `$PWD/resources/creation_info.json` |
+| **&#x2011;&#x2011;help**                         | switch |    No    | Show help and exit                                                                                                                                                                                                       |
+| **&#x2011;&#x2011;mendUrl**                      | string |   Yes    | Mend server URL                                                                                                                                                                                                          |
+| **&#x2011;&#x2011;userKey**      | string |   Yes    | Mend User Key                                                                                                                                                                                                            |
+| **&#x2011;&#x2011;apiKey**                       | string |   Yes    | Mend API Key                                                                                                                                                                                                             |
+| **&#x2011;&#x2011;type**                         | string |   No*    | Report format [`json` `tv` `rdf` `xml` `yaml` `cdx` `all`] (default: `tv`)                                                                                                                                               | 
+| **&#x2011;&#x2011;projectToken** | string |    No    | Project token to generate the report for.                                                                                                                                                                                |
+| **&#x2011;&#x2011;productToken** | string |    No    | Product token to generate the report for. When specifying a Product token, one report will be generated for each project under that product.                                                                             |
+| **&#x2011;&#x2011;out**          | string |    No    | Output directory (default: `$PWD`)                                                                                                                                                                                       |
+| **&#x2011;&#x2011;outfile**     | string |   No*    | Output file name* (default: `Mend {PROJECT_NAME} SBOM report-{FORMAT}`)                                                                                                                                                  |
+| **&#x2011;&#x2011;licensetext** | bool   |   No*    | Include full license text for all libraries (default: `False`)                                                                                                                                                          |
+| **&#x2011;&#x2011;threads**     | int    |    No    | Number of threads to run in parallel for report generation (default: `10`)                                                                                                                                               |
+| **&#x2011;&#x2011;extra**        | string |   No*    | Path to a json file containing the [creation info](https://spdx.github.io/spdx-spec/v2-draft/document-creation-information/#68-creator-field) to be included in the report (default: `$PWD/resources/creation_info.json` |
 
 >**Notes:**  
 >\* Report type (`--type`) `cdx` will generate a JSON file in [CycloneDX v1.4](https://cyclonedx.org/docs/1.4/json/) format.  
@@ -98,12 +98,13 @@ ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --apiKey $WS_APIKE
 
 Generating `xml` formatted SBOM report for a single project (executed by a product administrator)  
 ```shell
-ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --productToken $WS_PRODUCTTOKEN --tokenType product --scope $WS_PROJECTTOKEN --type xml --out $HOME/reports --extra creation_info.json
+ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --apiKey $WS_APIKEY --projectToken $WS_PROJECTTOKEN --type xml --out $HOME/reports --extra creation_info.json
 ```
 
 Generating `json` formatted SBOM report for a single project, specifying file name  
 ```shell
-ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --token $WS_APIKEY --scope $WS_PROJECTTOKEN --type json --out $HOME/reports --extra creation_info.json --outfile my-project-sbom.json
+ws_sbom_generator --mendUrl $WS_WSS_URL --userKey $WS_USERKEY --apiKey $WS_APIKEY --scope $WS_PROJECTTOKEN --type json --out $HOME/reports --extra creation_info.json --outfile my-project-sbom.json
+
 ```
 
 <br/>

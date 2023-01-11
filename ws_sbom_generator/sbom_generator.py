@@ -512,14 +512,14 @@ def init():
         args.extra_conf = json.loads(fp.read())
     except FileNotFoundError:
         noFile = True
-        if "creation_info.json" in args.extra: #We recommend to use creation_info.json file, but support old variant creation_info.json too
-            args.extra.replace("creation_info.json","creation_info.json")
+        if "creation_info.json" in args.extra: #We recommend to use creation_info.json file, but support old variant sbom_extra.json too
+            args.extra = args.extra.replace("creation_info.json","sbom_extra.json")
             try:
                 fp = open(args.extra, 'r')
                 args.extra_conf = json.loads(fp.read())
                 noFile = False
             except:
-                pass
+                args.extra = args.extra.replace("sbom_extra.json", "creation_info.json")
         if noFile:
             logger.warning(f'''{args.extra} configuration file was not found. Be sure to create a file in the following structure (-e/--extra):
                 {{
@@ -546,7 +546,7 @@ def parse_args():
                         choices=[ws_constants.ScopeTypes.PRODUCT, ws_constants.ScopeTypes.ORGANIZATION],
                         default=os.environ.get("WS_TOKEN_TYPE", ws_constants.ScopeTypes.ORGANIZATION))
     parser.add_argument('-pr', '--productToken', help="Mend Product Token", dest='ws_product', default='')
-    parser.add_argument('-a', '--mendUrl', help="Mend URL", dest='ws_url', required=True)
+    parser.add_argument('-a', '--mendUrl', help="Mend URL", dest='ws_url', required=True if not os.environ.get("WS_URL") else False)
     parser.add_argument('-t', '--type', help="Report type", dest='type', default=os.environ.get("WS_REPORTTYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '-ci','--creation-info','--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "creation_info.json"))
