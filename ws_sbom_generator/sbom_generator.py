@@ -546,7 +546,7 @@ def parse_args():
                         choices=[ws_constants.ScopeTypes.PRODUCT, ws_constants.ScopeTypes.ORGANIZATION],
                         default=os.environ.get("WS_TOKEN_TYPE", ws_constants.ScopeTypes.ORGANIZATION))
     parser.add_argument('-pr', '--productToken', help="Mend Product Token", dest='ws_product', default='')
-    parser.add_argument('-a', '--mendUrl', help="Mend URL", dest='ws_url', required=True if not os.environ.get("WS_URL") else False)
+    parser.add_argument('-a', '--mendUrl', help="Mend URL", dest='ws_url', default=os.environ.get("WS_URL"),required=True if not os.environ.get("WS_URL") else False)
     parser.add_argument('-t', '--type', help="Report type", dest='type', default=os.environ.get("WS_REPORTTYPE", 'tv'),
                         choices=[f_t.lower() for f_t in SPDXFileType.__members__.keys()] + ["all"])
     parser.add_argument('-e', '-ci','--creation-info','--extra', help="Extra configuration of SBOM", dest='extra', default=os.path.join(resource_real_path, "creation_info.json"))
