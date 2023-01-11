@@ -10,12 +10,14 @@ RUN python3 -m pip install --upgrade pip
 RUN pip3 install $SBOM_GENERATOR_WHL
 HEALTHCHECK NONE
 
-
-VOLUME /opt/ws-sbom-generator/sbom_generator/resources
-VOLUME /opt/ws-sbom-generator/sbom_generator/output
-
-#HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/creation_info.json
-RUN chmod 777 /opt/ws-sbom-generator/sbom_generator/output
 RUN useradd sbom
 USER sbom
-CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/creation_info.json
+
+#VOLUME /opt/ws-sbom-generator/sbom_generator/resources
+#VOLUME /opt/ws-sbom-generator/sbom_generator/output
+VOLUME /home/sbom/resources
+VOLUME /home/sbom
+
+#HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/creation_info.json
+#CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/creation_info.json
+CMD ws_sbom_generator -o /home/sbom -e /home/sbom/resources/creation_info.json
