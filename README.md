@@ -132,8 +132,8 @@ docker pull whitesourcetools/ws-sbom-generator:latest
 
 ```shell
 docker run --name ws-sbom-generator \ 
-  -v $HOME/ws-sbom-generator/resources:/opt/ws-sbom-generator/sbom-generator/resources \ 
-  -v $HOME/reports:/opt/ws-sbom-generator/sbom-generator/output \
+  -v /tmp:/tmp \ 
+  -v /tmp:/tmp \
   -e WS_URL=$WS_WSS_URL \
   -e WS_USER_KEY=$WS_USERKEY \ 
   -e WS_TOKEN=$WS_APIKEY \
@@ -147,8 +147,8 @@ Running as organization administrator, generating `json` formatted SBOM reports 
 
 ```shell
 docker run --name ws-sbom-generator \  
-  -v $HOME/ws-sbom-generator/resources:/opt/ws-sbom-generator/sbom_generator/resources \ 
-  -v $HOME/reports:/opt/ws-sbom-generator/sbom_generator/output \
+  -v /tmp:/tmp \ 
+  -v /tmp:/tmp \
   -e WS_URL=$WS_WSS_URL \
   -e WS_USER_KEY=$WS_USERKEY \ 
   -e WS_TOKEN=$WS_APIKEY \
@@ -160,8 +160,8 @@ Running as organization administrator, generating `tv` formatted SBOM report for
 
 ```shell
 docker run --name ws-sbom-generator \  
-  -v $HOME/ws-sbom-generator/resources:/opt/ws-sbom-generator/sbom_generator/resources \
-  -v $HOME/reports:/opt/ws-sbom-generator/sbom_generator/output \
+  -v /tmp:/tmp \
+  -v /tmp:/tmp \
   -e WS_URL=$WS_WSS_URL \
   -e WS_USER_KEY=$WS_USERKEY \
   -e WS_TOKEN=$WS_APIKEY \
@@ -173,8 +173,8 @@ Running as a product administrator, generating `rdf` formatted SBOM report for a
 
 ```shell
 docker run --name ws-sbom-generator \  
-  -v $HOME/ws-sbom-generator/resources:/opt/ws-sbom-generator/sbom_generator/resources \
-  -v $HOME/reports:/opt/ws-sbom-generator/sbom_generator/output \
+  -v /tmp:/tmp \
+  -v /tmp:/tmp \
   -e WS_URL=$WS_WSS_URL \
   -e WS_USER_KEY=$WS_USERKEY \
   -e WS_TOKEN=$WS_PRODUCTTOKEN \
