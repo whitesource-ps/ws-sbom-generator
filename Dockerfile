@@ -15,9 +15,9 @@ USER sbom
 
 #VOLUME /opt/ws-sbom-generator/sbom_generator/resources
 #VOLUME /opt/ws-sbom-generator/sbom_generator/output
-VOLUME /home/sbom/resources
-VOLUME /home/sbom
+VOLUME /tmp
+VOLUME /tmp
 
 #HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/creation_info.json
 #CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/creation_info.json
-CMD ws_sbom_generator -o /home/sbom -e /home/sbom/resources/creation_info.json
+CMD ws_sbom_generator -o /tmp -e /tmp/creation_info.json
