@@ -1,8 +1,5 @@
 FROM python:3.9-slim-buster
 
-RUN useradd sbom
-RUN usermod -a -G root sbom
-USER sbom
 
 ARG version
 ENV SBOM_GENERATOR_WHL="ws_sbom_generator-$version-py3-none-any.whl"
@@ -18,4 +15,7 @@ VOLUME /opt/ws-sbom-generator/sbom_generator/resources
 VOLUME /opt/ws-sbom-generator/sbom_generator/output
 
 #HEALTHCHECK CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/creation_info.json
+RUN chmod 777 /opt/ws-sbom-generator/sbom_generator/output
+RUN useradd sbom
+USER sbom
 CMD ws_sbom_generator -o /opt/ws-sbom-generator/sbom_generator/output -e /opt/ws-sbom-generator/sbom_generator/resources/creation_info.json
