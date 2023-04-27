@@ -5,6 +5,12 @@
 [![Python 3.8](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Blue_Python_3.8_Shield_Badge.svg/76px-Blue_Python_3.8_Shield_Badge.svg.png)](https://www.python.org/downloads/release/python-380/)
 [![GitHub release](https://img.shields.io/github/v/release/whitesource-ps/ws-sbom-generator)](https://github.com/whitesource-ps/ws-sbom-generator/releases/latest)  
 
+<div style="border: 1px solid #000000; background-color: #D9F4F1; padding: 10px; border-radius: 3px;">
+<p><b>END OF LIFE NOTICE</b></p>
+<p>As the ability to generate SBOM has been added to Mend SCA's core functionality, <b>this repository is now in maintenance mode</b>. We will not be making any changes or enhancements to it, other then necessary bug fixes.</p>
+<p>Please refer to the <b>Mend Information Hub</b> for instructions about exporting SBOM, either via the UI (<a href="https://docs.mend.io/bundle/sca_user_guide/page/the_sbom_export_report.html">The SBOM Export Report</a>) or using Mend's API (<a href="https://docs.mend.io/bundle/api_sca/page/reports_api_-_synchronous.html#Get-SBOM-Report-with-SPDX">Get SBOM Report with SPDX</a>).</p>
+</div>
+
 # Mend SBOM Generator
 This tool generates SBOM reports in either [SPDX](https://spdx.org) or [CycloneDX](https://cyclonedx.org/) formats, for specified projects.  
 
