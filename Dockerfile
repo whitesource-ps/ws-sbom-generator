@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster
+FROM python:3.11-slim-buster
 
 ARG version
 ENV SBOM_GENERATOR_WHL="ws_sbom_generator-$version-py3-none-any.whl"

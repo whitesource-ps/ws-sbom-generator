@@ -31,7 +31,7 @@ jobs:
               echo "RELEASE=true" >> $GITHUB_ENV
             fi
           fi
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set package version
         run: |
           sed -E -i  "s/^__version__ = \"[a-z0-9\.]+\"/__version__ = \"$VERSION\"/g"  ${{ env.TOOL_DIR }}/_version.py
@@ -39,7 +39,7 @@ jobs:
 #        with:
 #          branch: ${{ github.head_ref }}
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       - name: Change to last ws-sdk version on odd days (Mon, Wed, Fri, Sun)
@@ -123,17 +123,17 @@ jobs:
           echo ::set-output name=tags::${TAGS}
       - name: Set up Docker Buildx
         if: contains(github.ref, 'refs/tags/')
-        uses: docker/setup-buildx-action@v1
+        uses: docker/setup-buildx-action@v3
       - name: Login to DockerHub
         if: contains(github.ref, 'refs/tags/')
-        uses: docker/login-action@v1
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push to DockerHub
         if: contains(github.ref, 'refs/tags/')
         id: docker_build
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v5
         with:
           context: .
           push: true
