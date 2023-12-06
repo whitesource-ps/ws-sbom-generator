@@ -1,3 +1,7 @@
+> [!Warning]  
+**This repository has been deprecated</b>, as the ability to generate an SBOM has been added to the core functionality of Mend SCA. We will not be making any changes or enhancements to this repository.  Please refer to the Mend User Documentation for instructions about exporting SBOM via the User Interface.  For programmatic SBOM generation, it is recommended to use the [sbom_export_cli](https://github.com/mend-toolkit/Mend-SBOM-Export-CLI)**  
+
+
 [![Logo](https://resources.mend.io/mend-sig/logo/mend-dark-logo-horizontal.png)](https://www.mend.io/)  
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -7,10 +11,6 @@
 [![EOL](https://img.shields.io/badge/status-EOL-red)](https://docs.mend.io/bundle/sca_user_guide/page/the_sbom_export_report.html)  
 
 
-<table><tr><td bgcolor="#D9F4F1">
-<p><b>This repository is now in maintenance mode</b>, as the ability to generate SBOM has been added to the core functionality of Mend SCA. We will not be making any changes or enhancements to it, other then necessary bug fixes.</p>
-<p>Please refer to the <b>Mend Information Hub</b> for instructions about exporting SBOM, either via the UI (<a href="https://docs.mend.io/bundle/sca_user_guide/page/the_sbom_export_report.html" target="_blank">The SBOM Export Report</a>) or using Mend's API (<a href="https://docs.mend.io/bundle/api_sca/page/reports_api_-_synchronous.html#Get-SBOM-Report-with-SPDX" target="_blank">Get SBOM Report with SPDX</a>).</p>
-</td></tr></table>
 
 # Mend SBOM Generator
 This tool generates SBOM reports in either [SPDX](https://spdx.org) or [CycloneDX](https://cyclonedx.org/) formats, for specified projects.  
